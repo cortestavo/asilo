@@ -7,7 +7,7 @@
         <!--Log in-->
         <scene sceneID="xeZ-Qh-rJA">
             <objects>
-                <viewController id="f3g-R4-Hnn" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="f3g-R4-Hnn" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LzX-Ij-4sU"/>
                         <viewControllerLayoutGuide type="bottom" id="0sY-nZ-vWa"/>

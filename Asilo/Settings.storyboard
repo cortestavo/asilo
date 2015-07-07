@@ -7,7 +7,7 @@
         <!--Settings-->
         <scene sceneID="tNc-vh-y2O">
             <objects>
-                <viewController id="HVg-lh-Trd" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings" id="HVg-lh-Trd" customClass="SettingsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qbX-mD-pDI"/>
                         <viewControllerLayoutGuide type="bottom" id="glL-dm-irP"/>
