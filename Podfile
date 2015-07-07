@@ -3,6 +3,7 @@ platform :ios, '7.0'
 
 target 'Asilo' do
     pod 'MMDrawerController', '~> 0.5.7'
+    pod 'Parse'
 end
 
 target 'AsiloTests' do

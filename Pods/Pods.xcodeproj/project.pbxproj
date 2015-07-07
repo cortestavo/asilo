@@ -7,353 +7,718 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041D760ADA4628B4F34847F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0CBD6362FE5F85B69470DF /* Foundation.framework */; };
-		0BFA0C6206BDCA4DBEA941E8 /* Pods-Asilo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF50088824BDCA48ACC2BD /* Pods-Asilo-dummy.m */; };
-		0F5F783BD9F728E0C1282378 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 96075F840EEB0159FDB8BB7A /* MMDrawerController+Subclass.h */; };
-		13AA80F630681A396A67D142 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = A432854D37611CBBED9719DA /* MMDrawerController.h */; };
-		16C3CC33C6D78DAF9D6785F2 /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A111C270789C23B23CBCBCF0 /* MMDrawerController-dummy.m */; };
-		49D6D831B45147CA37EACA6A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5800866C616E966320101AD2 /* QuartzCore.framework */; };
-		4DDCFF61AA7A1C02F19F5308 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 27AE867F62FCA342B581346B /* MMDrawerBarButtonItem.h */; };
-		692D8D414319E2ED764E6AA6 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D88C99A9AD35F9D5029AB9A /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		834733291E5453FABC1148F6 /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = A0817607CA3C1BB7650D7E0F /* MMDrawerVisualState.h */; };
-		BA3FA86204F516AB942CD944 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7822E25335EBD77D9E1252CA /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C0121A5FFBBD86B3C0568163 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04454E70CBCFF0E3DED5B434 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C48684F41EAD6B2C59EB3B91 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A899200A457248DAE75E674 /* UIViewController+MMDrawerController.h */; };
-		ED62A45E69FDA737F7846A5C /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = A91DDA1950C5B45B422F9D0C /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F17EF5BF17B51F93BC69D8D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C0CBD6362FE5F85B69470DF /* Foundation.framework */; };
+		02CA87EC7B5DB6F2CA579739 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E53691CF921B9D096E201D /* Security.framework */; };
+		0453A5A025088970BD0C010F /* PFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B76F0E4780E41D881BC9B77 /* PFNetworkActivityIndicatorManager.h */; };
+		04D940F7CE5025EAF1B082BC /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 680380CEE8DBC09870C32E07 /* MMDrawerBarButtonItem.h */; };
+		04EB81FA449AFEAA1A8D5D6E /* PFUser.h in Headers */ = {isa = PBXBuildFile; fileRef = A9F9267726DFE84262BAADFF /* PFUser.h */; };
+		059360B4E62D8F0FED47C8D3 /* PFGeoPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = EB31351760838D1D55EB5F67 /* PFGeoPoint.h */; };
+		08E2FB0396E4599BF13ACB7F /* PFPush.h in Headers */ = {isa = PBXBuildFile; fileRef = 82487CDC0BC42E8645BF6BE8 /* PFPush.h */; };
+		090B94668176873B4F95C524 /* PF_Twitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B3C2488DD27DAB0D48E29FF /* PF_Twitter.h */; };
+		0BE87A8EDC33E9E3E57A8430 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC7422FF1C18EADF733FA10 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		16361D558635D64EDAD5A029 /* PFConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = FFE35F81085C4E4C305E6014 /* PFConfig.h */; };
+		19FD49506F2523C03E601034 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF63ED00487A34D8462EF94B /* CoreLocation.framework */; };
+		1AD3FBCC6E4B23196E519907 /* PFRole.h in Headers */ = {isa = PBXBuildFile; fileRef = C05487712B6FB0EE4F461949 /* PFRole.h */; };
+		1E1520372BE9C4F0D95A4E95 /* PFCloud.h in Headers */ = {isa = PBXBuildFile; fileRef = 76DEA7967988CAAA728C138F /* PFCloud.h */; };
+		2A3FAF87F0FBC7E0F4CB0B6D /* PFNullability.h in Headers */ = {isa = PBXBuildFile; fileRef = E2B2B70347FCE3C6661C1D17 /* PFNullability.h */; };
+		2AB3DFDBC33845B758A7E086 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A05BEE0985BCC0962D3152 /* MMDrawerController+Subclass.h */; };
+		30F205E9FA53FB60A93512E2 /* Pods-Asilo-Parse-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2F9C952D65B5C874947FC3 /* Pods-Asilo-Parse-dummy.m */; };
+		37BF802861F43DE2940756A7 /* PFTwitterUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 22A152DADD4C755AAEF9C7D5 /* PFTwitterUtils.h */; };
+		3ADBA9113A0B09249B78EE69 /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = A222568A18020A31F6E93D8B /* MMDrawerVisualState.h */; };
+		3E2B3188F984FC10D44AFB91 /* PFAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F1DF55F81224AF4F7A1A074 /* PFAnalytics.h */; };
+		444A59F3BDCD6D137C8ABF19 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B52B597BDA7F8CFF3E9DE1D /* AudioToolbox.framework */; };
+		5256D55556650FCB8B1E3AFB /* Pods-Asilo-MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BAC63F565F7D3F47532A2 /* Pods-Asilo-MMDrawerController-dummy.m */; };
+		5291462FD25A6DB55BAF93D8 /* PFSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 59F4A4783E4078041CBF2E3F /* PFSession.h */; };
+		53E68352E787D2F97AE8CE93 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB5A543EF38330DAA822D72 /* UIViewController+MMDrawerController.h */; };
+		55464B6C8699A70514B6CE5B /* Pods-Asilo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DBE039E406721BB0978B19 /* Pods-Asilo-dummy.m */; };
+		558C37922168324C9F0B9C7D /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAF79051AC2B09118B39F96 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		57032C950343CD2E8285B458 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0157D0936B1DA0BC2AC2E430 /* Foundation.framework */; };
+		603AC445BBD20D4F178D9FC3 /* PFRelation.h in Headers */ = {isa = PBXBuildFile; fileRef = 800D7FB8EB6C13E5FD7E1918 /* PFRelation.h */; };
+		626A61485EB632F786310005 /* BFExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F0D7EFE8DD25ADE95BB62DA /* BFExecutor.h */; };
+		6A308B484EADF38AACFD3A85 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A91A70100E4A10F62E8949 /* SystemConfiguration.framework */; };
+		6C11FE9010A158F09B8229DB /* PFFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EB8C594D33ABF4B676D47E2 /* PFFile.h */; };
+		784929EEC870B4CD4BD44FC1 /* BFCancellationTokenSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 55E6DD5FB5EA1B50EEB818E0 /* BFCancellationTokenSource.h */; };
+		79FE938BC5834AEDA2A0DF6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0157D0936B1DA0BC2AC2E430 /* Foundation.framework */; };
+		7F8DFC2B781970D233964FC0 /* BFExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E246FD5E15F2180AD383895 /* BFExecutor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8057CF3587741A38EB8D6F99 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58CBA71B7F8ADF877436FA3E /* CoreGraphics.framework */; };
+		808F162398BE67E515CC0DF4 /* BFTaskCompletionSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFABA0244B0D01A37DD4197 /* BFTaskCompletionSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		81349D71B36491D34BE68183 /* BFCancellationTokenRegistration.h in Headers */ = {isa = PBXBuildFile; fileRef = 15CAB0DAF1BA37524EAA35D8 /* BFCancellationTokenRegistration.h */; };
+		842F8EA94C1E1E7C51F3B590 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B75062A9B1E2061C9643B7 /* QuartzCore.framework */; };
+		9B2EF8A5EB1706FC0FC250AE /* BFCancellationTokenSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A4DD3BD0A68E839C81E9D9 /* BFCancellationTokenSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9BDB4CE7DACE1439DCFF7B01 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A79D6F0998FB2883433198D /* Empty.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9C1E6C9299553C6055E916F4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510BF732C431238D7A17E4AF /* CFNetwork.framework */; };
+		9FC2FC9E82F6BA544E2C5FF1 /* PFSubclassing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5058203E95C2422DD67C36AC /* PFSubclassing.h */; };
+		A1937C6FB58BA2265A084170 /* BFTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 56636C9A626FFDBA7E77F6C6 /* BFTask.h */; };
+		A4A8ACDDC1A17A15D2A50785 /* BFCancellationToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE9EB12D354F83F0279D255 /* BFCancellationToken.h */; };
+		A8884D76561C66F4D4100E44 /* Pods-Asilo-Bolts-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 277B7CAC3E7CB70D3BE934E6 /* Pods-Asilo-Bolts-dummy.m */; };
+		AC111F65FDF459D3B14636BE /* PFAnonymousUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E462E92BB9C5C2C94881CE04 /* PFAnonymousUtils.h */; };
+		B696DC4431558E6C8E1EF919 /* BFCancellationToken.m in Sources */ = {isa = PBXBuildFile; fileRef = F466801A8020529621236469 /* BFCancellationToken.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B80E5F4DA595ABD03C74BE2A /* PFObject+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = BDEA6D786D1AAF5D746A4CAF /* PFObject+Subclass.h */; };
+		C05D5DAE04558E0905C712E7 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = BCA529C8B15C8056385F84DA /* MMDrawerController.h */; };
+		C398174A4DCF729752724048 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0157D0936B1DA0BC2AC2E430 /* Foundation.framework */; };
+		C65EC756E1BC493126C21281 /* PFPurchase.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F5FD46E2EB88AACE46308F /* PFPurchase.h */; };
+		C75202B024B09FFA9CB4317E /* Bolts.h in Headers */ = {isa = PBXBuildFile; fileRef = D6FD313CC362D22214AE4E41 /* Bolts.h */; };
+		CA41124AD56A8B9EC9D36734 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 91A05BEE0985BCC0962D3152 /* MMDrawerController+Subclass.h */; };
+		CBEB625673616AD933D2B6C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B75062A9B1E2061C9643B7 /* QuartzCore.framework */; };
+		CEC3FDADAED01EB699C3AE5A /* BFTaskCompletionSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2BCC51753FCD73F708BE7B /* BFTaskCompletionSource.h */; };
+		D2A3255ACFF6BAEE8A38A30C /* Bolts.m in Sources */ = {isa = PBXBuildFile; fileRef = EE50F3AF16B5254C558821C5 /* Bolts.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E17F9A106125E2C5A31BE81E /* BFCancellationTokenRegistration.m in Sources */ = {isa = PBXBuildFile; fileRef = D251DC5F53ABFB769F470809 /* BFCancellationTokenRegistration.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E500F2BE1879B2036BCBB9F4 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A7BF85F735F25517C26EAE6 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E82BFE2A24838EC5A66571C8 /* PFProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = 8536F44C48DC4F62DD8AC8A9 /* PFProduct.h */; };
+		E94BB87DC5CD392F8667CD6E /* PFQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 83D0D87BE3F6361898CC6F8F /* PFQuery.h */; };
+		E950D4407AF194DF6AA80D36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0157D0936B1DA0BC2AC2E430 /* Foundation.framework */; };
+		EC9B88648C833E3A4FADFD43 /* PFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BE0A575E75DE3CBC6880356 /* PFConstants.h */; };
+		ED7C83A50C2F4EC2CB775D5B /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 54178D0825ADCAE69554136C /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EE8E3CE1D7EC6F51BA4BFF67 /* PFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 191F3F823693D407090572CE /* PFObject.h */; };
+		F0B52A9E7293A24831C384D7 /* BFTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 13F7ED846C1629EFC9CFF1A5 /* BFTask.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F5B270D147C633891998DC56 /* PFInstallation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3430456C5D2D8E2943035D23 /* PFInstallation.h */; };
+		F798121BC2110CC7A391CF4B /* BoltsVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = ECFCD29791EECA4E8E4CA1E5 /* BoltsVersion.h */; };
+		FCE2AA381FD6DFF93752172C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C40401A9F49874A230FE92 /* StoreKit.framework */; };
+		FCF96F0FCA9E8365EF0A0A27 /* PFACL.h in Headers */ = {isa = PBXBuildFile; fileRef = D768A33525A4CC75D8B6FE55 /* PFACL.h */; };
+		FD0A949D6C7D2869D848564A /* Parse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3968733B202816E2F50683E8 /* Parse.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C8A5FAA916B81B44BFA3F49E /* PBXContainerItemProxy */ = {
+		0D13EB6E24CA93994DD88D44 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3A4728B3602DDA01B9FCA027 /* Project object */;
+			containerPortal = BFC96316E3342145B80DA811 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8CFCCAA3CF5CB3FF8481889F;
-			remoteInfo = MMDrawerController;
+			remoteGlobalIDString = EFC4D9B9AB282189CF32F118;
+			remoteInfo = "Pods-Asilo-MMDrawerController";
+		};
+		18986D7B31C4054B368342B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFC96316E3342145B80DA811 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03FD7319F362790AFADEB14B;
+			remoteInfo = "Pods-Asilo-Bolts";
+		};
+		281B529539FAC5DEC519BCDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFC96316E3342145B80DA811 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 933708C4873C478565CF8C76;
+			remoteInfo = "Pods-Asilo-Parse";
+		};
+		E0F5B02D6BCBC3E64DC04322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFC96316E3342145B80DA811 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03FD7319F362790AFADEB14B;
+			remoteInfo = "Pods-Asilo-Bolts";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04454E70CBCFF0E3DED5B434 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		0F0C4695FD5BB4157C09EDAF /* Pods-Asilo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo.debug.xcconfig"; sourceTree = "<group>"; };
-		16A085C7650150521CF5A0F3 /* Pods-Asilo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Asilo-acknowledgements.plist"; sourceTree = "<group>"; };
-		1A0BCE80035013EB6E24CE29 /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
-		27AE867F62FCA342B581346B /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		2BA6BA781DE6723973B74626 /* libPods-Asilo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FAF50088824BDCA48ACC2BD /* Pods-Asilo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-dummy.m"; sourceTree = "<group>"; };
-		3D0103A66F58312702DFBC38 /* Pods-Asilo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Asilo-resources.sh"; sourceTree = "<group>"; };
-		5800866C616E966320101AD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		5A899200A457248DAE75E674 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		72D254C738AAF3CD40EC6BA5 /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
-		7822E25335EBD77D9E1252CA /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
-		7D88C99A9AD35F9D5029AB9A /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		8C0CBD6362FE5F85B69470DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		96075F840EEB0159FDB8BB7A /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		A04EBBF229C96962A253BB2A /* Pods-Asilo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo.release.xcconfig"; sourceTree = "<group>"; };
-		A0817607CA3C1BB7650D7E0F /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
-		A111C270789C23B23CBCBCF0 /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
-		A432854D37611CBBED9719DA /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
-		A91DDA1950C5B45B422F9D0C /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
-		C3D113F0D51D110AF4C12D02 /* libMMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMDrawerController.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D78E74B845CE03D662FE40E9 /* Pods-Asilo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Asilo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FA2692B2B29F8A0556A48028 /* MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
-		FEACCC8B5FA64D69EB0CFB9C /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0157D0936B1DA0BC2AC2E430 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		03816F6640D35D3937E1A5F4 /* Pods-Asilo-MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
+		03F5FD46E2EB88AACE46308F /* PFPurchase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPurchase.h; path = Parse.framework/Headers/PFPurchase.h; sourceTree = "<group>"; };
+		04F11106FE5228BB7C36B686 /* Pods-Asilo-Parse-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Asilo-Parse-prefix.pch"; sourceTree = "<group>"; };
+		0A79D6F0998FB2883433198D /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		0F1DF55F81224AF4F7A1A074 /* PFAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnalytics.h; path = Parse.framework/Headers/PFAnalytics.h; sourceTree = "<group>"; };
+		13F7ED846C1629EFC9CFF1A5 /* BFTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTask.m; path = Bolts/Common/BFTask.m; sourceTree = "<group>"; };
+		15CAB0DAF1BA37524EAA35D8 /* BFCancellationTokenRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationTokenRegistration.h; path = Bolts/Common/BFCancellationTokenRegistration.h; sourceTree = "<group>"; };
+		191F3F823693D407090572CE /* PFObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFObject.h; path = Parse.framework/Headers/PFObject.h; sourceTree = "<group>"; };
+		1BE0A575E75DE3CBC6880356 /* PFConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConstants.h; path = Parse.framework/Headers/PFConstants.h; sourceTree = "<group>"; };
+		22A152DADD4C755AAEF9C7D5 /* PFTwitterUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFTwitterUtils.h; path = Parse.framework/Headers/PFTwitterUtils.h; sourceTree = "<group>"; };
+		24DBE039E406721BB0978B19 /* Pods-Asilo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-dummy.m"; sourceTree = "<group>"; };
+		277B7CAC3E7CB70D3BE934E6 /* Pods-Asilo-Bolts-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-Bolts-dummy.m"; sourceTree = "<group>"; };
+		2B3C2488DD27DAB0D48E29FF /* PF_Twitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PF_Twitter.h; path = Parse.framework/Headers/PF_Twitter.h; sourceTree = "<group>"; };
+		33194E64620F8216629EA3B2 /* libPods-Asilo-Parse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo-Parse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3430456C5D2D8E2943035D23 /* PFInstallation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallation.h; path = Parse.framework/Headers/PFInstallation.h; sourceTree = "<group>"; };
+		3968733B202816E2F50683E8 /* Parse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Parse.h; path = Parse.framework/Headers/Parse.h; sourceTree = "<group>"; };
+		3A7BF85F735F25517C26EAE6 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		3CE9EB12D354F83F0279D255 /* BFCancellationToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationToken.h; path = Bolts/Common/BFCancellationToken.h; sourceTree = "<group>"; };
+		4A2BCC51753FCD73F708BE7B /* BFTaskCompletionSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTaskCompletionSource.h; path = Bolts/Common/BFTaskCompletionSource.h; sourceTree = "<group>"; };
+		4A89D4D4263D75D35C4EF20C /* Pods-Asilo-Bolts-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-Bolts-Private.xcconfig"; sourceTree = "<group>"; };
+		4E246FD5E15F2180AD383895 /* BFExecutor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFExecutor.m; path = Bolts/Common/BFExecutor.m; sourceTree = "<group>"; };
+		5058203E95C2422DD67C36AC /* PFSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSubclassing.h; path = Parse.framework/Headers/PFSubclassing.h; sourceTree = "<group>"; };
+		510BF732C431238D7A17E4AF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		54178D0825ADCAE69554136C /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		55E6DD5FB5EA1B50EEB818E0 /* BFCancellationTokenSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFCancellationTokenSource.h; path = Bolts/Common/BFCancellationTokenSource.h; sourceTree = "<group>"; };
+		56636C9A626FFDBA7E77F6C6 /* BFTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFTask.h; path = Bolts/Common/BFTask.h; sourceTree = "<group>"; };
+		57E53691CF921B9D096E201D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		58CBA71B7F8ADF877436FA3E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		59F4A4783E4078041CBF2E3F /* PFSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFSession.h; path = Parse.framework/Headers/PFSession.h; sourceTree = "<group>"; };
+		5DB5A543EF38330DAA822D72 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		680380CEE8DBC09870C32E07 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		6846644382768FAEEF24DD44 /* Pods-Asilo-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Asilo-environment.h"; sourceTree = "<group>"; };
+		6B52B597BDA7F8CFF3E9DE1D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		6F0D7EFE8DD25ADE95BB62DA /* BFExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFExecutor.h; path = Bolts/Common/BFExecutor.h; sourceTree = "<group>"; };
+		73577DA69F45C2D9B52F0ECE /* libPods-Asilo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73A91A70100E4A10F62E8949 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		76DEA7967988CAAA728C138F /* PFCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFCloud.h; path = Parse.framework/Headers/PFCloud.h; sourceTree = "<group>"; };
+		7B76F0E4780E41D881BC9B77 /* PFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFNetworkActivityIndicatorManager.h; path = Parse.framework/Headers/PFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		7E75B1CB9D9DA42FCA092BA4 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		800D7FB8EB6C13E5FD7E1918 /* PFRelation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRelation.h; path = Parse.framework/Headers/PFRelation.h; sourceTree = "<group>"; };
+		82487CDC0BC42E8645BF6BE8 /* PFPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFPush.h; path = Parse.framework/Headers/PFPush.h; sourceTree = "<group>"; };
+		82764DE5013D88A7F7706F19 /* Pods-Asilo-Parse-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-Parse-Private.xcconfig"; sourceTree = "<group>"; };
+		83D0D87BE3F6361898CC6F8F /* PFQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFQuery.h; path = Parse.framework/Headers/PFQuery.h; sourceTree = "<group>"; };
+		8483D0281457151FA95F5ADD /* Pods-Asilo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Asilo-acknowledgements.plist"; sourceTree = "<group>"; };
+		8536F44C48DC4F62DD8AC8A9 /* PFProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFProduct.h; path = Parse.framework/Headers/PFProduct.h; sourceTree = "<group>"; };
+		8EB8C594D33ABF4B676D47E2 /* PFFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFFile.h; path = Parse.framework/Headers/PFFile.h; sourceTree = "<group>"; };
+		8EC7422FF1C18EADF733FA10 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		91A05BEE0985BCC0962D3152 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		91C4FBFF53F904531817166D /* Pods-Asilo-MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-MMDrawerController.xcconfig"; sourceTree = "<group>"; };
+		93BF2AE1EC8F051824DD81D2 /* libPods-Asilo-Bolts.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo-Bolts.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A4DD3BD0A68E839C81E9D9 /* BFCancellationTokenSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenSource.m; path = Bolts/Common/BFCancellationTokenSource.m; sourceTree = "<group>"; };
+		9851B22A150743D932C15CE2 /* Pods-Asilo-MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Asilo-MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
+		9E8BAC63F565F7D3F47532A2 /* Pods-Asilo-MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		A222568A18020A31F6E93D8B /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		A2B75062A9B1E2061C9643B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A90ED9DD0D3E8E2FD58037FA /* Pods-Asilo-Bolts.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-Bolts.xcconfig"; sourceTree = "<group>"; };
+		A9F9267726DFE84262BAADFF /* PFUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFUser.h; path = Parse.framework/Headers/PFUser.h; sourceTree = "<group>"; };
+		ACD2499AD4C3D9F72F39CDB3 /* Pods-Asilo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Asilo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BAAF79051AC2B09118B39F96 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		BB58292988E603DE78EE6F2D /* Pods-Asilo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Asilo-resources.sh"; sourceTree = "<group>"; };
+		BCA529C8B15C8056385F84DA /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		BDEA6D786D1AAF5D746A4CAF /* PFObject+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PFObject+Subclass.h"; path = "Parse.framework/Headers/PFObject+Subclass.h"; sourceTree = "<group>"; };
+		C05487712B6FB0EE4F461949 /* PFRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFRole.h; path = Parse.framework/Headers/PFRole.h; sourceTree = "<group>"; };
+		C729879D6605858CD810F2C9 /* Pods-Asilo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo.release.xcconfig"; sourceTree = "<group>"; };
+		CC2F9C952D65B5C874947FC3 /* Pods-Asilo-Parse-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-Parse-dummy.m"; sourceTree = "<group>"; };
+		CF63ED00487A34D8462EF94B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		D251DC5F53ABFB769F470809 /* BFCancellationTokenRegistration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationTokenRegistration.m; path = Bolts/Common/BFCancellationTokenRegistration.m; sourceTree = "<group>"; };
+		D6FD313CC362D22214AE4E41 /* Bolts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bolts.h; path = Bolts/Common/Bolts.h; sourceTree = "<group>"; };
+		D768A33525A4CC75D8B6FE55 /* PFACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFACL.h; path = Parse.framework/Headers/PFACL.h; sourceTree = "<group>"; };
+		E2B2B70347FCE3C6661C1D17 /* PFNullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFNullability.h; path = Parse.framework/Headers/PFNullability.h; sourceTree = "<group>"; };
+		E462E92BB9C5C2C94881CE04 /* PFAnonymousUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFAnonymousUtils.h; path = Parse.framework/Headers/PFAnonymousUtils.h; sourceTree = "<group>"; };
+		E4C40401A9F49874A230FE92 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		E552357F95A99D93BCBD2519 /* Pods-Asilo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo.debug.xcconfig"; sourceTree = "<group>"; };
+		EB31351760838D1D55EB5F67 /* PFGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFGeoPoint.h; path = Parse.framework/Headers/PFGeoPoint.h; sourceTree = "<group>"; };
+		EBFABA0244B0D01A37DD4197 /* BFTaskCompletionSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFTaskCompletionSource.m; path = Bolts/Common/BFTaskCompletionSource.m; sourceTree = "<group>"; };
+		ECFCD29791EECA4E8E4CA1E5 /* BoltsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BoltsVersion.h; path = Bolts/Common/BoltsVersion.h; sourceTree = "<group>"; };
+		EE50F3AF16B5254C558821C5 /* Bolts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Bolts.m; path = Bolts/Common/Bolts.m; sourceTree = "<group>"; };
+		F0DD6686FF5877CE5B9D0DB0 /* libParse.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libParse.a; sourceTree = "<group>"; };
+		F374A4D1EDF89B0050896D61 /* libPods-Asilo-MMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo-MMDrawerController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F466801A8020529621236469 /* BFCancellationToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFCancellationToken.m; path = Bolts/Common/BFCancellationToken.m; sourceTree = "<group>"; };
+		FA42BB92671203B477CFBC60 /* Pods-Asilo-Bolts-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Asilo-Bolts-prefix.pch"; sourceTree = "<group>"; };
+		FD4028958BFE0DCEB79FA5A1 /* Pods-Asilo-Parse.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-Parse.xcconfig"; sourceTree = "<group>"; };
+		FFE35F81085C4E4C305E6014 /* PFConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFConfig.h; path = Parse.framework/Headers/PFConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		59021F3760C5B48A87129BFE /* Frameworks */ = {
+		439269BE05C5CAE7AB20393D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041D760ADA4628B4F34847F4 /* Foundation.framework in Frameworks */,
+				E950D4407AF194DF6AA80D36 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2529F7287DE9616BF4E3144 /* Frameworks */ = {
+		6C70B43AA137985AE9806B56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F17EF5BF17B51F93BC69D8D4 /* Foundation.framework in Frameworks */,
-				49D6D831B45147CA37EACA6A /* QuartzCore.framework in Frameworks */,
+				57032C950343CD2E8285B458 /* Foundation.framework in Frameworks */,
+				842F8EA94C1E1E7C51F3B590 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3A2D7C6B136BFAFAB1FBBC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				444A59F3BDCD6D137C8ABF19 /* AudioToolbox.framework in Frameworks */,
+				9C1E6C9299553C6055E916F4 /* CFNetwork.framework in Frameworks */,
+				8057CF3587741A38EB8D6F99 /* CoreGraphics.framework in Frameworks */,
+				19FD49506F2523C03E601034 /* CoreLocation.framework in Frameworks */,
+				C398174A4DCF729752724048 /* Foundation.framework in Frameworks */,
+				CBEB625673616AD933D2B6C0 /* QuartzCore.framework in Frameworks */,
+				02CA87EC7B5DB6F2CA579739 /* Security.framework in Frameworks */,
+				FCE2AA381FD6DFF93752172C /* StoreKit.framework in Frameworks */,
+				6A308B484EADF38AACFD3A85 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F59C713B461C02B85239315A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FE938BC5834AEDA2A0DF6F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		167420C3C0B5C812AEC557DC /* Pods-Asilo */ = {
-			isa = PBXGroup;
-			children = (
-				D78E74B845CE03D662FE40E9 /* Pods-Asilo-acknowledgements.markdown */,
-				16A085C7650150521CF5A0F3 /* Pods-Asilo-acknowledgements.plist */,
-				2FAF50088824BDCA48ACC2BD /* Pods-Asilo-dummy.m */,
-				3D0103A66F58312702DFBC38 /* Pods-Asilo-resources.sh */,
-				0F0C4695FD5BB4157C09EDAF /* Pods-Asilo.debug.xcconfig */,
-				A04EBBF229C96962A253BB2A /* Pods-Asilo.release.xcconfig */,
-			);
-			name = "Pods-Asilo";
-			path = "Target Support Files/Pods-Asilo";
-			sourceTree = "<group>";
-		};
-		24F9A89B00B2E3036F80AE3B /* MMDrawerController */ = {
-			isa = PBXGroup;
-			children = (
-				6A841274E999D69E0400B8BF /* Core */,
-				EF87E9994A9B447C43A5E790 /* MMDrawerBarButtonItem */,
-				72BF6F63A829DBF00E512C88 /* MMDrawerVisualStates */,
-				E246FBBD95B3E956FC306A2A /* Subclass */,
-				F2E401683C7D117462605DF3 /* Support Files */,
-			);
-			path = MMDrawerController;
-			sourceTree = "<group>";
-		};
-		2BD34E3DF809BD02CA3F1B79 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4AAB201D3ACF3EE55F1BB633 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		36EE2F51841831F4F3F1467E = {
-			isa = PBXGroup;
-			children = (
-				FEACCC8B5FA64D69EB0CFB9C /* Podfile */,
-				2BD34E3DF809BD02CA3F1B79 /* Frameworks */,
-				DE5B020194A008E10EFDEC07 /* Pods */,
-				4725ECB3663A9B0F565D3F6A /* Products */,
-				FFFDC4314C9E43B9421A5C4F /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		4725ECB3663A9B0F565D3F6A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C3D113F0D51D110AF4C12D02 /* libMMDrawerController.a */,
-				2BA6BA781DE6723973B74626 /* libPods-Asilo.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4AAB201D3ACF3EE55F1BB633 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				8C0CBD6362FE5F85B69470DF /* Foundation.framework */,
-				5800866C616E966320101AD2 /* QuartzCore.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		6A841274E999D69E0400B8BF /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				A432854D37611CBBED9719DA /* MMDrawerController.h */,
-				7822E25335EBD77D9E1252CA /* MMDrawerController.m */,
-				96075F840EEB0159FDB8BB7A /* MMDrawerController+Subclass.h */,
-				5A899200A457248DAE75E674 /* UIViewController+MMDrawerController.h */,
-				04454E70CBCFF0E3DED5B434 /* UIViewController+MMDrawerController.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		72BF6F63A829DBF00E512C88 /* MMDrawerVisualStates */ = {
-			isa = PBXGroup;
-			children = (
-				A0817607CA3C1BB7650D7E0F /* MMDrawerVisualState.h */,
-				A91DDA1950C5B45B422F9D0C /* MMDrawerVisualState.m */,
-			);
-			name = MMDrawerVisualStates;
-			sourceTree = "<group>";
-		};
-		DE5B020194A008E10EFDEC07 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				24F9A89B00B2E3036F80AE3B /* MMDrawerController */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E246FBBD95B3E956FC306A2A /* Subclass */ = {
+		11E751C940D08E5C1EA4C0F5 /* Subclass */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Subclass;
 			sourceTree = "<group>";
 		};
-		EF87E9994A9B447C43A5E790 /* MMDrawerBarButtonItem */ = {
+		1359AC6368AF84765328CA6B /* MMDrawerBarButtonItem */ = {
 			isa = PBXGroup;
 			children = (
-				27AE867F62FCA342B581346B /* MMDrawerBarButtonItem.h */,
-				7D88C99A9AD35F9D5029AB9A /* MMDrawerBarButtonItem.m */,
+				680380CEE8DBC09870C32E07 /* MMDrawerBarButtonItem.h */,
+				54178D0825ADCAE69554136C /* MMDrawerBarButtonItem.m */,
 			);
 			name = MMDrawerBarButtonItem;
 			sourceTree = "<group>";
 		};
-		F2E401683C7D117462605DF3 /* Support Files */ = {
+		3CDF13077910DEAFB94BEF4C = {
 			isa = PBXGroup;
 			children = (
-				72D254C738AAF3CD40EC6BA5 /* MMDrawerController.xcconfig */,
-				FA2692B2B29F8A0556A48028 /* MMDrawerController-Private.xcconfig */,
-				A111C270789C23B23CBCBCF0 /* MMDrawerController-dummy.m */,
-				1A0BCE80035013EB6E24CE29 /* MMDrawerController-prefix.pch */,
+				7E75B1CB9D9DA42FCA092BA4 /* Podfile */,
+				57915EA6C1A14D0ACF156AA6 /* Frameworks */,
+				5085BC5D42C471A7DDE49726 /* Pods */,
+				8D6747878E6F9193789BA922 /* Products */,
+				A147689E73849A8A71532CA1 /* Targets Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MMDrawerController";
 			sourceTree = "<group>";
 		};
-		FFFDC4314C9E43B9421A5C4F /* Targets Support Files */ = {
+		446160711E42C42EFAB9BB71 /* MMDrawerVisualStates */ = {
 			isa = PBXGroup;
 			children = (
-				167420C3C0B5C812AEC557DC /* Pods-Asilo */,
+				A222568A18020A31F6E93D8B /* MMDrawerVisualState.h */,
+				3A7BF85F735F25517C26EAE6 /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		5085BC5D42C471A7DDE49726 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F68A9E6C580C48C92D41FB5A /* Bolts */,
+				5FC662DBD90B2A5277B45C5C /* MMDrawerController */,
+				CAA1CEF58FC9F73BB89D0363 /* Parse */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		572DBF19F2B1B3EFCE399CAB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A90ED9DD0D3E8E2FD58037FA /* Pods-Asilo-Bolts.xcconfig */,
+				4A89D4D4263D75D35C4EF20C /* Pods-Asilo-Bolts-Private.xcconfig */,
+				277B7CAC3E7CB70D3BE934E6 /* Pods-Asilo-Bolts-dummy.m */,
+				FA42BB92671203B477CFBC60 /* Pods-Asilo-Bolts-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Asilo-Bolts";
+			sourceTree = "<group>";
+		};
+		57915EA6C1A14D0ACF156AA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EBD15A8B877093DD5858FA4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EBD15A8B877093DD5858FA4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6B52B597BDA7F8CFF3E9DE1D /* AudioToolbox.framework */,
+				510BF732C431238D7A17E4AF /* CFNetwork.framework */,
+				58CBA71B7F8ADF877436FA3E /* CoreGraphics.framework */,
+				CF63ED00487A34D8462EF94B /* CoreLocation.framework */,
+				0157D0936B1DA0BC2AC2E430 /* Foundation.framework */,
+				A2B75062A9B1E2061C9643B7 /* QuartzCore.framework */,
+				57E53691CF921B9D096E201D /* Security.framework */,
+				E4C40401A9F49874A230FE92 /* StoreKit.framework */,
+				73A91A70100E4A10F62E8949 /* SystemConfiguration.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5FC662DBD90B2A5277B45C5C /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				B3A135B325A1E43E49BDAAB4 /* Core */,
+				1359AC6368AF84765328CA6B /* MMDrawerBarButtonItem */,
+				446160711E42C42EFAB9BB71 /* MMDrawerVisualStates */,
+				11E751C940D08E5C1EA4C0F5 /* Subclass */,
+				858E928CC5AB5F3172AFE7EC /* Support Files */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		61EE4FC133574D7307501E2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0DD6686FF5877CE5B9D0DB0 /* libParse.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		798A4AA1C63DED287BB03A53 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				3CE9EB12D354F83F0279D255 /* BFCancellationToken.h */,
+				F466801A8020529621236469 /* BFCancellationToken.m */,
+				15CAB0DAF1BA37524EAA35D8 /* BFCancellationTokenRegistration.h */,
+				D251DC5F53ABFB769F470809 /* BFCancellationTokenRegistration.m */,
+				55E6DD5FB5EA1B50EEB818E0 /* BFCancellationTokenSource.h */,
+				96A4DD3BD0A68E839C81E9D9 /* BFCancellationTokenSource.m */,
+				6F0D7EFE8DD25ADE95BB62DA /* BFExecutor.h */,
+				4E246FD5E15F2180AD383895 /* BFExecutor.m */,
+				56636C9A626FFDBA7E77F6C6 /* BFTask.h */,
+				13F7ED846C1629EFC9CFF1A5 /* BFTask.m */,
+				4A2BCC51753FCD73F708BE7B /* BFTaskCompletionSource.h */,
+				EBFABA0244B0D01A37DD4197 /* BFTaskCompletionSource.m */,
+				D6FD313CC362D22214AE4E41 /* Bolts.h */,
+				EE50F3AF16B5254C558821C5 /* Bolts.m */,
+				ECFCD29791EECA4E8E4CA1E5 /* BoltsVersion.h */,
+			);
+			name = Tasks;
+			sourceTree = "<group>";
+		};
+		858E928CC5AB5F3172AFE7EC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				91C4FBFF53F904531817166D /* Pods-Asilo-MMDrawerController.xcconfig */,
+				03816F6640D35D3937E1A5F4 /* Pods-Asilo-MMDrawerController-Private.xcconfig */,
+				9E8BAC63F565F7D3F47532A2 /* Pods-Asilo-MMDrawerController-dummy.m */,
+				9851B22A150743D932C15CE2 /* Pods-Asilo-MMDrawerController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Asilo-MMDrawerController";
+			sourceTree = "<group>";
+		};
+		8D6747878E6F9193789BA922 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73577DA69F45C2D9B52F0ECE /* libPods-Asilo.a */,
+				93BF2AE1EC8F051824DD81D2 /* libPods-Asilo-Bolts.a */,
+				F374A4D1EDF89B0050896D61 /* libPods-Asilo-MMDrawerController.a */,
+				33194E64620F8216629EA3B2 /* libPods-Asilo-Parse.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A147689E73849A8A71532CA1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0EB6C204D37DAD88AD9D91A /* Pods-Asilo */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B3A135B325A1E43E49BDAAB4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BCA529C8B15C8056385F84DA /* MMDrawerController.h */,
+				BAAF79051AC2B09118B39F96 /* MMDrawerController.m */,
+				91A05BEE0985BCC0962D3152 /* MMDrawerController+Subclass.h */,
+				5DB5A543EF38330DAA822D72 /* UIViewController+MMDrawerController.h */,
+				8EC7422FF1C18EADF733FA10 /* UIViewController+MMDrawerController.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		CAA1CEF58FC9F73BB89D0363 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				0A79D6F0998FB2883433198D /* Empty.m */,
+				D768A33525A4CC75D8B6FE55 /* PFACL.h */,
+				0F1DF55F81224AF4F7A1A074 /* PFAnalytics.h */,
+				E462E92BB9C5C2C94881CE04 /* PFAnonymousUtils.h */,
+				76DEA7967988CAAA728C138F /* PFCloud.h */,
+				FFE35F81085C4E4C305E6014 /* PFConfig.h */,
+				1BE0A575E75DE3CBC6880356 /* PFConstants.h */,
+				8EB8C594D33ABF4B676D47E2 /* PFFile.h */,
+				EB31351760838D1D55EB5F67 /* PFGeoPoint.h */,
+				3430456C5D2D8E2943035D23 /* PFInstallation.h */,
+				7B76F0E4780E41D881BC9B77 /* PFNetworkActivityIndicatorManager.h */,
+				E2B2B70347FCE3C6661C1D17 /* PFNullability.h */,
+				191F3F823693D407090572CE /* PFObject.h */,
+				BDEA6D786D1AAF5D746A4CAF /* PFObject+Subclass.h */,
+				8536F44C48DC4F62DD8AC8A9 /* PFProduct.h */,
+				03F5FD46E2EB88AACE46308F /* PFPurchase.h */,
+				82487CDC0BC42E8645BF6BE8 /* PFPush.h */,
+				83D0D87BE3F6361898CC6F8F /* PFQuery.h */,
+				800D7FB8EB6C13E5FD7E1918 /* PFRelation.h */,
+				C05487712B6FB0EE4F461949 /* PFRole.h */,
+				59F4A4783E4078041CBF2E3F /* PFSession.h */,
+				5058203E95C2422DD67C36AC /* PFSubclassing.h */,
+				22A152DADD4C755AAEF9C7D5 /* PFTwitterUtils.h */,
+				A9F9267726DFE84262BAADFF /* PFUser.h */,
+				2B3C2488DD27DAB0D48E29FF /* PF_Twitter.h */,
+				3968733B202816E2F50683E8 /* Parse.h */,
+				61EE4FC133574D7307501E2F /* Frameworks */,
+				ECF0EB4CA2FE478171579611 /* Support Files */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
+		E0EB6C204D37DAD88AD9D91A /* Pods-Asilo */ = {
+			isa = PBXGroup;
+			children = (
+				ACD2499AD4C3D9F72F39CDB3 /* Pods-Asilo-acknowledgements.markdown */,
+				8483D0281457151FA95F5ADD /* Pods-Asilo-acknowledgements.plist */,
+				24DBE039E406721BB0978B19 /* Pods-Asilo-dummy.m */,
+				6846644382768FAEEF24DD44 /* Pods-Asilo-environment.h */,
+				BB58292988E603DE78EE6F2D /* Pods-Asilo-resources.sh */,
+				E552357F95A99D93BCBD2519 /* Pods-Asilo.debug.xcconfig */,
+				C729879D6605858CD810F2C9 /* Pods-Asilo.release.xcconfig */,
+			);
+			name = "Pods-Asilo";
+			path = "Target Support Files/Pods-Asilo";
+			sourceTree = "<group>";
+		};
+		ECF0EB4CA2FE478171579611 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FD4028958BFE0DCEB79FA5A1 /* Pods-Asilo-Parse.xcconfig */,
+				82764DE5013D88A7F7706F19 /* Pods-Asilo-Parse-Private.xcconfig */,
+				CC2F9C952D65B5C874947FC3 /* Pods-Asilo-Parse-dummy.m */,
+				04F11106FE5228BB7C36B686 /* Pods-Asilo-Parse-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Asilo-Parse";
+			sourceTree = "<group>";
+		};
+		F68A9E6C580C48C92D41FB5A /* Bolts */ = {
+			isa = PBXGroup;
+			children = (
+				572DBF19F2B1B3EFCE399CAB /* Support Files */,
+				798A4AA1C63DED287BB03A53 /* Tasks */,
+			);
+			path = Bolts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0EB46EF93A708C7D0E9BC426 /* Headers */ = {
+		1A13D91966CED127FE16C155 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DDCFF61AA7A1C02F19F5308 /* MMDrawerBarButtonItem.h in Headers */,
-				0F5F783BD9F728E0C1282378 /* MMDrawerController+Subclass.h in Headers */,
-				13AA80F630681A396A67D142 /* MMDrawerController.h in Headers */,
-				834733291E5453FABC1148F6 /* MMDrawerVisualState.h in Headers */,
-				C48684F41EAD6B2C59EB3B91 /* UIViewController+MMDrawerController.h in Headers */,
+				04D940F7CE5025EAF1B082BC /* MMDrawerBarButtonItem.h in Headers */,
+				CA41124AD56A8B9EC9D36734 /* MMDrawerController+Subclass.h in Headers */,
+				2AB3DFDBC33845B758A7E086 /* MMDrawerController+Subclass.h in Headers */,
+				C05D5DAE04558E0905C712E7 /* MMDrawerController.h in Headers */,
+				3ADBA9113A0B09249B78EE69 /* MMDrawerVisualState.h in Headers */,
+				53E68352E787D2F97AE8CE93 /* UIViewController+MMDrawerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F1D54E0F429D5FFB72C9E52 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4A8ACDDC1A17A15D2A50785 /* BFCancellationToken.h in Headers */,
+				81349D71B36491D34BE68183 /* BFCancellationTokenRegistration.h in Headers */,
+				784929EEC870B4CD4BD44FC1 /* BFCancellationTokenSource.h in Headers */,
+				626A61485EB632F786310005 /* BFExecutor.h in Headers */,
+				A1937C6FB58BA2265A084170 /* BFTask.h in Headers */,
+				CEC3FDADAED01EB699C3AE5A /* BFTaskCompletionSource.h in Headers */,
+				C75202B024B09FFA9CB4317E /* Bolts.h in Headers */,
+				F798121BC2110CC7A391CF4B /* BoltsVersion.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0DC72C30E1313B85D62565 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCF96F0FCA9E8365EF0A0A27 /* PFACL.h in Headers */,
+				3E2B3188F984FC10D44AFB91 /* PFAnalytics.h in Headers */,
+				AC111F65FDF459D3B14636BE /* PFAnonymousUtils.h in Headers */,
+				1E1520372BE9C4F0D95A4E95 /* PFCloud.h in Headers */,
+				16361D558635D64EDAD5A029 /* PFConfig.h in Headers */,
+				EC9B88648C833E3A4FADFD43 /* PFConstants.h in Headers */,
+				6C11FE9010A158F09B8229DB /* PFFile.h in Headers */,
+				059360B4E62D8F0FED47C8D3 /* PFGeoPoint.h in Headers */,
+				F5B270D147C633891998DC56 /* PFInstallation.h in Headers */,
+				0453A5A025088970BD0C010F /* PFNetworkActivityIndicatorManager.h in Headers */,
+				2A3FAF87F0FBC7E0F4CB0B6D /* PFNullability.h in Headers */,
+				B80E5F4DA595ABD03C74BE2A /* PFObject+Subclass.h in Headers */,
+				EE8E3CE1D7EC6F51BA4BFF67 /* PFObject.h in Headers */,
+				E82BFE2A24838EC5A66571C8 /* PFProduct.h in Headers */,
+				C65EC756E1BC493126C21281 /* PFPurchase.h in Headers */,
+				08E2FB0396E4599BF13ACB7F /* PFPush.h in Headers */,
+				E94BB87DC5CD392F8667CD6E /* PFQuery.h in Headers */,
+				603AC445BBD20D4F178D9FC3 /* PFRelation.h in Headers */,
+				1AD3FBCC6E4B23196E519907 /* PFRole.h in Headers */,
+				5291462FD25A6DB55BAF93D8 /* PFSession.h in Headers */,
+				9FC2FC9E82F6BA544E2C5FF1 /* PFSubclassing.h in Headers */,
+				37BF802861F43DE2940756A7 /* PFTwitterUtils.h in Headers */,
+				04EB81FA449AFEAA1A8D5D6E /* PFUser.h in Headers */,
+				090B94668176873B4F95C524 /* PF_Twitter.h in Headers */,
+				FD0A949D6C7D2869D848564A /* Parse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8CFCCAA3CF5CB3FF8481889F /* MMDrawerController */ = {
+		03FD7319F362790AFADEB14B /* Pods-Asilo-Bolts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D1F0322F40A23E0ACD7ED1FB /* Build configuration list for PBXNativeTarget "MMDrawerController" */;
+			buildConfigurationList = 06812883D6F1EB1F8CDD2206 /* Build configuration list for PBXNativeTarget "Pods-Asilo-Bolts" */;
 			buildPhases = (
-				78EA0F39A09FA3402FF9EBD4 /* Sources */,
-				C2529F7287DE9616BF4E3144 /* Frameworks */,
-				0EB46EF93A708C7D0E9BC426 /* Headers */,
+				60FDDACCC4F5628B0097C8A6 /* Sources */,
+				F59C713B461C02B85239315A /* Frameworks */,
+				6F1D54E0F429D5FFB72C9E52 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MMDrawerController;
-			productName = MMDrawerController;
-			productReference = C3D113F0D51D110AF4C12D02 /* libMMDrawerController.a */;
+			name = "Pods-Asilo-Bolts";
+			productName = "Pods-Asilo-Bolts";
+			productReference = 93BF2AE1EC8F051824DD81D2 /* libPods-Asilo-Bolts.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		F63EDF378684C729E4B0A702 /* Pods-Asilo */ = {
+		933708C4873C478565CF8C76 /* Pods-Asilo-Parse */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C46D98EF09357E42899863A /* Build configuration list for PBXNativeTarget "Pods-Asilo" */;
+			buildConfigurationList = 1BE5D85EB662EDAD032A1D3F /* Build configuration list for PBXNativeTarget "Pods-Asilo-Parse" */;
 			buildPhases = (
-				7ED1E2943F6F7679805DF403 /* Sources */,
-				59021F3760C5B48A87129BFE /* Frameworks */,
+				0D5A22EA47F320AF0E2A3DE1 /* Sources */,
+				B3A2D7C6B136BFAFAB1FBBC3 /* Frameworks */,
+				8B0DC72C30E1313B85D62565 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C6B249049E3EB60243CAB54B /* PBXTargetDependency */,
+				2A2B2A7D76C07DB62FF1BC33 /* PBXTargetDependency */,
+			);
+			name = "Pods-Asilo-Parse";
+			productName = "Pods-Asilo-Parse";
+			productReference = 33194E64620F8216629EA3B2 /* libPods-Asilo-Parse.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B59ED8530EBC8D08E0E0D6E8 /* Pods-Asilo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6EBE72484A3220775492977 /* Build configuration list for PBXNativeTarget "Pods-Asilo" */;
+			buildPhases = (
+				68C9C97D519B760D5B877F7A /* Sources */,
+				439269BE05C5CAE7AB20393D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7463132D7B3404440D69CBF4 /* PBXTargetDependency */,
+				2946AF9DCABA7FD18674CF0C /* PBXTargetDependency */,
+				A93CFC1B5B2AFB0BF080EAF0 /* PBXTargetDependency */,
 			);
 			name = "Pods-Asilo";
 			productName = "Pods-Asilo";
-			productReference = 2BA6BA781DE6723973B74626 /* libPods-Asilo.a */;
+			productReference = 73577DA69F45C2D9B52F0ECE /* libPods-Asilo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EFC4D9B9AB282189CF32F118 /* Pods-Asilo-MMDrawerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55BB65AF59360610B16C3E66 /* Build configuration list for PBXNativeTarget "Pods-Asilo-MMDrawerController" */;
+			buildPhases = (
+				C8EC39D25A44694ECD63A5C7 /* Sources */,
+				6C70B43AA137985AE9806B56 /* Frameworks */,
+				1A13D91966CED127FE16C155 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Asilo-MMDrawerController";
+			productName = "Pods-Asilo-MMDrawerController";
+			productReference = F374A4D1EDF89B0050896D61 /* libPods-Asilo-MMDrawerController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3A4728B3602DDA01B9FCA027 /* Project object */ = {
+		BFC96316E3342145B80DA811 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 68A1EBDE1320713C4E623351 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 567ABF16C78CA1F4049B40D4 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 36EE2F51841831F4F3F1467E;
-			productRefGroup = 4725ECB3663A9B0F565D3F6A /* Products */;
+			mainGroup = 3CDF13077910DEAFB94BEF4C;
+			productRefGroup = 8D6747878E6F9193789BA922 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8CFCCAA3CF5CB3FF8481889F /* MMDrawerController */,
-				F63EDF378684C729E4B0A702 /* Pods-Asilo */,
+				B59ED8530EBC8D08E0E0D6E8 /* Pods-Asilo */,
+				03FD7319F362790AFADEB14B /* Pods-Asilo-Bolts */,
+				EFC4D9B9AB282189CF32F118 /* Pods-Asilo-MMDrawerController */,
+				933708C4873C478565CF8C76 /* Pods-Asilo-Parse */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		78EA0F39A09FA3402FF9EBD4 /* Sources */ = {
+		0D5A22EA47F320AF0E2A3DE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				692D8D414319E2ED764E6AA6 /* MMDrawerBarButtonItem.m in Sources */,
-				16C3CC33C6D78DAF9D6785F2 /* MMDrawerController-dummy.m in Sources */,
-				BA3FA86204F516AB942CD944 /* MMDrawerController.m in Sources */,
-				ED62A45E69FDA737F7846A5C /* MMDrawerVisualState.m in Sources */,
-				C0121A5FFBBD86B3C0568163 /* UIViewController+MMDrawerController.m in Sources */,
+				9BDB4CE7DACE1439DCFF7B01 /* Empty.m in Sources */,
+				30F205E9FA53FB60A93512E2 /* Pods-Asilo-Parse-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7ED1E2943F6F7679805DF403 /* Sources */ = {
+		60FDDACCC4F5628B0097C8A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BFA0C6206BDCA4DBEA941E8 /* Pods-Asilo-dummy.m in Sources */,
+				B696DC4431558E6C8E1EF919 /* BFCancellationToken.m in Sources */,
+				E17F9A106125E2C5A31BE81E /* BFCancellationTokenRegistration.m in Sources */,
+				9B2EF8A5EB1706FC0FC250AE /* BFCancellationTokenSource.m in Sources */,
+				7F8DFC2B781970D233964FC0 /* BFExecutor.m in Sources */,
+				F0B52A9E7293A24831C384D7 /* BFTask.m in Sources */,
+				808F162398BE67E515CC0DF4 /* BFTaskCompletionSource.m in Sources */,
+				D2A3255ACFF6BAEE8A38A30C /* Bolts.m in Sources */,
+				A8884D76561C66F4D4100E44 /* Pods-Asilo-Bolts-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68C9C97D519B760D5B877F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55464B6C8699A70514B6CE5B /* Pods-Asilo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8EC39D25A44694ECD63A5C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED7C83A50C2F4EC2CB775D5B /* MMDrawerBarButtonItem.m in Sources */,
+				558C37922168324C9F0B9C7D /* MMDrawerController.m in Sources */,
+				E500F2BE1879B2036BCBB9F4 /* MMDrawerVisualState.m in Sources */,
+				5256D55556650FCB8B1E3AFB /* Pods-Asilo-MMDrawerController-dummy.m in Sources */,
+				0BE87A8EDC33E9E3E57A8430 /* UIViewController+MMDrawerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C6B249049E3EB60243CAB54B /* PBXTargetDependency */ = {
+		2946AF9DCABA7FD18674CF0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MMDrawerController;
-			target = 8CFCCAA3CF5CB3FF8481889F /* MMDrawerController */;
-			targetProxy = C8A5FAA916B81B44BFA3F49E /* PBXContainerItemProxy */;
+			name = "Pods-Asilo-MMDrawerController";
+			target = EFC4D9B9AB282189CF32F118 /* Pods-Asilo-MMDrawerController */;
+			targetProxy = 0D13EB6E24CA93994DD88D44 /* PBXContainerItemProxy */;
+		};
+		2A2B2A7D76C07DB62FF1BC33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Asilo-Bolts";
+			target = 03FD7319F362790AFADEB14B /* Pods-Asilo-Bolts */;
+			targetProxy = 18986D7B31C4054B368342B6 /* PBXContainerItemProxy */;
+		};
+		7463132D7B3404440D69CBF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Asilo-Bolts";
+			target = 03FD7319F362790AFADEB14B /* Pods-Asilo-Bolts */;
+			targetProxy = E0F5B02D6BCBC3E64DC04322 /* PBXContainerItemProxy */;
+		};
+		A93CFC1B5B2AFB0BF080EAF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Asilo-Parse";
+			target = 933708C4873C478565CF8C76 /* Pods-Asilo-Parse */;
+			targetProxy = 281B529539FAC5DEC519BCDB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A3F6EC3AF07B874C5FE9FB1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F0C4695FD5BB4157C09EDAF /* Pods-Asilo.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		42EAAD71869A575F3B1A4F69 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A04EBBF229C96962A253BB2A /* Pods-Asilo.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		6368CFE1247DA5B84582BA7B /* Release */ = {
+		1BA7159713233D6E136921B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -387,7 +752,119 @@
 			};
 			name = Release;
 		};
-		97312A75A2BC251DC4736D9F /* Debug */ = {
+		2FC0D7E017A0C21B5D5EBB24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C729879D6605858CD810F2C9 /* Pods-Asilo.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4A69A9354774F769DB445F96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A89D4D4263D75D35C4EF20C /* Pods-Asilo-Bolts-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-Bolts/Pods-Asilo-Bolts-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		622CB5B77CB8FBD2A62E5374 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A89D4D4263D75D35C4EF20C /* Pods-Asilo-Bolts-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-Bolts/Pods-Asilo-Bolts-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		67BCF5C5C340195E53C1AD97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03816F6640D35D3937E1A5F4 /* Pods-Asilo-MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-MMDrawerController/Pods-Asilo-MMDrawerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6A3D89907C3B0F251D32CBA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82764DE5013D88A7F7706F19 /* Pods-Asilo-Parse-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-Parse/Pods-Asilo-Parse-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6C3075FC459F55169B411309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E552357F95A99D93BCBD2519 /* Pods-Asilo.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		72E01AE57EC17D572F43242C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03816F6640D35D3937E1A5F4 /* Pods-Asilo-MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-MMDrawerController/Pods-Asilo-MMDrawerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8F5945C7671DE0DE8DE0CD7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -426,28 +903,12 @@
 			};
 			name = Debug;
 		};
-		B20088CCD18EA1EE06E0188E /* Debug */ = {
+		93371AEFFF3528AF3ACE5BED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA2692B2B29F8A0556A48028 /* MMDrawerController-Private.xcconfig */;
+			baseConfigurationReference = 82764DE5013D88A7F7706F19 /* Pods-Asilo-Parse-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		DC40F9899190A33ADF1E94D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA2692B2B29F8A0556A48028 /* MMDrawerController-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-Parse/Pods-Asilo-Parse-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -461,34 +922,52 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		68A1EBDE1320713C4E623351 /* Build configuration list for PBXProject "Pods" */ = {
+		06812883D6F1EB1F8CDD2206 /* Build configuration list for PBXNativeTarget "Pods-Asilo-Bolts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97312A75A2BC251DC4736D9F /* Debug */,
-				6368CFE1247DA5B84582BA7B /* Release */,
+				4A69A9354774F769DB445F96 /* Debug */,
+				622CB5B77CB8FBD2A62E5374 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C46D98EF09357E42899863A /* Build configuration list for PBXNativeTarget "Pods-Asilo" */ = {
+		1BE5D85EB662EDAD032A1D3F /* Build configuration list for PBXNativeTarget "Pods-Asilo-Parse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0A3F6EC3AF07B874C5FE9FB1 /* Debug */,
-				42EAAD71869A575F3B1A4F69 /* Release */,
+				6A3D89907C3B0F251D32CBA0 /* Debug */,
+				93371AEFFF3528AF3ACE5BED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D1F0322F40A23E0ACD7ED1FB /* Build configuration list for PBXNativeTarget "MMDrawerController" */ = {
+		55BB65AF59360610B16C3E66 /* Build configuration list for PBXNativeTarget "Pods-Asilo-MMDrawerController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B20088CCD18EA1EE06E0188E /* Debug */,
-				DC40F9899190A33ADF1E94D5 /* Release */,
+				67BCF5C5C340195E53C1AD97 /* Debug */,
+				72E01AE57EC17D572F43242C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		567ABF16C78CA1F4049B40D4 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F5945C7671DE0DE8DE0CD7A /* Debug */,
+				1BA7159713233D6E136921B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6EBE72484A3220775492977 /* Build configuration list for PBXNativeTarget "Pods-Asilo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C3075FC459F55169B411309 /* Debug */,
+				2FC0D7E017A0C21B5D5EBB24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3A4728B3602DDA01B9FCA027 /* Project object */;
+	rootObject = BFC96316E3342145B80DA811 /* Project object */;
 }
