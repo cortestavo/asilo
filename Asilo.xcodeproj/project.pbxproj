@@ -14,6 +14,7 @@
 		432FEE711B45CC74001BCF5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432FEE701B45CC74001BCF5E /* Images.xcassets */; };
 		432FEE741B45CC74001BCF5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432FEE721B45CC74001BCF5E /* LaunchScreen.xib */; };
 		432FEE801B45CC74001BCF5E /* AsiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE7F1B45CC74001BCF5E /* AsiloTests.m */; };
+		56F7EFEA1C07405C50B97C2E /* libPods-Asilo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		432FEE791B45CC74001BCF5E /* AsiloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsiloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		432FEE7E1B45CC74001BCF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		432FEE7F1B45CC74001BCF5E /* AsiloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsiloTests.m; sourceTree = "<group>"; };
+		92022E9E08D3E1C5EC05193E /* Pods-Asilo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Asilo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Asilo/Pods-Asilo.release.xcconfig"; sourceTree = "<group>"; };
+		B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E5108775253F3D07B198AB /* Pods-Asilo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Asilo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Asilo/Pods-Asilo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F7EFEA1C07405C50B97C2E /* libPods-Asilo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08E190D57819A613A42F17D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1E5108775253F3D07B198AB /* Pods-Asilo.debug.xcconfig */,
+				92022E9E08D3E1C5EC05193E /* Pods-Asilo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0E8F157D1AABA341D11010B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		432FEE571B45CC74001BCF5E = {
 			isa = PBXGroup;
 			children = (
 				432FEE621B45CC74001BCF5E /* Asilo */,
 				432FEE7C1B45CC74001BCF5E /* AsiloTests */,
 				432FEE611B45CC74001BCF5E /* Products */,
+				08E190D57819A613A42F17D5 /* Pods */,
+				0E8F157D1AABA341D11010B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 432FEE831B45CC74001BCF5E /* Build configuration list for PBXNativeTarget "Asilo" */;
 			buildPhases = (
+				0ADF0DC56E34B8B112529587 /* Check Pods Manifest.lock */,
 				432FEE5C1B45CC74001BCF5E /* Sources */,
 				432FEE5D1B45CC74001BCF5E /* Frameworks */,
 				432FEE5E1B45CC74001BCF5E /* Resources */,
+				25A14172006DA00E2B20C130 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +239,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0ADF0DC56E34B8B112529587 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		25A14172006DA00E2B20C130 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Asilo/Pods-Asilo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		432FEE5C1B45CC74001BCF5E /* Sources */ = {
@@ -347,6 +406,7 @@
 		};
 		432FEE841B45CC74001BCF5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1E5108775253F3D07B198AB /* Pods-Asilo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Asilo/Info.plist;
@@ -357,6 +417,7 @@
 		};
 		432FEE851B45CC74001BCF5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92022E9E08D3E1C5EC05193E /* Pods-Asilo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Asilo/Info.plist;
@@ -418,6 +479,7 @@
 				432FEE851B45CC74001BCF5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		432FEE861B45CC74001BCF5E /* Build configuration list for PBXNativeTarget "AsiloTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +488,7 @@
 				432FEE881B45CC74001BCF5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
