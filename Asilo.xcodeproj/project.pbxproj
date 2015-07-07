@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A717E1B4C5584005415F6 /* Search.storyboard */; };
+		3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71801B4C559B005415F6 /* Login.storyboard */; };
+		3E6A71831B4C55B8005415F6 /* Publications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71821B4C55B8005415F6 /* Publications.storyboard */; };
+		3E6A71851B4C55E3005415F6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71841B4C55E3005415F6 /* Settings.storyboard */; };
 		432FEE661B45CC74001BCF5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE651B45CC74001BCF5E /* main.m */; };
 		432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE681B45CC74001BCF5E /* AppDelegate.m */; };
 		432FEE6C1B45CC74001BCF5E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE6B1B45CC74001BCF5E /* ViewController.m */; };
@@ -28,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E6A717E1B4C5584005415F6 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		3E6A71801B4C559B005415F6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3E6A71821B4C55B8005415F6 /* Publications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Publications.storyboard; sourceTree = "<group>"; };
+		3E6A71841B4C55E3005415F6 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		432FEE601B45CC74001BCF5E /* Asilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432FEE641B45CC74001BCF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		432FEE651B45CC74001BCF5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,6 +118,10 @@
 				432FEE6A1B45CC74001BCF5E /* ViewController.h */,
 				432FEE6B1B45CC74001BCF5E /* ViewController.m */,
 				432FEE6D1B45CC74001BCF5E /* Main.storyboard */,
+				3E6A717E1B4C5584005415F6 /* Search.storyboard */,
+				3E6A71821B4C55B8005415F6 /* Publications.storyboard */,
+				3E6A71801B4C559B005415F6 /* Login.storyboard */,
+				3E6A71841B4C55E3005415F6 /* Settings.storyboard */,
 				432FEE701B45CC74001BCF5E /* Images.xcassets */,
 				432FEE721B45CC74001BCF5E /* LaunchScreen.xib */,
 				432FEE631B45CC74001BCF5E /* Supporting Files */,
@@ -227,7 +239,11 @@
 			files = (
 				432FEE6F1B45CC74001BCF5E /* Main.storyboard in Resources */,
 				432FEE741B45CC74001BCF5E /* LaunchScreen.xib in Resources */,
+				3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */,
+				3E6A71831B4C55B8005415F6 /* Publications.storyboard in Resources */,
+				3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */,
 				432FEE711B45CC74001BCF5E /* Images.xcassets in Resources */,
+				3E6A71851B4C55E3005415F6 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
