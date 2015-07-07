@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Log in-->
         <scene sceneID="xeZ-Qh-rJA">
             <objects>
                 <viewController id="f3g-R4-Hnn" customClass="LoginViewController" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="31a-OE-tqz"/>
+                    <navigationItem key="navigationItem" title="Log in" id="31a-OE-tqz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nie-N8-ydQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

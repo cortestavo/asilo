@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Result Map View Controller-->
+        <!--Search-->
         <scene sceneID="GKC-mp-21P">
             <objects>
                 <viewController storyboardIdentifier="ResultMap" id="ech-q5-vzk" customClass="ResultMapViewController" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MDL-fT-g7p"/>
+                    <navigationItem key="navigationItem" title="Search" id="MDL-fT-g7p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jve-8q-Tqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

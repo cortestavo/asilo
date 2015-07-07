@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My Publications-->
         <scene sceneID="bXC-3t-jr9">
             <objects>
                 <tableViewController id="UVa-Rv-ePy" customClass="MyPublicationsTableViewController" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                             <outlet property="delegate" destination="UVa-Rv-ePy" id="Omb-2x-FJ6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="G9V-Cn-Ljx"/>
+                    <navigationItem key="navigationItem" title="My Publications" id="G9V-Cn-Ljx"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evD-ip-itK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="tNc-vh-y2O">
             <objects>
                 <viewController id="HVg-lh-Trd" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7Wq-rG-bpj"/>
+                    <navigationItem key="navigationItem" title="Settings" id="7Wq-rG-bpj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pV3-Cy-Yyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
