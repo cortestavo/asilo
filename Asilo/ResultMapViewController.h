@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASBaseViewController.h"
 
-@interface ResultMapViewController : UIViewController
+@interface ResultMapViewController : ASBaseViewController
 
 @end

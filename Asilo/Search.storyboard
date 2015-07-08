@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="1917" y="300"/>
         </scene>
-        <!--Search Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="W7W-qh-nDA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJ7-y7-DvP" customClass="SearchNavigationController" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJ7-y7-DvP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="khB-Ol-ZZG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

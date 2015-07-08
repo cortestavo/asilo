@@ -15,6 +15,9 @@
 		3E6A718F1B4C6330005415F6 /* MyPublicationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A718E1B4C6330005415F6 /* MyPublicationsTableViewController.m */; };
 		3E6A71931B4C63D3005415F6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A71921B4C63D3005415F6 /* LoginViewController.m */; };
 		3E6A71971B4C645F005415F6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A71961B4C645F005415F6 /* SettingsViewController.m */; };
+		3E6A719D1B4C8D1C005415F6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A719C1B4C8D1C005415F6 /* MenuViewController.m */; };
+		3E6A71A61B4DA386005415F6 /* ASMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A71A51B4DA386005415F6 /* ASMenuItem.m */; };
+		3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A71A81B4DCD8A005415F6 /* ASBaseViewController.m */; };
 		432FEE661B45CC74001BCF5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE651B45CC74001BCF5E /* main.m */; };
 		432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE681B45CC74001BCF5E /* AppDelegate.m */; };
 		432FEE6F1B45CC74001BCF5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432FEE6D1B45CC74001BCF5E /* Main.storyboard */; };
@@ -48,6 +51,12 @@
 		3E6A71921B4C63D3005415F6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3E6A71951B4C645F005415F6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		3E6A71961B4C645F005415F6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		3E6A719B1B4C8D1C005415F6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		3E6A719C1B4C8D1C005415F6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		3E6A71A41B4DA386005415F6 /* ASMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASMenuItem.h; sourceTree = "<group>"; };
+		3E6A71A51B4DA386005415F6 /* ASMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASMenuItem.m; sourceTree = "<group>"; };
+		3E6A71A71B4DCD8A005415F6 /* ASBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASBaseViewController.h; sourceTree = "<group>"; };
+		3E6A71A81B4DCD8A005415F6 /* ASBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASBaseViewController.m; sourceTree = "<group>"; };
 		432FEE601B45CC74001BCF5E /* Asilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432FEE641B45CC74001BCF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		432FEE651B45CC74001BCF5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -166,6 +175,12 @@
 			children = (
 				432FEE671B45CC74001BCF5E /* AppDelegate.h */,
 				432FEE681B45CC74001BCF5E /* AppDelegate.m */,
+				3E6A719B1B4C8D1C005415F6 /* MenuViewController.h */,
+				3E6A719C1B4C8D1C005415F6 /* MenuViewController.m */,
+				3E6A71A41B4DA386005415F6 /* ASMenuItem.h */,
+				3E6A71A51B4DA386005415F6 /* ASMenuItem.m */,
+				3E6A71A71B4DCD8A005415F6 /* ASBaseViewController.h */,
+				3E6A71A81B4DCD8A005415F6 /* ASBaseViewController.m */,
 				432FEE6D1B45CC74001BCF5E /* Main.storyboard */,
 				3E6A718B1B4C61AC005415F6 /* Search */,
 				3E6A718C1B4C62F3005415F6 /* Publications */,
@@ -344,9 +359,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6A718F1B4C6330005415F6 /* MyPublicationsTableViewController.m in Sources */,
+				3E6A71A61B4DA386005415F6 /* ASMenuItem.m in Sources */,
+				3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
 				432FEE661B45CC74001BCF5E /* main.m in Sources */,
 				3E6A71971B4C645F005415F6 /* SettingsViewController.m in Sources */,
+				3E6A719D1B4C8D1C005415F6 /* MenuViewController.m in Sources */,
 				3E6A718A1B4C619C005415F6 /* ResultMapViewController.m in Sources */,
 				3E6A71931B4C63D3005415F6 /* LoginViewController.m in Sources */,
 			);
