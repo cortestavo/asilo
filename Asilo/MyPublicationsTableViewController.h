@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASBaseViewController.h"
 
-@interface MyPublicationsTableViewController : UITableViewController
+@interface MyPublicationsTableViewController : ASBaseViewController<UITableViewDataSource, UITableViewDelegate>
 
 @end

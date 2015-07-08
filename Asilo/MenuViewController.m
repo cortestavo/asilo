@@ -24,9 +24,9 @@
     self.menuItems = @[
                        [[ASMenuItem alloc] initWithTitle:@"For Rent" name:@"Search" requireLogin:NO],
                        [[ASMenuItem alloc] initWithTitle:@"For Sale" name:@"Search" requireLogin:NO],
-                       [[ASMenuItem alloc] initWithTitle:@"My publications" name:@"Publications" requireLogin:NO],
+                       [[ASMenuItem alloc] initWithTitle:@"My publications" name:@"Publications" requireLogin:YES],
                        [[ASMenuItem alloc] initWithTitle:@"Log in" name:@"Login" requireLogin:NO],
-                       [[ASMenuItem alloc] initWithTitle:@"Log out" name:@"logout" requireLogin:NO],
+                       [[ASMenuItem alloc] initWithTitle:@"Log out" name:@"Logout" requireLogin:YES],
                        [[ASMenuItem alloc] initWithTitle:@"Settings" name:@"Settings" requireLogin:NO]
                        ];
 }
