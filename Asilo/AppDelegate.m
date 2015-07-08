@@ -14,9 +14,19 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *searchStoryboard = [UIStoryboard storyboardWithName:@"Search" bundle:nil];
+    UINavigationController *resultMapViewController = [searchStoryboard instantiateInitialViewController];
+    UIViewController *menuViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"Menu"];
+    
+    self.drawerViewController = [[MMDrawerController alloc] initWithCenterViewController:resultMapViewController leftDrawerViewController:menuViewController];
+    self.drawerViewController.openDrawerGestureModeMask = MMOpenDrawerGestureModeCustom;
+    self.drawerViewController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeTapCenterView;
+    
+    self.window.rootViewController = self.drawerViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
