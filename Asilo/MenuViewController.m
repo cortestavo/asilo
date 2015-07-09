@@ -30,7 +30,7 @@
                        }],
                        [[ASNavigateMenuItem alloc] initWithTitle:@"For Sale" requireLogin:NO destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
                            SearchNavigationController *searchNavigation = (SearchNavigationController *)destinationViewController;
-                           searchNavigation.searchType = ASSearchTypeForRent;
+                           searchNavigation.searchType = ASSearchTypeForSale;
                        }],
                        [[ASNavigateMenuItem alloc] initWithTitle:@"My publications" requireLogin:YES destination:@"Publications" beforeNavigation:nil],
                       [[ASNavigateMenuItem alloc] initWithTitle:@"Log in" requireLogin:NO destination:@"Login" beforeNavigation:nil],
