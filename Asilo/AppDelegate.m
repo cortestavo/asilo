@@ -15,6 +15,12 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self initializeDrawerController];
+    
+    return YES;
+}
+
+- (void)initializeDrawerController {
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIStoryboard *searchStoryboard = [UIStoryboard storyboardWithName:@"Search" bundle:nil];
     UINavigationController *resultMapViewController = [searchStoryboard instantiateInitialViewController];
@@ -26,8 +32,6 @@
     
     self.window.rootViewController = self.drawerViewController;
     [self.window makeKeyAndVisible];
-    
-    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
