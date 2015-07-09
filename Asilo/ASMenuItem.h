@@ -11,7 +11,9 @@
 @interface ASMenuItem : NSObject
 @property (strong, nonatomic) NSString *title;
 @property (assign, nonatomic) BOOL isLoginRequired;
-@property (strong, nonatomic) NSString *name;
 
--(instancetype)initWithTitle:(NSString *)title name:(NSString *)name requireLogin:(BOOL)isLoginRequired;
+-(instancetype)initWithTitle:(NSString *)title requireLogin:(BOOL)isLoginRequired;
+
+-(void)selectItem;
+
 @end
