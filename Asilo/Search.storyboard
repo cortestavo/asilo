@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IJ7-y7-DvP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="GKC-mp-21P">
+            <objects>
+                <viewController storyboardIdentifier="ResultMap" id="ech-q5-vzk" customClass="ResultMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="40C-Tl-MXq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gys-CY-Zwc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rlH-An-Bii">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="MDL-fT-g7p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jve-8q-Tqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="300"/>
+        </scene>
+        <!--Search Navigation Controller-->
+        <scene sceneID="W7W-qh-nDA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJ7-y7-DvP" customClass="SearchNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="khB-Ol-ZZG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ech-q5-vzk" kind="relationship" relationship="rootViewController" id="v7K-gC-po7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tF-IF-PiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="300"/>
+        </scene>
+    </scenes>
+</document>
