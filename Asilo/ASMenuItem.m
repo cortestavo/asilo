@@ -19,4 +19,9 @@
     return self;
 }
 
+- (void)selectItem {
+    NSException *exception = [NSException exceptionWithName:@"Not implemented" reason:@"This method should be implemented by the subclass" userInfo:nil];
+    @throw exception;
+}
+
 @end
