@@ -8,7 +8,9 @@
 
 #import "MenuViewController.h"
 #import "ASMenuItem.h"
+#import "ASNavigateMenuItem.h"
 #import "AppDelegate.h"
+#import "SearchNavigationController.h"
 
 @interface MenuViewController ()
 
@@ -22,12 +24,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.menuItems = @[
-                       [[ASMenuItem alloc] initWithTitle:@"For Rent" name:@"Search" requireLogin:NO],
-                       [[ASMenuItem alloc] initWithTitle:@"For Sale" name:@"Search" requireLogin:NO],
-                       [[ASMenuItem alloc] initWithTitle:@"My publications" name:@"Publications" requireLogin:YES],
-                       [[ASMenuItem alloc] initWithTitle:@"Log in" name:@"Login" requireLogin:NO],
-                       [[ASMenuItem alloc] initWithTitle:@"Log out" name:@"Logout" requireLogin:YES],
-                       [[ASMenuItem alloc] initWithTitle:@"Settings" name:@"Settings" requireLogin:NO]
+                       [[ASNavigateMenuItem alloc] initWithTitle:@"For Rent" requireLogin:NO destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
+                           SearchNavigationController *searchNavigation = (SearchNavigationController *)destinationViewController;
+                           searchNavigation.searchType = ASSearchTypeForRent;
+                       }],
+                       [[ASNavigateMenuItem alloc] initWithTitle:@"For Sale" requireLogin:NO destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
+                           SearchNavigationController *searchNavigation = (SearchNavigationController *)destinationViewController;
+                           searchNavigation.searchType = ASSearchTypeForRent;
+                       }],
+                       [[ASNavigateMenuItem alloc] initWithTitle:@"My publications" requireLogin:YES destination:@"Publications" beforeNavigation:nil],
+                      [[ASNavigateMenuItem alloc] initWithTitle:@"Log in" requireLogin:NO destination:@"Login" beforeNavigation:nil],
+                       [[ASNavigateMenuItem alloc] initWithTitle:@"Log out" requireLogin:YES destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
+                           // TODO: Insert Log Out logic here
+                           // TODO: set searchType = ASSearchTypeForRent
+                       }],
+                      [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil]
                        ];
 }
 
@@ -65,10 +76,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ASMenuItem *item = self.menuItems[indexPath.row];
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    UIStoryboard *destinationStoryboard = [UIStoryboard storyboardWithName:item.name bundle:nil];
-    UIViewController *destinationViewController = [destinationStoryboard instantiateInitialViewController];
-    [appDelegate.drawerViewController setCenterViewController:destinationViewController withCloseAnimation:YES completion:nil];
+    [item selectItem];
 }
 
 @end
