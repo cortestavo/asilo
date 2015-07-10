@@ -12,8 +12,8 @@
 @interface ASFilter : PFObject <PFSubclassing>
 
 typedef enum {
-    ASSearchTypeForRent,
-    ASSearchTypeForSale
+    ASFilterTypeForRent,
+    ASFilterTypeForSale
 } ASFilterType;
 
 @property (nonatomic) NSNumber *baths;
