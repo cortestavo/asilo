@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E13BAE31B50399A0052F56D /* WizardLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */; };
+		3E13BAE51B5045210052F56D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13BAE41B5045210052F56D /* MapKit.framework */; };
 		3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A717E1B4C5584005415F6 /* Search.storyboard */; };
 		3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71801B4C559B005415F6 /* Login.storyboard */; };
 		3E6A71831B4C55B8005415F6 /* Publications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71821B4C55B8005415F6 /* Publications.storyboard */; };
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardLocationViewController.h; sourceTree = "<group>"; };
+		3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardLocationViewController.m; sourceTree = "<group>"; };
+		3E13BAE41B5045210052F56D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3E6A717E1B4C5584005415F6 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		3E6A71801B4C559B005415F6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3E6A71821B4C55B8005415F6 /* Publications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Publications.storyboard; sourceTree = "<group>"; };
@@ -84,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E13BAE51B5045210052F56D /* MapKit.framework in Frameworks */,
 				56F7EFEA1C07405C50B97C2E /* libPods-Asilo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +116,7 @@
 		0E8F157D1AABA341D11010B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E13BAE41B5045210052F56D /* MapKit.framework */,
 				3E6A71861B4C5836005415F6 /* libMMDrawerController.a */,
 				B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */,
 			);
@@ -134,6 +141,8 @@
 				3E6A71821B4C55B8005415F6 /* Publications.storyboard */,
 				3E6A718D1B4C6330005415F6 /* MyPublicationsTableViewController.h */,
 				3E6A718E1B4C6330005415F6 /* MyPublicationsTableViewController.m */,
+				3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */,
+				3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */,
 			);
 			name = Publications;
 			sourceTree = "<group>";
@@ -386,6 +395,7 @@
 				3E6A719D1B4C8D1C005415F6 /* MenuViewController.m in Sources */,
 				3E6A718A1B4C619C005415F6 /* ResultMapViewController.m in Sources */,
 				3E6A71931B4C63D3005415F6 /* LoginViewController.m in Sources */,
+				3E13BAE31B50399A0052F56D /* WizardLocationViewController.m in Sources */,
 				3E6A71B01B4DFD4F005415F6 /* SearchNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
