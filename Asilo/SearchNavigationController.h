@@ -7,14 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASFilter.h"
 
 @interface SearchNavigationController : UINavigationController
 
-typedef enum {
-    ASSearchTypeForRent,
-    ASSearchTypeForSale
-} ASSearchType;
-
-@property (assign, nonatomic) ASSearchType searchType;
+@property (assign, nonatomic) ASFilterType searchType;
 
 @end
