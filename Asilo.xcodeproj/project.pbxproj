@@ -26,6 +26,11 @@
 		432FEE711B45CC74001BCF5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432FEE701B45CC74001BCF5E /* Images.xcassets */; };
 		432FEE741B45CC74001BCF5E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432FEE721B45CC74001BCF5E /* LaunchScreen.xib */; };
 		432FEE801B45CC74001BCF5E /* AsiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE7F1B45CC74001BCF5E /* AsiloTests.m */; };
+		432FEEFB1B4C9B76001BCF5E /* ASHome.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEEFA1B4C9B76001BCF5E /* ASHome.m */; };
+		432FEF011B4DA7C3001BCF5E /* ASTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF001B4DA7C3001BCF5E /* ASTag.m */; };
+		432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF031B4DA89E001BCF5E /* ASFilter.m */; };
+		432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF061B4DE9F5001BCF5E /* ASUser.m */; };
+		432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */; };
 		56F7EFEA1C07405C50B97C2E /* libPods-Asilo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +79,16 @@
 		432FEE791B45CC74001BCF5E /* AsiloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsiloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		432FEE7E1B45CC74001BCF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		432FEE7F1B45CC74001BCF5E /* AsiloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsiloTests.m; sourceTree = "<group>"; };
+		432FEEF91B4C9B76001BCF5E /* ASHome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHome.h; sourceTree = "<group>"; };
+		432FEEFA1B4C9B76001BCF5E /* ASHome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHome.m; sourceTree = "<group>"; };
+		432FEEFF1B4DA7C3001BCF5E /* ASTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTag.h; sourceTree = "<group>"; };
+		432FEF001B4DA7C3001BCF5E /* ASTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTag.m; sourceTree = "<group>"; };
+		432FEF021B4DA89E001BCF5E /* ASFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFilter.h; sourceTree = "<group>"; };
+		432FEF031B4DA89E001BCF5E /* ASFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFilter.m; sourceTree = "<group>"; };
+		432FEF051B4DE9F5001BCF5E /* ASUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASUser.h; sourceTree = "<group>"; };
+		432FEF061B4DE9F5001BCF5E /* ASUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASUser.m; sourceTree = "<group>"; };
+		432FEF0A1B4EE2E6001BCF5E /* ASPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPhoto.h; sourceTree = "<group>"; };
+		432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPhoto.m; sourceTree = "<group>"; };
 		92022E9E08D3E1C5EC05193E /* Pods-Asilo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Asilo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Asilo/Pods-Asilo.release.xcconfig"; sourceTree = "<group>"; };
 		B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E5108775253F3D07B198AB /* Pods-Asilo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Asilo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Asilo/Pods-Asilo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +209,7 @@
 		432FEE621B45CC74001BCF5E /* Asilo */ = {
 			isa = PBXGroup;
 			children = (
+				432FEEF71B4C9B54001BCF5E /* Model */,
 				432FEE671B45CC74001BCF5E /* AppDelegate.h */,
 				432FEE681B45CC74001BCF5E /* AppDelegate.m */,
 				3E6A71A71B4DCD8A005415F6 /* ASBaseViewController.h */,
@@ -235,6 +251,31 @@
 				432FEE7E1B45CC74001BCF5E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		432FEEF71B4C9B54001BCF5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				432FEEF81B4C9B5B001BCF5E /* Entities */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		432FEEF81B4C9B5B001BCF5E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				432FEEF91B4C9B76001BCF5E /* ASHome.h */,
+				432FEEFA1B4C9B76001BCF5E /* ASHome.m */,
+				432FEF051B4DE9F5001BCF5E /* ASUser.h */,
+				432FEF061B4DE9F5001BCF5E /* ASUser.m */,
+				432FEEFF1B4DA7C3001BCF5E /* ASTag.h */,
+				432FEF001B4DA7C3001BCF5E /* ASTag.m */,
+				432FEF021B4DA89E001BCF5E /* ASFilter.h */,
+				432FEF031B4DA89E001BCF5E /* ASFilter.m */,
+				432FEF0A1B4EE2E6001BCF5E /* ASPhoto.h */,
+				432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,7 +421,13 @@
 				3E6A71A61B4DA386005415F6 /* ASMenuItem.m in Sources */,
 				3E6A71AD1B4DE6F2005415F6 /* ASNavigateMenuItem.m in Sources */,
 				3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */,
+				432FEF011B4DA7C3001BCF5E /* ASTag.m in Sources */,
+				432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */,
+				432FEE6C1B45CC74001BCF5E /* ViewController.m in Sources */,
+				432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */,
+				432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
+				432FEEFB1B4C9B76001BCF5E /* ASHome.m in Sources */,
 				432FEE661B45CC74001BCF5E /* main.m in Sources */,
 				3E6A71971B4C645F005415F6 /* SettingsViewController.m in Sources */,
 				3E6A719D1B4C8D1C005415F6 /* MenuViewController.m in Sources */,
