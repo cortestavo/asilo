@@ -51,7 +51,6 @@
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
-    NSLog(@"Updated user location");
     if (!self.hasCenteredMapAtLoading) {
         mapView.region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 100, 100);
         self.hasCenteredMapAtLoading = true;
