@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="do6-mV-Lpq">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Publications-->
@@ -46,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-K6-1eW">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8c-K6-1eW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
                         </subviews>
@@ -59,10 +61,66 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SZK-0q-ZLf"/>
+                    <connections>
+                        <outlet property="mapView" destination="u8c-K6-1eW" id="IWN-f1-eWu"/>
+                        <segue destination="Ewq-VL-0oW" kind="show" identifier="WizardType" id="Jne-PG-I7n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOM-bm-TFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1727" y="222"/>
+        </scene>
+        <!--Wizard Type View Controller-->
+        <scene sceneID="ceC-sq-ey2">
+            <objects>
+                <viewController storyboardIdentifier="WizardType" id="Ewq-VL-0oW" customClass="WizardTypeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fc6-LY-NUW"/>
+                        <viewControllerLayoutGuide type="bottom" id="xTr-fO-72Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NXH-GE-HLN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCw-RS-mRz">
+                                <rect key="frame" x="535" y="72" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Rent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gk1-pA-3fX">
+                                <rect key="frame" x="16" y="77" width="511" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SWJ-S6-yKc">
+                                <rect key="frame" x="535" y="111" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For Sale" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnE-eH-WjX">
+                                <rect key="frame" x="16" y="116" width="511" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hCw-RS-mRz" firstAttribute="leading" secondItem="SWJ-S6-yKc" secondAttribute="leading" id="5RI-5w-UAl"/>
+                            <constraint firstItem="hCw-RS-mRz" firstAttribute="top" secondItem="Fc6-LY-NUW" secondAttribute="bottom" constant="8" symbolic="YES" id="Atn-45-0TC"/>
+                            <constraint firstItem="gk1-pA-3fX" firstAttribute="leading" secondItem="NnE-eH-WjX" secondAttribute="leading" id="Dqe-R9-OfO"/>
+                            <constraint firstItem="gk1-pA-3fX" firstAttribute="leading" secondItem="NXH-GE-HLN" secondAttribute="leadingMargin" id="UOn-fp-8f4"/>
+                            <constraint firstItem="hCw-RS-mRz" firstAttribute="centerY" secondItem="gk1-pA-3fX" secondAttribute="centerY" id="V7A-Lm-ycw"/>
+                            <constraint firstItem="hCw-RS-mRz" firstAttribute="leading" secondItem="gk1-pA-3fX" secondAttribute="trailing" constant="8" symbolic="YES" id="XFs-MG-kIp"/>
+                            <constraint firstItem="NnE-eH-WjX" firstAttribute="centerY" secondItem="SWJ-S6-yKc" secondAttribute="centerY" id="ZPj-Yv-aGg"/>
+                            <constraint firstItem="NnE-eH-WjX" firstAttribute="top" secondItem="gk1-pA-3fX" secondAttribute="bottom" constant="18" id="bcB-dM-DOB"/>
+                            <constraint firstItem="SWJ-S6-yKc" firstAttribute="top" secondItem="hCw-RS-mRz" secondAttribute="bottom" constant="8" symbolic="YES" id="dbH-IM-2es"/>
+                            <constraint firstItem="gk1-pA-3fX" firstAttribute="top" secondItem="Fc6-LY-NUW" secondAttribute="bottom" constant="13" id="nmY-eJ-SYF"/>
+                            <constraint firstItem="SWJ-S6-yKc" firstAttribute="leading" secondItem="NnE-eH-WjX" secondAttribute="trailing" constant="8" symbolic="YES" id="onA-cc-zys"/>
+                            <constraint firstItem="SWJ-S6-yKc" firstAttribute="trailing" secondItem="NXH-GE-HLN" secondAttribute="trailingMargin" id="zAF-cX-aXD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QB0-67-0cP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2458" y="222"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="drd-p3-56r">
