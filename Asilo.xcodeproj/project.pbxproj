@@ -148,10 +148,10 @@
 		3E13BAE91B506BFA0052F56D /* Publish Wizard */ = {
 			isa = PBXGroup;
 			children = (
-				3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */,
-				3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */,
 				3E13BAEA1B506C2E0052F56D /* WizardTypeViewController.h */,
 				3E13BAEB1B506C2E0052F56D /* WizardTypeViewController.m */,
+				3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */,
+				3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */,
 			);
 			name = "Publish Wizard";
 			sourceTree = "<group>";

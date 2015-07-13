@@ -25,6 +25,7 @@
     [super viewDidLoad];
     [self setupNavigationBar];
     [self setupMap];
+
 }
 
 - (void)didReceiveMemoryWarning {
