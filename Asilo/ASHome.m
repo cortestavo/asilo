@@ -11,25 +11,25 @@
 
 @implementation ASHome
 
-@dynamic address;
-@dynamic baths;
-@dynamic beds;
-@dynamic deposit;
-@dynamic description;
-@dynamic hasAC;
-@dynamic hasHeating;
-@dynamic isForSale;
-@dynamic isForRent;
-@dynamic isFurnished;
-@dynamic lease;
-@dynamic location;
-@dynamic owner;
-@dynamic parkingLots;
-@dynamic petsAllowed;
-@dynamic priceForRent;
-@dynamic priceForSale;
-@dynamic squareMeters;
-@dynamic tags;
+@dynamic address;           // shared
+@dynamic baths;             // shared
+@dynamic beds;              // shared
+@dynamic deposit;           // rent
+@dynamic description;       // shared
+@dynamic hasAC;             // shared
+@dynamic hasHeating;        // shared
+@dynamic isForSale;         // NA
+@dynamic isForRent;         // NA
+@dynamic isFurnished;       // rent
+@dynamic lease;             // rent
+@dynamic location;          // NA
+@dynamic owner;             // NA
+@dynamic parkingLots;       // shared
+@dynamic petsAllowed;       // rent
+@dynamic priceForRent;      // rent
+@dynamic priceForSale;      // sale
+@dynamic squareMeters;      // shared
+@dynamic tags;              // shared
 
 + (void)load {
     [self registerSubclass];
