@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E13BAE31B50399A0052F56D /* WizardLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */; };
 		3E13BAE51B5045210052F56D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13BAE41B5045210052F56D /* MapKit.framework */; };
+		3E13BAEC1B506C2E0052F56D /* WizardTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAEB1B506C2E0052F56D /* WizardTypeViewController.m */; };
+		3E13BAEE1B5433440052F56D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13BAED1B5433440052F56D /* CoreLocation.framework */; };
 		3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A717E1B4C5584005415F6 /* Search.storyboard */; };
 		3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71801B4C559B005415F6 /* Login.storyboard */; };
 		3E6A71831B4C55B8005415F6 /* Publications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71821B4C55B8005415F6 /* Publications.storyboard */; };
@@ -50,6 +52,9 @@
 		3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardLocationViewController.h; sourceTree = "<group>"; };
 		3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardLocationViewController.m; sourceTree = "<group>"; };
 		3E13BAE41B5045210052F56D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3E13BAEA1B506C2E0052F56D /* WizardTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardTypeViewController.h; sourceTree = "<group>"; };
+		3E13BAEB1B506C2E0052F56D /* WizardTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardTypeViewController.m; sourceTree = "<group>"; };
+		3E13BAED1B5433440052F56D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3E6A717E1B4C5584005415F6 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		3E6A71801B4C559B005415F6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3E6A71821B4C55B8005415F6 /* Publications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Publications.storyboard; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E13BAEE1B5433440052F56D /* CoreLocation.framework in Frameworks */,
 				3E13BAE51B5045210052F56D /* MapKit.framework in Frameworks */,
 				56F7EFEA1C07405C50B97C2E /* libPods-Asilo.a in Frameworks */,
 			);
@@ -131,11 +137,23 @@
 		0E8F157D1AABA341D11010B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E13BAED1B5433440052F56D /* CoreLocation.framework */,
 				3E13BAE41B5045210052F56D /* MapKit.framework */,
 				3E6A71861B4C5836005415F6 /* libMMDrawerController.a */,
 				B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E13BAE91B506BFA0052F56D /* Publish Wizard */ = {
+			isa = PBXGroup;
+			children = (
+				3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */,
+				3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */,
+				3E13BAEA1B506C2E0052F56D /* WizardTypeViewController.h */,
+				3E13BAEB1B506C2E0052F56D /* WizardTypeViewController.m */,
+			);
+			name = "Publish Wizard";
 			sourceTree = "<group>";
 		};
 		3E6A718B1B4C61AC005415F6 /* Search */ = {
@@ -156,8 +174,7 @@
 				3E6A71821B4C55B8005415F6 /* Publications.storyboard */,
 				3E6A718D1B4C6330005415F6 /* MyPublicationsTableViewController.h */,
 				3E6A718E1B4C6330005415F6 /* MyPublicationsTableViewController.m */,
-				3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */,
-				3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */,
+				3E13BAE91B506BFA0052F56D /* Publish Wizard */,
 			);
 			name = Publications;
 			sourceTree = "<group>";
@@ -338,6 +355,7 @@
 				TargetAttributes = {
 					432FEE5F1B45CC74001BCF5E = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = TF76XBAQC8;
 					};
 					432FEE781B45CC74001BCF5E = {
 						CreatedOnToolsVersion = 6.4;
@@ -432,8 +450,8 @@
 				3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */,
 				432FEF011B4DA7C3001BCF5E /* ASTag.m in Sources */,
 				432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */,
-				432FEE6C1B45CC74001BCF5E /* ViewController.m in Sources */,
 				432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */,
+				3E13BAEC1B506C2E0052F56D /* WizardTypeViewController.m in Sources */,
 				432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
 				432FEEFB1B4C9B76001BCF5E /* ASHome.m in Sources */,
@@ -572,13 +590,17 @@
 			baseConfigurationReference = E1E5108775253F3D07B198AB /* Pods-Asilo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Asilo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -587,13 +609,17 @@
 			baseConfigurationReference = 92022E9E08D3E1C5EC05193E /* Pods-Asilo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Asilo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

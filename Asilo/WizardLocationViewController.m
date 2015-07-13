@@ -7,9 +7,15 @@
 //
 
 #import "WizardLocationViewController.h"
+#import "ASHome.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface WizardLocationViewController ()
 
+@property (strong, nonatomic) ASHome *home;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (assign, nonatomic) BOOL hasCenteredMapAtLoading;
 
 @end
 
@@ -18,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavigationBar];
+    [self setupMap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,12 +38,35 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelPublishing:)];
 }
 
+- (void)setupMap {
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.distanceFilter = 5;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    self.mapView.delegate = self;
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    NSLog(@"Updated user location");
+    if (!self.hasCenteredMapAtLoading) {
+        mapView.region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 100, 100);
+        self.hasCenteredMapAtLoading = true;
+    }
+}
+
+- (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error {
+    NSLog(@"err: %@", error.description);
+}
+
 - (void)cancelPublishing:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)next {
-
+    [self performSegueWithIdentifier:@"WizardType" sender:nil];
 }
 
 /*
