@@ -8,6 +8,7 @@
 
 #import "WizardLocationViewController.h"
 #import "ASHome.h"
+#import "ASUser.h"
 #import "WizardSharedDataViewController.h"
 #import <CoreLocation/CoreLocation.h>
 
@@ -24,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.home.owner = [ASUser currentUser];
     [self setupNavigationBar];
     [self setupMap];
     [self setupSelectingLocation];
