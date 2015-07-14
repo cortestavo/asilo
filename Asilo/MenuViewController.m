@@ -11,6 +11,8 @@
 #import "ASNavigateMenuItem.h"
 #import "AppDelegate.h"
 #import "SearchNavigationController.h"
+#import <Parse/Parse.h>
+#import "ASUser.h"
 
 @interface MenuViewController ()
 
@@ -34,12 +36,9 @@
                        }],
                        [[ASNavigateMenuItem alloc] initWithTitle:@"My publications" requireLogin:YES destination:@"Publications" beforeNavigation:nil],
                       [[ASNavigateMenuItem alloc] initWithTitle:@"Log in" requireLogin:NO destination:@"Login" beforeNavigation:nil],
-                       [[ASNavigateMenuItem alloc] initWithTitle:@"Log out" requireLogin:YES destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
-                           // TODO: Insert Log Out logic here
-                           // TODO: set searchType = ASSearchTypeForRent
-                       }],
                       [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil]
                        ];
+    [self updateLoginStatus];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,6 +76,15 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     ASMenuItem *item = self.menuItems[indexPath.row];
     [item selectItem];
+}
+
+- (void) updateLoginStatus {
+    NSString *loginTitle = @"Log in";
+    if([ASUser currentUser]) {
+        loginTitle = @"Log out";
+    }
+    [self.menuItems[3] setTitle:loginTitle];
+    [self.menuItemsTable reloadData];
 }
 
 @end

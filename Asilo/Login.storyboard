@@ -13,11 +13,47 @@
                         <viewControllerLayoutGuide type="bottom" id="0sY-nZ-vWa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9q2-7f-Zg5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkA-1e-gW2">
+                                <rect key="frame" x="60" y="263" width="200" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Xq0-Nq-I5X"/>
+                                    <constraint firstAttribute="height" constant="41" id="aba-9q-kfU"/>
+                                </constraints>
+                                <state key="normal" image="login-facebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginWithFacebook:" destination="f3g-R4-Hnn" eventType="touchUpInside" id="atC-rc-DSb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logging out ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYg-io-wnJ">
+                                <rect key="frame" x="105" y="273" width="111" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="IJM-ho-yYX"/>
+                                    <constraint firstAttribute="width" constant="111" id="n9S-BS-sIi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="xkA-1e-gW2" secondAttribute="centerY" id="Gkl-Tm-liV"/>
+                            <constraint firstAttribute="centerY" secondItem="LYg-io-wnJ" secondAttribute="centerY" id="Mkb-Dm-kOq"/>
+                            <constraint firstAttribute="centerX" secondItem="LYg-io-wnJ" secondAttribute="centerX" id="bn8-Dv-N6y"/>
+                            <constraint firstAttribute="centerX" secondItem="xkA-1e-gW2" secondAttribute="centerX" id="xHi-5C-Ua3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Log in" id="31a-OE-tqz"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="loggingOutLabel" destination="LYg-io-wnJ" id="mbN-hB-4Po"/>
+                        <outlet property="loginFacebookButton" destination="xkA-1e-gW2" id="fx2-R5-Js6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nie-N8-ydQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,4 +78,7 @@
             <point key="canvasLocation" x="302" y="382"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="login-facebook.png" width="200" height="41"/>
+    </resources>
 </document>

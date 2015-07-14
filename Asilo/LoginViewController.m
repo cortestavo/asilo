@@ -7,6 +7,14 @@
 //
 
 #import "LoginViewController.h"
+#import <Parse/Parse.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import "ASUser.h"
+#import "MenuViewController.h"
+#import "ASMenuItem.h"
+#import <MMDrawerController/MMDrawerController.h>
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 
@@ -16,22 +24,54 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if([ASUser currentUser] == nil) {
+        [self showOnlyLoginButton];
+    } else {
+        [self showOnlyLogoutLabel];
+        [ASUser logOutInBackgroundWithBlock:^(NSError *error) {
+            [self showOnlyLoginButton];
+            [self updateLoginStatus];
+            [self sendToSearch];
+        }];
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)loginWithFacebook:(id)sender {
+    [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile"] block:^(PFUser *user, NSError *error) {
+        [self updateLoginStatus];
+        if(user != nil) {
+            [self sendToSearch];
+        }
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (MMDrawerController *) getDrawer {
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    MMDrawerController *drawerController = appDelegate.drawerViewController;
+    return drawerController;
 }
-*/
+
+- (void) updateLoginStatus {
+    MMDrawerController *drawer = [self getDrawer];
+    MenuViewController *menu = (MenuViewController *)drawer.leftDrawerViewController;
+    [menu updateLoginStatus];
+}
+
+- (void) sendToSearch {
+    MMDrawerController *drawer = [self getDrawer];
+    UIStoryboard *destinationStoryboard = [UIStoryboard storyboardWithName:@"Search" bundle:nil];
+    UIViewController *destinationViewController = [destinationStoryboard instantiateInitialViewController];
+    [drawer setCenterViewController:destinationViewController withCloseAnimation:NO completion:nil];
+}
+
+- (void) showOnlyLoginButton {
+    [self.loggingOutLabel setHidden:YES];
+    [self.loginFacebookButton setHidden:NO];
+}
+
+- (void) showOnlyLogoutLabel {
+    [self.loggingOutLabel setHidden:NO];
+    [self.loginFacebookButton setHidden:YES];
+}
 
 @end
