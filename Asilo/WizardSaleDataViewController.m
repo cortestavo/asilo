@@ -10,6 +10,8 @@
 
 @interface WizardSaleDataViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *priceForSaleField;
+
 @end
 
 @implementation WizardSaleDataViewController

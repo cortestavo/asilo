@@ -10,6 +10,13 @@
 
 @interface WizardRentDataViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *priceForRentField;
+@property (weak, nonatomic) IBOutlet UITextField *depositField;
+@property (weak, nonatomic) IBOutlet UILabel *monthsForLeaseLabel;
+@property (weak, nonatomic) IBOutlet UIStepper *monthsForLeaseStepper;
+@property (weak, nonatomic) IBOutlet UISwitch *furnishedSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *petsAllowedSwitch;
+
 @end
 
 @implementation WizardRentDataViewController

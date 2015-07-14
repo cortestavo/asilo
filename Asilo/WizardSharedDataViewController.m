@@ -10,6 +10,20 @@
 
 @interface WizardSharedDataViewController ()
 
+@property (weak, nonatomic) IBOutlet UISwitch *forRentSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *forSaleSwitch;
+@property (weak, nonatomic) IBOutlet UITextField *addressField;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfBathsLabel;
+@property (weak, nonatomic) IBOutlet UIStepper *numberOfBathsStepper;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfBedsLabel;
+@property (weak, nonatomic) IBOutlet UIStepper *numberOfBedsStepper;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionText;
+@property (weak, nonatomic) IBOutlet UISwitch *hasAcSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *hasHeatingSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfParkingLotsLabel;
+@property (weak, nonatomic) IBOutlet UIStepper *numberOfParkingLotsStepper;
+@property (weak, nonatomic) IBOutlet UITextField *squareFeetField;
+
 @end
 
 @implementation WizardSharedDataViewController
