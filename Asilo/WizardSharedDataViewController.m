@@ -47,6 +47,19 @@
     [self performSegueWithIdentifier:@"WizardSharedToRent" sender:nil];
 }
 
+- (IBAction)forRentSwitchChanged:(id)sender {
+    UISwitch *forRentSwitch = (UISwitch *)sender;
+    if (!forRentSwitch.isOn) {
+        self.forSaleSwitch.on = true;
+    }
+}
+
+- (IBAction)forSaleSwitchChanged:(id)sender {
+    UISwitch *forSaleSwitch = (UISwitch *)sender;
+    if (!forSaleSwitch.isOn) {
+        self.forRentSwitch.on = true;
+    }
+}
 
 #pragma mark - Navigation
 
