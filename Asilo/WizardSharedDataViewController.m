@@ -47,17 +47,26 @@
     [self performSegueWithIdentifier:@"WizardSharedToRent" sender:nil];
 }
 
+- (IBAction)forRentSwitchChanged:(id)sender {
+    UISwitch *forRentSwitch = (UISwitch *)sender;
+    if (!forRentSwitch.isOn) {
+        self.forSaleSwitch.on = true;
+    }
+}
+
+- (IBAction)forSaleSwitchChanged:(id)sender {
+    UISwitch *forSaleSwitch = (UISwitch *)sender;
+    if (!forSaleSwitch.isOn) {
+        self.forRentSwitch.on = true;
+    }
+}
+
 /*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-<<<<<<< HEAD
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-=======
 //     if (segue.identifier isEqualToString:@"Wizard")
->>>>>>> change name of VC
 }
 */
 
