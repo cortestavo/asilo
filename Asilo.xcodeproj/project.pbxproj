@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		3E13BAE31B50399A0052F56D /* WizardLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */; };
 		3E13BAE51B5045210052F56D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13BAE41B5045210052F56D /* MapKit.framework */; };
-		3E13BAEC1B506C2E0052F56D /* WizardTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAEB1B506C2E0052F56D /* WizardTypeViewController.m */; };
+		3E13BAEC1B506C2E0052F56D /* WizardSharedDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAEB1B506C2E0052F56D /* WizardSharedDataViewController.m */; };
 		3E13BAEE1B5433440052F56D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13BAED1B5433440052F56D /* CoreLocation.framework */; };
+		3E13BAF41B548E300052F56D /* WizardRentDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAF31B548E300052F56D /* WizardRentDataViewController.m */; };
+		3E13BAF71B548E490052F56D /* WizardSaleDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAF61B548E490052F56D /* WizardSaleDataViewController.m */; };
 		3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A717E1B4C5584005415F6 /* Search.storyboard */; };
 		3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71801B4C559B005415F6 /* Login.storyboard */; };
 		3E6A71831B4C55B8005415F6 /* Publications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71821B4C55B8005415F6 /* Publications.storyboard */; };
@@ -52,9 +54,13 @@
 		3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardLocationViewController.h; sourceTree = "<group>"; };
 		3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardLocationViewController.m; sourceTree = "<group>"; };
 		3E13BAE41B5045210052F56D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		3E13BAEA1B506C2E0052F56D /* WizardTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardTypeViewController.h; sourceTree = "<group>"; };
-		3E13BAEB1B506C2E0052F56D /* WizardTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardTypeViewController.m; sourceTree = "<group>"; };
+		3E13BAEA1B506C2E0052F56D /* WizardSharedDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardSharedDataViewController.h; sourceTree = "<group>"; };
+		3E13BAEB1B506C2E0052F56D /* WizardSharedDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardSharedDataViewController.m; sourceTree = "<group>"; };
 		3E13BAED1B5433440052F56D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3E13BAF21B548E300052F56D /* WizardRentDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardRentDataViewController.h; sourceTree = "<group>"; };
+		3E13BAF31B548E300052F56D /* WizardRentDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardRentDataViewController.m; sourceTree = "<group>"; };
+		3E13BAF51B548E490052F56D /* WizardSaleDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardSaleDataViewController.h; sourceTree = "<group>"; };
+		3E13BAF61B548E490052F56D /* WizardSaleDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardSaleDataViewController.m; sourceTree = "<group>"; };
 		3E6A717E1B4C5584005415F6 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		3E6A71801B4C559B005415F6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3E6A71821B4C55B8005415F6 /* Publications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Publications.storyboard; sourceTree = "<group>"; };
@@ -150,8 +156,12 @@
 			children = (
 				3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */,
 				3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */,
-				3E13BAEA1B506C2E0052F56D /* WizardTypeViewController.h */,
-				3E13BAEB1B506C2E0052F56D /* WizardTypeViewController.m */,
+				3E13BAEA1B506C2E0052F56D /* WizardSharedDataViewController.h */,
+				3E13BAEB1B506C2E0052F56D /* WizardSharedDataViewController.m */,
+				3E13BAF21B548E300052F56D /* WizardRentDataViewController.h */,
+				3E13BAF31B548E300052F56D /* WizardRentDataViewController.m */,
+				3E13BAF51B548E490052F56D /* WizardSaleDataViewController.h */,
+				3E13BAF61B548E490052F56D /* WizardSaleDataViewController.m */,
 			);
 			name = "Publish Wizard";
 			sourceTree = "<group>";
@@ -448,10 +458,12 @@
 				3E6A71A61B4DA386005415F6 /* ASMenuItem.m in Sources */,
 				3E6A71AD1B4DE6F2005415F6 /* ASNavigateMenuItem.m in Sources */,
 				3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */,
+				3E13BAF71B548E490052F56D /* WizardSaleDataViewController.m in Sources */,
 				432FEF011B4DA7C3001BCF5E /* ASTag.m in Sources */,
 				432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */,
 				432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */,
-				3E13BAEC1B506C2E0052F56D /* WizardTypeViewController.m in Sources */,
+				3E13BAEC1B506C2E0052F56D /* WizardSharedDataViewController.m in Sources */,
+				3E13BAF41B548E300052F56D /* WizardRentDataViewController.m in Sources */,
 				432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
 				432FEEFB1B4C9B76001BCF5E /* ASHome.m in Sources */,
