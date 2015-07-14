@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ASHome.h"
 
-@interface WizardTypeViewController : UIViewController
+@interface WizardSharedDataViewController : UIViewController
 
 @property (strong, nonatomic) ASHome *home;
 

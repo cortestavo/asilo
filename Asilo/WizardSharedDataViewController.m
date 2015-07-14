@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Nearsoft. All rights reserved.
 //
 
-#import "WizardTypeViewController.h"
+#import "WizardSharedDataViewController.h"
 
-@interface WizardTypeViewController ()
+@interface WizardSharedDataViewController ()
 
 @end
 
-@implementation WizardTypeViewController
+@implementation WizardSharedDataViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setupNavigationBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,19 +25,19 @@
 }
 
 - (void)setupNavigationBar {
-    self.navigationItem.title = @"Type of publication";
+    self.navigationItem.title = @"General info";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(next)];
 }
 
 - (void)next {
-    [self performSegueWithIdentifier:@"" sender:nil];
+    [self performSegueWithIdentifier:@"WizardSharedToRent" sender:nil];
 }
 
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//     if (segue.)
+//     if (segue.identifier isEqualToString:@"Wizard")
 }
 
 @end
