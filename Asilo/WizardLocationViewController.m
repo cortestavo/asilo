@@ -65,7 +65,7 @@
 }
 
 - (void)next {
-    [self performSegueWithIdentifier:@"WizardType" sender:nil];
+    [self performSegueWithIdentifier:@"WizardShared" sender:nil];
 }
 
 /*
