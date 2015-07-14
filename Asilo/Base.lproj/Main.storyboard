@@ -96,6 +96,9 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="menuItemsTable" destination="bfb-th-frp" id="DGQ-qr-3tK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5X-lb-IkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

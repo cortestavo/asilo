@@ -31,6 +31,10 @@
 		432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF031B4DA89E001BCF5E /* ASFilter.m */; };
 		432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF061B4DE9F5001BCF5E /* ASUser.m */; };
 		432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */; };
+		4384A8851B54889400F062F4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384A8831B54889400F062F4 /* FBSDKCoreKit.framework */; };
+		4384A8861B54889500F062F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384A8841B54889400F062F4 /* FBSDKLoginKit.framework */; };
+		4384A8881B5488DB00F062F4 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384A8871B5488DB00F062F4 /* ParseFacebookUtilsV4.framework */; };
+		43EAC46C1B55BC8A0001E4C2 /* login-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 43EAC46B1B55BC8A0001E4C2 /* login-facebook.png */; };
 		56F7EFEA1C07405C50B97C2E /* libPods-Asilo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +93,10 @@
 		432FEF061B4DE9F5001BCF5E /* ASUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASUser.m; sourceTree = "<group>"; };
 		432FEF0A1B4EE2E6001BCF5E /* ASPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPhoto.h; sourceTree = "<group>"; };
 		432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPhoto.m; sourceTree = "<group>"; };
+		4384A8831B54889400F062F4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		4384A8841B54889400F062F4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		4384A8871B5488DB00F062F4 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../Downloads/parse-library-1.7.5/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
+		43EAC46B1B55BC8A0001E4C2 /* login-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-facebook.png"; sourceTree = "<group>"; };
 		92022E9E08D3E1C5EC05193E /* Pods-Asilo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Asilo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Asilo/Pods-Asilo.release.xcconfig"; sourceTree = "<group>"; };
 		B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E5108775253F3D07B198AB /* Pods-Asilo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Asilo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Asilo/Pods-Asilo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +108,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				56F7EFEA1C07405C50B97C2E /* libPods-Asilo.a in Frameworks */,
+				4384A8851B54889400F062F4 /* FBSDKCoreKit.framework in Frameworks */,
+				4384A8881B5488DB00F062F4 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				4384A8861B54889500F062F4 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +136,9 @@
 		0E8F157D1AABA341D11010B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4384A8871B5488DB00F062F4 /* ParseFacebookUtilsV4.framework */,
+				4384A8831B54889400F062F4 /* FBSDKCoreKit.framework */,
+				4384A8841B54889400F062F4 /* FBSDKLoginKit.framework */,
 				3E6A71861B4C5836005415F6 /* libMMDrawerController.a */,
 				B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */,
 			);
@@ -189,6 +203,7 @@
 		432FEE571B45CC74001BCF5E = {
 			isa = PBXGroup;
 			children = (
+				43EAC46B1B55BC8A0001E4C2 /* login-facebook.png */,
 				432FEE621B45CC74001BCF5E /* Asilo */,
 				432FEE7C1B45CC74001BCF5E /* AsiloTests */,
 				432FEE611B45CC74001BCF5E /* Products */,
@@ -209,6 +224,7 @@
 		432FEE621B45CC74001BCF5E /* Asilo */ = {
 			isa = PBXGroup;
 			children = (
+				43EAC4641B55B3370001E4C2 /* Assets */,
 				432FEEF71B4C9B54001BCF5E /* Model */,
 				432FEE671B45CC74001BCF5E /* AppDelegate.h */,
 				432FEE681B45CC74001BCF5E /* AppDelegate.m */,
@@ -276,6 +292,13 @@
 				432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		43EAC4641B55B3370001E4C2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +387,7 @@
 				432FEE741B45CC74001BCF5E /* LaunchScreen.xib in Resources */,
 				3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */,
 				3E6A71831B4C55B8005415F6 /* Publications.storyboard in Resources */,
+				43EAC46C1B55BC8A0001E4C2 /* login-facebook.png in Resources */,
 				3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */,
 				432FEE711B45CC74001BCF5E /* Images.xcassets in Resources */,
 				3E6A71851B4C55E3005415F6 /* Settings.storyboard in Resources */,
@@ -423,7 +447,6 @@
 				3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */,
 				432FEF011B4DA7C3001BCF5E /* ASTag.m in Sources */,
 				432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */,
-				432FEE6C1B45CC74001BCF5E /* ViewController.m in Sources */,
 				432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */,
 				432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
@@ -562,6 +585,11 @@
 			baseConfigurationReference = E1E5108775253F3D07B198AB /* Pods-Asilo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ocortes/Documents/FacebookSDK,
+					"/Users/ocortes/Downloads/parse-library-1.7.5",
+				);
 				INFOPLIST_FILE = Asilo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -577,6 +605,11 @@
 			baseConfigurationReference = 92022E9E08D3E1C5EC05193E /* Pods-Asilo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ocortes/Documents/FacebookSDK,
+					"/Users/ocortes/Downloads/parse-library-1.7.5",
+				);
 				INFOPLIST_FILE = Asilo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

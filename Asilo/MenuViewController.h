@@ -10,4 +10,8 @@
 
 @interface MenuViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITableView *menuItemsTable;
+
+- (void) updateLoginStatus;
+
 @end
