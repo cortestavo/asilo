@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WizardTypeViewController : UIViewController
+@interface WizardSharedDataViewController : UIViewController
 
 @end

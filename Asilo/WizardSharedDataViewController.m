@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Nearsoft. All rights reserved.
 //
 
-#import "WizardTypeViewController.h"
+#import "WizardSharedDataViewController.h"
 
-@interface WizardTypeViewController ()
+@interface WizardSharedDataViewController ()
 
 @end
 
-@implementation WizardTypeViewController
+@implementation WizardSharedDataViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupNavigationBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,13 +24,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setupNavigationBar {
+    self.navigationItem.title = @"General info";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(next)];
+}
+
+- (void)next {
+    [self performSegueWithIdentifier:@"WizardSharedToRent" sender:nil];
+}
+
 /*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+<<<<<<< HEAD
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+=======
+//     if (segue.identifier isEqualToString:@"Wizard")
+>>>>>>> change name of VC
 }
 */
 
