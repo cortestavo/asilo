@@ -8,6 +8,7 @@
 
 #import "WizardLocationViewController.h"
 #import "ASHome.h"
+#import "WizardSharedDataViewController.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface WizardLocationViewController ()
@@ -25,7 +26,7 @@
     [super viewDidLoad];
     [self setupNavigationBar];
     [self setupMap];
-
+    [self setupSelectingLocation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,6 +49,29 @@
         [self.locationManager requestWhenInUseAuthorization];
     }
     self.mapView.delegate = self;
+    
+}
+
+- (void)setupSelectingLocation {
+    UILongPressGestureRecognizer *pressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(mapPressed:)];
+    pressRecognizer.minimumPressDuration = 0.3;
+    [self.mapView addGestureRecognizer:pressRecognizer];
+}
+
+#pragma mark - Event handlers
+
+- (void)mapPressed:(UIGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
+        return;
+    
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
+    CLLocationCoordinate2D touchMapCoordinate = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
+    MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
+    annot.title = @"Your publication will be listed here";
+    annot.coordinate = touchMapCoordinate;
+    [self.mapView addAnnotation:annot];
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
@@ -66,17 +90,26 @@
 }
 
 - (void)next {
-    [self performSegueWithIdentifier:@"WizardShared" sender:nil];
+    if ([self populateModel]) {
+        [self performSegueWithIdentifier:@"WizardShared" sender:nil];
+    }
 }
 
-/*
+- (BOOL)populateModel {
+    if (self.mapView.annotations.count <= 0) {
+        return NO;
+    }
+    MKPointAnnotation *annotation = self.mapView.annotations.firstObject;
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:annotation.coordinate.latitude longitude:annotation.coordinate.longitude];
+    self.home.location = [PFGeoPoint geoPointWithLocation:location];
+    return YES;
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    WizardSharedDataViewController *destination = (WizardSharedDataViewController *)segue.destinationViewController;
+    destination.home = self.home;
 }
-*/
 
 @end
