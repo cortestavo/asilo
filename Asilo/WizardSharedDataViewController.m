@@ -44,7 +44,11 @@
 }
 
 - (void)next {
-    [self performSegueWithIdentifier:@"WizardSharedToRent" sender:nil];
+    if (self.forRentSwitch.isOn) {
+        [self performSegueWithIdentifier:@"WizardSharedToRent" sender:nil];
+    } else {
+        [self performSegueWithIdentifier:@"WizardSharedToSale" sender:nil];
+    }
 }
 
 - (IBAction)forRentSwitchChanged:(id)sender {
