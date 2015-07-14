@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.descriptionText.text = @"";
     [self setupNavigationBar];
 }
 
@@ -44,11 +45,32 @@
 }
 
 - (void)next {
-    if (self.forRentSwitch.isOn) {
-        [self performSegueWithIdentifier:@"WizardSharedToRent" sender:nil];
+    if ([self populateModel]) {
+        if (self.forRentSwitch.isOn) {
+            [self performSegueWithIdentifier:@"WizardSharedToRent" sender:nil];
+        } else {
+            [self performSegueWithIdentifier:@"WizardSharedToSale" sender:nil];
+        }
     } else {
-        [self performSegueWithIdentifier:@"WizardSharedToSale" sender:nil];
+        // TODO: Alert error
     }
+}
+
+- (BOOL)populateModel {
+    if ([self.addressField.text isEqualToString:@""]) {
+        return NO;
+    }
+    self.home.isForRent = self.forRentSwitch.isOn;
+    self.home.isForSale = self.forSaleSwitch.isOn;
+    self.home.address = self.addressField.text;
+    self.home.description = self.descriptionText.text;
+    self.home.baths = @(self.numberOfBathsStepper.value);
+    self.home.beds = @(self.numberOfBedsStepper.value);
+    self.home.parkingLots = @(self.numberOfParkingLotsStepper.value);
+    self.home.squareMeters = @([self.squareFeetField.text doubleValue]);
+    self.home.hasAC = self.hasAcSwitch.isOn;
+    self.home.hasHeating = self.hasHeatingSwitch.isOn;
+    return YES;
 }
 
 - (IBAction)forRentSwitchChanged:(id)sender {
@@ -73,5 +95,22 @@
 //     if (segue.identifier isEqualToString:@"Wizard")
 }
 */
+
+#pragma mark - View handlers
+
+- (IBAction)numberOfBathsChanged:(id)sender {
+    UIStepper *stepper = (UIStepper *)sender;
+    self.numberOfBathsLabel.text = [NSString stringWithFormat:@"%lu",(long)stepper.value];
+}
+
+- (IBAction)numberOfBedsChanged:(id)sender {
+    UIStepper *stepper = (UIStepper *)sender;
+    self.numberOfBedsLabel.text = [NSString stringWithFormat:@"%lu",(long)stepper.value];
+}
+
+- (IBAction)numberOfParkingLotsChanged:(id)sender {
+    UIStepper *stepper = (UIStepper *)sender;
+    self.numberOfParkingLotsLabel.text = [NSString stringWithFormat:@"%lu",(long)stepper.value];
+}
 
 @end
