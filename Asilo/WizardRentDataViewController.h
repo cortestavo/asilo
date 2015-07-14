@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASHome.h"
 
 @interface WizardRentDataViewController : UIViewController
+
+@property (strong, nonatomic) ASHome *home;
 
 @end
