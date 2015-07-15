@@ -7,6 +7,8 @@
 //
 
 #import "WizardSharedDataViewController.h"
+#import "WizardRentDataViewController.h"
+#import "WizardSaleDataViewController.h"
 
 @interface WizardSharedDataViewController ()
 
@@ -92,7 +94,13 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//     if (segue.identifier isEqualToString:@"Wizard")
+    if ([segue.identifier isEqualToString:@"WizardSharedToRent"]) {
+        WizardRentDataViewController *rentVC = (WizardRentDataViewController *)sender;
+        rentVC.home = self.home;
+    } else if ([segue.identifier isEqualToString:@"WizardSharedToSale"]) {
+        WizardSaleDataViewController *saleVC = (WizardSaleDataViewController *)sender;
+        saleVC.home = self.home;
+    }
 }
 */
 
