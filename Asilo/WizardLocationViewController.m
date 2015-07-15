@@ -60,6 +60,17 @@
     [self.mapView addGestureRecognizer:pressRecognizer];
 }
 
+- (void)setDefaultAnnotation:(CLLocationCoordinate2D)coor {
+    [self.mapView addAnnotation:[self annotationFromCoordinate:coor]];
+}
+
+- (MKPointAnnotation *)annotationFromCoordinate:(CLLocationCoordinate2D)coor {
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    annotation.title = @"Your publication will be listed here";
+    annotation.coordinate = coor;
+    return annotation;
+}
+
 #pragma mark - Event handlers
 
 - (void)mapPressed:(UIGestureRecognizer *)gestureRecognizer {
@@ -70,16 +81,16 @@
     
     CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
     CLLocationCoordinate2D touchMapCoordinate = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
-    MKPointAnnotation *annot = [[MKPointAnnotation alloc] init];
-    annot.title = @"Your publication will be listed here";
-    annot.coordinate = touchMapCoordinate;
-    [self.mapView addAnnotation:annot];
+    MKPointAnnotation *annotation = [self annotationFromCoordinate:touchMapCoordinate];
+    [self.mapView addAnnotation:annotation];
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     if (!self.hasCenteredMapAtLoading) {
-        mapView.region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 100, 100);
+        const CLLocationDistance METERS_TO_ZOOM = 500;
+        mapView.region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, METERS_TO_ZOOM, METERS_TO_ZOOM);
         self.hasCenteredMapAtLoading = true;
+        [self setDefaultAnnotation:userLocation.coordinate];
     }
 }
 
@@ -98,7 +109,7 @@
 }
 
 - (BOOL)populateModel {
-    if (self.mapView.annotations.count <= 0) {
+    if (self.mapView.annotations.count <= 1) {
         return NO;
     }
     MKPointAnnotation *annotation = self.mapView.annotations.firstObject;
