@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "ASUser.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 
 @interface AppDelegate ()
 
@@ -18,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self initializeDrawerController];
-    [self initParse];
+    [self initParse: launchOptions];
     return YES;
 }
 
@@ -52,15 +54,26 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBSDKAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)initParse {
+- (void)initParse:(NSDictionary *)launchOptions {
     [Parse setApplicationId:@"47azMepKryfWJSRJQYsGW93O2r3ltrn6QYPscHR8"
                   clientKey:@"tp8yTvbgtJwbeN2FLRyqYxQQk6ZUZIGL8UNc59af"];
+    [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
 }
 
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
+}
 @end

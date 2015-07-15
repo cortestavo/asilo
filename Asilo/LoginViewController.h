@@ -11,4 +11,9 @@
 
 @interface LoginViewController : ASBaseViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *loginFacebookButton;
+@property (weak, nonatomic) IBOutlet UILabel *loggingOutLabel;
+
+- (IBAction)loginWithFacebook:(id)sender;
+
 @end
