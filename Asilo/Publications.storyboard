@@ -235,7 +235,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="jc3-tI-VEV" userLabel="Change number of parking lots">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="jc3-tI-VEV" userLabel="Change number of parking lots">
                                         <rect key="frame" x="498" y="458" width="94" height="29"/>
                                         <connections>
                                             <action selector="numberOfParkingLotsChanged:" destination="Ewq-VL-0oW" eventType="valueChanged" id="7Iq-QG-SS0"/>
