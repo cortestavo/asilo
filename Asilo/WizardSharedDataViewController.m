@@ -93,10 +93,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"WizardSharedToRent"]) {
-        WizardRentDataViewController *rentVC = (WizardRentDataViewController *)sender;
+        WizardRentDataViewController *rentVC = (WizardRentDataViewController *)segue.destinationViewController;
         rentVC.home = self.home;
     } else if ([segue.identifier isEqualToString:@"WizardSharedToSale"]) {
-        WizardSaleDataViewController *saleVC = (WizardSaleDataViewController *)sender;
+        WizardSaleDataViewController *saleVC = (WizardSaleDataViewController *)segue.destinationViewController;
         saleVC.home = self.home;
     }
 }

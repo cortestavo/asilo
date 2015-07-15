@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.home.owner = [ASUser currentUser];
+    [self initializeHomeObject];
     [self setupNavigationBar];
     [self setupMap];
     [self setupSelectingLocation];
@@ -34,6 +34,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)initializeHomeObject {
+    self.home = [ASHome objectWithClassName:@"Home"];
+    self.home.owner = [ASUser currentUser];
 }
 
 - (void)setupNavigationBar {
