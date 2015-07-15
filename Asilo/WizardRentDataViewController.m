@@ -7,6 +7,8 @@
 //
 
 #import "WizardRentDataViewController.h"
+#import "WizardSaleDataViewController.h"
+#import "ASHome.h"
 
 @interface WizardRentDataViewController ()
 
@@ -33,21 +35,35 @@
 
 - (void)setupNavigationBar {
     self.navigationItem.title = @"Rent info";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(next)];
+    NSString *nextString = self.home.isForSale ? @"Next" : @"Save";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nextString style:UIBarButtonItemStyleDone target:self action:@selector(next)];
 }
 
 - (void)next {
-    
+    if (self.home.isForSale) {
+        [self performSegueWithIdentifier:@"WizardRentToSale" sender:nil];
+    } else {
+        [self saveHome];
+    }
 }
 
-/*
+- (void)saveHome {
+    [self.home saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [self dismissViewControllerAnimated:YES completion:nil]; // Closes modal
+        } else {
+            // TODO: Alert error
+        }
+    }];
+}
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"WizardRentToSale"]) {
+        WizardSaleDataViewController *saleVC = (WizardSaleDataViewController *)segue.destinationViewController;
+        saleVC.home = self.home;
+    }
 }
-*/
 
 @end

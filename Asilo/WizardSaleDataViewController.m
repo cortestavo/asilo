@@ -28,21 +28,21 @@
 
 - (void)setupNavigationBar {
     self.navigationItem.title = @"Sale info";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(next)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(saveHome)];
 }
 
--(void)next {
-    
+- (void)populateModel {
+    self.home.priceForSale = @([self.priceForSaleField.text doubleValue]);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)saveHome {
+    [self.home saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [self dismissViewControllerAnimated:YES completion:nil]; // Closes modal
+        } else {
+            // TODO: Alert error
+        }
+    }];
 }
-*/
 
 @end
