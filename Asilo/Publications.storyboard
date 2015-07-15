@@ -440,7 +440,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9iZ-S5-3xu" userLabel="Months for Lease">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9iZ-S5-3xu" userLabel="Months for Lease">
                                                 <rect key="frame" x="510" y="96" width="94" height="29"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="94" id="f9G-Pg-xPF"/>
