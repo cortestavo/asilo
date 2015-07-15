@@ -10,11 +10,10 @@
 
 @implementation ASMenuItem
 
-- (instancetype)initWithTitle:(NSString *)title requireLogin:(BOOL)isLoginRequired {
+- (instancetype)initWithTitle:(NSString *)title {
     self = [super init];
     if (self) {
         self.title = title;
-        self.isLoginRequired = isLoginRequired;
     }
     return self;
 }

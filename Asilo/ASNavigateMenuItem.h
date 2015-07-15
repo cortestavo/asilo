@@ -13,9 +13,8 @@
 
 @property (strong, nonatomic) NSString *destination;
 @property (nonatomic, copy) void (^beforeNavigation)(UIViewController *destinationViewController);
+@property (assign, nonatomic) BOOL requireLogin;
 
 - (instancetype)initWithTitle:(NSString *)title requireLogin:(BOOL)isLoginRequired destination:(NSString*)destination beforeNavigation:(void (^)(UIViewController *destinationViewController))beforeNavigation;
-
-- (void)selectItem;
 
 @end

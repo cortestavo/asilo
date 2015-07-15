@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ASBaseViewController.h"
 
-@interface LoginViewController : ASBaseViewController
+@interface LoginViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *loginFacebookButton;
 @property (weak, nonatomic) IBOutlet UILabel *loggingOutLabel;

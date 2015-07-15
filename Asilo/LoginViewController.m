@@ -24,6 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNavigationBar];
     if([ASUser currentUser] == nil) {
         [self showOnlyLoginButton];
     } else {
@@ -31,16 +32,24 @@
         [ASUser logOutInBackgroundWithBlock:^(NSError *error) {
             [self showOnlyLoginButton];
             [self updateLoginStatus];
-            [self sendToSearch];
+            [self dismissLogin];
         }];
     }
+}
+
+-(void) setupNavigationBar {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissLogin)];
+}
+
+- (void) dismissLogin {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)loginWithFacebook:(id)sender {
     [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile"] block:^(PFUser *user, NSError *error) {
         [self updateLoginStatus];
         if(user != nil) {
-            [self sendToSearch];
+            [self dismissLogin];
         }
     }];
 }

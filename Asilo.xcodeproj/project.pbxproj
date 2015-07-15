@@ -37,6 +37,8 @@
 		432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF031B4DA89E001BCF5E /* ASFilter.m */; };
 		432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF061B4DE9F5001BCF5E /* ASUser.m */; };
 		432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */; };
+		433CEDAA1B56DEFA00688F44 /* ASLoginMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 433CEDA91B56DEFA00688F44 /* ASLoginMenuItem.m */; };
+		433CEDAD1B570E9000688F44 /* LoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 433CEDAC1B570E9000688F44 /* LoginHelper.m */; };
 		4384A8851B54889400F062F4 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384A8831B54889400F062F4 /* FBSDKCoreKit.framework */; };
 		4384A8861B54889500F062F4 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384A8841B54889400F062F4 /* FBSDKLoginKit.framework */; };
 		4384A8881B5488DB00F062F4 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4384A8871B5488DB00F062F4 /* ParseFacebookUtilsV4.framework */; };
@@ -109,6 +111,10 @@
 		432FEF061B4DE9F5001BCF5E /* ASUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASUser.m; sourceTree = "<group>"; };
 		432FEF0A1B4EE2E6001BCF5E /* ASPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPhoto.h; sourceTree = "<group>"; };
 		432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPhoto.m; sourceTree = "<group>"; };
+		433CEDA81B56DEFA00688F44 /* ASLoginMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLoginMenuItem.h; sourceTree = "<group>"; };
+		433CEDA91B56DEFA00688F44 /* ASLoginMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLoginMenuItem.m; sourceTree = "<group>"; };
+		433CEDAB1B570E9000688F44 /* LoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginHelper.h; sourceTree = "<group>"; };
+		433CEDAC1B570E9000688F44 /* LoginHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginHelper.m; sourceTree = "<group>"; };
 		4384A8831B54889400F062F4 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		4384A8841B54889400F062F4 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		4384A8871B5488DB00F062F4 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "../../Downloads/parse-library-1.7.5/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 				3E6A71801B4C559B005415F6 /* Login.storyboard */,
 				3E6A71911B4C63D3005415F6 /* LoginViewController.h */,
 				3E6A71921B4C63D3005415F6 /* LoginViewController.m */,
+				433CEDAB1B570E9000688F44 /* LoginHelper.h */,
+				433CEDAC1B570E9000688F44 /* LoginHelper.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -232,6 +240,8 @@
 				3E6A71A51B4DA386005415F6 /* ASMenuItem.m */,
 				3E6A71AB1B4DE6F2005415F6 /* ASNavigateMenuItem.h */,
 				3E6A71AC1B4DE6F2005415F6 /* ASNavigateMenuItem.m */,
+				433CEDA81B56DEFA00688F44 /* ASLoginMenuItem.h */,
+				433CEDA91B56DEFA00688F44 /* ASLoginMenuItem.m */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -491,12 +501,14 @@
 				432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
 				432FEEFB1B4C9B76001BCF5E /* ASHome.m in Sources */,
+				433CEDAD1B570E9000688F44 /* LoginHelper.m in Sources */,
 				432FEE661B45CC74001BCF5E /* main.m in Sources */,
 				3E6A71971B4C645F005415F6 /* SettingsViewController.m in Sources */,
 				3E6A719D1B4C8D1C005415F6 /* MenuViewController.m in Sources */,
 				3E6A718A1B4C619C005415F6 /* ResultMapViewController.m in Sources */,
 				3E6A71931B4C63D3005415F6 /* LoginViewController.m in Sources */,
 				3E13BAE31B50399A0052F56D /* WizardLocationViewController.m in Sources */,
+				433CEDAA1B56DEFA00688F44 /* ASLoginMenuItem.m in Sources */,
 				3E6A71B01B4DFD4F005415F6 /* SearchNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

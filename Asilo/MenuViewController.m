@@ -7,8 +7,8 @@
 //
 
 #import "MenuViewController.h"
-#import "ASMenuItem.h"
 #import "ASNavigateMenuItem.h"
+#import "ASLoginMenuItem.h"
 #import "AppDelegate.h"
 #import "SearchNavigationController.h"
 #import <Parse/Parse.h>
@@ -35,8 +35,8 @@
                            searchNavigation.searchType = ASFilterTypeForSale;
                        }],
                        [[ASNavigateMenuItem alloc] initWithTitle:@"My publications" requireLogin:YES destination:@"Publications" beforeNavigation:nil],
-                      [[ASNavigateMenuItem alloc] initWithTitle:@"Log in" requireLogin:NO destination:@"Login" beforeNavigation:nil],
-                      [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil]
+                      [[ASLoginMenuItem alloc] initWithTitle:@"Log in" sourceViewController:self],
+                      [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil],
                        ];
     [self updateLoginStatus];
 }
