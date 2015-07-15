@@ -14,10 +14,11 @@
 
 -(instancetype)initWithTitle:(NSString *)title requireLogin:(BOOL)isLoginRequired destination:(NSString *)destination beforeNavigation:(void (^)(UIViewController *))beforeNavigation
 {
-    self = [super initWithTitle:title requireLogin:isLoginRequired];
+    self = [super initWithTitle:title];
     if (self) {
         self.destination = destination;
         self.beforeNavigation = beforeNavigation;
+        self.requireLogin = isLoginRequired;
     }
     return self;
 }
@@ -31,6 +32,7 @@
         self.beforeNavigation(destinationViewController);
     }
     [appDelegate.drawerViewController setCenterViewController:destinationViewController withCloseAnimation:YES completion:nil];
+
 }
 
 @end

@@ -7,8 +7,8 @@
 //
 
 #import "MenuViewController.h"
-#import "ASMenuItem.h"
 #import "ASNavigateMenuItem.h"
+#import "ASLoginMenuItem.h"
 #import "AppDelegate.h"
 #import "SearchNavigationController.h"
 #import <Parse/Parse.h>
@@ -36,7 +36,8 @@
                        }],
                        [[ASNavigateMenuItem alloc] initWithTitle:@"My publications" requireLogin:YES destination:@"Publications" beforeNavigation:nil],
                       [[ASNavigateMenuItem alloc] initWithTitle:@"Log in" requireLogin:NO destination:@"Login" beforeNavigation:nil],
-                      [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil]
+                      [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil],
+                      [[ASLoginMenuItem alloc] initWithTitle:@"Login 2" ]
                        ];
     [self updateLoginStatus];
 }

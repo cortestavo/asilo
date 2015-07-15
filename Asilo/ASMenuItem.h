@@ -12,7 +12,7 @@
 @property (strong, nonatomic) NSString *title;
 @property (assign, nonatomic) BOOL isLoginRequired;
 
--(instancetype)initWithTitle:(NSString *)title requireLogin:(BOOL)isLoginRequired;
+-(instancetype)initWithTitle:(NSString *)title;
 
 -(void)selectItem;
 
