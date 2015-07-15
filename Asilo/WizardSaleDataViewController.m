@@ -31,18 +31,28 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(saveHome)];
 }
 
-- (void)populateModel {
-    self.home.priceForSale = @([self.priceForSaleField.text doubleValue]);
+- (BOOL)populateModel {
+    double priceForSale = [self.priceForSaleField.text doubleValue];
+    if (priceForSale > 0) {
+        self.home.priceForSale = @(priceForSale);
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 -(void)saveHome {
-    [self.home saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            [self dismissViewControllerAnimated:YES completion:nil]; // Closes modal
-        } else {
-            // TODO: Alert error
-        }
-    }];
+    if ([self populateModel]) {
+        [self.home saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                [self dismissViewControllerAnimated:YES completion:nil]; // Closes modal
+            } else {
+                // TODO: Alert error
+            }
+        }];
+    } else {
+        // TODO: Alert validation error
+    }
 }
 
 @end

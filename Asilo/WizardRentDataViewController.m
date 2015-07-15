@@ -39,11 +39,27 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nextString style:UIBarButtonItemStyleDone target:self action:@selector(next)];
 }
 
+- (BOOL)populateModel {
+    double priceForRent = [self.priceForRentField.text doubleValue];
+    if (!priceForRent > 0)
+        return NO;
+    self.home.priceForRent = @([self.priceForRentField.text doubleValue]);
+    self.home.deposit = @([self.depositField.text doubleValue]);
+    self.home.lease = @((long)self.monthsForLeaseStepper.value);
+    self.home.isFurnished = self.furnishedSwitch.isOn;
+    self.home.petsAllowed = self.petsAllowedSwitch.isOn;
+    return YES;
+}
+
 - (void)next {
-    if (self.home.isForSale) {
-        [self performSegueWithIdentifier:@"WizardRentToSale" sender:nil];
+    if ([self populateModel]) {
+        if (self.home.isForSale) {
+            [self performSegueWithIdentifier:@"WizardRentToSale" sender:nil];
+        } else {
+            [self saveHome];
+        }
     } else {
-        [self saveHome];
+        // TODO: Alert validation error
     }
 }
 
@@ -55,6 +71,11 @@
             // TODO: Alert error
         }
     }];
+}
+
+- (IBAction)monthsForLeaseChanged:(id)sender {
+    UIStepper *stepper = (UIStepper *)sender;
+    self.monthsForLeaseLabel.text = [NSString stringWithFormat:@"%lu months", (long)stepper.value];
 }
 
 #pragma mark - Navigation

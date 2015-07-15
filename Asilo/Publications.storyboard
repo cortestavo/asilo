@@ -450,6 +450,9 @@
                                                         <exclude reference="f9G-Pg-xPF"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="monthsForLeaseChanged:" destination="z3Q-Ns-acD" eventType="valueChanged" id="SLv-DM-DEf"/>
+                                                </connections>
                                             </stepper>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Pg-iV-Oru" userLabel="Deposit">
                                                 <rect key="frame" x="494" y="58" width="110" height="30"/>
@@ -659,6 +662,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LM5-nb-yNY"/>
+        <segue reference="aFa-gD-kNY"/>
     </inferredMetricsTieBreakers>
 </document>
