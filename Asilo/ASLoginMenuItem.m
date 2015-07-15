@@ -7,6 +7,8 @@
 //
 
 #import "ASLoginMenuItem.h"
+#import "LoginViewController.h"
+#import "LoginHelper.h"
 
 @implementation ASLoginMenuItem
 
@@ -19,6 +21,7 @@
 }
 
 -(void)selectItem {
+    [LoginHelper displayLoginFromViewController:self.sourceViewController];
 }
 
 @end
