@@ -1,5 +1,4 @@
 PODS:
-  - Bolts/Tasks (1.2.0)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
@@ -12,16 +11,11 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.5.7):
     - MMDrawerController/Core
-  - Parse (1.7.5):
-    - Bolts/Tasks (>= 1.2.0)
 
 DEPENDENCIES:
   - MMDrawerController (~> 0.5.7)
-  - Parse
 
 SPEC CHECKSUMS:
-  Bolts: d176cb1e0012175589e389a9db49b85e27787576
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
-  Parse: 7c0f115eff3e0cea3fac08d50bda47154edb8832
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.0.beta.1
