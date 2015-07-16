@@ -39,6 +39,9 @@
 		3EF2B35B1B58291800B9718C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2B35A1B58291800B9718C /* CFNetwork.framework */; };
 		3EF2B35D1B58292400B9718C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2B35C1B58292400B9718C /* AudioToolbox.framework */; };
 		3EF2B35F1B58293700B9718C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2B35E1B58293700B9718C /* Accounts.framework */; };
+		3EF2B3641B582D8600B9718C /* ResultListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2B3611B582D8600B9718C /* ResultListTableViewCell.m */; };
+		3EF2B3651B582D8600B9718C /* ResultListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */; };
+		3EF2B3691B58479100B9718C /* castle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EF2B3681B58479100B9718C /* castle.jpg */; };
 		432FEE661B45CC74001BCF5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE651B45CC74001BCF5E /* main.m */; };
 		432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE681B45CC74001BCF5E /* AppDelegate.m */; };
 		432FEE6F1B45CC74001BCF5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432FEE6D1B45CC74001BCF5E /* Main.storyboard */; };
@@ -116,6 +119,11 @@
 		3EF2B35A1B58291800B9718C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3EF2B35C1B58292400B9718C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3EF2B35E1B58293700B9718C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		3EF2B3601B582D8600B9718C /* ResultListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultListTableViewCell.h; sourceTree = "<group>"; };
+		3EF2B3611B582D8600B9718C /* ResultListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultListTableViewCell.m; sourceTree = "<group>"; };
+		3EF2B3621B582D8600B9718C /* ResultListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultListTableViewController.h; sourceTree = "<group>"; };
+		3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultListTableViewController.m; sourceTree = "<group>"; };
+		3EF2B3681B58479100B9718C /* castle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = castle.jpg; sourceTree = "<group>"; };
 		432FEE601B45CC74001BCF5E /* Asilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432FEE641B45CC74001BCF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		432FEE651B45CC74001BCF5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -241,6 +249,10 @@
 				3E6A71AF1B4DFD4F005415F6 /* SearchNavigationController.m */,
 				3E6A71881B4C619C005415F6 /* ResultMapViewController.h */,
 				3E6A71891B4C619C005415F6 /* ResultMapViewController.m */,
+				3EF2B3601B582D8600B9718C /* ResultListTableViewCell.h */,
+				3EF2B3611B582D8600B9718C /* ResultListTableViewCell.m */,
+				3EF2B3621B582D8600B9718C /* ResultListTableViewController.h */,
+				3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -403,6 +415,7 @@
 		43EAC4641B55B3370001E4C2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3EF2B3681B58479100B9718C /* castle.jpg */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -497,6 +510,7 @@
 				43EAC46C1B55BC8A0001E4C2 /* login-facebook.png in Resources */,
 				3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */,
 				432FEE711B45CC74001BCF5E /* Images.xcassets in Resources */,
+				3EF2B3691B58479100B9718C /* castle.jpg in Resources */,
 				3E6A71851B4C55E3005415F6 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6A718F1B4C6330005415F6 /* MyPublicationsTableViewController.m in Sources */,
+				3EF2B3641B582D8600B9718C /* ResultListTableViewCell.m in Sources */,
 				3E6A71A61B4DA386005415F6 /* ASMenuItem.m in Sources */,
 				3E6A71AD1B4DE6F2005415F6 /* ASNavigateMenuItem.m in Sources */,
 				3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */,
@@ -559,6 +574,7 @@
 				3E13BAEC1B506C2E0052F56D /* WizardSharedDataViewController.m in Sources */,
 				3E13BAF41B548E300052F56D /* WizardRentDataViewController.m in Sources */,
 				432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */,
+				3EF2B3651B582D8600B9718C /* ResultListTableViewController.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
 				432FEEFB1B4C9B76001BCF5E /* ASHome.m in Sources */,
 				433CEDAD1B570E9000688F44 /* LoginHelper.m in Sources */,
