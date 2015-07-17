@@ -22,6 +22,7 @@
                     <navigationItem key="navigationItem" title="Search" id="MDL-fT-g7p"/>
                     <connections>
                         <segue destination="D5O-5G-h3R" kind="show" identifier="ResultList" id="frt-jN-vTO"/>
+                        <segue destination="xHD-iS-Ewd" kind="show" identifier="MapToDetail" id="5JU-rt-cxd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jve-8q-Tqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -132,10 +133,32 @@
                         <barButtonItem title="Map View" id="vuZ-E7-cpZ"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <segue destination="xHD-iS-Ewd" kind="show" identifier="ListToDetail" id="v1N-nH-leP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8c-Je-qpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1917" y="1004"/>
+        </scene>
+        <!--Home Detail View Controller-->
+        <scene sceneID="hOA-DH-9B3">
+            <objects>
+                <viewController id="xHD-iS-Ewd" customClass="HomeDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wDS-zB-M3b"/>
+                        <viewControllerLayoutGuide type="bottom" id="gLQ-7o-vzb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5dz-ZG-YrX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W4U-j7-wG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2877" y="704"/>
         </scene>
         <!--Search Navigation Controller-->
         <scene sceneID="W7W-qh-nDA">
@@ -159,4 +182,7 @@
     <resources>
         <image name="castle.jpg" width="2801" height="1957"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="v1N-nH-leP"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -42,6 +42,7 @@
 		3EF2B3641B582D8600B9718C /* ResultListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2B3611B582D8600B9718C /* ResultListTableViewCell.m */; };
 		3EF2B3651B582D8600B9718C /* ResultListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */; };
 		3EF2B3691B58479100B9718C /* castle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EF2B3681B58479100B9718C /* castle.jpg */; };
+		3EF2B3D91B589CDD00B9718C /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2B3D81B589CDD00B9718C /* HomeDetailViewController.m */; };
 		432FEE661B45CC74001BCF5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE651B45CC74001BCF5E /* main.m */; };
 		432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEE681B45CC74001BCF5E /* AppDelegate.m */; };
 		432FEE6F1B45CC74001BCF5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432FEE6D1B45CC74001BCF5E /* Main.storyboard */; };
@@ -124,6 +125,8 @@
 		3EF2B3621B582D8600B9718C /* ResultListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultListTableViewController.h; sourceTree = "<group>"; };
 		3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultListTableViewController.m; sourceTree = "<group>"; };
 		3EF2B3681B58479100B9718C /* castle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = castle.jpg; sourceTree = "<group>"; };
+		3EF2B3D71B589CDD00B9718C /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
+		3EF2B3D81B589CDD00B9718C /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
 		432FEE601B45CC74001BCF5E /* Asilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Asilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432FEE641B45CC74001BCF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		432FEE651B45CC74001BCF5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -253,6 +256,8 @@
 				3EF2B3611B582D8600B9718C /* ResultListTableViewCell.m */,
 				3EF2B3621B582D8600B9718C /* ResultListTableViewController.h */,
 				3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */,
+				3EF2B3D71B589CDD00B9718C /* HomeDetailViewController.h */,
+				3EF2B3D81B589CDD00B9718C /* HomeDetailViewController.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -565,6 +570,7 @@
 				3E6A718F1B4C6330005415F6 /* MyPublicationsTableViewController.m in Sources */,
 				3EF2B3641B582D8600B9718C /* ResultListTableViewCell.m in Sources */,
 				3E6A71A61B4DA386005415F6 /* ASMenuItem.m in Sources */,
+				3EF2B3D91B589CDD00B9718C /* HomeDetailViewController.m in Sources */,
 				3E6A71AD1B4DE6F2005415F6 /* ASNavigateMenuItem.m in Sources */,
 				3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */,
 				3E13BAF71B548E490052F56D /* WizardSaleDataViewController.m in Sources */,
