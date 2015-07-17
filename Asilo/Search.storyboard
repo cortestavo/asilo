@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IJ7-y7-DvP">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Search-->
@@ -13,11 +15,39 @@
                         <viewControllerLayoutGuide type="bottom" id="Gys-CY-Zwc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rlH-An-Bii">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aba-Bp-aso">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cbX-gB-wHC"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Save Search" id="zwt-Cg-W9s"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="V4a-Wx-4h0"/>
+                                    <barButtonItem title="List" id="AWa-t5-wKa"/>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SaZ-B7-pdC">
+                                <rect key="frame" x="0.0" y="0.0" width="341" height="524"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aba-Bp-aso" firstAttribute="leading" secondItem="rlH-An-Bii" secondAttribute="leadingMargin" constant="-16" id="LEa-dQ-xg3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SaZ-B7-pdC" secondAttribute="trailing" constant="-37" id="NJq-L5-xaa"/>
+                            <constraint firstItem="SaZ-B7-pdC" firstAttribute="top" secondItem="rlH-An-Bii" secondAttribute="topMargin" id="Uym-48-ZIe"/>
+                            <constraint firstItem="Gys-CY-Zwc" firstAttribute="top" secondItem="aba-Bp-aso" secondAttribute="bottom" id="bRb-gc-3Od"/>
+                            <constraint firstItem="SaZ-B7-pdC" firstAttribute="leading" secondItem="rlH-An-Bii" secondAttribute="leadingMargin" constant="-16" id="fqX-lZ-z7J"/>
+                            <constraint firstItem="aba-Bp-aso" firstAttribute="top" secondItem="SaZ-B7-pdC" secondAttribute="bottom" id="xS0-Xt-WAk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aba-Bp-aso" secondAttribute="trailing" constant="-16" id="xnj-Ev-Uy8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="MDL-fT-g7p"/>
+                    <connections>
+                        <outlet property="mapView" destination="SaZ-B7-pdC" id="ryo-Un-lkX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jve-8q-Tqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -28,6 +58,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJ7-y7-DvP" customClass="SearchNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="khB-Ol-ZZG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
