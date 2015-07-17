@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IJ7-y7-DvP">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Search-->
@@ -18,10 +20,122 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="MDL-fT-g7p"/>
+                    <connections>
+                        <segue destination="D5O-5G-h3R" kind="show" identifier="ResultList" id="frt-jN-vTO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jve-8q-Tqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1917" y="300"/>
+        </scene>
+        <!--Result List Table View Controller-->
+        <scene sceneID="1Os-6p-D15">
+            <objects>
+                <tableViewController id="D5O-5G-h3R" customClass="ResultListTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="266" sectionHeaderHeight="22" sectionFooterHeight="22" id="bMG-Xx-3vb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultListCell" rowHeight="266" id="Tql-Ed-SHm" customClass="ResultListTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tql-Ed-SHm" id="dFO-yd-TPf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3DZ-9L-Fug" userLabel="Background Image">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="266"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4la-BW-xKM" userLabel="Gradient">
+                                            <rect key="frame" x="0.0" y="132" width="600" height="133"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 bd, 2 bth, 80 sqmt" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHL-m1-7mc" userLabel="(Summary) 2 bd, 2 bth, 80 sqmt">
+                                                    <rect key="frame" x="169" y="76" width="431" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="bN6-R9-2YO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blv. Antonio Quiroga No. 21, El Llano, Hermosillo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ado-3M-AOB" userLabel="(Address) Blv. Antonio Quiroga No. 21, El Llano, Hermosillo">
+                                                    <rect key="frame" x="8" y="104" width="464" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20.5" id="rrM-SJ-doL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 days ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIb-ab-Ipt" userLabel="(Publication date) 2 days ago">
+                                                    <rect key="frame" x="492" y="105" width="100" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="52b-J3-emF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="0.72999999999999998" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3,500/mo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iE1-1h-CAN" userLabel="(Price) $3,500/mo">
+                                                    <rect key="frame" x="8" y="76" width="153" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="153" id="AFx-YN-ibV"/>
+                                                        <constraint firstAttribute="height" constant="21" id="hbh-nR-OiE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="pIb-ab-Ipt" firstAttribute="centerY" secondItem="ado-3M-AOB" secondAttribute="centerY" constant="1" id="6OM-f0-sJ2"/>
+                                                <constraint firstAttribute="trailing" secondItem="MHL-m1-7mc" secondAttribute="trailing" id="7FP-0J-BaN"/>
+                                                <constraint firstItem="iE1-1h-CAN" firstAttribute="leading" secondItem="4la-BW-xKM" secondAttribute="leading" constant="8" id="7N1-x1-Ko7"/>
+                                                <constraint firstItem="MHL-m1-7mc" firstAttribute="leading" secondItem="iE1-1h-CAN" secondAttribute="trailing" constant="8" id="8vP-FY-J3m"/>
+                                                <constraint firstItem="ado-3M-AOB" firstAttribute="leading" secondItem="4la-BW-xKM" secondAttribute="leading" constant="8" id="Nvi-7Y-oGd"/>
+                                                <constraint firstAttribute="trailing" secondItem="pIb-ab-Ipt" secondAttribute="trailing" constant="8" id="grn-7I-UOB"/>
+                                                <constraint firstAttribute="bottom" secondItem="ado-3M-AOB" secondAttribute="bottom" constant="8.5" id="p6K-7R-jpi"/>
+                                                <constraint firstAttribute="bottom" secondItem="pIb-ab-Ipt" secondAttribute="bottom" constant="7.5" id="pgK-Jf-69d"/>
+                                                <constraint firstItem="ado-3M-AOB" firstAttribute="top" secondItem="iE1-1h-CAN" secondAttribute="bottom" constant="7" id="qtn-na-odN"/>
+                                                <constraint firstItem="pIb-ab-Ipt" firstAttribute="top" secondItem="MHL-m1-7mc" secondAttribute="bottom" constant="8" id="rlg-oK-cgQ"/>
+                                                <constraint firstAttribute="height" constant="133" id="ugT-kl-fk3"/>
+                                                <constraint firstItem="pIb-ab-Ipt" firstAttribute="leading" secondItem="ado-3M-AOB" secondAttribute="trailing" constant="20" id="vi5-si-wCs"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="4la-BW-xKM" secondAttribute="bottom" constant="0.5" id="5VL-TN-dtl"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3DZ-9L-Fug" secondAttribute="bottomMargin" id="6Cm-sc-3YI"/>
+                                        <constraint firstItem="3DZ-9L-Fug" firstAttribute="leading" secondItem="dFO-yd-TPf" secondAttribute="leading" id="DBP-ru-TG7"/>
+                                        <constraint firstItem="4la-BW-xKM" firstAttribute="leading" secondItem="dFO-yd-TPf" secondAttribute="leading" id="Y2M-5t-PUK"/>
+                                        <constraint firstItem="3DZ-9L-Fug" firstAttribute="top" secondItem="dFO-yd-TPf" secondAttribute="top" id="bRQ-sz-fbl"/>
+                                        <constraint firstAttribute="trailing" secondItem="3DZ-9L-Fug" secondAttribute="trailing" id="egF-OX-AvI"/>
+                                        <constraint firstAttribute="trailing" secondItem="4la-BW-xKM" secondAttribute="trailing" id="fob-Gh-JHq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="ado-3M-AOB" id="vd5-UZ-Z3W"/>
+                                    <outlet property="backgroundImage" destination="3DZ-9L-Fug" id="kkc-44-Vpd"/>
+                                    <outlet property="dateLabel" destination="pIb-ab-Ipt" id="CnL-bl-Imn"/>
+                                    <outlet property="gradientView" destination="4la-BW-xKM" id="Qm8-tH-tLi"/>
+                                    <outlet property="priceLabel" destination="iE1-1h-CAN" id="hZS-Vf-cla"/>
+                                    <outlet property="summaryLabel" destination="MHL-m1-7mc" id="qer-y6-2q7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="D5O-5G-h3R" id="KdO-JO-fNQ"/>
+                            <outlet property="delegate" destination="D5O-5G-h3R" id="vSV-av-8bS"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Map View" id="vuZ-E7-cpZ"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8c-Je-qpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="1004"/>
         </scene>
         <!--Search Navigation Controller-->
         <scene sceneID="W7W-qh-nDA">
@@ -42,4 +156,7 @@
             <point key="canvasLocation" x="1105" y="300"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="castle.jpg" width="2801" height="1957"/>
+    </resources>
 </document>
