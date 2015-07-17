@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ASBaseViewController.h"
+#import <MapKit/MapKit.h>
 
-@interface ResultMapViewController : ASBaseViewController
+@interface ResultMapViewController : ASBaseViewController<MKMapViewDelegate>
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
