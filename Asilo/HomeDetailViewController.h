@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASHome.h"
 
 @interface HomeDetailViewController : UIViewController
+
+@property ASHome *home;
 
 @end
