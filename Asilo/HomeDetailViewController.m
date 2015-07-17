@@ -10,6 +10,22 @@
 
 @interface HomeDetailViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bedsAndBathsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *squareMetersLabel;
+@property (weak, nonatomic) IBOutlet UILabel *publicationTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UITextView *descriptionText;
+@property (weak, nonatomic) IBOutlet UILabel *hasAcLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hasHeatingLabel;
+@property (weak, nonatomic) IBOutlet UILabel *parkingLotsLabel;
+@property (weak, nonatomic) IBOutlet UIView *rentInfoView;
+@property (weak, nonatomic) IBOutlet UILabel *isFurnishedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *petsAllowedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *leaseLabel;
+@property (weak, nonatomic) IBOutlet UILabel *depositLabel;
+
 @end
 
 @implementation HomeDetailViewController

@@ -214,7 +214,7 @@
                                         <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXc-VA-IaU">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXc-VA-IaU" userLabel="Description">
                                         <rect key="frame" x="8" y="467" width="584" height="153"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -371,6 +371,23 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="Ebk-ke-lAp" id="tbO-Ev-Nox"/>
+                        <outlet property="bedsAndBathsLabel" destination="bQ3-uN-qyh" id="HiE-pv-dhi"/>
+                        <outlet property="depositLabel" destination="wmP-Gc-uj6" id="CYL-uq-k77"/>
+                        <outlet property="descriptionText" destination="VXc-VA-IaU" id="scS-yJ-MQR"/>
+                        <outlet property="hasAcLabel" destination="cTY-fU-Pm5" id="bqT-Ar-FfX"/>
+                        <outlet property="hasHeatingLabel" destination="jJm-hW-4hh" id="S8N-cd-KWz"/>
+                        <outlet property="headerImageView" destination="Iws-pD-Yzu" id="mLW-Hn-lFR"/>
+                        <outlet property="isFurnishedLabel" destination="qH6-px-ze8" id="lPp-Np-lg2"/>
+                        <outlet property="leaseLabel" destination="g9K-re-yMm" id="o6b-Rx-jvw"/>
+                        <outlet property="parkingLotsLabel" destination="sgM-wG-V79" id="Dl3-ES-6Sk"/>
+                        <outlet property="petsAllowedLabel" destination="fgZ-4P-P6P" id="Wd9-A1-hpc"/>
+                        <outlet property="priceLabel" destination="gju-Pb-ex8" id="4ol-bk-5Gr"/>
+                        <outlet property="publicationTypeLabel" destination="DQi-wL-7VI" id="5YP-1N-8Pq"/>
+                        <outlet property="rentInfoView" destination="KxW-Up-ohu" id="rE2-wc-J37"/>
+                        <outlet property="squareMetersLabel" destination="rGc-q9-HxJ" id="gvW-xq-BNe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4U-j7-wG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
