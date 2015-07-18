@@ -65,7 +65,7 @@
     self.home.isForRent = self.forRentSwitch.isOn;
     self.home.isForSale = self.forSaleSwitch.isOn;
     self.home.address = self.addressField.text;
-    self.home.description = self.descriptionText.text;
+    self.home.homeDescription = self.descriptionText.text;
     self.home.baths = @(self.numberOfBathsStepper.value);
     self.home.beds = @(self.numberOfBedsStepper.value);
     self.home.parkingLots = @(self.numberOfParkingLotsStepper.value);

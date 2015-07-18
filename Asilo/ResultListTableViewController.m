@@ -9,6 +9,7 @@
 #import "ResultListTableViewController.h"
 #import "ResultListTableViewCell.h"
 #import "ASHome.h"
+#import "HomeDetailViewController.h"
 
 @interface ResultListTableViewController ()
 
@@ -29,7 +30,6 @@
 //    testHome.address = @"Blv. Fco. Eusebio Kino No. 123, Col. Pitic, Hermosillo, Sonora.";
 //    self.homes = [NSArray arrayWithObject:testHome];
     // =========================================
-    
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
@@ -57,6 +57,11 @@
     [cell setupWithHome:self.homes[indexPath.row]];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ASHome *selectedHome = self.homes[indexPath.row];
+    [self performSegueWithIdentifier:@"ListToDetail" sender:selectedHome];
 }
 
 /*
@@ -93,14 +98,14 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"ListToDetail"]) {
+        ASHome *home = (ASHome *)sender;
+        HomeDetailViewController *destination = (HomeDetailViewController *)segue.destinationViewController;
+        destination.home = home;
+    }
 }
-*/
 
 @end
