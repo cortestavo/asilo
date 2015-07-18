@@ -15,7 +15,8 @@
 
 @interface ResultMapViewController ()
 
-@property (assign, nonatomic) ASFilterType searchType;
+@property (nonatomic) ASFilterType searchType;
+@property (strong, nonatomic) NSArray *homes;
 
 @end
 
@@ -30,6 +31,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)listAction:(id)sender {
+    [self changeToListView];
 }
 
 /**
@@ -55,7 +60,7 @@
     CLLocationCoordinate2D sw = MKCoordinateForMapPoint(MKMapPointMake(mRect.origin.x, MKMapRectGetMaxY(mRect)));
     
     [ASHomeRepository findByAreaWithNorthEast:ne southWest:sw searchType:self.searchType block:^void (NSArray *homes){
-        NSLog(@"%@", ((ASHome *)homes[0]).description);
+        self.homes = homes;
     }];
 }
 
@@ -69,8 +74,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ResultList"]) {
         ResultListTableViewController *listView = (ResultListTableViewController *)segue.destinationViewController;
-        #warning Missing implementation
-        // TODO: Set a value to the listView.homes array
+        listView.homes = self.homes;
     }
 }
 
