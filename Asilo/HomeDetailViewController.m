@@ -72,7 +72,7 @@
         self.priceLabel.text = [NSString stringWithFormat:@"$%@", formattedPrice];
         self.rentInfoView.hidden = YES;
     }
-    self.descriptionText.text = self.home.description;
+    self.descriptionText.text = self.home.homeDescription;
     self.hasAcLabel.text = [NSString stringWithFormat:@"A.C.: %@", self.home.hasAC ? @"Yes" : @"No"];
     self.hasHeatingLabel.text = [NSString stringWithFormat:@"Heating: %@", self.home.hasHeating ? @"Yes" : @"No"];
     self.parkingLotsLabel.text = [NSString stringWithFormat:@"Parking lots: %d", self.home.parkingLots.intValue];
