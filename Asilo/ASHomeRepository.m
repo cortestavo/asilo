@@ -22,7 +22,8 @@
     }
     [query whereKey:@"location" withinGeoBoxFromSouthwest:sw toNortheast:ne];
     [query findObjectsInBackgroundWithBlock:^(NSArray *homes, NSError *error){
-            block(homes);
+        NSArray *found = [NSArray arrayWithArray:homes];
+        block(found);
     }];
 }
 
