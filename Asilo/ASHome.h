@@ -16,7 +16,7 @@
 @property (nonatomic) NSNumber *baths;
 @property (nonatomic) NSNumber *beds;
 @property (nonatomic) NSNumber *deposit;
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSString *homeDescription;
 @property (nonatomic) BOOL hasAC;
 @property (nonatomic) BOOL hasHeating;
 @property (nonatomic) BOOL isForSale;
