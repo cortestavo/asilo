@@ -15,12 +15,42 @@
                         <viewControllerLayoutGuide type="bottom" id="Gys-CY-Zwc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rlH-An-Bii">
-                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aba-Bp-aso">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cbX-gB-wHC"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Save Search" id="zwt-Cg-W9s"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="V4a-Wx-4h0"/>
+                                    <barButtonItem title="List" id="AWa-t5-wKa">
+                                        <connections>
+                                            <action selector="listAction:" destination="ech-q5-vzk" id="kw0-70-LcU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SaZ-B7-pdC">
+                                <rect key="frame" x="0.0" y="0.0" width="341" height="524"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aba-Bp-aso" firstAttribute="leading" secondItem="rlH-An-Bii" secondAttribute="leadingMargin" constant="-16" id="LEa-dQ-xg3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SaZ-B7-pdC" secondAttribute="trailing" constant="-37" id="NJq-L5-xaa"/>
+                            <constraint firstItem="SaZ-B7-pdC" firstAttribute="top" secondItem="rlH-An-Bii" secondAttribute="topMargin" id="Uym-48-ZIe"/>
+                            <constraint firstItem="Gys-CY-Zwc" firstAttribute="top" secondItem="aba-Bp-aso" secondAttribute="bottom" id="bRb-gc-3Od"/>
+                            <constraint firstItem="SaZ-B7-pdC" firstAttribute="leading" secondItem="rlH-An-Bii" secondAttribute="leadingMargin" constant="-16" id="fqX-lZ-z7J"/>
+                            <constraint firstItem="aba-Bp-aso" firstAttribute="top" secondItem="SaZ-B7-pdC" secondAttribute="bottom" id="xS0-Xt-WAk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aba-Bp-aso" secondAttribute="trailing" constant="-16" id="xnj-Ev-Uy8"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="MDL-fT-g7p"/>
                     <connections>
+                        <outlet property="mapView" destination="SaZ-B7-pdC" id="ryo-Un-lkX"/>
                         <segue destination="D5O-5G-h3R" kind="show" identifier="ResultList" id="frt-jN-vTO"/>
                         <segue destination="xHD-iS-Ewd" kind="show" identifier="MapToDetail" id="5JU-rt-cxd"/>
                     </connections>
@@ -34,7 +64,7 @@
             <objects>
                 <tableViewController id="D5O-5G-h3R" customClass="ResultListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="266" sectionHeaderHeight="22" sectionFooterHeight="22" id="bMG-Xx-3vb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -43,13 +73,13 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tql-Ed-SHm" id="dFO-yd-TPf">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3DZ-9L-Fug" userLabel="Background Image">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="castle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3DZ-9L-Fug" userLabel="Background Image">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="266"/>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4la-BW-xKM" userLabel="Gradient">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4la-BW-xKM" userLabel="Gradient">
                                             <rect key="frame" x="0.0" y="132" width="600" height="133"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 bd, 2 bth, 80 sqmt" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHL-m1-7mc" userLabel="(Summary) 2 bd, 2 bth, 80 sqmt">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2 bd, 2 bth, 80 sqmt" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHL-m1-7mc" userLabel="(Summary) 2 bd, 2 bth, 80 sqmt">
                                                     <rect key="frame" x="169" y="76" width="431" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="bN6-R9-2YO"/>
@@ -58,8 +88,8 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blv. Antonio Quiroga No. 21, El Llano, Hermosillo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ado-3M-AOB" userLabel="(Address) Blv. Antonio Quiroga No. 21, El Llano, Hermosillo">
-                                                    <rect key="frame" x="8" y="104" width="464" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Blv. Antonio Quiroga No. 21, El Llano, Hermosillo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ado-3M-AOB" userLabel="(Address) Blv. Antonio Quiroga No. 21, El Llano, Hermosillo">
+                                                    <rect key="frame" x="8" y="104" width="464" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="rrM-SJ-doL"/>
                                                     </constraints>
@@ -67,8 +97,8 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 days ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIb-ab-Ipt" userLabel="(Publication date) 2 days ago">
-                                                    <rect key="frame" x="492" y="105" width="100" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2 days ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIb-ab-Ipt" userLabel="(Publication date) 2 days ago">
+                                                    <rect key="frame" x="492" y="105" width="100" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="52b-J3-emF"/>
                                                     </constraints>
@@ -220,7 +250,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="153" id="4xK-62-siq"/>
                                         </constraints>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -398,6 +428,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJ7-y7-DvP" customClass="SearchNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="khB-Ol-ZZG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

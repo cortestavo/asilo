@@ -8,8 +8,17 @@
 
 #import "ResultMapViewController.h"
 #import "ResultListTableViewController.h"
+#import "ASFilter.h"
+#import "SearchNavigationController.h"
+#import "ASHomeRepository.h"
+#import "ASHome.h"
+#import "ASAnnotation.h"
+#import "HomeDetailViewController.h"
 
 @interface ResultMapViewController ()
+
+@property (nonatomic) ASFilterType searchType;
+@property (strong, nonatomic) NSArray *homes;
 
 @end
 
@@ -17,7 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.searchType = ((SearchNavigationController *)self.parentViewController).searchType;
+    [self initMap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,6 +35,83 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)listAction:(id)sender {
+    [self changeToListView];
+}
+
+/**
+    Creates a map with Hermosillo as a center
+**/
+- (void)initMap {
+    self.mapView.delegate = self;
+    CLLocationDistance distance = 35 * 1609;
+    CLLocationCoordinate2D zoomLocation;
+    zoomLocation.latitude = 29.0729670;
+    zoomLocation.longitude = -110.9559190;
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, distance, distance);
+    [self.mapView setRegion:viewRegion animated:YES];
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    [self getHomes];
+}
+
+- (void) getHomes {
+    MKMapRect mRect = self.mapView.visibleMapRect;
+    CLLocationCoordinate2D ne = MKCoordinateForMapPoint(MKMapPointMake(MKMapRectGetMaxX(mRect), mRect.origin.y));
+    CLLocationCoordinate2D sw = MKCoordinateForMapPoint(MKMapPointMake(mRect.origin.x, MKMapRectGetMaxY(mRect)));
+    
+    [ASHomeRepository findByAreaWithNorthEast:ne southWest:sw searchType:self.searchType block:^void (NSArray *homes){
+        self.homes = homes;
+        if(self.homes.count) {
+            for (ASAnnotation *annotation in self.mapView.annotations) {
+                [self.mapView removeAnnotation:annotation];
+            }
+            
+            for (int cont = 0, max = (int)[self.homes count]; cont < max; cont++) {
+                ASAnnotation *annotation = [self createAnnotationFromHomeInIndex:cont];
+                if(annotation != nil) {
+                    [self.mapView addAnnotation:annotation];
+                }
+            }
+        }
+    }];
+}
+
+- (ASAnnotation *) createAnnotationFromHomeInIndex:(int)index {
+    if(index < 0 && index >= [self.homes count]) {
+        return  nil;
+    }
+    CLLocationCoordinate2D coordinate;
+    ASHome *home = self.homes[index];
+    coordinate.latitude = home.location.latitude;
+    coordinate.longitude = home.location.longitude;
+    ASAnnotation *annotation = [[ASAnnotation alloc] init];
+    annotation.title = @"Click me for details";
+    annotation.coordinate = coordinate;
+    annotation.index = index;
+    return annotation;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(calloutTapped:)];
+    [view addGestureRecognizer:tapGesture];
+}
+
+-(void)calloutTapped:(UITapGestureRecognizer *) sender
+{
+    NSLog(@"Callout was tapped");
+    
+    MKAnnotationView *view = (MKAnnotationView*)sender.view;
+    ASAnnotation *annotation = [view annotation];
+    if ([annotation isKindOfClass:[ASAnnotation class]])
+    {
+        if(annotation.index >= 0 && annotation.index < [self.homes count]) {
+            [self performSegueWithIdentifier:@"MapToDetail" sender:self.homes[annotation.index]];
+        }
+    }
+}
 
 #pragma mark - Navigation
 
@@ -36,8 +123,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ResultList"]) {
         ResultListTableViewController *listView = (ResultListTableViewController *)segue.destinationViewController;
-        #warning Missing implementation
-        // TODO: Set a value to the listView.homes array
+        listView.homes = self.homes;
+    }
+    if ([segue.identifier isEqualToString:@"MapToDetail"]) {
+        ASHome *home = (ASHome *)sender;
+        HomeDetailViewController *destination = (HomeDetailViewController *)segue.destinationViewController;
+        destination.home = home;
     }
 }
 
