@@ -12,6 +12,7 @@
 #import "SearchNavigationController.h"
 #import "ASHomeRepository.h"
 #import "ASHome.h"
+#import "ASAnnotation.h"
 
 @interface ResultMapViewController ()
 
@@ -61,7 +62,34 @@
     
     [ASHomeRepository findByAreaWithNorthEast:ne southWest:sw searchType:self.searchType block:^void (NSArray *homes){
         self.homes = homes;
+        if(self.homes.count) {
+            for (ASAnnotation *annotation in self.mapView.annotations) {
+                [self.mapView removeAnnotation:annotation];
+            }
+            
+            for (int cont = 0, max = (int)[self.homes count]; cont < max; cont++) {
+                ASAnnotation *annotation = [self createAnnotationFromHomeInIndex:cont];
+                if(annotation != nil) {
+                    [self.mapView addAnnotation:annotation];
+                }
+            }
+        }
     }];
+}
+
+- (ASAnnotation *) createAnnotationFromHomeInIndex:(int)index {
+    if(index < 0 && index >= [self.homes count]) {
+        return  nil;
+    }
+    CLLocationCoordinate2D coordinate;
+    ASHome *home = self.homes[index];
+    coordinate.latitude = home.location.latitude;
+    coordinate.longitude = home.location.longitude;
+    ASAnnotation *annotation = [[ASAnnotation alloc] init];
+    annotation.title = @"Click me for details";
+    annotation.coordinate = coordinate;
+    annotation.index = index;
+    return annotation;
 }
 
 #pragma mark - Navigation
