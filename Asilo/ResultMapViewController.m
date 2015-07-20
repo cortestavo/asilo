@@ -13,6 +13,7 @@
 #import "ASHomeRepository.h"
 #import "ASHome.h"
 #import "ASAnnotation.h"
+#import "HomeDetailViewController.h"
 
 @interface ResultMapViewController ()
 
@@ -92,6 +93,26 @@
     return annotation;
 }
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(calloutTapped:)];
+    [view addGestureRecognizer:tapGesture];
+}
+
+-(void)calloutTapped:(UITapGestureRecognizer *) sender
+{
+    NSLog(@"Callout was tapped");
+    
+    MKAnnotationView *view = (MKAnnotationView*)sender.view;
+    ASAnnotation *annotation = [view annotation];
+    if ([annotation isKindOfClass:[ASAnnotation class]])
+    {
+        if(annotation.index >= 0 && annotation.index < [self.homes count]) {
+            [self performSegueWithIdentifier:@"MapToDetail" sender:self.homes[annotation.index]];
+        }
+    }
+}
+
 #pragma mark - Navigation
 
 -(void)changeToListView {
@@ -103,6 +124,11 @@
     if ([segue.identifier isEqualToString:@"ResultList"]) {
         ResultListTableViewController *listView = (ResultListTableViewController *)segue.destinationViewController;
         listView.homes = self.homes;
+    }
+    if ([segue.identifier isEqualToString:@"MapToDetail"]) {
+        ASHome *home = (ASHome *)sender;
+        HomeDetailViewController *destination = (HomeDetailViewController *)segue.destinationViewController;
+        destination.home = home;
     }
 }
 
