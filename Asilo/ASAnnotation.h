@@ -10,4 +10,6 @@
 
 @interface ASAnnotation : MKPointAnnotation
 
+@property (nonatomic) int index;
+
 @end
