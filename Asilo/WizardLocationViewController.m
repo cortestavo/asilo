@@ -9,7 +9,7 @@
 #import "WizardLocationViewController.h"
 #import "ASHome.h"
 #import "ASUser.h"
-#import "WizardSharedDataViewController.h"
+#import "WizardPicturesController.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface WizardLocationViewController ()
@@ -109,7 +109,7 @@
 
 - (void)next {
     if ([self populateModel]) {
-        [self performSegueWithIdentifier:@"WizardShared" sender:nil];
+        [self performSegueWithIdentifier:@"WizardPictures" sender:nil];
     }
 }
 
@@ -126,8 +126,10 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    WizardSharedDataViewController *destination = (WizardSharedDataViewController *)segue.destinationViewController;
-    destination.home = self.home;
+    if ([segue.identifier isEqualToString:@"WizardsPictures"]) {
+        WizardPicturesController *destination = (WizardPicturesController *)segue.destinationViewController;
+        destination.home = self.home;
+    }
 }
 
 @end
