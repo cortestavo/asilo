@@ -64,12 +64,71 @@
                     <navigationItem key="navigationItem" id="SZK-0q-ZLf"/>
                     <connections>
                         <outlet property="mapView" destination="u8c-K6-1eW" id="IWN-f1-eWu"/>
-                        <segue destination="Ewq-VL-0oW" kind="show" identifier="WizardShared" id="Jne-PG-I7n"/>
+                        <segue destination="zto-EM-hde" kind="show" identifier="WizardPictures" id="nKD-kd-mQD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOM-bm-TFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1727" y="222"/>
+        </scene>
+        <!--Wizard Pictures Controller-->
+        <scene sceneID="1hK-pA-JKf">
+            <objects>
+                <collectionViewController id="zto-EM-hde" customClass="WizardPicturesController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="mhA-oe-KKV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FbS-tb-A2m">
+                            <size key="itemSize" width="110" height="110"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WizardPictureView" id="Ytk-MW-yRl">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-lx-S15">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="5t4-lx-S15" firstAttribute="leading" secondItem="Ytk-MW-yRl" secondAttribute="leading" id="G4z-Hl-6bW"/>
+                                    <constraint firstAttribute="trailing" secondItem="5t4-lx-S15" secondAttribute="trailing" id="TeE-vC-h2M"/>
+                                    <constraint firstItem="5t4-lx-S15" firstAttribute="top" secondItem="Ytk-MW-yRl" secondAttribute="top" id="d9m-6c-TZA"/>
+                                    <constraint firstAttribute="bottom" secondItem="5t4-lx-S15" secondAttribute="bottom" id="xqa-dW-wMO"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="zto-EM-hde" id="I0V-9S-ggA"/>
+                            <outlet property="delegate" destination="zto-EM-hde" id="dqI-EW-iiv"/>
+                        </connections>
+                    </collectionView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="wRr-In-q9T"/>
+                        <barButtonItem image="camera" id="qmG-Ae-xMC">
+                            <connections>
+                                <action selector="takePhoto:" destination="zto-EM-hde" id="8ra-5D-W0l"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="oDn-11-6g3"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <segue destination="Ewq-VL-0oW" kind="show" identifier="WizardShared" id="b7A-rN-gzk"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gr9-we-hzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2742" y="222"/>
         </scene>
         <!--Wizard Shared Data View Controller-->
         <scene sceneID="ceC-sq-ey2">
@@ -348,6 +407,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="900"/>
                     <connections>
@@ -370,7 +430,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QB0-67-0cP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2458" y="222"/>
+            <point key="canvasLocation" x="3682" y="222"/>
         </scene>
         <!--Wizard Rent Data View Controller-->
         <scene sceneID="ylz-qT-jaf">
@@ -396,19 +456,19 @@
                                                     <constraint firstAttribute="height" constant="21" id="feH-ID-fcC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pets allowed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyd-VM-nU3">
                                                 <rect key="frame" x="20" y="177" width="118" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Furnished" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zn-25-qrs">
                                                 <rect key="frame" x="20" y="138" width="118" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mKG-T2-jKm" userLabel="Is Furnished">
@@ -423,7 +483,7 @@
                                                     <constraint firstAttribute="width" constant="118" id="ed8-lA-1OI"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1TC-p7-Z8K" userLabel="Price for rent">
@@ -437,7 +497,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lease" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zm0-QZ-EtR">
                                                 <rect key="frame" x="20" y="100" width="118" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="9iZ-S5-3xu" userLabel="Months for Lease">
@@ -465,7 +525,7 @@
                                                     <constraint firstAttribute="width" constant="101" id="Lgc-Ts-JTZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -550,7 +610,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNw-DP-QWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3364" y="-170"/>
+            <point key="canvasLocation" x="4588" y="-170"/>
         </scene>
         <!--Wizard Sale Data View Controller-->
         <scene sceneID="6XY-8u-sb9">
@@ -576,7 +636,7 @@
                                                     <constraint firstAttribute="width" constant="118" id="F2a-GV-AV3"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNs-xI-PfD">
@@ -624,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvv-SG-FEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3364" y="614"/>
+            <point key="canvasLocation" x="4588" y="614"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="drd-p3-56r">
@@ -645,13 +705,16 @@
         <!--Navigation Controller-->
         <scene sceneID="Gtf-rv-uui">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yAJ-nM-RLJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="yAJ-nM-RLJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zHk-Bw-N2U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Olh-YD-Nhr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="LYh-81-q7L" kind="relationship" relationship="rootViewController" id="Ckd-v5-uwD"/>
                     </connections>
@@ -661,6 +724,9 @@
             <point key="canvasLocation" x="915" y="222"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" width="50" height="50"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aFa-gD-kNY"/>
     </inferredMetricsTieBreakers>
