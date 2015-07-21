@@ -33,6 +33,7 @@
             [self showOnlyLoginButton];
             [self updateLoginStatus];
             [self dismissLogin];
+            [self sendToSearch];
         }];
     }
 }
