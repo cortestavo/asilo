@@ -37,6 +37,24 @@ static NSString * const reuseIdentifier = @"Cell";
     self.navigationController.toolbarHidden = NO;
 }
 
+- (IBAction)takePhoto:(id)sender {
+    UIImagePickerController *picker = [UIImagePickerController new];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (IBAction)selectPhoto:(id)sender {
+    UIImagePickerController *picker = [UIImagePickerController new];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
 - (void)next {
     [self performSegueWithIdentifier:@"WizardShared" sender:nil];
 }

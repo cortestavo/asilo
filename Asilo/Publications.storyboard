@@ -119,6 +119,12 @@
                                 <action selector="takePhoto:" destination="zto-EM-hde" id="8ra-5D-W0l"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="VNX-lX-H63"/>
+                        <barButtonItem image="gallery" id="zaN-G4-do5">
+                            <connections>
+                                <action selector="selectPhoto:" destination="zto-EM-hde" id="UtD-eR-tdK"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="oDn-11-6g3"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
@@ -726,6 +732,7 @@
     </scenes>
     <resources>
         <image name="camera" width="50" height="50"/>
+        <image name="gallery" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aFa-gD-kNY"/>
