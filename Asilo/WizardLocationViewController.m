@@ -114,7 +114,7 @@
 }
 
 - (BOOL)populateModel {
-    if (self.mapView.annotations.count <= 1) {
+    if (self.mapView.annotations.count <= self.mapView.userLocationVisible ? 1 : 0) {
         return NO;
     }
     MKPointAnnotation *annotation = self.mapView.annotations.firstObject;
