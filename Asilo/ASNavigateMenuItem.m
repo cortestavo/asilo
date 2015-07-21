@@ -28,7 +28,7 @@
     UIStoryboard *destinationStoryboard = [UIStoryboard storyboardWithName:self.destination bundle:nil];
     UIViewController *destinationViewController = [destinationStoryboard instantiateInitialViewController];
 
-    if([self isLoginPassed]) {
+    if([self hasLoginPassed]) {
         if (self.beforeNavigation) {
             self.beforeNavigation(destinationViewController);
         }

@@ -25,7 +25,7 @@
     @throw exception;
 }
 
-- (BOOL) isLoginPassed {
+- (BOOL) hasLoginPassed {
     BOOL loginPassed = YES;
     if(self.requireLogin && [ASUser currentUser] == nil) {
         loginPassed = NO;

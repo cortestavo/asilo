@@ -15,6 +15,6 @@
 -(instancetype)initWithTitle:(NSString *)title;
 
 -(void)selectItem;
-- (BOOL) isLoginPassed;
+- (BOOL) hasLoginPassed;
 
 @end
