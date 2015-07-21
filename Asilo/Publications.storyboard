@@ -55,13 +55,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="u8c-K6-1eW" firstAttribute="bottom" secondItem="5qh-tu-Yaq" secondAttribute="top" id="0OB-dc-RlF"/>
-                            <constraint firstItem="u8c-K6-1eW" firstAttribute="leading" secondItem="z7K-te-cAq" secondAttribute="leading" id="JM7-1h-VDi"/>
-                            <constraint firstAttribute="trailing" secondItem="u8c-K6-1eW" secondAttribute="trailing" id="jpj-fm-9xQ"/>
-                            <constraint firstItem="u8c-K6-1eW" firstAttribute="top" secondItem="z7K-te-cAq" secondAttribute="top" id="q0l-tQ-zfU"/>
+                            <constraint firstItem="u8c-K6-1eW" firstAttribute="leading" secondItem="z7K-te-cAq" secondAttribute="leading" id="8yW-wQ-Nv5"/>
+                            <constraint firstItem="u8c-K6-1eW" firstAttribute="bottom" secondItem="5qh-tu-Yaq" secondAttribute="top" id="dBS-91-DzA"/>
+                            <constraint firstAttribute="trailing" secondItem="u8c-K6-1eW" secondAttribute="trailing" id="l5p-nR-YuH"/>
+                            <constraint firstItem="u8c-K6-1eW" firstAttribute="top" secondItem="z7K-te-cAq" secondAttribute="top" id="nc7-H3-RsR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SZK-0q-ZLf"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="u8c-K6-1eW" id="IWN-f1-eWu"/>
                         <segue destination="zto-EM-hde" kind="show" identifier="WizardPictures" id="nKD-kd-mQD"/>
