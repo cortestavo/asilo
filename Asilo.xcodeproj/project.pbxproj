@@ -248,14 +248,14 @@
 				3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */,
 				3E6244231B5EBCD300B62E82 /* WizardPicturesController.h */,
 				3E6244241B5EBCD300B62E82 /* WizardPicturesController.m */,
+				3E6244261B5ED50200B62E82 /* PictureCollectionViewCell.h */,
+				3E6244271B5ED50200B62E82 /* PictureCollectionViewCell.m */,
 				3E13BAEA1B506C2E0052F56D /* WizardSharedDataViewController.h */,
 				3E13BAEB1B506C2E0052F56D /* WizardSharedDataViewController.m */,
 				3E13BAF21B548E300052F56D /* WizardRentDataViewController.h */,
 				3E13BAF31B548E300052F56D /* WizardRentDataViewController.m */,
 				3E13BAF51B548E490052F56D /* WizardSaleDataViewController.h */,
 				3E13BAF61B548E490052F56D /* WizardSaleDataViewController.m */,
-				3E6244261B5ED50200B62E82 /* PictureCollectionViewCell.h */,
-				3E6244271B5ED50200B62E82 /* PictureCollectionViewCell.m */,
 			);
 			name = "Publish Wizard";
 			sourceTree = "<group>";

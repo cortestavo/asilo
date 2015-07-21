@@ -8,21 +8,23 @@
 
 #import "WizardPicturesController.h"
 #import "WizardSharedDataViewController.h"
+#import "PictureCollectionViewCell.h"
 
 @interface WizardPicturesController ()
+
+@property NSMutableArray *pictures;
 
 @end
 
 @implementation WizardPicturesController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"WizardPictureCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
+    self.pictures = [NSMutableArray array];
     [self setupNavigationBar];
 }
 
@@ -32,10 +34,16 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)setupNavigationBar {
-    self.navigationItem.title = @"Take pictures";
+    self.navigationItem.title = @"Add pictures";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStyleDone target:self action:@selector(next)];
     self.navigationController.toolbarHidden = NO;
 }
+
+- (void)next {
+    [self performSegueWithIdentifier:@"WizardShared" sender:nil];
+}
+
+#pragma mark - Actions
 
 - (IBAction)takePhoto:(id)sender {
     UIImagePickerController *picker = [UIImagePickerController new];
@@ -55,8 +63,13 @@ static NSString * const reuseIdentifier = @"Cell";
     [self presentViewController:picker animated:YES completion:nil];
 }
 
-- (void)next {
-    [self performSegueWithIdentifier:@"WizardShared" sender:nil];
+# pragma mark - UIImagePickerController delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *image = info[UIImagePickerControllerEditedImage];
+    [self.pictures addObject:image];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    [self.collectionView reloadData];
 }
 
 #pragma mark - Navigation
@@ -76,14 +89,14 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+    NSLog(@"%d", (int)self.pictures.count);
+    return self.pictures.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
+    PictureCollectionViewCell *cell = (PictureCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    UIImage *image = (UIImage *)[self.pictures objectAtIndex:indexPath.row];
+    cell.imageView.image = image;
     
     return cell;
 }
