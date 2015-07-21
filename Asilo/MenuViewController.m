@@ -70,6 +70,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuCell" forIndexPath:indexPath];
     ASMenuItem *item = self.menuItems[indexPath.row];
     cell.textLabel.text = item.title;
+    UIColor *textColor;
+    
+    if([item isLoginPassed]) {
+        textColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1];
+    } else {
+        textColor = [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1];
+    }
+    cell.textLabel.textColor = textColor;
     return cell;
 }
 

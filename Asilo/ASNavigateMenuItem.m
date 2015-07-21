@@ -28,11 +28,12 @@
     UIStoryboard *destinationStoryboard = [UIStoryboard storyboardWithName:self.destination bundle:nil];
     UIViewController *destinationViewController = [destinationStoryboard instantiateInitialViewController];
 
-    if (self.beforeNavigation) {
-        self.beforeNavigation(destinationViewController);
+    if([self hasLoginPassed]) {
+        if (self.beforeNavigation) {
+            self.beforeNavigation(destinationViewController);
+        }
+        [appDelegate.drawerViewController setCenterViewController:destinationViewController withCloseAnimation:YES completion:nil];
     }
-    [appDelegate.drawerViewController setCenterViewController:destinationViewController withCloseAnimation:YES completion:nil];
-
 }
 
 @end
