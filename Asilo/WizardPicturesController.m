@@ -48,7 +48,6 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
 - (IBAction)takePhoto:(id)sender {
     UIImagePickerController *picker = [UIImagePickerController new];
     picker.delegate = self;
-    picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     [self presentViewController:picker animated:YES completion:nil];
@@ -66,7 +65,7 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
 # pragma mark - UIImagePickerController delegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    UIImage *image = info[UIImagePickerControllerEditedImage];
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
     [self.pictures addObject:image];
     [picker dismissViewControllerAnimated:YES completion:nil];
     [self.collectionView reloadData];
@@ -89,7 +88,6 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    NSLog(@"%d", (int)self.pictures.count);
     return self.pictures.count;
 }
 
