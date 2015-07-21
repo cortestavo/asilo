@@ -72,7 +72,7 @@
     cell.textLabel.text = item.title;
     UIColor *textColor;
     
-    if([item isLoginPassed]) {
+    if([item hasLoginPassed]) {
         textColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1];
     } else {
         textColor = [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1];
