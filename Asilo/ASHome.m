@@ -56,7 +56,6 @@
         self.photos = [NSMutableArray array];
     }
     [self.photos addObject:imageFile];
-    [self saveInBackground];
 }
 
 - (int) countOfPhotos {
