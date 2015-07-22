@@ -85,8 +85,11 @@
     [self.mapView removeAnnotations:self.mapView.annotations];
     
     CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
-    CLLocationCoordinate2D touchMapCoordinate = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
-    MKPointAnnotation *annotation = [self annotationFromCoordinate:touchMapCoordinate];
+    CLLocationCoordinate2D coordinate = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
+    MKPointAnnotation *annotation = [self annotationFromCoordinate:coordinate];
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
+    self.home.location = [PFGeoPoint geoPointWithLocation:location];
+    
     [self.mapView addAnnotation:annotation];
 }
 
@@ -117,9 +120,6 @@
     if (self.mapView.annotations.count <= self.mapView.userLocationVisible ? 1 : 0) {
         return NO;
     }
-    MKPointAnnotation *annotation = self.mapView.annotations.firstObject;
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:annotation.coordinate.latitude longitude:annotation.coordinate.longitude];
-    self.home.location = [PFGeoPoint geoPointWithLocation:location];
     return YES;
 }
 
