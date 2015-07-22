@@ -7,6 +7,7 @@
 //
 
 #import "ASUser.h"
+#import "ASHomeRepository.h"
 
 @implementation ASUser
 
@@ -19,6 +20,10 @@
 
 + (ASUser *)currentUser {
     return (ASUser *)[PFUser currentUser];
+}
+
+- (void)getMyPublicationsWithBlock:(void(^)(NSArray *, NSError *))block {
+    [ASHomeRepository getPublishedHomesForUser:self block:block];
 }
 
 @end
