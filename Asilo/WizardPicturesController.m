@@ -12,8 +12,6 @@
 
 @interface WizardPicturesController ()
 
-@property NSMutableArray *pictures;
-
 @end
 
 @implementation WizardPicturesController
@@ -23,8 +21,6 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Register cell classes
-    self.pictures = [NSMutableArray array];
     [self setupNavigationBar];
 }
 
@@ -66,7 +62,6 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
-    [self.pictures addObject:image];
     [self.home addPhoto:image];
     [picker dismissViewControllerAnimated:YES completion:nil];
     [self.collectionView reloadData];
@@ -89,13 +84,14 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.pictures.count;
+    return [self.home countOfPhotos];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     PictureCollectionViewCell *cell = (PictureCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    UIImage *image = (UIImage *)[self.pictures objectAtIndex:indexPath.row];
-    cell.imageView.image = image;
+    [self.home getPhotoAtIndex:indexPath.row block:^(UIImage *image) {
+        cell.imageView.image = image;
+    }];
     
     return cell;
 }
