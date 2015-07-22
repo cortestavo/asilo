@@ -7,8 +7,14 @@
 //
 
 #import "MyPublicationsTableViewController.h"
+#import "ASUser.h"
+#import "ResultListTableViewCell.h"
+#import "HomeDetailViewController.h"
 
 @interface MyPublicationsTableViewController ()
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property NSArray *homes;
 
 @end
 
@@ -19,11 +25,27 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
      self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(publishNew)];
+    [self refreshMyPublications];
+}
+
+- (void)refreshMyPublications {
+    [[ASUser currentUser] getMyPublicationsWithBlock:^(NSArray *homes, NSError *error) {
+        if (error) {
+            // TODO: alert error
+            NSLog(@"Error: %@", error.localizedDescription);
+        }
+        self.homes = homes;
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self refreshMyPublications];
 }
 
 #pragma mark - Table view data source
@@ -34,24 +56,21 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.homes.count;
 }
 
 -(void)publishNew {
     [self performSegueWithIdentifier:@"PublishWizard" sender:nil];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    ResultListTableViewCell *cell = (ResultListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ResultListCell" forIndexPath:indexPath];
+    ASHome *home = (ASHome *)self.homes[indexPath.row];
+    [cell setupWithHome:home];
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -70,20 +89,6 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
 }
 */
 

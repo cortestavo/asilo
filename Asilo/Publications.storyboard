@@ -11,7 +11,7 @@
         <scene sceneID="bXC-3t-jr9">
             <objects>
                 <tableViewController storyboardIdentifier="MyPublications" id="UVa-Rv-ePy" customClass="MyPublicationsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CLz-u0-biv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="266" sectionHeaderHeight="22" sectionFooterHeight="22" id="CLz-u0-biv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,6 +109,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="My Publications" id="G9V-Cn-Ljx"/>
                     <connections>
+                        <outlet property="tableView" destination="CLz-u0-biv" id="Uee-7B-dyM"/>
                         <segue destination="yAJ-nM-RLJ" kind="presentation" identifier="PublishWizard" id="NYn-by-wbW"/>
                     </connections>
                 </tableViewController>
