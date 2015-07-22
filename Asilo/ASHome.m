@@ -8,6 +8,7 @@
 
 #import "ASHome.h"
 #import <Parse/PFObject+Subclass.h>
+#import <Foundation/Foundation.h>
 
 @implementation ASHome
 
@@ -30,6 +31,7 @@
 @dynamic priceForSale;      // sale
 @dynamic squareMeters;      // shared
 @dynamic tags;              // shared
+@dynamic photos;
 
 + (void)load {
     [self registerSubclass];
@@ -37,6 +39,39 @@
 
 + (NSString *)parseClassName {
     return @"Home";
+}
+
++ (instancetype)objectWithClassName:(NSString *)className {
+    return [super objectWithClassName:className];
+}
+
++ (instancetype)getNewObject {
+    return [super objectWithClassName:@"Home"];
+}
+
+- (void) addPhoto:(UIImage *)photo {
+    NSData *imageData = UIImageJPEGRepresentation(photo, 80);
+    PFFile *imageFile = [PFFile fileWithData:imageData];
+    if(self.photos == nil) {
+        self.photos = [NSMutableArray array];
+    }
+    [self.photos addObject:imageFile];
+}
+
+- (int) countOfPhotos {
+    return self.photos == nil ? 0 : (int)[self.photos count];
+}
+
+- (void) getPhotoAtIndex:(int)index block:(void (^)(UIImage *))block {
+    if(self.photos == nil || index < 0 || index > [self.photos count]) {
+        return;
+    }
+    PFFile *image = [self.photos objectAtIndex:index];
+    [image getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error){
+        if(error == nil) {
+            block([UIImage imageWithData:imageData]);
+        }
+    }];
 }
 
 @end

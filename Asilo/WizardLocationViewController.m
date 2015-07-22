@@ -37,7 +37,7 @@
 }
 
 - (void)initializeHomeObject {
-    self.home = [ASHome objectWithClassName:@"Home"];
+    self.home = [ASHome getNewObject];
     self.home.owner = [ASUser currentUser];
 }
 
