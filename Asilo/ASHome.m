@@ -31,7 +31,6 @@
 @dynamic priceForSale;      // sale
 @dynamic squareMeters;      // shared
 @dynamic tags;              // shared
-@dynamic photos;
 
 + (void)load {
     [self registerSubclass];
@@ -52,21 +51,21 @@
 - (void) addPhoto:(UIImage *)photo {
     NSData *imageData = UIImageJPEGRepresentation(photo, 80);
     PFFile *imageFile = [PFFile fileWithData:imageData];
-    if(self.photos == nil) {
-        self.photos = [NSMutableArray array];
+    if(self[@"photos"] == nil) {
+        self[@"photos"] = [NSMutableArray array];
     }
-    [self.photos addObject:imageFile];
+    [self[@"photos"] addObject:imageFile];
 }
 
 - (int) countOfPhotos {
-    return self.photos == nil ? 0 : (int)[self.photos count];
+    return self[@"photos"] == nil ? 0 : (int)[self[@"photos"] count];
 }
 
 - (void) getPhotoAtIndex:(int)index block:(void (^)(UIImage *))block {
-    if(self.photos == nil || index < 0 || index > [self.photos count]) {
+    if(self[@"photos"] == nil || index < 0 || index > [self[@"photos"] count]) {
         return;
     }
-    PFFile *image = [self.photos objectAtIndex:index];
+    PFFile *image = [self[@"photos"] objectAtIndex:index];
     [image getDataInBackgroundWithBlock:^(NSData *imageData, NSError *error){
         if(error == nil) {
             block([UIImage imageWithData:imageData]);
