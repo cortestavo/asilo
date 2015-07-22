@@ -63,7 +63,7 @@
     return self.photos == nil ? 0 : (int)[self.photos count];
 }
 
-- (void) getPhotoAtIndex:(int)index block:(void (^)(UIImage *))block{
+- (void) getPhotoAtIndex:(int)index block:(void (^)(UIImage *))block {
     if(self.photos == nil || index < 0 || index > [self.photos count]) {
         return;
     }

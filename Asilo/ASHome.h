@@ -38,6 +38,6 @@
 + (instancetype)getNewObject;
 - (void) addPhoto:(UIImage *)photo;
 - (int) countOfPhotos;
-- (void) getPhotoAtIndex:(int)index;
+- (void) getPhotoAtIndex:(int)index block:(void (^)(UIImage *))block;
 
 @end
