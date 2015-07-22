@@ -67,6 +67,7 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     [self.pictures addObject:image];
+    [self.home addPhoto:image];
     [picker dismissViewControllerAnimated:YES completion:nil];
     [self.collectionView reloadData];
 }
@@ -74,7 +75,7 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"WizardsShared"]) {
+    if ([segue.identifier isEqualToString:@"WizardShared"]) {
         WizardSharedDataViewController *destination = (WizardSharedDataViewController *)segue.destinationViewController;
         destination.home = self.home;
     }

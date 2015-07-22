@@ -126,7 +126,7 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"WizardsPictures"]) {
+    if ([segue.identifier isEqualToString:@"WizardPictures"]) {
         WizardPicturesController *destination = (WizardPicturesController *)segue.destinationViewController;
         destination.home = self.home;
     }
