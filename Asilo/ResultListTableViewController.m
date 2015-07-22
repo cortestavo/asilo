@@ -32,9 +32,6 @@
     // =========================================
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,11 +54,6 @@
     [cell setupWithHome:self.homes[indexPath.row]];
     
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ASHome *selectedHome = self.homes[indexPath.row];
-    [self performSegueWithIdentifier:@"ListToDetail" sender:selectedHome];
 }
 
 /*
@@ -102,7 +94,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ListToDetail"]) {
-        ASHome *home = (ASHome *)sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        ASHome *home = self.homes[indexPath.row];
         HomeDetailViewController *destination = (HomeDetailViewController *)segue.destinationViewController;
         destination.home = home;
     }
