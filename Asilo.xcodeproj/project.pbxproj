@@ -13,6 +13,8 @@
 		3E13BAEE1B5433440052F56D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13BAED1B5433440052F56D /* CoreLocation.framework */; };
 		3E13BAF41B548E300052F56D /* WizardRentDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAF31B548E300052F56D /* WizardRentDataViewController.m */; };
 		3E13BAF71B548E490052F56D /* WizardSaleDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAF61B548E490052F56D /* WizardSaleDataViewController.m */; };
+		3E6244251B5EBCD300B62E82 /* WizardPicturesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6244241B5EBCD300B62E82 /* WizardPicturesController.m */; };
+		3E6244281B5ED50200B62E82 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6244271B5ED50200B62E82 /* PictureCollectionViewCell.m */; };
 		3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A717E1B4C5584005415F6 /* Search.storyboard */; };
 		3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71801B4C559B005415F6 /* Login.storyboard */; };
 		3E6A71831B4C55B8005415F6 /* Publications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A71821B4C55B8005415F6 /* Publications.storyboard */; };
@@ -86,6 +88,10 @@
 		3E13BAF31B548E300052F56D /* WizardRentDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardRentDataViewController.m; sourceTree = "<group>"; };
 		3E13BAF51B548E490052F56D /* WizardSaleDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardSaleDataViewController.h; sourceTree = "<group>"; };
 		3E13BAF61B548E490052F56D /* WizardSaleDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardSaleDataViewController.m; sourceTree = "<group>"; };
+		3E6244231B5EBCD300B62E82 /* WizardPicturesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardPicturesController.h; sourceTree = "<group>"; };
+		3E6244241B5EBCD300B62E82 /* WizardPicturesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardPicturesController.m; sourceTree = "<group>"; };
+		3E6244261B5ED50200B62E82 /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
+		3E6244271B5ED50200B62E82 /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
 		3E6A717E1B4C5584005415F6 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		3E6A71801B4C559B005415F6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		3E6A71821B4C55B8005415F6 /* Publications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Publications.storyboard; sourceTree = "<group>"; };
@@ -240,6 +246,10 @@
 			children = (
 				3E13BAE11B50399A0052F56D /* WizardLocationViewController.h */,
 				3E13BAE21B50399A0052F56D /* WizardLocationViewController.m */,
+				3E6244231B5EBCD300B62E82 /* WizardPicturesController.h */,
+				3E6244241B5EBCD300B62E82 /* WizardPicturesController.m */,
+				3E6244261B5ED50200B62E82 /* PictureCollectionViewCell.h */,
+				3E6244271B5ED50200B62E82 /* PictureCollectionViewCell.m */,
 				3E13BAEA1B506C2E0052F56D /* WizardSharedDataViewController.h */,
 				3E13BAEB1B506C2E0052F56D /* WizardSharedDataViewController.m */,
 				3E13BAF21B548E300052F56D /* WizardRentDataViewController.h */,
@@ -594,10 +604,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6A718F1B4C6330005415F6 /* MyPublicationsTableViewController.m in Sources */,
+				3E6244251B5EBCD300B62E82 /* WizardPicturesController.m in Sources */,
 				3EF2B3641B582D8600B9718C /* ResultListTableViewCell.m in Sources */,
 				3E6A71A61B4DA386005415F6 /* ASMenuItem.m in Sources */,
 				3EF2B3D91B589CDD00B9718C /* HomeDetailViewController.m in Sources */,
 				3E6A71AD1B4DE6F2005415F6 /* ASNavigateMenuItem.m in Sources */,
+				3E6244281B5ED50200B62E82 /* PictureCollectionViewCell.m in Sources */,
 				43CE65AC1B5D683C00610D4A /* ASAnnotation.m in Sources */,
 				3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */,
 				3E13BAF71B548E490052F56D /* WizardSaleDataViewController.m in Sources */,
