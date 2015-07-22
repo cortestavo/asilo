@@ -72,6 +72,18 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%d", indexPath.row);
+    [self showDetailForHome:self.homes[indexPath.row]];
+}
+
+- (void)showDetailForHome:(ASHome *)home {
+    UIStoryboard *searchStoryboard = [UIStoryboard storyboardWithName:@"Search" bundle:nil];
+    HomeDetailViewController *vc = (HomeDetailViewController *)[searchStoryboard instantiateViewControllerWithIdentifier:@"HomeDetail"];
+    vc.home = home;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
