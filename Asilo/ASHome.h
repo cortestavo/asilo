@@ -31,7 +31,13 @@
 @property (nonatomic) NSNumber *priceForSale;
 @property (nonatomic) NSNumber *squareMeters;
 @property (nonatomic) PFRelation *tags;
+@property (nonatomic) NSMutableArray *photos;
 
 + (NSString *)parseClassName;
++ (instancetype)objectWithClassName:(NSString *)className;
++ (instancetype)getNewObject;
+- (void) addPhoto:(UIImage *)photo;
+- (int) countOfPhotos;
+- (void) getPhotoAtIndex:(int)index;
 
 @end
