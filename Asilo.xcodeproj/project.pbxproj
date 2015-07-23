@@ -13,6 +13,7 @@
 		3E13BAEE1B5433440052F56D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E13BAED1B5433440052F56D /* CoreLocation.framework */; };
 		3E13BAF41B548E300052F56D /* WizardRentDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAF31B548E300052F56D /* WizardRentDataViewController.m */; };
 		3E13BAF71B548E490052F56D /* WizardSaleDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E13BAF61B548E490052F56D /* WizardSaleDataViewController.m */; };
+		3E4D86DB1B604A08008341C3 /* ASHomeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D86DA1B604A08008341C3 /* ASHomeAnnotation.m */; };
 		3E6244251B5EBCD300B62E82 /* WizardPicturesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6244241B5EBCD300B62E82 /* WizardPicturesController.m */; };
 		3E6244281B5ED50200B62E82 /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6244271B5ED50200B62E82 /* PictureCollectionViewCell.m */; };
 		3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6A717E1B4C5584005415F6 /* Search.storyboard */; };
@@ -88,6 +89,8 @@
 		3E13BAF31B548E300052F56D /* WizardRentDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardRentDataViewController.m; sourceTree = "<group>"; };
 		3E13BAF51B548E490052F56D /* WizardSaleDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardSaleDataViewController.h; sourceTree = "<group>"; };
 		3E13BAF61B548E490052F56D /* WizardSaleDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardSaleDataViewController.m; sourceTree = "<group>"; };
+		3E4D86D91B604A08008341C3 /* ASHomeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASHomeAnnotation.h; sourceTree = "<group>"; };
+		3E4D86DA1B604A08008341C3 /* ASHomeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASHomeAnnotation.m; sourceTree = "<group>"; };
 		3E6244231B5EBCD300B62E82 /* WizardPicturesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WizardPicturesController.h; sourceTree = "<group>"; };
 		3E6244241B5EBCD300B62E82 /* WizardPicturesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WizardPicturesController.m; sourceTree = "<group>"; };
 		3E6244261B5ED50200B62E82 /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
@@ -274,6 +277,8 @@
 				3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */,
 				3EF2B3D71B589CDD00B9718C /* HomeDetailViewController.h */,
 				3EF2B3D81B589CDD00B9718C /* HomeDetailViewController.m */,
+				3E4D86D91B604A08008341C3 /* ASHomeAnnotation.h */,
+				3E4D86DA1B604A08008341C3 /* ASHomeAnnotation.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -630,6 +635,7 @@
 				3E6A718A1B4C619C005415F6 /* ResultMapViewController.m in Sources */,
 				3E6A71931B4C63D3005415F6 /* LoginViewController.m in Sources */,
 				3E13BAE31B50399A0052F56D /* WizardLocationViewController.m in Sources */,
+				3E4D86DB1B604A08008341C3 /* ASHomeAnnotation.m in Sources */,
 				433CEDAA1B56DEFA00688F44 /* ASLoginMenuItem.m in Sources */,
 				3E6A71B01B4DFD4F005415F6 /* SearchNavigationController.m in Sources */,
 			);
