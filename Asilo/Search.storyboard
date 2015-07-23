@@ -172,7 +172,7 @@
         <!--Home Detail View Controller-->
         <scene sceneID="hOA-DH-9B3">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="xHD-iS-Ewd" customClass="HomeDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeDetail" automaticallyAdjustsScrollViewInsets="NO" id="xHD-iS-Ewd" customClass="HomeDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wDS-zB-M3b"/>
                         <viewControllerLayoutGuide type="bottom" id="gLQ-7o-vzb"/>

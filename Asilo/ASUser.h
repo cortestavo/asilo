@@ -15,4 +15,6 @@
 
 + (ASUser *)currentUser;
 
+- (void)getMyPublicationsWithBlock:(void(^)(NSArray *homes, NSError *error))block;
+
 @end

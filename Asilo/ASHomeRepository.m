@@ -27,6 +27,12 @@
     }];
 }
 
++ (void)getPublishedHomesForUser:(PFUser *)user block:(void (^)(NSArray *, NSError *))block {
+    PFQuery *query = [self createQuery];
+    [query whereKey:@"owner" equalTo:user];
+    [query findObjectsInBackgroundWithBlock:block];
+}
+
 #pragma private methods
 
 /**
