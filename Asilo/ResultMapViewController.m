@@ -12,8 +12,8 @@
 #import "SearchNavigationController.h"
 #import "ASHomeRepository.h"
 #import "ASHome.h"
-#import "ASAnnotation.h"
 #import "HomeDetailViewController.h"
+#import "ASHomeAnnotation.h"
 
 @interface ResultMapViewController ()
 
@@ -64,33 +64,33 @@
     [ASHomeRepository findByAreaWithNorthEast:ne southWest:sw searchType:self.searchType block:^void (NSArray *homes){
         self.homes = homes;
         if(self.homes.count) {
-            for (ASAnnotation *annotation in self.mapView.annotations) {
-                [self.mapView removeAnnotation:annotation];
-            }
+            [self.mapView removeAnnotations:self.mapView.annotations];
             
             for (int cont = 0, max = (int)[self.homes count]; cont < max; cont++) {
-                ASAnnotation *annotation = [self createAnnotationFromHomeInIndex:cont];
-                if(annotation != nil) {
-                    [self.mapView addAnnotation:annotation];
-                }
+//                ASAnnotation *annotation = [self createAnnotationFromHomeInIndex:cont];
+//                if(annotation != nil) {
+//                    [self.mapView addAnnotation:annotation];
+//                }
+                ASHomeAnnotation *annotation = [[ASHomeAnnotation alloc] initWithHome:self.homes[cont]];
+                [self.mapView addAnnotation:annotation];
             }
         }
     }];
 }
 
-- (ASAnnotation *) createAnnotationFromHomeInIndex:(int)index {
-    if(index < 0 && index >= [self.homes count]) {
-        return  nil;
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[ASHomeAnnotation class]]) {
+        ASHomeAnnotation *homeAnnotation = (ASHomeAnnotation *)annotation;
+        MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"HomeAnnotation"];
+//        if (annotationView == nil) {
+            annotationView = homeAnnotation.annotationView;
+//        } else {
+//            annotationView.annotation = annotation;
+//        }
+        return annotationView;
+    } else {
+        return nil;
     }
-    CLLocationCoordinate2D coordinate;
-    ASHome *home = self.homes[index];
-    coordinate.latitude = home.location.latitude;
-    coordinate.longitude = home.location.longitude;
-    ASAnnotation *annotation = [[ASAnnotation alloc] init];
-    annotation.title = @"Click me for details";
-    annotation.coordinate = coordinate;
-    annotation.index = index;
-    return annotation;
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
@@ -101,15 +101,10 @@
 
 -(void)calloutTapped:(UITapGestureRecognizer *) sender
 {
-    NSLog(@"Callout was tapped");
-    
     MKAnnotationView *view = (MKAnnotationView*)sender.view;
-    ASAnnotation *annotation = [view annotation];
-    if ([annotation isKindOfClass:[ASAnnotation class]])
-    {
-        if(annotation.index >= 0 && annotation.index < [self.homes count]) {
-            [self performSegueWithIdentifier:@"MapToDetail" sender:self.homes[annotation.index]];
-        }
+    ASHomeAnnotation *annotation = [view annotation];
+    if ([annotation isKindOfClass:[ASHomeAnnotation class]]) {
+        [self performSegueWithIdentifier:@"MapToDetail" sender:annotation.home];
     }
 }
 
