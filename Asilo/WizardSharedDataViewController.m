@@ -32,13 +32,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.descriptionText.text = @"";
+    [self setupUiElements];
     [self setupNavigationBar];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setupUiElements {
+    self.descriptionText.text = @"";
+    self.descriptionText.layer.borderColor = [UIColor colorWithRed:230.0/255.0
+                                                             green:230.0/255.0
+                                                              blue:230.0/255.0
+                                                             alpha:1.0].CGColor;
+    self.descriptionText.layer.borderWidth = 1;
+    self.descriptionText.layer.cornerRadius = 5;
 }
 
 - (void)setupNavigationBar {
