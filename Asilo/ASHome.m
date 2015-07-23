@@ -32,6 +32,8 @@
 @dynamic squareMeters;      // shared
 @dynamic tags;              // shared
 
+@synthesize isFavorite;
+
 + (void)load {
     [self registerSubclass];
 }
@@ -41,7 +43,7 @@
 }
 
 + (instancetype)objectWithClassName:(NSString *)className {
-    return [super objectWithClassName:className];
+    return nil;
 }
 
 + (instancetype)getNewObject {

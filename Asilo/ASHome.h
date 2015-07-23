@@ -31,6 +31,7 @@
 @property (nonatomic) NSNumber *priceForSale;
 @property (nonatomic) NSNumber *squareMeters;
 @property (nonatomic) PFRelation *tags;
+@property (nonatomic) BOOL isFavorite;
 
 + (NSString *)parseClassName;
 + (instancetype)objectWithClassName:(NSString *)className;
