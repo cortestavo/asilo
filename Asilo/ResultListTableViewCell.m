@@ -8,6 +8,7 @@
 
 #import "ResultListTableViewCell.h"
 #import <NSDate+DateTools.h>
+#import "ASUser.h"
 
 @interface ResultListTableViewCell()
 
@@ -17,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIView *gradientView;
+@property (nonatomic) ASHome *home;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 @end
 
@@ -57,6 +60,47 @@
     self.summaryLabel.text = [NSString stringWithFormat:@"%d bd, %d bth, %@ sqmt", home.beds.intValue, home.baths.intValue, [distanceFormatter stringFromNumber:home.squareMeters]];
     self.addressLabel.text = home.address;
     self.dateLabel.text = home.createdAt.timeAgoSinceNow;
+    self.home = home;
+    ASUser *currentUser = [ASUser currentUser];
+    if(currentUser != nil) {
+        PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+        [query whereKey:@"favorites" equalTo:home];
+        [query countObjectsInBackgroundWithBlock:^(int counter, NSError *error){
+            if(counter > 0) {
+                [self favorite];
+            }
+        }];
+    }
+}
+
+- (IBAction)favoriteAction:(id)sender {
+    ASUser *currentUser = [ASUser currentUser];
+    if(currentUser != nil) {
+        if(self.home.isFavorite == true) {
+            [currentUser unfavorite:self.home block:^{
+                [self unfavorite];
+            }];
+        } else {
+            [currentUser favorite:self.home block:^{
+                [self favorite];
+            }];
+        }
+    }
+}
+
+- (void) favorite {
+    [self changeTitleToFavoriteButton:@"Favorited!!"];
+    self.home.isFavorite = true;
+}
+
+- (void) unfavorite {
+    [self changeTitleToFavoriteButton:@"Favorite"];
+    self.home.isFavorite = false;
+}
+
+- (void) changeTitleToFavoriteButton:(NSString *)newTitle {
+    [self.favoriteButton setTitle:newTitle forState:UIControlStateNormal];
+    [self.favoriteButton layoutIfNeeded];
 }
 
 @end
