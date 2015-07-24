@@ -63,6 +63,10 @@
 		433CEDB01B572AB100688F44 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433CEDAE1B572AB100688F44 /* FBSDKCoreKit.framework */; };
 		433CEDB11B572AB100688F44 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433CEDAF1B572AB100688F44 /* FBSDKLoginKit.framework */; };
 		433CEDB41B572B0500688F44 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433CEDB31B572B0500688F44 /* ParseFacebookUtilsV4.framework */; };
+		43CD43E51B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */; };
+		43CD43E81B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E71B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m */; };
+		43CD43ED1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43EA1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m */; };
+		43CD43EE1B61B89D0070A49B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43EC1B61B89D0070A49B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		43CE65AC1B5D683C00610D4A /* ASAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CE65AB1B5D683C00610D4A /* ASAnnotation.m */; };
 		43EAC46C1B55BC8A0001E4C2 /* login-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 43EAC46B1B55BC8A0001E4C2 /* login-facebook.png */; };
 		56F7EFEA1C07405C50B97C2E /* libPods-Asilo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B19F7BC7A657AFFEE4A78E51 /* libPods-Asilo.a */; };
@@ -168,6 +172,14 @@
 		433CEDAE1B572AB100688F44 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		433CEDAF1B572AB100688F44 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		433CEDB31B572B0500688F44 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		43CD43E31B61B81B0070A49B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		43CD43E61B61B8930070A49B /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		43CD43E71B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		43CD43E91B61B89D0070A49B /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		43CD43EA1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		43CD43EB1B61B89D0070A49B /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		43CD43EC1B61B89D0070A49B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		43CE65AA1B5D683C00610D4A /* ASAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAnnotation.h; sourceTree = "<group>"; };
 		43CE65AB1B5D683C00610D4A /* ASAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAnnotation.m; sourceTree = "<group>"; };
 		43EAC46B1B55BC8A0001E4C2 /* login-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-facebook.png"; sourceTree = "<group>"; };
@@ -365,6 +377,7 @@
 		432FEE621B45CC74001BCF5E /* Asilo */ = {
 			isa = PBXGroup;
 			children = (
+				43CD43E11B61B79F0070A49B /* Libraries */,
 				43EAC4641B55B3370001E4C2 /* Assets */,
 				432FEEF71B4C9B54001BCF5E /* Model */,
 				432FEE671B45CC74001BCF5E /* AppDelegate.h */,
@@ -447,6 +460,29 @@
 				433CEDAF1B572AB100688F44 /* FBSDKLoginKit.framework */,
 			);
 			name = "Local frameworks";
+			sourceTree = "<group>";
+		};
+		43CD43E11B61B79F0070A49B /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				43CD43E21B61B7B40070A49B /* TPKeyboardAvoiding */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		43CD43E21B61B7B40070A49B /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				43CD43E91B61B89D0070A49B /* TPKeyboardAvoidingTableView.h */,
+				43CD43EA1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m */,
+				43CD43EB1B61B89D0070A49B /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				43CD43EC1B61B89D0070A49B /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+				43CD43E61B61B8930070A49B /* TPKeyboardAvoidingCollectionView.h */,
+				43CD43E71B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m */,
+				43CD43E31B61B81B0070A49B /* TPKeyboardAvoidingScrollView.h */,
+				43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */,
+			);
+			name = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 		43CE65A91B5D680100610D4A /* Classes */ = {
@@ -609,7 +645,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6A718F1B4C6330005415F6 /* MyPublicationsTableViewController.m in Sources */,
+				43CD43E51B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				3E6244251B5EBCD300B62E82 /* WizardPicturesController.m in Sources */,
+				43CD43EE1B61B89D0070A49B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				3EF2B3641B582D8600B9718C /* ResultListTableViewCell.m in Sources */,
 				3E6A71A61B4DA386005415F6 /* ASMenuItem.m in Sources */,
 				3EF2B3D91B589CDD00B9718C /* HomeDetailViewController.m in Sources */,
@@ -625,6 +663,7 @@
 				3E13BAEC1B506C2E0052F56D /* WizardSharedDataViewController.m in Sources */,
 				3E13BAF41B548E300052F56D /* WizardRentDataViewController.m in Sources */,
 				432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */,
+				43CD43E81B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				3EF2B3651B582D8600B9718C /* ResultListTableViewController.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
 				432FEEFB1B4C9B76001BCF5E /* ASHome.m in Sources */,
@@ -636,6 +675,7 @@
 				3E6A71931B4C63D3005415F6 /* LoginViewController.m in Sources */,
 				3E13BAE31B50399A0052F56D /* WizardLocationViewController.m in Sources */,
 				3E4D86DB1B604A08008341C3 /* ASHomeAnnotation.m in Sources */,
+				43CD43ED1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m in Sources */,
 				433CEDAA1B56DEFA00688F44 /* ASLoginMenuItem.m in Sources */,
 				3E6A71B01B4DFD4F005415F6 /* SearchNavigationController.m in Sources */,
 			);
