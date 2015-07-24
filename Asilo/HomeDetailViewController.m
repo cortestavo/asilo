@@ -76,6 +76,11 @@
     self.hasAcLabel.text = [NSString stringWithFormat:@"A.C.: %@", self.home.hasAC ? @"Yes" : @"No"];
     self.hasHeatingLabel.text = [NSString stringWithFormat:@"Heating: %@", self.home.hasHeating ? @"Yes" : @"No"];
     self.parkingLotsLabel.text = [NSString stringWithFormat:@"Parking lots: %d", self.home.parkingLots.intValue];
+    if([self.home countOfPhotos] > 0) {
+        [self.home getPhotoAtIndex:0 block:^(UIImage *image) {
+            [self.headerImageView setImage: image];
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
