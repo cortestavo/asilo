@@ -34,14 +34,14 @@
                                 </items>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SaZ-B7-pdC">
-                                <rect key="frame" x="0.0" y="0.0" width="341" height="524"/>
+                                <rect key="frame" x="0.0" y="64" width="322" height="460"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aba-Bp-aso" firstAttribute="leading" secondItem="rlH-An-Bii" secondAttribute="leadingMargin" constant="-16" id="LEa-dQ-xg3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SaZ-B7-pdC" secondAttribute="trailing" constant="-37" id="NJq-L5-xaa"/>
-                            <constraint firstItem="SaZ-B7-pdC" firstAttribute="top" secondItem="rlH-An-Bii" secondAttribute="topMargin" id="Uym-48-ZIe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SaZ-B7-pdC" secondAttribute="trailing" constant="-18" id="NJq-L5-xaa"/>
+                            <constraint firstItem="SaZ-B7-pdC" firstAttribute="top" secondItem="rlH-An-Bii" secondAttribute="topMargin" constant="64" id="Uym-48-ZIe"/>
                             <constraint firstItem="Gys-CY-Zwc" firstAttribute="top" secondItem="aba-Bp-aso" secondAttribute="bottom" id="bRb-gc-3Od"/>
                             <constraint firstItem="SaZ-B7-pdC" firstAttribute="leading" secondItem="rlH-An-Bii" secondAttribute="leadingMargin" constant="-16" id="fqX-lZ-z7J"/>
                             <constraint firstItem="aba-Bp-aso" firstAttribute="top" secondItem="SaZ-B7-pdC" secondAttribute="bottom" id="xS0-Xt-WAk"/>
@@ -452,6 +452,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="AXm-Yi-QLP"/>
+        <segue reference="5JU-rt-cxd"/>
     </inferredMetricsTieBreakers>
 </document>
