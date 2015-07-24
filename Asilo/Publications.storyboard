@@ -11,7 +11,7 @@
         <scene sceneID="bXC-3t-jr9">
             <objects>
                 <tableViewController storyboardIdentifier="MyPublications" id="UVa-Rv-ePy" customClass="MyPublicationsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="266" sectionHeaderHeight="22" sectionFooterHeight="22" id="CLz-u0-biv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="266" sectionHeaderHeight="22" sectionFooterHeight="22" id="CLz-u0-biv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -21,7 +21,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VHu-Np-TAC" id="5VB-R6-BgX">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rd5-fx-Ehm" userLabel="Background Image">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rd5-fx-Ehm" userLabel="Background Image">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="266"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYM-Yc-Y5N" userLabel="Gradient">
