@@ -194,7 +194,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3r-Vp-AlJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Iws-pD-Yzu">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iws-pD-Yzu">
                                         <rect key="frame" x="0.0" y="63" width="600" height="234"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="234" id="qmn-OW-4Fm"/>
@@ -451,9 +451,6 @@
             <point key="canvasLocation" x="1105" y="300"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="castle.jpg" width="2801" height="1957"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="AXm-Yi-QLP"/>
     </inferredMetricsTieBreakers>
