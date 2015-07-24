@@ -71,6 +71,11 @@
             }
         }];
     }
+    if([self.home countOfPhotos] > 0) {
+        [self.home getPhotoAtIndex:0 block:^(UIImage *image) {
+            [self.backgroundImage setImage: image];
+        }];
+    }
 }
 
 - (IBAction)favoriteAction:(id)sender {
