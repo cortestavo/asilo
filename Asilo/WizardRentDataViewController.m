@@ -9,6 +9,8 @@
 #import "WizardRentDataViewController.h"
 #import "WizardSaleDataViewController.h"
 #import "ASHome.h"
+#import "ASAlertHelper.h"
+#import <MBProgressHUD.h>
 
 @interface WizardRentDataViewController ()
 
@@ -18,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIStepper *monthsForLeaseStepper;
 @property (weak, nonatomic) IBOutlet UISwitch *furnishedSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *petsAllowedSwitch;
+
+@property (assign, nonatomic) BOOL isSaving;
 
 @end
 
@@ -41,8 +45,10 @@
 
 - (BOOL)populateModel {
     double priceForRent = [self.priceForRentField.text doubleValue];
-    if (!priceForRent > 0)
+    if (priceForRent <= 0) {
+        [ASAlertHelper alertWithTitle:@"Validation error" message:@"Please set a positive price for rent" sourceViewController:self];
         return NO;
+    }
     self.home.priceForRent = @([self.priceForRentField.text doubleValue]);
     self.home.deposit = @([self.depositField.text doubleValue]);
     self.home.lease = @((long)self.monthsForLeaseStepper.value);
@@ -58,17 +64,26 @@
         } else {
             [self saveHome];
         }
-    } else {
-        // TODO: Alert validation error
     }
 }
 
 - (void)saveHome {
+    if (self.isSaving) {
+        return;
+    }
+    if (![self populateModel]) {
+        return;
+    }
+    self.isSaving = YES;
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Saving...";
     [self.home saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        self.isSaving = NO;
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (succeeded) {
             [self dismissViewControllerAnimated:YES completion:nil]; // Closes modal
         } else {
-            // TODO: Alert error
+            [ASAlertHelper alertWithTitle:@"Validation error" message:error.localizedDescription sourceViewController:self];
         }
     }];
 }

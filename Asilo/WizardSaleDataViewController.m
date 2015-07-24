@@ -7,10 +7,13 @@
 //
 
 #import "WizardSaleDataViewController.h"
+#import "ASAlertHelper.h"
+#import <MBProgressHUD.h>
 
 @interface WizardSaleDataViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *priceForSaleField;
+@property (assign, nonatomic) BOOL isSaving;
 
 @end
 
@@ -37,21 +40,29 @@
         self.home.priceForSale = @(priceForSale);
         return YES;
     } else {
+        [ASAlertHelper alertWithTitle:@"Validation error" message:@"Please set a positive price for rent" sourceViewController:self];
         return NO;
     }
 }
 
 -(void)saveHome {
+    if (self.isSaving) {
+        return;
+    }
     if ([self populateModel]) {
+        self.isSaving = YES;
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.labelText = @"Saving...";
         [self.home saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            self.isSaving = NO;
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             if (succeeded) {
                 [self dismissViewControllerAnimated:YES completion:nil]; // Closes modal
             } else {
                 // TODO: Alert error
+                [ASAlertHelper alertWithTitle:@"Couldn't save" message:error.localizedDescription sourceViewController:self];
             }
         }];
-    } else {
-        // TODO: Alert validation error
     }
 }
 

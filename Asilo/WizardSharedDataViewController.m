@@ -9,6 +9,7 @@
 #import "WizardSharedDataViewController.h"
 #import "WizardRentDataViewController.h"
 #import "WizardSaleDataViewController.h"
+#import "ASAlertHelper.h"
 
 @interface WizardSharedDataViewController ()
 
@@ -32,13 +33,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.descriptionText.text = @"";
+    [self setupUiElements];
     [self setupNavigationBar];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setupUiElements {
+    self.descriptionText.text = @"";
+    self.descriptionText.layer.borderColor = [UIColor colorWithRed:230.0/255.0
+                                                             green:230.0/255.0
+                                                              blue:230.0/255.0
+                                                             alpha:1.0].CGColor;
+    self.descriptionText.layer.borderWidth = 1;
+    self.descriptionText.layer.cornerRadius = 5;
 }
 
 - (void)setupNavigationBar {
@@ -60,8 +71,11 @@
 
 - (BOOL)populateModel {
     if ([self.addressField.text isEqualToString:@""]) {
+        [ASAlertHelper alertWithTitle:@"Validation error" message:@"We need to know the address" sourceViewController:self];
         return NO;
     }
+    double squareMeters = [self.squareFeetField.text doubleValue];
+    
     self.home.isForRent = self.forRentSwitch.isOn;
     self.home.isForSale = self.forSaleSwitch.isOn;
     self.home.address = self.addressField.text;
@@ -69,7 +83,7 @@
     self.home.baths = @(self.numberOfBathsStepper.value);
     self.home.beds = @(self.numberOfBedsStepper.value);
     self.home.parkingLots = @(self.numberOfParkingLotsStepper.value);
-    self.home.squareMeters = @([self.squareFeetField.text doubleValue]);
+    self.home.squareMeters = @(squareMeters);
     self.home.hasAC = self.hasAcSwitch.isOn;
     self.home.hasHeating = self.hasHeatingSwitch.isOn;
     return YES;

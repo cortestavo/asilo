@@ -9,6 +9,7 @@
 #import "WizardPicturesController.h"
 #import "WizardSharedDataViewController.h"
 #import "PictureCollectionViewCell.h"
+#import "ASAlertHelper.h"
 
 @interface WizardPicturesController ()
 
@@ -36,7 +37,11 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
 }
 
 - (void)next {
-    [self performSegueWithIdentifier:@"WizardShared" sender:nil];
+    if (self.home.countOfPhotos > 0) {
+        [self performSegueWithIdentifier:@"WizardShared" sender:nil];
+    } else {
+        [ASAlertHelper alertWithTitle:@"Add a picture" message:@"Please add at least one picture" sourceViewController:self];
+    }
 }
 
 #pragma mark - Actions

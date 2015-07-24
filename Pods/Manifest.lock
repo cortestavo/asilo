@@ -1,5 +1,6 @@
 PODS:
   - DateTools (1.6.1)
+  - MBProgressHUD (0.9.1)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
@@ -15,10 +16,12 @@ PODS:
 
 DEPENDENCIES:
   - DateTools (~> 1.6.1)
+  - MBProgressHUD (~> 0.9.1)
   - MMDrawerController (~> 0.5.7)
 
 SPEC CHECKSUMS:
   DateTools: 9bcc89e4f2f9004d8a7a2bd1b49269cf78968e65
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
 
 COCOAPODS: 0.38.0.beta.1
