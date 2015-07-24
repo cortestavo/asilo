@@ -14,7 +14,7 @@
 @interface MyPublicationsTableViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property NSArray *homes;
+@property NSMutableArray *homes;
 
 @end
 
@@ -34,7 +34,7 @@
             // TODO: alert error
             NSLog(@"Error: %@", error.localizedDescription);
         }
-        self.homes = homes;
+        self.homes = [NSMutableArray arrayWithArray:homes];
         [self.tableView reloadData];
     }];
 }
@@ -83,25 +83,23 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-/*
-// Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        ASHome *home = (ASHome *)self.homes[indexPath.row];
+        [home deleteInBackground];
+        [self.homes removeObject:home];
         // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 #pragma mark - Navigation
