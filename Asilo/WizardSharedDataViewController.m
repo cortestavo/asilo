@@ -9,6 +9,7 @@
 #import "WizardSharedDataViewController.h"
 #import "WizardRentDataViewController.h"
 #import "WizardSaleDataViewController.h"
+#import "ASAlertHelper.h"
 
 @interface WizardSharedDataViewController ()
 
@@ -70,8 +71,11 @@
 
 - (BOOL)populateModel {
     if ([self.addressField.text isEqualToString:@""]) {
+        [ASAlertHelper alertWithTitle:@"Validation error" message:@"We need to know the address" sourceViewController:self];
         return NO;
     }
+    double squareMeters = [self.squareFeetField.text doubleValue];
+    
     self.home.isForRent = self.forRentSwitch.isOn;
     self.home.isForSale = self.forSaleSwitch.isOn;
     self.home.address = self.addressField.text;
@@ -79,7 +83,7 @@
     self.home.baths = @(self.numberOfBathsStepper.value);
     self.home.beds = @(self.numberOfBedsStepper.value);
     self.home.parkingLots = @(self.numberOfParkingLotsStepper.value);
-    self.home.squareMeters = @([self.squareFeetField.text doubleValue]);
+    self.home.squareMeters = @(squareMeters);
     self.home.hasAC = self.hasAcSwitch.isOn;
     self.home.hasHeating = self.hasHeatingSwitch.isOn;
     return YES;

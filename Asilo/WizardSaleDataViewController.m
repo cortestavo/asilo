@@ -7,6 +7,7 @@
 //
 
 #import "WizardSaleDataViewController.h"
+#import "ASAlertHelper.h"
 
 @interface WizardSaleDataViewController ()
 
@@ -37,6 +38,7 @@
         self.home.priceForSale = @(priceForSale);
         return YES;
     } else {
+        [ASAlertHelper alertWithTitle:@"Validation error" message:@"Please set a positive price for rent" sourceViewController:self];
         return NO;
     }
 }
@@ -48,10 +50,9 @@
                 [self dismissViewControllerAnimated:YES completion:nil]; // Closes modal
             } else {
                 // TODO: Alert error
+                [ASAlertHelper alertWithTitle:@"Couldn't save" message:error.localizedDescription sourceViewController:self];
             }
         }];
-    } else {
-        // TODO: Alert validation error
     }
 }
 

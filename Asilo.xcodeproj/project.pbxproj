@@ -29,6 +29,7 @@
 		3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A71A81B4DCD8A005415F6 /* ASBaseViewController.m */; };
 		3E6A71AD1B4DE6F2005415F6 /* ASNavigateMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A71AC1B4DE6F2005415F6 /* ASNavigateMenuItem.m */; };
 		3E6A71B01B4DFD4F005415F6 /* SearchNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E6A71AF1B4DFD4F005415F6 /* SearchNavigationController.m */; };
+		3EE08F041B61BFE6007B00E6 /* ASAlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE08F031B61BFE6007B00E6 /* ASAlertHelper.m */; };
 		3EF2B3431B58274600B9718C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2B3421B58274600B9718C /* Parse.framework */; };
 		3EF2B3451B58275C00B9718C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2B3441B58275C00B9718C /* Bolts.framework */; };
 		3EF2B34B1B58285500B9718C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2B34A1B58285500B9718C /* QuartzCore.framework */; };
@@ -122,6 +123,8 @@
 		3E6A71AC1B4DE6F2005415F6 /* ASNavigateMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASNavigateMenuItem.m; sourceTree = "<group>"; };
 		3E6A71AE1B4DFD4F005415F6 /* SearchNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchNavigationController.h; sourceTree = "<group>"; };
 		3E6A71AF1B4DFD4F005415F6 /* SearchNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchNavigationController.m; sourceTree = "<group>"; };
+		3EE08F021B61BFE6007B00E6 /* ASAlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASAlertHelper.h; sourceTree = "<group>"; };
+		3EE08F031B61BFE6007B00E6 /* ASAlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASAlertHelper.m; sourceTree = "<group>"; };
 		3EF2B3421B58274600B9718C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		3EF2B3441B58275C00B9718C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		3EF2B34A1B58285500B9718C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -384,6 +387,8 @@
 				432FEE681B45CC74001BCF5E /* AppDelegate.m */,
 				3E6A71A71B4DCD8A005415F6 /* ASBaseViewController.h */,
 				3E6A71A81B4DCD8A005415F6 /* ASBaseViewController.m */,
+				3EE08F021B61BFE6007B00E6 /* ASAlertHelper.h */,
+				3EE08F031B61BFE6007B00E6 /* ASAlertHelper.m */,
 				432FEE6D1B45CC74001BCF5E /* Main.storyboard */,
 				3E6A71AA1B4DE605005415F6 /* Menu */,
 				3E6A718B1B4C61AC005415F6 /* Search */,
@@ -671,6 +676,7 @@
 				432FEE661B45CC74001BCF5E /* main.m in Sources */,
 				3E6A71971B4C645F005415F6 /* SettingsViewController.m in Sources */,
 				3E6A719D1B4C8D1C005415F6 /* MenuViewController.m in Sources */,
+				3EE08F041B61BFE6007B00E6 /* ASAlertHelper.m in Sources */,
 				3E6A718A1B4C619C005415F6 /* ResultMapViewController.m in Sources */,
 				3E6A71931B4C63D3005415F6 /* LoginViewController.m in Sources */,
 				3E13BAE31B50399A0052F56D /* WizardLocationViewController.m in Sources */,

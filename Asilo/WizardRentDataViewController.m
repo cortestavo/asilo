@@ -9,6 +9,7 @@
 #import "WizardRentDataViewController.h"
 #import "WizardSaleDataViewController.h"
 #import "ASHome.h"
+#import "ASAlertHelper.h"
 
 @interface WizardRentDataViewController ()
 
@@ -41,8 +42,10 @@
 
 - (BOOL)populateModel {
     double priceForRent = [self.priceForRentField.text doubleValue];
-    if (!priceForRent > 0)
+    if (priceForRent <= 0) {
+        [ASAlertHelper alertWithTitle:@"Validation error" message:@"Please set a positive price for rent" sourceViewController:self];
         return NO;
+    }
     self.home.priceForRent = @([self.priceForRentField.text doubleValue]);
     self.home.deposit = @([self.depositField.text doubleValue]);
     self.home.lease = @((long)self.monthsForLeaseStepper.value);
@@ -58,17 +61,19 @@
         } else {
             [self saveHome];
         }
-    } else {
-        // TODO: Alert validation error
     }
 }
 
 - (void)saveHome {
+    if (![self populateModel]) {
+        return;
+    }
+        
     [self.home saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [self dismissViewControllerAnimated:YES completion:nil]; // Closes modal
         } else {
-            // TODO: Alert error
+            [ASAlertHelper alertWithTitle:@"Validation error" message:error.localizedDescription sourceViewController:self];
         }
     }];
 }
