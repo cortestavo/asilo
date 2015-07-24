@@ -13,15 +13,18 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.5.7):
     - MMDrawerController/Core
+  - Toast (2.4)
 
 DEPENDENCIES:
   - DateTools (~> 1.6.1)
   - MBProgressHUD (~> 0.9.1)
   - MMDrawerController (~> 0.5.7)
+  - Toast (~> 2.4)
 
 SPEC CHECKSUMS:
   DateTools: 9bcc89e4f2f9004d8a7a2bd1b49269cf78968e65
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
+  Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d
 
 COCOAPODS: 0.38.0.beta.1

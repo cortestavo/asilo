@@ -14,6 +14,7 @@
 #import "ASHome.h"
 #import "HomeDetailViewController.h"
 #import "ASHomeAnnotation.h"
+#import <UIView+Toast.h>
 
 @interface ResultMapViewController ()
 
@@ -74,6 +75,7 @@
                 ASHomeAnnotation *annotation = [[ASHomeAnnotation alloc] initWithHome:self.homes[cont]];
                 [self.mapView addAnnotation:annotation];
             }
+            [self.mapView makeToast:[NSString stringWithFormat:@"Showing %d results", homes.count] duration:3.0 position:CSToastPositionTop];
         }
     }];
 }
