@@ -73,7 +73,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%d", indexPath.row);
     [self showDetailForHome:self.homes[indexPath.row]];
 }
 
