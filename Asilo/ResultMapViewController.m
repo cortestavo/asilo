@@ -68,14 +68,10 @@
             [self.mapView removeAnnotations:self.mapView.annotations];
             
             for (int cont = 0, max = (int)[self.homes count]; cont < max; cont++) {
-//                ASAnnotation *annotation = [self createAnnotationFromHomeInIndex:cont];
-//                if(annotation != nil) {
-//                    [self.mapView addAnnotation:annotation];
-//                }
                 ASHomeAnnotation *annotation = [[ASHomeAnnotation alloc] initWithHome:self.homes[cont]];
                 [self.mapView addAnnotation:annotation];
             }
-            [self.mapView makeToast:[NSString stringWithFormat:@"Showing %d results", homes.count] duration:3.0 position:CSToastPositionTop];
+            [self.mapView makeToast:[NSString stringWithFormat:@"Showing %lu results", (unsigned long)homes.count] duration:3.0 position:CSToastPositionTop];
         }
     }];
 }
@@ -84,11 +80,7 @@
     if ([annotation isKindOfClass:[ASHomeAnnotation class]]) {
         ASHomeAnnotation *homeAnnotation = (ASHomeAnnotation *)annotation;
         MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"HomeAnnotation"];
-//        if (annotationView == nil) {
             annotationView = homeAnnotation.annotationView;
-//        } else {
-//            annotationView.annotation = annotation;
-//        }
         return annotationView;
     } else {
         return nil;
