@@ -519,6 +519,7 @@
 				432FEE5D1B45CC74001BCF5E /* Frameworks */,
 				432FEE5E1B45CC74001BCF5E /* Resources */,
 				25A14172006DA00E2B20C130 /* Copy Pods Resources */,
+				434EB2CC1B66B898001535FC /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -641,6 +642,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Asilo/Pods-Asilo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		434EB2CC1B66B898001535FC /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" ce0d5ca3091b8599bfe9f0311a1dc70fe6fada3f 6fa650bd319ad0986fc0ed85dc80e540ffe224ff2af8b5ffc3fa8346e6dca9a5";
 		};
 /* End PBXShellScriptBuildPhase section */
 
