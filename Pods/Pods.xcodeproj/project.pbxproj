@@ -7,666 +7,713 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A57362BED5574EF0D20374D /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7F7276147B85B7F41EAA536 /* UIViewController+MMDrawerController.h */; };
-		10EBBF88172CEC2D0C417236 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = C92C4D2022CD3B208FD5CC01 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1B80E89A6BB630E86522B878 /* DTTimePeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 77360602AB4CE6CC76059022 /* DTTimePeriodCollection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		21192EC725A95C4458E3768B /* DTTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF672B4690259AD5104D1C7 /* DTTimePeriod.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		2495E709B0E171ACBEA2BBEE /* DTTimePeriodCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 24A7D9107CF1B9A9E7056D96 /* DTTimePeriodCollection.h */; };
-		3623949A9A7A8A89AFDE8A06 /* DTTimePeriodChain.h in Headers */ = {isa = PBXBuildFile; fileRef = D10EADE34AC9ACE5BDFCEE85 /* DTTimePeriodChain.h */; };
-		40D1852A51E76A4F8AE75A6F /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = A2B47B9320292D45D499D88E /* DateTools.h */; };
-		49A9A71DAE7D3FD9F485D338 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 11A493409CA9B0BF49BF3FF5 /* MMDrawerBarButtonItem.h */; };
-		57A63907E20D81D157E939A0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F96013A1FA1E6CD5DC83328 /* CoreGraphics.framework */; };
-		599D614F3ACECEFB6F31BB0C /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC470CBFE4911320957D51D /* MMDrawerController+Subclass.h */; };
-		5E7DB34CC35189087BC3EA3D /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 254E7B8B62A6446D015F03A1 /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		68F78F454AFEAA563471E1CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310C8751DB9C59885BC6D7FE /* Foundation.framework */; };
-		6BC809D722A47B5FA8B3C73F /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DE8F321189CF01F7EC1FF2B /* MMDrawerVisualState.h */; };
-		79C5F204336FE1D62C53F87C /* UIView+Toast.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C28168329FE0DC798BD49C0 /* UIView+Toast.h */; };
-		7D8BA2131CDF85106AD124C9 /* DTTimePeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 228E48E5860535A5E7D1BC5F /* DTTimePeriod.h */; };
-		81175A552C068D75706CAB9E /* DTTimePeriodChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFD69F85424FAB9C88A2254 /* DTTimePeriodChain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		838EDF5000EFE89BFEC0507B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310C8751DB9C59885BC6D7FE /* Foundation.framework */; };
-		85AD7119D4E1798251614586 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA511EDED96547902C3FDCD5 /* QuartzCore.framework */; };
-		8B0D0D46F1F8AECE1E995B4B /* MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCF51B74EF1034FB13DE4F8 /* MMDrawerController-dummy.m */; };
-		8BEEF0892F96471707D04EB9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F9431E848152D83104B7F440 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8C904BDF62CD41EE97273D52 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7503BF68F75B28B63DC8715F /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		921EF7A9EC6BF026477D7072 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA511EDED96547902C3FDCD5 /* QuartzCore.framework */; };
-		927B72032134EEBFB8064738 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310C8751DB9C59885BC6D7FE /* Foundation.framework */; };
-		958C0149E02FAB8C05456C20 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA9FF30135375957AEFD3D2 /* MMDrawerController.h */; };
-		97278F0C81FA043A2AB5F2BF /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC63518EB950E65DA291C15 /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9977CF8410AFA3D6B99B4F3C /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 79CE5434956EC9D025627A87 /* MBProgressHUD.h */; };
-		9D296AB932A9F656F5B2BDC1 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = B16D3B0AC2FAA59C365F16D5 /* UIView+Toast.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A58B2AD32E84DFA647AFBA93 /* DTTimePeriodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3977E4CA90DD9A42BC8A6 /* DTTimePeriodGroup.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		A80EBADE10698E256849231B /* DTError.h in Headers */ = {isa = PBXBuildFile; fileRef = F2ED9C5AAE342E23CFFDC04E /* DTError.h */; };
-		A950692F58F3D017FBFA8E9B /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F3D3AB368CA43575B30B3D /* MBProgressHUD-dummy.m */; };
-		AA45497BD9DC659CA2E3B173 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310C8751DB9C59885BC6D7FE /* Foundation.framework */; };
-		AF869638AB10210DA12D4A22 /* Toast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE1AFD3BEDE2A916A973B37E /* Toast-dummy.m */; };
-		C40A3E8BEC46CA7685444252 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310C8751DB9C59885BC6D7FE /* Foundation.framework */; };
-		CFA9E40BF157B4F7DBFF6FAB /* NSDate+DateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE3766FB00399693F76767B /* NSDate+DateTools.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D1897215F3033EC7C0D2B911 /* DTError.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A957837FAB7A21971AD09F /* DTError.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E0C6E0D93A19FE453B4599A0 /* NSDate+DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = F6DCB4029A5F149796571AF0 /* NSDate+DateTools.h */; };
-		E15A48B50AF3C9DCC7F68BD1 /* DTTimePeriodGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 9095D11ED80B3FA92C5304C8 /* DTTimePeriodGroup.h */; };
-		E16EB8BF8F6F2FBBF79CAE04 /* DTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F3494D2C251FBB3D657AB1 /* DTConstants.h */; };
-		EDB4402703E2F98DF894B5DB /* Pods-Asilo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F93DC464A1592620E76B62 /* Pods-Asilo-dummy.m */; };
-		FDB1D2CA01F03FFA64FFD5B1 /* DateTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CA4BBBC6A88B2C6075BC9E /* DateTools-dummy.m */; };
+		016E658A5436196FA8A03B1F /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A9999DCE4AC9853960B902E /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		05AD95854C23C66649785967 /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE8905A5156F2EE230F82EC /* MMDrawerController.h */; };
+		0AD41698FEEA5A057B75FF49 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D7C07B746F729286477D5D /* UIView+Toast.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		110F3C37D2FC8A62997B48AE /* Pods-Asilo-MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6118EFF5033B97595DD77D37 /* Pods-Asilo-MMDrawerController-dummy.m */; };
+		12AD5639FE1A4C37CBB41D5D /* Pods-Asilo-DateTools-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EADED35C8654C48F2B89DF9 /* Pods-Asilo-DateTools-dummy.m */; };
+		12DF8B8D6AB0BC81D6B59E62 /* Pods-Asilo-MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E92D5C1C4960154D17CE3F20 /* Pods-Asilo-MBProgressHUD-dummy.m */; };
+		1989439B021188888047CFB4 /* DTTimePeriodChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 188DD5C515B3EDE249940709 /* DTTimePeriodChain.h */; };
+		210F903089B8C102B1CE6316 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 368C56992D4B619FD928B7D7 /* MMDrawerController+Subclass.h */; };
+		23404F084F67CFBC9D7F2266 /* NSDate+DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CBB575052EB7203B49DF1FCE /* NSDate+DateTools.h */; };
+		258F6B9EE507910F6A9A91BE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724D115F25AE4FD5CC67E599 /* QuartzCore.framework */; };
+		29A1778ECF0D708A9152955B /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F31B2BDE75974431C5E0CC1 /* UIViewController+MMDrawerController.h */; };
+		2A2E0D8EDF91C5B970A91C26 /* Pods-Asilo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7AC567E7E43C853BD27F897 /* Pods-Asilo-dummy.m */; };
+		34AC20CC9A6905D3B7631D61 /* DTTimePeriodGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 64A3B8660599CDC6D3B4A2C1 /* DTTimePeriodGroup.h */; };
+		36437E4234993A074C40BBCF /* NSDate+DateTools.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC51C95B65A663E45F51A52 /* NSDate+DateTools.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		38B5894D5FD7D3F0DDF54C28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D15BEF6A256FFA6F7BEFCC /* Foundation.framework */; };
+		4AF493DA177F5210BAB41CBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B56AF58BA69E98B84232D99 /* CoreGraphics.framework */; };
+		4DDBB3A9DA173156C458571D /* DTTimePeriodCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 579A966091247EE303495537 /* DTTimePeriodCollection.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5071AD7B3F7C72C3B42CC207 /* DTTimePeriod.h in Headers */ = {isa = PBXBuildFile; fileRef = 455F96B96F148623A45F03F3 /* DTTimePeriod.h */; };
+		60E422DAA4AC87E75682C150 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CA78D9DC86560B936EB6E92B /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6238C5CFCA012C63C8F216E0 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 137780FBC1519D17904F90F3 /* MBProgressHUD.h */; };
+		68CECACCF6741F96078906E0 /* DTTimePeriodChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A609823C4B04C23F067882B /* DTTimePeriodChain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6A8DA2B6CD5A64612914E12A /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 238C11F4F2A98BEFB2A3C694 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6FF99E4204DC95A6120F039B /* UIView+Toast.h in Headers */ = {isa = PBXBuildFile; fileRef = 6932DF1883D78CF860F794C6 /* UIView+Toast.h */; };
+		74DA3107E76F94C44F07B377 /* DTError.m in Sources */ = {isa = PBXBuildFile; fileRef = F07AB564139C6D2DC9E29C5E /* DTError.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7D2D672848AA4A8E79445987 /* DTTimePeriodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FD6FC6DD67EE0C955AE17E /* DTTimePeriodGroup.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		81D45143131AC92B884DB6A8 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C6470EB9CE000034D2B7356 /* MMDrawerBarButtonItem.h */; };
+		89E7258E85716FC1EEA19E21 /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = F0F69779D1E891FA8F561B0A /* DateTools.h */; };
+		8FCB4A138E8AE697286B2233 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D15BEF6A256FFA6F7BEFCC /* Foundation.framework */; };
+		9E034C2B110D569E9E6649B0 /* DTError.h in Headers */ = {isa = PBXBuildFile; fileRef = 07B406F95CA14363D6EA0FB9 /* DTError.h */; };
+		A786BCC4B667542CB08163CE /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 7725E64426E857CA7452ECEB /* MMDrawerVisualState.h */; };
+		AE6C06839DA01FFD092C7C98 /* DTTimePeriodCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B5CF88F004646DA3B759658 /* DTTimePeriodCollection.h */; };
+		AF635C15BD35BEE72423A6B5 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 368C56992D4B619FD928B7D7 /* MMDrawerController+Subclass.h */; };
+		B305876395637D053014F001 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D15BEF6A256FFA6F7BEFCC /* Foundation.framework */; };
+		B6770342775C764A0DE0F0AA /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FC6381ACE5D0E341187635 /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C5F13340311CFF8B3B15E27E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D15BEF6A256FFA6F7BEFCC /* Foundation.framework */; };
+		C8D74D173CEC29834805FDFF /* DTTimePeriod.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF95924A52301083736D47C /* DTTimePeriod.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CA6B521666B108E08D71CAF5 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C62BF54B92F1F83D37C74FC9 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DB64AE096A419C3102EBE30F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D15BEF6A256FFA6F7BEFCC /* Foundation.framework */; };
+		DBC3E20FE3F2969A8A929DDF /* Pods-Asilo-Toast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D62CEE6B096989ADFC6BDACE /* Pods-Asilo-Toast-dummy.m */; };
+		DFAB92301E28CE8F9762F708 /* DTConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = D9237CDAC433FE069872049B /* DTConstants.h */; };
+		E2A61C6C202F869FB4CDF496 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724D115F25AE4FD5CC67E599 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2025B78870327D8AE8D0E4DA /* PBXContainerItemProxy */ = {
+		000861275DAF0E54DD9F226D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 912E744810E6C36225F35337 /* Project object */;
+			containerPortal = CAA12ED3E907819DE6848C22 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4DFF734F8B8AE74BF332959A;
-			remoteInfo = Toast;
+			remoteGlobalIDString = 18F31CBD3BA603AD1105B29C;
+			remoteInfo = "Pods-Asilo-MMDrawerController";
 		};
-		8C31872BD4737BF0962F19C5 /* PBXContainerItemProxy */ = {
+		7045F44EE46F0B10A943CCAB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 912E744810E6C36225F35337 /* Project object */;
+			containerPortal = CAA12ED3E907819DE6848C22 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6C8F328066565FF6CC42FC20;
-			remoteInfo = MBProgressHUD;
+			remoteGlobalIDString = EB79B43991FE5B6A45AC7981;
+			remoteInfo = "Pods-Asilo-DateTools";
 		};
-		D9F5F2D85B093ECDCE2DE2A3 /* PBXContainerItemProxy */ = {
+		80635FB47CA074DF28BD3F7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 912E744810E6C36225F35337 /* Project object */;
+			containerPortal = CAA12ED3E907819DE6848C22 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C14AF23571322676780AEA1B;
-			remoteInfo = MMDrawerController;
+			remoteGlobalIDString = D8B871406537D53E7B5F05B3;
+			remoteInfo = "Pods-Asilo-MBProgressHUD";
 		};
-		E21AE3AA874B5191931242DE /* PBXContainerItemProxy */ = {
+		E037037E995F66D0D3689B97 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 912E744810E6C36225F35337 /* Project object */;
+			containerPortal = CAA12ED3E907819DE6848C22 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 175F55DCD69045FE046B1035;
-			remoteInfo = DateTools;
+			remoteGlobalIDString = 1CA054E9A917EE4CC736E9DC;
+			remoteInfo = "Pods-Asilo-Toast";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0280991EEE39979313E97D8D /* DateTools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DateTools-prefix.pch"; sourceTree = "<group>"; };
-		02CA4BBBC6A88B2C6075BC9E /* DateTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DateTools-dummy.m"; sourceTree = "<group>"; };
-		04F3494D2C251FBB3D657AB1 /* DTConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTConstants.h; path = DateTools/DTConstants.h; sourceTree = "<group>"; };
-		0DE8F321189CF01F7EC1FF2B /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
-		11A493409CA9B0BF49BF3FF5 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		120443FF48A764E49DF538DF /* libPods-Asilo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		14744CAC0637C1116911332F /* DateTools.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DateTools.xcconfig; sourceTree = "<group>"; };
-		157F3129B4343D89ABDFB801 /* Pods-Asilo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo.debug.xcconfig"; sourceTree = "<group>"; };
-		228E48E5860535A5E7D1BC5F /* DTTimePeriod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriod.h; path = DateTools/DTTimePeriod.h; sourceTree = "<group>"; };
-		24A7D9107CF1B9A9E7056D96 /* DTTimePeriodCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodCollection.h; path = DateTools/DTTimePeriodCollection.h; sourceTree = "<group>"; };
-		254E7B8B62A6446D015F03A1 /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
-		2799E4E81841EA6DA5F23D82 /* Pods-Asilo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Asilo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		288C17CF51F4C01F7884DE43 /* libDateTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDateTools.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F96013A1FA1E6CD5DC83328 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		310C8751DB9C59885BC6D7FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		37C94EC32745069C78A01A65 /* Pods-Asilo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Asilo-acknowledgements.plist"; sourceTree = "<group>"; };
-		3C28168329FE0DC798BD49C0 /* UIView+Toast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "Toast/Toast/UIView+Toast.h"; sourceTree = "<group>"; };
-		41AABA63BB994BD5C7A26E70 /* libMMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMMDrawerController.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BA3977E4CA90DD9A42BC8A6 /* DTTimePeriodGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodGroup.m; path = DateTools/DTTimePeriodGroup.m; sourceTree = "<group>"; };
-		4BC63518EB950E65DA291C15 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		4BFD69F85424FAB9C88A2254 /* DTTimePeriodChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodChain.m; path = DateTools/DTTimePeriodChain.m; sourceTree = "<group>"; };
-		52F3D3AB368CA43575B30B3D /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		5F683548AF3C4B1602E0F9CF /* Pods-Asilo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo.release.xcconfig"; sourceTree = "<group>"; };
-		669961153E14BD6F34A8A4DF /* libToast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libToast.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		70036AFB0F00ABDCDF487810 /* MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMDrawerController.xcconfig; sourceTree = "<group>"; };
-		7503BF68F75B28B63DC8715F /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
-		77360602AB4CE6CC76059022 /* DTTimePeriodCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodCollection.m; path = DateTools/DTTimePeriodCollection.m; sourceTree = "<group>"; };
-		79CE5434956EC9D025627A87 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		7C3F44C60CAD4BE0B7415F80 /* MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
-		7EF672B4690259AD5104D1C7 /* DTTimePeriod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriod.m; path = DateTools/DTTimePeriod.m; sourceTree = "<group>"; };
-		8CCF51B74EF1034FB13DE4F8 /* MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMDrawerController-dummy.m"; sourceTree = "<group>"; };
-		8EF249D2AF77239F0795F469 /* DateTools-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DateTools-Private.xcconfig"; sourceTree = "<group>"; };
-		8F4BA8788E45142D70E08C16 /* MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
-		9095D11ED80B3FA92C5304C8 /* DTTimePeriodGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodGroup.h; path = DateTools/DTTimePeriodGroup.h; sourceTree = "<group>"; };
-		93E5C96AC25E7112CE9AC925 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9566D8642F878BAD41F66F7F /* Pods-Asilo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Asilo-resources.sh"; sourceTree = "<group>"; };
-		99F93DC464A1592620E76B62 /* Pods-Asilo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-dummy.m"; sourceTree = "<group>"; };
-		9CA9FF30135375957AEFD3D2 /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
-		9E2CA60CE3B7C2B5A359E10A /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		A0DC532CA9E966EE946B8D71 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A22AA7A8A573680F3D297BC8 /* MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
-		A2B47B9320292D45D499D88E /* DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DateTools.h; path = DateTools/DateTools.h; sourceTree = "<group>"; };
-		A79CB914688880CD25BA853A /* Toast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toast-prefix.pch"; sourceTree = "<group>"; };
-		A7F7276147B85B7F41EAA536 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		ACC137F63F5C99540B508A8C /* DateTools.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = DateTools/DateTools.bundle; sourceTree = "<group>"; };
-		ADAD645A2B6E8300059014F8 /* Toast-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Toast-Private.xcconfig"; sourceTree = "<group>"; };
-		B16D3B0AC2FAA59C365F16D5 /* UIView+Toast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
-		BA511EDED96547902C3FDCD5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		BEC470CBFE4911320957D51D /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		BEE3766FB00399693F76767B /* NSDate+DateTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+DateTools.m"; path = "DateTools/NSDate+DateTools.m"; sourceTree = "<group>"; };
-		C6A957837FAB7A21971AD09F /* DTError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTError.m; path = DateTools/DTError.m; sourceTree = "<group>"; };
-		C92C4D2022CD3B208FD5CC01 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
-		D10EADE34AC9ACE5BDFCEE85 /* DTTimePeriodChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodChain.h; path = DateTools/DTTimePeriodChain.h; sourceTree = "<group>"; };
-		E7503DDAC805A7DC2684CAEA /* Toast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toast.xcconfig; sourceTree = "<group>"; };
-		EE1AFD3BEDE2A916A973B37E /* Toast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toast-dummy.m"; sourceTree = "<group>"; };
-		F2ED9C5AAE342E23CFFDC04E /* DTError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTError.h; path = DateTools/DTError.h; sourceTree = "<group>"; };
-		F67B203D006E07B2E527F053 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
-		F6DCB4029A5F149796571AF0 /* NSDate+DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+DateTools.h"; path = "DateTools/NSDate+DateTools.h"; sourceTree = "<group>"; };
-		F9431E848152D83104B7F440 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		07B406F95CA14363D6EA0FB9 /* DTError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTError.h; path = DateTools/DTError.h; sourceTree = "<group>"; };
+		1157F64F370B55310519B941 /* Pods-Asilo-Toast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Asilo-Toast-prefix.pch"; sourceTree = "<group>"; };
+		137780FBC1519D17904F90F3 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		14852AD65AD120910C9C453A /* Pods-Asilo-MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-MMDrawerController.xcconfig"; sourceTree = "<group>"; };
+		1489723F4702C4D4E4337A77 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		15D7C07B746F729286477D5D /* UIView+Toast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Toast.m"; path = "Toast/Toast/UIView+Toast.m"; sourceTree = "<group>"; };
+		188DD5C515B3EDE249940709 /* DTTimePeriodChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodChain.h; path = DateTools/DTTimePeriodChain.h; sourceTree = "<group>"; };
+		1BF95924A52301083736D47C /* DTTimePeriod.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriod.m; path = DateTools/DTTimePeriod.m; sourceTree = "<group>"; };
+		1EA7C50C0B8C5C8C52B0A2B5 /* libPods-Asilo-Toast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo-Toast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F31B2BDE75974431C5E0CC1 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		1F6B587335A6A7CD1CFBA42F /* libPods-Asilo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		238C11F4F2A98BEFB2A3C694 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		33E8EE7F8FBDC2EB0F9D99E9 /* DateTools.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = DateTools.bundle; path = DateTools/DateTools.bundle; sourceTree = "<group>"; };
+		368C56992D4B619FD928B7D7 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		3DAEAAEA7C5591CAFDD85E37 /* Pods-Asilo-DateTools-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-DateTools-Private.xcconfig"; sourceTree = "<group>"; };
+		45182678DDE9299EB2CA75F3 /* Pods-Asilo-DateTools.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-DateTools.xcconfig"; sourceTree = "<group>"; };
+		455F96B96F148623A45F03F3 /* DTTimePeriod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriod.h; path = DateTools/DTTimePeriod.h; sourceTree = "<group>"; };
+		5771E6591082103C92BA02AC /* libPods-Asilo-DateTools.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo-DateTools.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		579A966091247EE303495537 /* DTTimePeriodCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodCollection.m; path = DateTools/DTTimePeriodCollection.m; sourceTree = "<group>"; };
+		5A3ECC30B1AAB3AD7FBCF555 /* Pods-Asilo-MBProgressHUD-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-MBProgressHUD-Private.xcconfig"; sourceTree = "<group>"; };
+		5B56AF58BA69E98B84232D99 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		6118EFF5033B97595DD77D37 /* Pods-Asilo-MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		64227B09F9C68EAA158811DC /* Pods-Asilo-MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Asilo-MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		64A3B8660599CDC6D3B4A2C1 /* DTTimePeriodGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodGroup.h; path = DateTools/DTTimePeriodGroup.h; sourceTree = "<group>"; };
+		6932DF1883D78CF860F794C6 /* UIView+Toast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Toast.h"; path = "Toast/Toast/UIView+Toast.h"; sourceTree = "<group>"; };
+		69567A4C181BAFB00592899B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		724D115F25AE4FD5CC67E599 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		77125BFBBD4EAD9FB67D19BF /* Pods-Asilo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Asilo-resources.sh"; sourceTree = "<group>"; };
+		7725E64426E857CA7452ECEB /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		7A609823C4B04C23F067882B /* DTTimePeriodChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodChain.m; path = DateTools/DTTimePeriodChain.m; sourceTree = "<group>"; };
+		7A9999DCE4AC9853960B902E /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		7BE8905A5156F2EE230F82EC /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+		7EADED35C8654C48F2B89DF9 /* Pods-Asilo-DateTools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-DateTools-dummy.m"; sourceTree = "<group>"; };
+		83FC6381ACE5D0E341187635 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		8B5CF88F004646DA3B759658 /* DTTimePeriodCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTimePeriodCollection.h; path = DateTools/DTTimePeriodCollection.h; sourceTree = "<group>"; };
+		8C3DA867E9200F08A9C6B144 /* Pods-Asilo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo.release.xcconfig"; sourceTree = "<group>"; };
+		8D4FB253E32B7815B151102B /* libPods-Asilo-MBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo-MBProgressHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C6470EB9CE000034D2B7356 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		9ED99A0A98B36F20E5C40E3E /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2FE79A87FD544A3DEA7D4C4 /* Pods-Asilo-MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-MBProgressHUD.xcconfig"; sourceTree = "<group>"; };
+		A67E9D970C832DB1C56F3C23 /* Pods-Asilo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Asilo-acknowledgements.plist"; sourceTree = "<group>"; };
+		B5AC5EDAF789058A9B5FA05C /* Pods-Asilo-DateTools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Asilo-DateTools-prefix.pch"; sourceTree = "<group>"; };
+		BA9685E84BACBEF17D410182 /* Pods-Asilo-Toast-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-Toast-Private.xcconfig"; sourceTree = "<group>"; };
+		C3D15BEF6A256FFA6F7BEFCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C62BF54B92F1F83D37C74FC9 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		C8FD6FC6DD67EE0C955AE17E /* DTTimePeriodGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTimePeriodGroup.m; path = DateTools/DTTimePeriodGroup.m; sourceTree = "<group>"; };
+		C90F57FFFA54CAAAE33F3190 /* Pods-Asilo-Toast.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-Toast.xcconfig"; sourceTree = "<group>"; };
+		CA78D9DC86560B936EB6E92B /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		CBB575052EB7203B49DF1FCE /* NSDate+DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+DateTools.h"; path = "DateTools/NSDate+DateTools.h"; sourceTree = "<group>"; };
+		CCC51C95B65A663E45F51A52 /* NSDate+DateTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+DateTools.m"; path = "DateTools/NSDate+DateTools.m"; sourceTree = "<group>"; };
+		D1A1513460F1939EF5F4C1F0 /* Pods-Asilo-MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo-MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
+		D62CEE6B096989ADFC6BDACE /* Pods-Asilo-Toast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-Toast-dummy.m"; sourceTree = "<group>"; };
+		D7AC567E7E43C853BD27F897 /* Pods-Asilo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-dummy.m"; sourceTree = "<group>"; };
+		D9237CDAC433FE069872049B /* DTConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTConstants.h; path = DateTools/DTConstants.h; sourceTree = "<group>"; };
+		DAF3C4D924502B5575EFFA26 /* Pods-Asilo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Asilo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E11F838B81569B5EDE20E0FE /* Pods-Asilo-MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Asilo-MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
+		E21E10D50409073194BEDC90 /* libPods-Asilo-MMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Asilo-MMDrawerController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E77E4F39A7211509D9E6DA0F /* Pods-Asilo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Asilo.debug.xcconfig"; sourceTree = "<group>"; };
+		E92D5C1C4960154D17CE3F20 /* Pods-Asilo-MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Asilo-MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		F07AB564139C6D2DC9E29C5E /* DTError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTError.m; path = DateTools/DTError.m; sourceTree = "<group>"; };
+		F0F69779D1E891FA8F561B0A /* DateTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DateTools.h; path = DateTools/DateTools.h; sourceTree = "<group>"; };
+		FDCE2BD2261622A5D574280C /* Pods-Asilo-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Asilo-environment.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4108EF4E310B77501EE8788D /* Frameworks */ = {
+		026E7AC49CE478CFC4CDBF86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40A3E8BEC46CA7685444252 /* Foundation.framework in Frameworks */,
-				85AD7119D4E1798251614586 /* QuartzCore.framework in Frameworks */,
+				DB64AE096A419C3102EBE30F /* Foundation.framework in Frameworks */,
+				E2A61C6C202F869FB4CDF496 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52D7B329FAFB3D7BB04CA273 /* Frameworks */ = {
+		22C52DEAD3AE1581C79C7D2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57A63907E20D81D157E939A0 /* CoreGraphics.framework in Frameworks */,
-				838EDF5000EFE89BFEC0507B /* Foundation.framework in Frameworks */,
+				38B5894D5FD7D3F0DDF54C28 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53DB0D4855F9BEE9D401A1CA /* Frameworks */ = {
+		2BFB2136BD6829106400DA3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				927B72032134EEBFB8064738 /* Foundation.framework in Frameworks */,
+				B305876395637D053014F001 /* Foundation.framework in Frameworks */,
+				258F6B9EE507910F6A9A91BE /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		69C1CBFD49CE53FE978A8E03 /* Frameworks */ = {
+		8FB49C7E2CCC4AFDC0114C0D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA45497BD9DC659CA2E3B173 /* Foundation.framework in Frameworks */,
+				8FCB4A138E8AE697286B2233 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF2A1C4E2953CF1A9DED5014 /* Frameworks */ = {
+		93CF43F828DC3A6D6E3D2024 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68F78F454AFEAA563471E1CE /* Foundation.framework in Frameworks */,
-				921EF7A9EC6BF026477D7072 /* QuartzCore.framework in Frameworks */,
+				4AF493DA177F5210BAB41CBC /* CoreGraphics.framework in Frameworks */,
+				C5F13340311CFF8B3B15E27E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25A64C453578CED629FB21D7 /* Frameworks */ = {
+		0BBEF344FE95A3971D8B396C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7FE16F2663F4C89C10FA6770 /* iOS */,
+				45182678DDE9299EB2CA75F3 /* Pods-Asilo-DateTools.xcconfig */,
+				3DAEAAEA7C5591CAFDD85E37 /* Pods-Asilo-DateTools-Private.xcconfig */,
+				7EADED35C8654C48F2B89DF9 /* Pods-Asilo-DateTools-dummy.m */,
+				B5AC5EDAF789058A9B5FA05C /* Pods-Asilo-DateTools-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Asilo-DateTools";
+			sourceTree = "<group>";
+		};
+		1664D8327DF8C672D306147E /* DateTools */ = {
+			isa = PBXGroup;
+			children = (
+				D9237CDAC433FE069872049B /* DTConstants.h */,
+				07B406F95CA14363D6EA0FB9 /* DTError.h */,
+				F07AB564139C6D2DC9E29C5E /* DTError.m */,
+				455F96B96F148623A45F03F3 /* DTTimePeriod.h */,
+				1BF95924A52301083736D47C /* DTTimePeriod.m */,
+				188DD5C515B3EDE249940709 /* DTTimePeriodChain.h */,
+				7A609823C4B04C23F067882B /* DTTimePeriodChain.m */,
+				8B5CF88F004646DA3B759658 /* DTTimePeriodCollection.h */,
+				579A966091247EE303495537 /* DTTimePeriodCollection.m */,
+				64A3B8660599CDC6D3B4A2C1 /* DTTimePeriodGroup.h */,
+				C8FD6FC6DD67EE0C955AE17E /* DTTimePeriodGroup.m */,
+				F0F69779D1E891FA8F561B0A /* DateTools.h */,
+				CBB575052EB7203B49DF1FCE /* NSDate+DateTools.h */,
+				CCC51C95B65A663E45F51A52 /* NSDate+DateTools.m */,
+				DB8905520D7DFC6EC8EB435C /* Resources */,
+				0BBEF344FE95A3971D8B396C /* Support Files */,
+			);
+			path = DateTools;
+			sourceTree = "<group>";
+		};
+		1E820E932233B39458E81A2C /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				F009D2B0ED56D401A03D7D83 /* Core */,
+				B48FA79F8DE315D7C6F72B0A /* MMDrawerBarButtonItem */,
+				BCFBB23647B0538330519A07 /* MMDrawerVisualStates */,
+				7A1C757322055FDFE34B5398 /* Subclass */,
+				F41900CC9BC57966549F8942 /* Support Files */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		2094FDEFE4994B336125E4AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1489723F4702C4D4E4337A77 /* Crashlytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		344C1AD1ABAA59D86A5AA65E /* Core */ = {
+		23B4041A0B291D464A5B9B04 /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				9CA9FF30135375957AEFD3D2 /* MMDrawerController.h */,
-				254E7B8B62A6446D015F03A1 /* MMDrawerController.m */,
-				BEC470CBFE4911320957D51D /* MMDrawerController+Subclass.h */,
-				A7F7276147B85B7F41EAA536 /* UIViewController+MMDrawerController.h */,
-				7503BF68F75B28B63DC8715F /* UIViewController+MMDrawerController.m */,
+				2094FDEFE4994B336125E4AF /* Frameworks */,
 			);
-			name = Core;
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
-		7FE16F2663F4C89C10FA6770 /* iOS */ = {
+		304238D3C4E38C8B374E9B65 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				2F96013A1FA1E6CD5DC83328 /* CoreGraphics.framework */,
-				310C8751DB9C59885BC6D7FE /* Foundation.framework */,
-				BA511EDED96547902C3FDCD5 /* QuartzCore.framework */,
+				7D466D681BDA98FE59B06FBB /* Base */,
 			);
-			name = iOS;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
-		84457101C78C0637CF7D78B1 /* Products */ = {
+		392AA51C04EA7EE9A91897E4 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				288C17CF51F4C01F7884DE43 /* libDateTools.a */,
-				93E5C96AC25E7112CE9AC925 /* libMBProgressHUD.a */,
-				41AABA63BB994BD5C7A26E70 /* libMMDrawerController.a */,
-				120443FF48A764E49DF538DF /* libPods-Asilo.a */,
-				669961153E14BD6F34A8A4DF /* libToast.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		87641526D60E696A41DE7ED7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BE126BCBC643047B47BDF060 /* DateTools */,
-				DB6FE0C5A3D68FAD627EF687 /* MBProgressHUD */,
-				F62C51F148EFFDEC13B7F033 /* MMDrawerController */,
-				FE9AA51ACD085065E0765C94 /* Toast */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8BF5842926DF8342B2B4949B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				70036AFB0F00ABDCDF487810 /* MMDrawerController.xcconfig */,
-				7C3F44C60CAD4BE0B7415F80 /* MMDrawerController-Private.xcconfig */,
-				8CCF51B74EF1034FB13DE4F8 /* MMDrawerController-dummy.m */,
-				8F4BA8788E45142D70E08C16 /* MMDrawerController-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MMDrawerController";
-			sourceTree = "<group>";
-		};
-		8F8EE3FAC268F891A48E6E29 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C1CF22A79B38670E9DF92353 /* Pods-Asilo */,
+				810564DA9B1592DEB569A1A7 /* Pods-Asilo */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AB8A83819A1BD31CACED0069 /* Resources */ = {
+		3D557A4D41C665E3174191A9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				ACC137F63F5C99540B508A8C /* DateTools.bundle */,
+				A2FE79A87FD544A3DEA7D4C4 /* Pods-Asilo-MBProgressHUD.xcconfig */,
+				5A3ECC30B1AAB3AD7FBCF555 /* Pods-Asilo-MBProgressHUD-Private.xcconfig */,
+				E92D5C1C4960154D17CE3F20 /* Pods-Asilo-MBProgressHUD-dummy.m */,
+				64227B09F9C68EAA158811DC /* Pods-Asilo-MBProgressHUD-prefix.pch */,
 			);
-			name = Resources;
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Asilo-MBProgressHUD";
 			sourceTree = "<group>";
 		};
-		B7B212601DF96B1EF54331D5 /* Subclass */ = {
+		50E0B7D016585324A6445777 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				6932DF1883D78CF860F794C6 /* UIView+Toast.h */,
+				15D7C07B746F729286477D5D /* UIView+Toast.m */,
+				C024491C8F09FC3156F26175 /* Support Files */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		5B4311D6BD8F42E82E647C4A = {
+			isa = PBXGroup;
+			children = (
+				9ED99A0A98B36F20E5C40E3E /* Podfile */,
+				C634F93D0B270B93191AF4C1 /* Frameworks */,
+				D60B7248AE0ED642897E89A7 /* Pods */,
+				79EC89485E4E8F1894039419 /* Products */,
+				392AA51C04EA7EE9A91897E4 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		79EC89485E4E8F1894039419 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F6B587335A6A7CD1CFBA42F /* libPods-Asilo.a */,
+				5771E6591082103C92BA02AC /* libPods-Asilo-DateTools.a */,
+				8D4FB253E32B7815B151102B /* libPods-Asilo-MBProgressHUD.a */,
+				E21E10D50409073194BEDC90 /* libPods-Asilo-MMDrawerController.a */,
+				1EA7C50C0B8C5C8C52B0A2B5 /* libPods-Asilo-Toast.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A1C757322055FDFE34B5398 /* Subclass */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Subclass;
 			sourceTree = "<group>";
 		};
-		B7BC2125820B97F899BD8B98 /* MMDrawerVisualStates */ = {
+		7D466D681BDA98FE59B06FBB /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				0DE8F321189CF01F7EC1FF2B /* MMDrawerVisualState.h */,
-				C92C4D2022CD3B208FD5CC01 /* MMDrawerVisualState.m */,
+				E13C869ADBF511A123FB2249 /* Frameworks */,
 			);
-			name = MMDrawerVisualStates;
+			name = Base;
 			sourceTree = "<group>";
 		};
-		BE126BCBC643047B47BDF060 /* DateTools */ = {
+		810564DA9B1592DEB569A1A7 /* Pods-Asilo */ = {
 			isa = PBXGroup;
 			children = (
-				04F3494D2C251FBB3D657AB1 /* DTConstants.h */,
-				F2ED9C5AAE342E23CFFDC04E /* DTError.h */,
-				C6A957837FAB7A21971AD09F /* DTError.m */,
-				228E48E5860535A5E7D1BC5F /* DTTimePeriod.h */,
-				7EF672B4690259AD5104D1C7 /* DTTimePeriod.m */,
-				D10EADE34AC9ACE5BDFCEE85 /* DTTimePeriodChain.h */,
-				4BFD69F85424FAB9C88A2254 /* DTTimePeriodChain.m */,
-				24A7D9107CF1B9A9E7056D96 /* DTTimePeriodCollection.h */,
-				77360602AB4CE6CC76059022 /* DTTimePeriodCollection.m */,
-				9095D11ED80B3FA92C5304C8 /* DTTimePeriodGroup.h */,
-				4BA3977E4CA90DD9A42BC8A6 /* DTTimePeriodGroup.m */,
-				A2B47B9320292D45D499D88E /* DateTools.h */,
-				F6DCB4029A5F149796571AF0 /* NSDate+DateTools.h */,
-				BEE3766FB00399693F76767B /* NSDate+DateTools.m */,
-				AB8A83819A1BD31CACED0069 /* Resources */,
-				EF8C3D1A1B0BB96CAFE41F3A /* Support Files */,
-			);
-			path = DateTools;
-			sourceTree = "<group>";
-		};
-		C1CF22A79B38670E9DF92353 /* Pods-Asilo */ = {
-			isa = PBXGroup;
-			children = (
-				2799E4E81841EA6DA5F23D82 /* Pods-Asilo-acknowledgements.markdown */,
-				37C94EC32745069C78A01A65 /* Pods-Asilo-acknowledgements.plist */,
-				99F93DC464A1592620E76B62 /* Pods-Asilo-dummy.m */,
-				9566D8642F878BAD41F66F7F /* Pods-Asilo-resources.sh */,
-				157F3129B4343D89ABDFB801 /* Pods-Asilo.debug.xcconfig */,
-				5F683548AF3C4B1602E0F9CF /* Pods-Asilo.release.xcconfig */,
+				DAF3C4D924502B5575EFFA26 /* Pods-Asilo-acknowledgements.markdown */,
+				A67E9D970C832DB1C56F3C23 /* Pods-Asilo-acknowledgements.plist */,
+				D7AC567E7E43C853BD27F897 /* Pods-Asilo-dummy.m */,
+				FDCE2BD2261622A5D574280C /* Pods-Asilo-environment.h */,
+				77125BFBBD4EAD9FB67D19BF /* Pods-Asilo-resources.sh */,
+				E77E4F39A7211509D9E6DA0F /* Pods-Asilo.debug.xcconfig */,
+				8C3DA867E9200F08A9C6B144 /* Pods-Asilo.release.xcconfig */,
 			);
 			name = "Pods-Asilo";
 			path = "Target Support Files/Pods-Asilo";
 			sourceTree = "<group>";
 		};
-		C3750FBE6668324E33A24808 /* Support Files */ = {
+		8BF07C77796DDB8A161D3642 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				E7503DDAC805A7DC2684CAEA /* Toast.xcconfig */,
-				ADAD645A2B6E8300059014F8 /* Toast-Private.xcconfig */,
-				EE1AFD3BEDE2A916A973B37E /* Toast-dummy.m */,
-				A79CB914688880CD25BA853A /* Toast-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Toast";
-			sourceTree = "<group>";
-		};
-		DB6FE0C5A3D68FAD627EF687 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				79CE5434956EC9D025627A87 /* MBProgressHUD.h */,
-				F9431E848152D83104B7F440 /* MBProgressHUD.m */,
-				FA9A73E9C362C189752120E9 /* Support Files */,
+				137780FBC1519D17904F90F3 /* MBProgressHUD.h */,
+				CA78D9DC86560B936EB6E92B /* MBProgressHUD.m */,
+				3D557A4D41C665E3174191A9 /* Support Files */,
 			);
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		EC7686854CEA1B8E937D125F /* MMDrawerBarButtonItem */ = {
+		B48FA79F8DE315D7C6F72B0A /* MMDrawerBarButtonItem */ = {
 			isa = PBXGroup;
 			children = (
-				11A493409CA9B0BF49BF3FF5 /* MMDrawerBarButtonItem.h */,
-				4BC63518EB950E65DA291C15 /* MMDrawerBarButtonItem.m */,
+				9C6470EB9CE000034D2B7356 /* MMDrawerBarButtonItem.h */,
+				83FC6381ACE5D0E341187635 /* MMDrawerBarButtonItem.m */,
 			);
 			name = MMDrawerBarButtonItem;
 			sourceTree = "<group>";
 		};
-		EE798AABCCC363F7F565F8D5 = {
+		B70E90B29F196C1EF9D42C9D /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A0DC532CA9E966EE946B8D71 /* Podfile */,
-				25A64C453578CED629FB21D7 /* Frameworks */,
-				87641526D60E696A41DE7ED7 /* Pods */,
-				84457101C78C0637CF7D78B1 /* Products */,
-				8F8EE3FAC268F891A48E6E29 /* Targets Support Files */,
+				5B56AF58BA69E98B84232D99 /* CoreGraphics.framework */,
+				C3D15BEF6A256FFA6F7BEFCC /* Foundation.framework */,
+				724D115F25AE4FD5CC67E599 /* QuartzCore.framework */,
 			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		EF8C3D1A1B0BB96CAFE41F3A /* Support Files */ = {
+		BCFBB23647B0538330519A07 /* MMDrawerVisualStates */ = {
 			isa = PBXGroup;
 			children = (
-				14744CAC0637C1116911332F /* DateTools.xcconfig */,
-				8EF249D2AF77239F0795F469 /* DateTools-Private.xcconfig */,
-				02CA4BBBC6A88B2C6075BC9E /* DateTools-dummy.m */,
-				0280991EEE39979313E97D8D /* DateTools-prefix.pch */,
+				7725E64426E857CA7452ECEB /* MMDrawerVisualState.h */,
+				238C11F4F2A98BEFB2A3C694 /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		C024491C8F09FC3156F26175 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C90F57FFFA54CAAAE33F3190 /* Pods-Asilo-Toast.xcconfig */,
+				BA9685E84BACBEF17D410182 /* Pods-Asilo-Toast-Private.xcconfig */,
+				D62CEE6B096989ADFC6BDACE /* Pods-Asilo-Toast-dummy.m */,
+				1157F64F370B55310519B941 /* Pods-Asilo-Toast-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/DateTools";
+			path = "../Target Support Files/Pods-Asilo-Toast";
 			sourceTree = "<group>";
 		};
-		F62C51F148EFFDEC13B7F033 /* MMDrawerController */ = {
+		C634F93D0B270B93191AF4C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				344C1AD1ABAA59D86A5AA65E /* Core */,
-				EC7686854CEA1B8E937D125F /* MMDrawerBarButtonItem */,
-				B7BC2125820B97F899BD8B98 /* MMDrawerVisualStates */,
-				B7B212601DF96B1EF54331D5 /* Subclass */,
-				8BF5842926DF8342B2B4949B /* Support Files */,
+				B70E90B29F196C1EF9D42C9D /* iOS */,
 			);
-			path = MMDrawerController;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA9A73E9C362C189752120E9 /* Support Files */ = {
+		D60B7248AE0ED642897E89A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F67B203D006E07B2E527F053 /* MBProgressHUD.xcconfig */,
-				A22AA7A8A573680F3D297BC8 /* MBProgressHUD-Private.xcconfig */,
-				52F3D3AB368CA43575B30B3D /* MBProgressHUD-dummy.m */,
-				9E2CA60CE3B7C2B5A359E10A /* MBProgressHUD-prefix.pch */,
+				23B4041A0B291D464A5B9B04 /* Crashlytics */,
+				1664D8327DF8C672D306147E /* DateTools */,
+				304238D3C4E38C8B374E9B65 /* Fabric */,
+				8BF07C77796DDB8A161D3642 /* MBProgressHUD */,
+				1E820E932233B39458E81A2C /* MMDrawerController */,
+				50E0B7D016585324A6445777 /* Toast */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB8905520D7DFC6EC8EB435C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33E8EE7F8FBDC2EB0F9D99E9 /* DateTools.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E13C869ADBF511A123FB2249 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69567A4C181BAFB00592899B /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F009D2B0ED56D401A03D7D83 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8905A5156F2EE230F82EC /* MMDrawerController.h */,
+				7A9999DCE4AC9853960B902E /* MMDrawerController.m */,
+				368C56992D4B619FD928B7D7 /* MMDrawerController+Subclass.h */,
+				1F31B2BDE75974431C5E0CC1 /* UIViewController+MMDrawerController.h */,
+				C62BF54B92F1F83D37C74FC9 /* UIViewController+MMDrawerController.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		F41900CC9BC57966549F8942 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				14852AD65AD120910C9C453A /* Pods-Asilo-MMDrawerController.xcconfig */,
+				D1A1513460F1939EF5F4C1F0 /* Pods-Asilo-MMDrawerController-Private.xcconfig */,
+				6118EFF5033B97595DD77D37 /* Pods-Asilo-MMDrawerController-dummy.m */,
+				E11F838B81569B5EDE20E0FE /* Pods-Asilo-MMDrawerController-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
-			sourceTree = "<group>";
-		};
-		FE9AA51ACD085065E0765C94 /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				3C28168329FE0DC798BD49C0 /* UIView+Toast.h */,
-				B16D3B0AC2FAA59C365F16D5 /* UIView+Toast.m */,
-				C3750FBE6668324E33A24808 /* Support Files */,
-			);
-			path = Toast;
+			path = "../Target Support Files/Pods-Asilo-MMDrawerController";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2D4E7EF9F854EDF9CFAB2A0C /* Headers */ = {
+		2680AF412C0B559FA9398D9C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E16EB8BF8F6F2FBBF79CAE04 /* DTConstants.h in Headers */,
-				A80EBADE10698E256849231B /* DTError.h in Headers */,
-				7D8BA2131CDF85106AD124C9 /* DTTimePeriod.h in Headers */,
-				3623949A9A7A8A89AFDE8A06 /* DTTimePeriodChain.h in Headers */,
-				2495E709B0E171ACBEA2BBEE /* DTTimePeriodCollection.h in Headers */,
-				E15A48B50AF3C9DCC7F68BD1 /* DTTimePeriodGroup.h in Headers */,
-				40D1852A51E76A4F8AE75A6F /* DateTools.h in Headers */,
-				E0C6E0D93A19FE453B4599A0 /* NSDate+DateTools.h in Headers */,
+				6FF99E4204DC95A6120F039B /* UIView+Toast.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3565333A3DB3390ECBC9231A /* Headers */ = {
+		8E6F6B2F0DAB5E3CCEF01DA6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79C5F204336FE1D62C53F87C /* UIView+Toast.h in Headers */,
+				81D45143131AC92B884DB6A8 /* MMDrawerBarButtonItem.h in Headers */,
+				210F903089B8C102B1CE6316 /* MMDrawerController+Subclass.h in Headers */,
+				AF635C15BD35BEE72423A6B5 /* MMDrawerController+Subclass.h in Headers */,
+				05AD95854C23C66649785967 /* MMDrawerController.h in Headers */,
+				A786BCC4B667542CB08163CE /* MMDrawerVisualState.h in Headers */,
+				29A1778ECF0D708A9152955B /* UIViewController+MMDrawerController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D73847EDB32EC31C3D10F49A /* Headers */ = {
+		EB4690558048479DA28C66A2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A9A71DAE7D3FD9F485D338 /* MMDrawerBarButtonItem.h in Headers */,
-				599D614F3ACECEFB6F31BB0C /* MMDrawerController+Subclass.h in Headers */,
-				958C0149E02FAB8C05456C20 /* MMDrawerController.h in Headers */,
-				6BC809D722A47B5FA8B3C73F /* MMDrawerVisualState.h in Headers */,
-				0A57362BED5574EF0D20374D /* UIViewController+MMDrawerController.h in Headers */,
+				DFAB92301E28CE8F9762F708 /* DTConstants.h in Headers */,
+				9E034C2B110D569E9E6649B0 /* DTError.h in Headers */,
+				5071AD7B3F7C72C3B42CC207 /* DTTimePeriod.h in Headers */,
+				1989439B021188888047CFB4 /* DTTimePeriodChain.h in Headers */,
+				AE6C06839DA01FFD092C7C98 /* DTTimePeriodCollection.h in Headers */,
+				34AC20CC9A6905D3B7631D61 /* DTTimePeriodGroup.h in Headers */,
+				89E7258E85716FC1EEA19E21 /* DateTools.h in Headers */,
+				23404F084F67CFBC9D7F2266 /* NSDate+DateTools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F154CDCE20161C9961C0F0A8 /* Headers */ = {
+		F7682BD76B799518F65FB1BC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9977CF8410AFA3D6B99B4F3C /* MBProgressHUD.h in Headers */,
+				6238C5CFCA012C63C8F216E0 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		175F55DCD69045FE046B1035 /* DateTools */ = {
+		18F31CBD3BA603AD1105B29C /* Pods-Asilo-MMDrawerController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8400A347B9072C819EC67047 /* Build configuration list for PBXNativeTarget "DateTools" */;
+			buildConfigurationList = 2E436BC1907E130C8B3224F9 /* Build configuration list for PBXNativeTarget "Pods-Asilo-MMDrawerController" */;
 			buildPhases = (
-				1A3E2D566AAC552B7460A66D /* Sources */,
-				53DB0D4855F9BEE9D401A1CA /* Frameworks */,
-				2D4E7EF9F854EDF9CFAB2A0C /* Headers */,
+				15080C4FD2181E3D403E4378 /* Sources */,
+				026E7AC49CE478CFC4CDBF86 /* Frameworks */,
+				8E6F6B2F0DAB5E3CCEF01DA6 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = DateTools;
-			productName = DateTools;
-			productReference = 288C17CF51F4C01F7884DE43 /* libDateTools.a */;
+			name = "Pods-Asilo-MMDrawerController";
+			productName = "Pods-Asilo-MMDrawerController";
+			productReference = E21E10D50409073194BEDC90 /* libPods-Asilo-MMDrawerController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		4DFF734F8B8AE74BF332959A /* Toast */ = {
+		1CA054E9A917EE4CC736E9DC /* Pods-Asilo-Toast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C82A3FE67594E60DC29E4B5 /* Build configuration list for PBXNativeTarget "Toast" */;
+			buildConfigurationList = 8A5D87FBEF153E291F2D0631 /* Build configuration list for PBXNativeTarget "Pods-Asilo-Toast" */;
 			buildPhases = (
-				2878E8C57C33043CA3B6FA01 /* Sources */,
-				FF2A1C4E2953CF1A9DED5014 /* Frameworks */,
-				3565333A3DB3390ECBC9231A /* Headers */,
+				C96E94726A4170C0975EB304 /* Sources */,
+				2BFB2136BD6829106400DA3A /* Frameworks */,
+				2680AF412C0B559FA9398D9C /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Toast;
-			productName = Toast;
-			productReference = 669961153E14BD6F34A8A4DF /* libToast.a */;
+			name = "Pods-Asilo-Toast";
+			productName = "Pods-Asilo-Toast";
+			productReference = 1EA7C50C0B8C5C8C52B0A2B5 /* libPods-Asilo-Toast.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		6C8F328066565FF6CC42FC20 /* MBProgressHUD */ = {
+		C9B04EDDF81BCFA11A7D71A4 /* Pods-Asilo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 369D15689E4280F68E33A1A7 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildConfigurationList = 1FA372F190BB5BA2E6FBF1A9 /* Build configuration list for PBXNativeTarget "Pods-Asilo" */;
 			buildPhases = (
-				6E290295F19779A238780075 /* Sources */,
-				52D7B329FAFB3D7BB04CA273 /* Frameworks */,
-				F154CDCE20161C9961C0F0A8 /* Headers */,
+				42FCEA4CBEF8099B4FA5AAD1 /* Sources */,
+				8FB49C7E2CCC4AFDC0114C0D /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = MBProgressHUD;
-			productName = MBProgressHUD;
-			productReference = 93E5C96AC25E7112CE9AC925 /* libMBProgressHUD.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		842D3C1C526E4AE48BC52E76 /* Pods-Asilo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BA0D1606D21C0CA00D29CAA1 /* Build configuration list for PBXNativeTarget "Pods-Asilo" */;
-			buildPhases = (
-				21EC8594C774B2E497FE2E3B /* Sources */,
-				69C1CBFD49CE53FE978A8E03 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0D1C4F84E84ABFAC42104DDA /* PBXTargetDependency */,
-				6E1AE1C4687050BBD83042AA /* PBXTargetDependency */,
-				261F802D2F30A32F81A5DA03 /* PBXTargetDependency */,
-				5D700B2E2FE966A51324C453 /* PBXTargetDependency */,
+				08CCF24A56E66799276BA1D3 /* PBXTargetDependency */,
+				2137AD5E66F636B199D9A601 /* PBXTargetDependency */,
+				86184538B54429343591FFF6 /* PBXTargetDependency */,
+				2652CA0CFC269326DE59E2BF /* PBXTargetDependency */,
 			);
 			name = "Pods-Asilo";
 			productName = "Pods-Asilo";
-			productReference = 120443FF48A764E49DF538DF /* libPods-Asilo.a */;
+			productReference = 1F6B587335A6A7CD1CFBA42F /* libPods-Asilo.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		C14AF23571322676780AEA1B /* MMDrawerController */ = {
+		D8B871406537D53E7B5F05B3 /* Pods-Asilo-MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E2C34EEF3ED728C4FCD1A96 /* Build configuration list for PBXNativeTarget "MMDrawerController" */;
+			buildConfigurationList = 9C9C96083759A7FAFA7D5364 /* Build configuration list for PBXNativeTarget "Pods-Asilo-MBProgressHUD" */;
 			buildPhases = (
-				1D8C9435E984E9FC384EA304 /* Sources */,
-				4108EF4E310B77501EE8788D /* Frameworks */,
-				D73847EDB32EC31C3D10F49A /* Headers */,
+				678CE639DB4132346055C8BB /* Sources */,
+				93CF43F828DC3A6D6E3D2024 /* Frameworks */,
+				F7682BD76B799518F65FB1BC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MMDrawerController;
-			productName = MMDrawerController;
-			productReference = 41AABA63BB994BD5C7A26E70 /* libMMDrawerController.a */;
+			name = "Pods-Asilo-MBProgressHUD";
+			productName = "Pods-Asilo-MBProgressHUD";
+			productReference = 8D4FB253E32B7815B151102B /* libPods-Asilo-MBProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB79B43991FE5B6A45AC7981 /* Pods-Asilo-DateTools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7E92EA7FB055476950C01F /* Build configuration list for PBXNativeTarget "Pods-Asilo-DateTools" */;
+			buildPhases = (
+				B5D6F47F9FB55056F8B314D6 /* Sources */,
+				22C52DEAD3AE1581C79C7D2C /* Frameworks */,
+				EB4690558048479DA28C66A2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Asilo-DateTools";
+			productName = "Pods-Asilo-DateTools";
+			productReference = 5771E6591082103C92BA02AC /* libPods-Asilo-DateTools.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		912E744810E6C36225F35337 /* Project object */ = {
+		CAA12ED3E907819DE6848C22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 9CB5C4E6EB7DCD2913263B6D /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 83EA1801F9DFEE4C2D044B7F /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = EE798AABCCC363F7F565F8D5;
-			productRefGroup = 84457101C78C0637CF7D78B1 /* Products */;
+			mainGroup = 5B4311D6BD8F42E82E647C4A;
+			productRefGroup = 79EC89485E4E8F1894039419 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				175F55DCD69045FE046B1035 /* DateTools */,
-				6C8F328066565FF6CC42FC20 /* MBProgressHUD */,
-				C14AF23571322676780AEA1B /* MMDrawerController */,
-				842D3C1C526E4AE48BC52E76 /* Pods-Asilo */,
-				4DFF734F8B8AE74BF332959A /* Toast */,
+				C9B04EDDF81BCFA11A7D71A4 /* Pods-Asilo */,
+				EB79B43991FE5B6A45AC7981 /* Pods-Asilo-DateTools */,
+				D8B871406537D53E7B5F05B3 /* Pods-Asilo-MBProgressHUD */,
+				18F31CBD3BA603AD1105B29C /* Pods-Asilo-MMDrawerController */,
+				1CA054E9A917EE4CC736E9DC /* Pods-Asilo-Toast */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A3E2D566AAC552B7460A66D /* Sources */ = {
+		15080C4FD2181E3D403E4378 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1897215F3033EC7C0D2B911 /* DTError.m in Sources */,
-				21192EC725A95C4458E3768B /* DTTimePeriod.m in Sources */,
-				81175A552C068D75706CAB9E /* DTTimePeriodChain.m in Sources */,
-				1B80E89A6BB630E86522B878 /* DTTimePeriodCollection.m in Sources */,
-				A58B2AD32E84DFA647AFBA93 /* DTTimePeriodGroup.m in Sources */,
-				FDB1D2CA01F03FFA64FFD5B1 /* DateTools-dummy.m in Sources */,
-				CFA9E40BF157B4F7DBFF6FAB /* NSDate+DateTools.m in Sources */,
+				B6770342775C764A0DE0F0AA /* MMDrawerBarButtonItem.m in Sources */,
+				016E658A5436196FA8A03B1F /* MMDrawerController.m in Sources */,
+				6A8DA2B6CD5A64612914E12A /* MMDrawerVisualState.m in Sources */,
+				110F3C37D2FC8A62997B48AE /* Pods-Asilo-MMDrawerController-dummy.m in Sources */,
+				CA6B521666B108E08D71CAF5 /* UIViewController+MMDrawerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D8C9435E984E9FC384EA304 /* Sources */ = {
+		42FCEA4CBEF8099B4FA5AAD1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97278F0C81FA043A2AB5F2BF /* MMDrawerBarButtonItem.m in Sources */,
-				8B0D0D46F1F8AECE1E995B4B /* MMDrawerController-dummy.m in Sources */,
-				5E7DB34CC35189087BC3EA3D /* MMDrawerController.m in Sources */,
-				10EBBF88172CEC2D0C417236 /* MMDrawerVisualState.m in Sources */,
-				8C904BDF62CD41EE97273D52 /* UIViewController+MMDrawerController.m in Sources */,
+				2A2E0D8EDF91C5B970A91C26 /* Pods-Asilo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		21EC8594C774B2E497FE2E3B /* Sources */ = {
+		678CE639DB4132346055C8BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB4402703E2F98DF894B5DB /* Pods-Asilo-dummy.m in Sources */,
+				60E422DAA4AC87E75682C150 /* MBProgressHUD.m in Sources */,
+				12DF8B8D6AB0BC81D6B59E62 /* Pods-Asilo-MBProgressHUD-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2878E8C57C33043CA3B6FA01 /* Sources */ = {
+		B5D6F47F9FB55056F8B314D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF869638AB10210DA12D4A22 /* Toast-dummy.m in Sources */,
-				9D296AB932A9F656F5B2BDC1 /* UIView+Toast.m in Sources */,
+				74DA3107E76F94C44F07B377 /* DTError.m in Sources */,
+				C8D74D173CEC29834805FDFF /* DTTimePeriod.m in Sources */,
+				68CECACCF6741F96078906E0 /* DTTimePeriodChain.m in Sources */,
+				4DDBB3A9DA173156C458571D /* DTTimePeriodCollection.m in Sources */,
+				7D2D672848AA4A8E79445987 /* DTTimePeriodGroup.m in Sources */,
+				36437E4234993A074C40BBCF /* NSDate+DateTools.m in Sources */,
+				12AD5639FE1A4C37CBB41D5D /* Pods-Asilo-DateTools-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E290295F19779A238780075 /* Sources */ = {
+		C96E94726A4170C0975EB304 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A950692F58F3D017FBFA8E9B /* MBProgressHUD-dummy.m in Sources */,
-				8BEEF0892F96471707D04EB9 /* MBProgressHUD.m in Sources */,
+				DBC3E20FE3F2969A8A929DDF /* Pods-Asilo-Toast-dummy.m in Sources */,
+				0AD41698FEEA5A057B75FF49 /* UIView+Toast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0D1C4F84E84ABFAC42104DDA /* PBXTargetDependency */ = {
+		08CCF24A56E66799276BA1D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = DateTools;
-			target = 175F55DCD69045FE046B1035 /* DateTools */;
-			targetProxy = E21AE3AA874B5191931242DE /* PBXContainerItemProxy */;
+			name = "Pods-Asilo-DateTools";
+			target = EB79B43991FE5B6A45AC7981 /* Pods-Asilo-DateTools */;
+			targetProxy = 7045F44EE46F0B10A943CCAB /* PBXContainerItemProxy */;
 		};
-		261F802D2F30A32F81A5DA03 /* PBXTargetDependency */ = {
+		2137AD5E66F636B199D9A601 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MMDrawerController;
-			target = C14AF23571322676780AEA1B /* MMDrawerController */;
-			targetProxy = D9F5F2D85B093ECDCE2DE2A3 /* PBXContainerItemProxy */;
+			name = "Pods-Asilo-MBProgressHUD";
+			target = D8B871406537D53E7B5F05B3 /* Pods-Asilo-MBProgressHUD */;
+			targetProxy = 80635FB47CA074DF28BD3F7F /* PBXContainerItemProxy */;
 		};
-		5D700B2E2FE966A51324C453 /* PBXTargetDependency */ = {
+		2652CA0CFC269326DE59E2BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Toast;
-			target = 4DFF734F8B8AE74BF332959A /* Toast */;
-			targetProxy = 2025B78870327D8AE8D0E4DA /* PBXContainerItemProxy */;
+			name = "Pods-Asilo-Toast";
+			target = 1CA054E9A917EE4CC736E9DC /* Pods-Asilo-Toast */;
+			targetProxy = E037037E995F66D0D3689B97 /* PBXContainerItemProxy */;
 		};
-		6E1AE1C4687050BBD83042AA /* PBXTargetDependency */ = {
+		86184538B54429343591FFF6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MBProgressHUD;
-			target = 6C8F328066565FF6CC42FC20 /* MBProgressHUD */;
-			targetProxy = 8C31872BD4737BF0962F19C5 /* PBXContainerItemProxy */;
+			name = "Pods-Asilo-MMDrawerController";
+			target = 18F31CBD3BA603AD1105B29C /* Pods-Asilo-MMDrawerController */;
+			targetProxy = 000861275DAF0E54DD9F226D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1546141C6A1DAB5EE289DC79 /* Debug */ = {
+		0264C1393B264FAB43BC4056 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C3F44C60CAD4BE0B7415F80 /* MMDrawerController-Private.xcconfig */;
+			baseConfigurationReference = 5A3ECC30B1AAB3AD7FBCF555 /* Pods-Asilo-MBProgressHUD-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-MBProgressHUD/Pods-Asilo-MBProgressHUD-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -677,121 +724,7 @@
 			};
 			name = Debug;
 		};
-		16C36DB1EF32E6385BBB289A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C3F44C60CAD4BE0B7415F80 /* MMDrawerController-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MMDrawerController/MMDrawerController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		5C5B52DEC26C78C572FFDED3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5F683548AF3C4B1602E0F9CF /* Pods-Asilo.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		613F4C3E0871C8F0411B9AC8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A22AA7A8A573680F3D297BC8 /* MBProgressHUD-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		8A5CB3045700999FA3E4F43A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADAD645A2B6E8300059014F8 /* Toast-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Toast/Toast-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		8BD3692256B47E58C904847B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EF249D2AF77239F0795F469 /* DateTools-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DateTools/DateTools-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		B694B18C76FBE4418AA6EADD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C23133B98E8EA43A8B3BDBF4 /* Debug */ = {
+		203A4152ED23D3C336E60E1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -830,9 +763,75 @@
 			};
 			name = Debug;
 		};
-		CBB064B6E588C6AE253226CE /* Debug */ = {
+		30BEE9C0DF7F9164BEA16845 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 157F3129B4343D89ABDFB801 /* Pods-Asilo.debug.xcconfig */;
+			baseConfigurationReference = 8C3DA867E9200F08A9C6B144 /* Pods-Asilo.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		330AAABCD606CF8E9F046621 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1A1513460F1939EF5F4C1F0 /* Pods-Asilo-MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-MMDrawerController/Pods-Asilo-MMDrawerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3A0A7CAC7712350A97711A47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FDD66084082C7BEF5134E83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E77E4F39A7211509D9E6DA0F /* Pods-Asilo.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -846,12 +845,12 @@
 			};
 			name = Debug;
 		};
-		E393F32625AFF5AA3508BFA0 /* Debug */ = {
+		61D03DF28490654EE8C062AC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A22AA7A8A573680F3D297BC8 /* MBProgressHUD-Private.xcconfig */;
+			baseConfigurationReference = D1A1513460F1939EF5F4C1F0 /* Pods-Asilo-MMDrawerController-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-MMDrawerController/Pods-Asilo-MMDrawerController-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -862,12 +861,44 @@
 			};
 			name = Debug;
 		};
-		EA4AA12DCEB84A91DCF18961 /* Debug */ = {
+		6B0964426FB2B930E35D16BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8EF249D2AF77239F0795F469 /* DateTools-Private.xcconfig */;
+			baseConfigurationReference = 5A3ECC30B1AAB3AD7FBCF555 /* Pods-Asilo-MBProgressHUD-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DateTools/DateTools-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-MBProgressHUD/Pods-Asilo-MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		97207249227372F2F9F84845 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA9685E84BACBEF17D410182 /* Pods-Asilo-Toast-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-Toast/Pods-Asilo-Toast-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CFAF04B8A4B97B9A09525ACC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAEAAEA7C5591CAFDD85E37 /* Pods-Asilo-DateTools-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-DateTools/Pods-Asilo-DateTools-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -878,12 +909,28 @@
 			};
 			name = Debug;
 		};
-		F00938881515EF021C800B85 /* Release */ = {
+		D5745138A2DBBFC9998C0AC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ADAD645A2B6E8300059014F8 /* Toast-Private.xcconfig */;
+			baseConfigurationReference = BA9685E84BACBEF17D410182 /* Pods-Asilo-Toast-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Toast/Toast-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-Toast/Pods-Asilo-Toast-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DC637BA766798D949A789922 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAEAAEA7C5591CAFDD85E37 /* Pods-Asilo-DateTools-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Asilo-DateTools/Pods-Asilo-DateTools-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
@@ -897,61 +944,61 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		369D15689E4280F68E33A1A7 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+		1FA372F190BB5BA2E6FBF1A9 /* Build configuration list for PBXNativeTarget "Pods-Asilo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E393F32625AFF5AA3508BFA0 /* Debug */,
-				613F4C3E0871C8F0411B9AC8 /* Release */,
+				3FDD66084082C7BEF5134E83 /* Debug */,
+				30BEE9C0DF7F9164BEA16845 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E2C34EEF3ED728C4FCD1A96 /* Build configuration list for PBXNativeTarget "MMDrawerController" */ = {
+		2E436BC1907E130C8B3224F9 /* Build configuration list for PBXNativeTarget "Pods-Asilo-MMDrawerController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1546141C6A1DAB5EE289DC79 /* Debug */,
-				16C36DB1EF32E6385BBB289A /* Release */,
+				61D03DF28490654EE8C062AC /* Debug */,
+				330AAABCD606CF8E9F046621 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8400A347B9072C819EC67047 /* Build configuration list for PBXNativeTarget "DateTools" */ = {
+		4F7E92EA7FB055476950C01F /* Build configuration list for PBXNativeTarget "Pods-Asilo-DateTools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA4AA12DCEB84A91DCF18961 /* Debug */,
-				8BD3692256B47E58C904847B /* Release */,
+				CFAF04B8A4B97B9A09525ACC /* Debug */,
+				DC637BA766798D949A789922 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C82A3FE67594E60DC29E4B5 /* Build configuration list for PBXNativeTarget "Toast" */ = {
+		83EA1801F9DFEE4C2D044B7F /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A5CB3045700999FA3E4F43A /* Debug */,
-				F00938881515EF021C800B85 /* Release */,
+				203A4152ED23D3C336E60E1D /* Debug */,
+				3A0A7CAC7712350A97711A47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CB5C4E6EB7DCD2913263B6D /* Build configuration list for PBXProject "Pods" */ = {
+		8A5D87FBEF153E291F2D0631 /* Build configuration list for PBXNativeTarget "Pods-Asilo-Toast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C23133B98E8EA43A8B3BDBF4 /* Debug */,
-				B694B18C76FBE4418AA6EADD /* Release */,
+				D5745138A2DBBFC9998C0AC2 /* Debug */,
+				97207249227372F2F9F84845 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BA0D1606D21C0CA00D29CAA1 /* Build configuration list for PBXNativeTarget "Pods-Asilo" */ = {
+		9C9C96083759A7FAFA7D5364 /* Build configuration list for PBXNativeTarget "Pods-Asilo-MBProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CBB064B6E588C6AE253226CE /* Debug */,
-				5C5B52DEC26C78C572FFDED3 /* Release */,
+				0264C1393B264FAB43BC4056 /* Debug */,
+				6B0964426FB2B930E35D16BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 912E744810E6C36225F35337 /* Project object */;
+	rootObject = CAA12ED3E907819DE6848C22 /* Project object */;
 }

@@ -6,6 +6,8 @@ target 'Asilo' do
     pod 'DateTools', '~> 1.6.1'
     pod 'MBProgressHUD', '~> 0.9.1'
     pod 'Toast', '~> 2.4'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
 target 'AsiloTests' do
