@@ -16,6 +16,7 @@
     if (self) {
         self.title = title;
         self.requireLogin = NO;
+        self.textColor = [UIColor blackColor];
     }
     return self;
 }
