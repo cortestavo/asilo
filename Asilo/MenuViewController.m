@@ -73,7 +73,13 @@
     UIColor *textColor;
     
     if([item hasLoginPassed]) {
-        textColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1];
+        if([item.title isEqualToString:@"For Rent"]) {
+            textColor = [UIColor redColor];
+        } else if([item.title isEqualToString:@"For Sale"]) {
+            textColor = [UIColor blueColor];
+        } else {
+            textColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1];
+        }
     } else {
         textColor = [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1];
     }
