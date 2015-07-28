@@ -12,5 +12,6 @@
 @interface LoginHelper : NSObject
 
 + (void) displayLoginFromViewController:(UIViewController *)sourceViewController;
++ (void) displayLoginFromViewController:(UIViewController *)sourceViewController block:(void(^)())block;
 
 @end
