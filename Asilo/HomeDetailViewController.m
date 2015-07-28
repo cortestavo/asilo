@@ -44,7 +44,6 @@
 //    testHome.address = @"Blv. Fco. Eusebio Kino No. 123, Col. Pitic, Hermosillo, Sonora.";
 //    self.home = testHome;
     // =========================================
-    
     [self populateView];
 }
 
@@ -76,6 +75,9 @@
     self.hasAcLabel.text = [NSString stringWithFormat:@"A.C.: %@", self.home.hasAC ? @"Yes" : @"No"];
     self.hasHeatingLabel.text = [NSString stringWithFormat:@"Heating: %@", self.home.hasHeating ? @"Yes" : @"No"];
     self.parkingLotsLabel.text = [NSString stringWithFormat:@"Parking lots: %d", self.home.parkingLots.intValue];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
     if([self.home countOfPhotos] > 0) {
         [self.home getPhotoAtIndex:0 block:^(UIImage *image) {
             [self.headerImageView setImage: image];

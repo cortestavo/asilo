@@ -61,7 +61,6 @@
     MKMapRect mRect = self.mapView.visibleMapRect;
     CLLocationCoordinate2D ne = MKCoordinateForMapPoint(MKMapPointMake(MKMapRectGetMaxX(mRect), mRect.origin.y));
     CLLocationCoordinate2D sw = MKCoordinateForMapPoint(MKMapPointMake(mRect.origin.x, MKMapRectGetMaxY(mRect)));
-    
     [ASHomeRepository findByAreaWithNorthEast:ne southWest:sw searchType:self.searchType block:^void (NSArray *homes){
         self.homes = homes;
         if(self.homes.count) {
@@ -89,17 +88,8 @@
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(calloutTapped:)];
-    [view addGestureRecognizer:tapGesture];
-}
-
--(void)calloutTapped:(UITapGestureRecognizer *) sender
-{
-    MKAnnotationView *view = (MKAnnotationView*)sender.view;
     ASHomeAnnotation *annotation = [view annotation];
-    if ([annotation isKindOfClass:[ASHomeAnnotation class]]) {
-        [self performSegueWithIdentifier:@"MapToDetail" sender:annotation.home];
-    }
+    [self performSegueWithIdentifier:@"MapToDetail" sender:annotation.home];
 }
 
 #pragma mark - Navigation
