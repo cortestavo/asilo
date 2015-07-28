@@ -64,6 +64,8 @@
 		433CEDB01B572AB100688F44 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433CEDAE1B572AB100688F44 /* FBSDKCoreKit.framework */; };
 		433CEDB11B572AB100688F44 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433CEDAF1B572AB100688F44 /* FBSDKLoginKit.framework */; };
 		433CEDB41B572B0500688F44 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433CEDB31B572B0500688F44 /* ParseFacebookUtilsV4.framework */; };
+		434EB2D31B6809A4001535FC /* like-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 434EB2D11B6809A4001535FC /* like-filled.png */; };
+		434EB2D41B6809A4001535FC /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 434EB2D21B6809A4001535FC /* like.png */; };
 		43CD43E51B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */; };
 		43CD43E81B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E71B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m */; };
 		43CD43ED1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43EA1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m */; };
@@ -175,6 +177,8 @@
 		433CEDAE1B572AB100688F44 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		433CEDAF1B572AB100688F44 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		433CEDB31B572B0500688F44 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		434EB2D11B6809A4001535FC /* like-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like-filled.png"; sourceTree = "<group>"; };
+		434EB2D21B6809A4001535FC /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
 		43CD43E31B61B81B0070A49B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		43CD43E61B61B8930070A49B /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
@@ -502,6 +506,8 @@
 		43EAC4641B55B3370001E4C2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				434EB2D11B6809A4001535FC /* like-filled.png */,
+				434EB2D21B6809A4001535FC /* like.png */,
 				3EF2B3681B58479100B9718C /* castle.jpg */,
 			);
 			name = Assets;
@@ -591,6 +597,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434EB2D31B6809A4001535FC /* like-filled.png in Resources */,
 				432FEE6F1B45CC74001BCF5E /* Main.storyboard in Resources */,
 				432FEE741B45CC74001BCF5E /* LaunchScreen.xib in Resources */,
 				3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */,
@@ -600,6 +607,7 @@
 				432FEE711B45CC74001BCF5E /* Images.xcassets in Resources */,
 				3EF2B3691B58479100B9718C /* castle.jpg in Resources */,
 				3E6A71851B4C55E3005415F6 /* Settings.storyboard in Resources */,
+				434EB2D41B6809A4001535FC /* like.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

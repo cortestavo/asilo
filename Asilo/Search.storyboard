@@ -133,9 +133,9 @@
                                                 <constraint firstItem="pIb-ab-Ipt" firstAttribute="leading" secondItem="ado-3M-AOB" secondAttribute="trailing" constant="20" id="vi5-si-wCs"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-GR-RVd">
-                                            <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
-                                            <state key="normal" title="Favorite">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-GR-RVd">
+                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                            <state key="normal" image="like.png">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
@@ -451,7 +451,10 @@
             <point key="canvasLocation" x="1105" y="300"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="like.png" width="23" height="21"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5JU-rt-cxd"/>
+        <segue reference="AXm-Yi-QLP"/>
     </inferredMetricsTieBreakers>
 </document>
