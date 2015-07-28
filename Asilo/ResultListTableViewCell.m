@@ -94,18 +94,18 @@
 }
 
 - (void) favorite {
-    [self changeTitleToFavoriteButton:@"Favorited!!"];
+    [self changeImageToFavoriteButton:@"like-filled.png"];
     self.home.isFavorite = true;
 }
 
 - (void) unfavorite {
-    [self changeTitleToFavoriteButton:@"Favorite"];
+    [self changeImageToFavoriteButton:@"like"];
     self.home.isFavorite = false;
 }
 
-- (void) changeTitleToFavoriteButton:(NSString *)newTitle {
-    [self.favoriteButton setTitle:newTitle forState:UIControlStateNormal];
-    [self.favoriteButton layoutIfNeeded];
+- (void) changeImageToFavoriteButton:(NSString *)newTitle {
+    UIImage *image = [UIImage imageNamed:newTitle];
+    [self.favoriteButton setImage:image forState:UIControlStateNormal];
 }
 
 @end
