@@ -31,7 +31,7 @@
     annotationView.canShowCallout = YES;
     
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
-    lbl.backgroundColor = [UIColor redColor];
+    lbl.backgroundColor = self.home.isForRent == true ? [UIColor redColor] : [UIColor blueColor];
     lbl.textColor = [UIColor whiteColor];
     lbl.alpha = 0.8;
     lbl.tag = 42;
