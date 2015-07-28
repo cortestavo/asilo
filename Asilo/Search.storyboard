@@ -112,7 +112,7 @@
                                                         <constraint firstAttribute="width" constant="153" id="AFx-YN-ibV"/>
                                                         <constraint firstAttribute="height" constant="21" id="hbh-nR-OiE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -133,11 +133,12 @@
                                                 <constraint firstItem="pIb-ab-Ipt" firstAttribute="leading" secondItem="ado-3M-AOB" secondAttribute="trailing" constant="20" id="vi5-si-wCs"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-GR-RVd">
-                                            <rect key="frame" x="0.0" y="0.0" width="46" height="40"/>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-GR-RVd">
+                                            <rect key="frame" x="16" y="16" width="23" height="22"/>
                                             <state key="normal" image="like.png">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
+                                            <state key="selected" image="like-filled.png"/>
                                             <connections>
                                                 <action selector="favoriteAction:" destination="Tql-Ed-SHm" eventType="touchUpInside" id="fW2-x9-kXr"/>
                                             </connections>
@@ -145,12 +146,16 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="4la-BW-xKM" secondAttribute="bottom" constant="0.5" id="5VL-TN-dtl"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4la-BW-xKM" secondAttribute="trailing" constant="-8" id="5Wm-2T-zXF"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="3DZ-9L-Fug" secondAttribute="bottomMargin" id="6Cm-sc-3YI"/>
                                         <constraint firstItem="3DZ-9L-Fug" firstAttribute="leading" secondItem="dFO-yd-TPf" secondAttribute="leading" id="DBP-ru-TG7"/>
+                                        <constraint firstItem="tPy-GR-RVd" firstAttribute="leading" secondItem="dFO-yd-TPf" secondAttribute="leadingMargin" constant="8" id="Uoi-dR-SW6"/>
                                         <constraint firstItem="4la-BW-xKM" firstAttribute="leading" secondItem="dFO-yd-TPf" secondAttribute="leading" id="Y2M-5t-PUK"/>
+                                        <constraint firstItem="4la-BW-xKM" firstAttribute="leading" secondItem="dFO-yd-TPf" secondAttribute="leadingMargin" constant="-8" id="aZP-ks-DAS"/>
                                         <constraint firstItem="3DZ-9L-Fug" firstAttribute="top" secondItem="dFO-yd-TPf" secondAttribute="top" id="bRQ-sz-fbl"/>
                                         <constraint firstAttribute="trailing" secondItem="3DZ-9L-Fug" secondAttribute="trailing" id="egF-OX-AvI"/>
                                         <constraint firstAttribute="trailing" secondItem="4la-BW-xKM" secondAttribute="trailing" id="fob-Gh-JHq"/>
+                                        <constraint firstItem="tPy-GR-RVd" firstAttribute="top" secondItem="dFO-yd-TPf" secondAttribute="topMargin" constant="8" id="osw-hv-HFs"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -452,6 +457,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="like-filled.png" width="23" height="21"/>
         <image name="like.png" width="23" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
