@@ -28,7 +28,7 @@
 - (MKAnnotationView *)annotationView {
     MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"HomeAnnotation"];
     annotationView.enabled = YES;
-    annotationView.canShowCallout = YES;
+    annotationView.canShowCallout = NO;
     
     UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
     lbl.backgroundColor = self.home.isForRent == true ? [UIColor redColor] : [UIColor blueColor];
