@@ -22,8 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [Fabric with:@[CrashlyticsKit]];
-    [self initializeDrawerController];
     [self initParse: launchOptions];
+    [self initializeDrawerController];
     return YES;
 }
 
