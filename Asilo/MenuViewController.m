@@ -25,19 +25,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    ASNavigateMenuItem *forRent = [[ASNavigateMenuItem alloc] initWithTitle:@"For Rent" requireLogin:NO destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
+        SearchNavigationController *searchNavigation = (SearchNavigationController *)destinationViewController;
+        searchNavigation.searchType = ASFilterTypeForRent;
+    }];
+    forRent.textColor = [UIColor redColor];
+    
+    ASNavigateMenuItem *forSale = [[ASNavigateMenuItem alloc] initWithTitle:@"For Sale" requireLogin:NO destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
+        SearchNavigationController *searchNavigation = (SearchNavigationController *)destinationViewController;
+        searchNavigation.searchType = ASFilterTypeForSale;
+    }];
+    forSale.textColor = [UIColor blueColor];
+    
     self.menuItems = @[
-                       [[ASNavigateMenuItem alloc] initWithTitle:@"For Rent" requireLogin:NO destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
-                           SearchNavigationController *searchNavigation = (SearchNavigationController *)destinationViewController;
-                           searchNavigation.searchType = ASFilterTypeForRent;
-                       }],
-                       [[ASNavigateMenuItem alloc] initWithTitle:@"For Sale" requireLogin:NO destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
-                           SearchNavigationController *searchNavigation = (SearchNavigationController *)destinationViewController;
-                           searchNavigation.searchType = ASFilterTypeForSale;
-                       }],
-                       [[ASNavigateMenuItem alloc] initWithTitle:@"My publications" requireLogin:YES destination:@"Publications" beforeNavigation:nil],
-                      [[ASLoginMenuItem alloc] initWithTitle:@"Log in" sourceViewController:self],
-                      [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil],
-                       ];
+        forRent,
+        forSale,
+        [[ASNavigateMenuItem alloc] initWithTitle:@"My publications" requireLogin:YES destination:@"Publications" beforeNavigation:nil],
+        [[ASLoginMenuItem alloc] initWithTitle:@"Log in" sourceViewController:self],
+        [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil],
+    ];
     [self updateLoginStatus];
 }
 
@@ -73,7 +79,7 @@
     UIColor *textColor;
     
     if([item hasLoginPassed]) {
-        textColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1];
+        textColor = item.textColor;
     } else {
         textColor = [UIColor colorWithRed:150/255.0 green:150/255.0 blue:150/255.0 alpha:1];
     }

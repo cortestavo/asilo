@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
 @interface ASMenuItem : NSObject
 @property (strong, nonatomic) NSString *title;
 @property (assign, nonatomic) BOOL requireLogin;
+@property (strong, nonatomic) UIColor *textColor;
 
 -(instancetype)initWithTitle:(NSString *)title;
 
