@@ -91,16 +91,12 @@
 
 - (IBAction)forRentSwitchChanged:(id)sender {
     UISwitch *forRentSwitch = (UISwitch *)sender;
-    if (!forRentSwitch.isOn) {
-        self.forSaleSwitch.on = true;
-    }
+    self.forSaleSwitch.on = !forRentSwitch.isOn;
 }
 
 - (IBAction)forSaleSwitchChanged:(id)sender {
     UISwitch *forSaleSwitch = (UISwitch *)sender;
-    if (!forSaleSwitch.isOn) {
-        self.forRentSwitch.on = true;
-    }
+    self.forRentSwitch.on = !forSaleSwitch.isOn;
 }
 
 #pragma mark - Navigation
