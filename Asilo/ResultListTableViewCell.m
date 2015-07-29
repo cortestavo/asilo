@@ -9,6 +9,7 @@
 #import "ResultListTableViewCell.h"
 #import <NSDate+DateTools.h>
 #import "ASUser.h"
+#import "LoginHelper.h"
 
 @interface ResultListTableViewCell()
 
@@ -46,6 +47,8 @@
 }
 
 - (void)setupWithHome:(ASHome *)home {
+    self.favoriteButton.selected = false;
+    
     NSNumberFormatter *currencyFormatter = [NSNumberFormatter new];
     currencyFormatter.numberStyle = NSNumberFormatterDecimalStyle;
     currencyFormatter.maximumFractionDigits = 2;
@@ -90,22 +93,26 @@
                 [self favorite];
             }];
         }
+    } else {
+        [LoginHelper displayLoginFromViewController:self.parent block:^{
+            ASUser *currentUser = [ASUser currentUser];
+            if(currentUser != nil) {
+                [currentUser favorite:self.home block:^{
+                    [self favorite];
+                }];
+            }
+        }];
     }
 }
 
 - (void) favorite {
-    [self changeImageToFavoriteButton:@"like-filled.png"];
+    self.favoriteButton.selected = true;
     self.home.isFavorite = true;
 }
 
 - (void) unfavorite {
-    [self changeImageToFavoriteButton:@"like"];
+    self.favoriteButton.selected = false;
     self.home.isFavorite = false;
-}
-
-- (void) changeImageToFavoriteButton:(NSString *)newTitle {
-    UIImage *image = [UIImage imageNamed:newTitle];
-    [self.favoriteButton setImage:image forState:UIControlStateNormal];
 }
 
 @end

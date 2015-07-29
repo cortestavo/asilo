@@ -50,6 +50,9 @@
     [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile"] block:^(PFUser *user, NSError *error) {
         [self updateLoginStatus];
         if(user != nil) {
+            if(self.block != nil) {
+                self.block();
+            }
             [self dismissLogin];
         }
     }];
@@ -82,6 +85,10 @@
 - (void) showOnlyLogoutLabel {
     [self.loggingOutLabel setHidden:NO];
     [self.loginFacebookButton setHidden:YES];
+}
+
+- (void) setBlock:(void (^)(void))block {
+    _block = block;
 }
 
 @end

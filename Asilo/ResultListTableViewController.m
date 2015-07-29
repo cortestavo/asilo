@@ -52,7 +52,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ResultListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ResultListCell" forIndexPath:indexPath];
     [cell setupWithHome:self.homes[indexPath.row]];
-    
+    cell.parent = self;
     return cell;
 }
 

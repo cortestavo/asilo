@@ -13,7 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *loginFacebookButton;
 @property (weak, nonatomic) IBOutlet UILabel *loggingOutLabel;
+@property (nonatomic, copy) void (^block)(void);
 
 - (IBAction)loginWithFacebook:(id)sender;
+- (void) setBlock:(void (^)(void))block;
 
 @end
