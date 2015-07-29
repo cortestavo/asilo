@@ -282,32 +282,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bathrooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h68-ju-3ki">
-                                        <rect key="frame" x="8" y="388" width="85" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="85" id="8bz-sn-5uo"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwa-fm-FXc" userLabel="Number of bathrooms">
-                                        <rect key="frame" x="393" y="388" width="85" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="85" id="gyk-tu-v0m"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dW1-09-H6D" userLabel="Change number of bathrooms">
-                                        <rect key="frame" x="498" y="384" width="94" height="29"/>
-                                        <connections>
-                                            <action selector="numberOfBathsChanged:" destination="Ewq-VL-0oW" eventType="valueChanged" id="Hro-2M-3eU"/>
-                                        </connections>
-                                    </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bedrooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBn-iO-3U0">
-                                        <rect key="frame" x="8" y="425" width="80" height="21"/>
+                                        <rect key="frame" x="8" y="388" width="80" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="jwL-CU-Tbd"/>
                                         </constraints>
@@ -316,13 +292,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbk-Bv-eOn" userLabel="Number of bedrooms">
-                                        <rect key="frame" x="393" y="425" width="85" height="21"/>
+                                        <rect key="frame" x="393" y="388" width="85" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mvp-Nx-wkB" userLabel="Change number of bedrooms">
-                                        <rect key="frame" x="498" y="421" width="94" height="29"/>
+                                        <rect key="frame" x="498" y="384" width="94" height="29"/>
                                         <connections>
                                             <action selector="numberOfBedsChanged:" destination="Ewq-VL-0oW" eventType="valueChanged" id="OLF-wT-6ol"/>
                                         </connections>
@@ -403,15 +379,39 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bathrooms" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h68-ju-3ki">
+                                        <rect key="frame" x="8" y="423" width="85" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="8bz-sn-5uo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwa-fm-FXc" userLabel="Number of bathrooms">
+                                        <rect key="frame" x="393" y="423" width="85" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="gyk-tu-v0m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dW1-09-H6D" userLabel="Change number of bathrooms">
+                                        <rect key="frame" x="498" y="421" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="numberOfBathsChanged:" destination="Ewq-VL-0oW" eventType="valueChanged" id="Hro-2M-3eU"/>
+                                        </connections>
+                                    </stepper>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="NnE-eH-WjX" firstAttribute="leading" secondItem="gk1-pA-3fX" secondAttribute="leading" id="1DG-qz-RRU"/>
                                     <constraint firstItem="h68-ju-3ki" firstAttribute="firstBaseline" secondItem="pwa-fm-FXc" secondAttribute="firstBaseline" id="1LD-QP-O7D"/>
                                     <constraint firstItem="hCw-RS-mRz" firstAttribute="centerY" secondItem="gk1-pA-3fX" secondAttribute="centerY" id="1WD-eR-r86"/>
-                                    <constraint firstItem="h68-ju-3ki" firstAttribute="top" secondItem="FuC-Nn-x8E" secondAttribute="bottom" constant="12" id="21x-FJ-OkK"/>
-                                    <constraint firstItem="dW1-09-H6D" firstAttribute="top" secondItem="FuC-Nn-x8E" secondAttribute="bottom" constant="8" symbolic="YES" id="3u3-ud-erZ"/>
+                                    <constraint firstItem="h68-ju-3ki" firstAttribute="top" secondItem="FuC-Nn-x8E" secondAttribute="bottom" constant="47" id="21x-FJ-OkK"/>
+                                    <constraint firstItem="dW1-09-H6D" firstAttribute="top" secondItem="FuC-Nn-x8E" secondAttribute="bottom" constant="45" id="3u3-ud-erZ"/>
                                     <constraint firstItem="oUn-n9-kl8" firstAttribute="centerY" secondItem="0Uk-Q8-O9n" secondAttribute="centerY" id="4Jj-Rc-sPV"/>
-                                    <constraint firstItem="zBn-iO-3U0" firstAttribute="top" secondItem="h68-ju-3ki" secondAttribute="bottom" constant="16" id="5Br-sf-dta"/>
+                                    <constraint firstItem="zBn-iO-3U0" firstAttribute="top" secondItem="h68-ju-3ki" secondAttribute="bottom" constant="-56" id="5Br-sf-dta"/>
                                     <constraint firstItem="dW1-09-H6D" firstAttribute="leading" secondItem="pwa-fm-FXc" secondAttribute="trailing" constant="20" id="5ss-fI-xhg"/>
                                     <constraint firstItem="jc3-tI-VEV" firstAttribute="centerY" secondItem="OXq-53-VeG" secondAttribute="centerY" id="60X-5g-o8K"/>
                                     <constraint firstItem="FuC-Nn-x8E" firstAttribute="centerX" secondItem="rRO-hI-wET" secondAttribute="centerX" id="6yq-AC-4Fb"/>
@@ -421,16 +421,16 @@
                                     <constraint firstItem="OXq-53-VeG" firstAttribute="trailing" secondItem="zbk-Bv-eOn" secondAttribute="trailing" id="8e4-b1-PMK"/>
                                     <constraint firstItem="oUn-n9-kl8" firstAttribute="leading" secondItem="RSW-vD-Dnb" secondAttribute="leading" id="94Y-qZ-CbU"/>
                                     <constraint firstItem="h68-ju-3ki" firstAttribute="leading" secondItem="FuC-Nn-x8E" secondAttribute="leading" id="9MM-w7-ViX"/>
-                                    <constraint firstItem="HJy-zj-QnG" firstAttribute="top" secondItem="zBn-iO-3U0" secondAttribute="bottom" constant="16" id="9p9-qs-bXF"/>
+                                    <constraint firstItem="HJy-zj-QnG" firstAttribute="top" secondItem="zBn-iO-3U0" secondAttribute="bottom" constant="53" id="9p9-qs-bXF"/>
                                     <constraint firstItem="Mvp-Nx-wkB" firstAttribute="centerY" secondItem="zbk-Bv-eOn" secondAttribute="centerY" id="BKv-NY-BW5"/>
                                     <constraint firstItem="wcg-42-9bt" firstAttribute="top" secondItem="0Uk-Q8-O9n" secondAttribute="bottom" constant="8" symbolic="YES" id="BTq-HO-oXR"/>
                                     <constraint firstItem="zbk-Bv-eOn" firstAttribute="firstBaseline" secondItem="zBn-iO-3U0" secondAttribute="firstBaseline" id="EEJ-lL-FwH"/>
-                                    <constraint firstItem="Mvp-Nx-wkB" firstAttribute="top" secondItem="dW1-09-H6D" secondAttribute="bottom" constant="8" symbolic="YES" id="Eeh-6u-hXK"/>
+                                    <constraint firstItem="Mvp-Nx-wkB" firstAttribute="top" secondItem="dW1-09-H6D" secondAttribute="bottom" constant="-66" id="Eeh-6u-hXK"/>
                                     <constraint firstItem="c7d-B0-yMz" firstAttribute="leading" secondItem="NnE-eH-WjX" secondAttribute="leading" id="F9f-MP-FRV"/>
                                     <constraint firstItem="gk1-pA-3fX" firstAttribute="top" secondItem="rRO-hI-wET" secondAttribute="top" constant="79" id="FX8-Oh-yGH"/>
                                     <constraint firstItem="zBn-iO-3U0" firstAttribute="baseline" secondItem="zbk-Bv-eOn" secondAttribute="baseline" id="Fxr-eI-sPW"/>
                                     <constraint firstItem="ShN-rP-Z30" firstAttribute="leading" secondItem="4F7-vr-YQm" secondAttribute="leading" id="Hl2-gz-cSL"/>
-                                    <constraint firstItem="pwa-fm-FXc" firstAttribute="centerY" secondItem="dW1-09-H6D" secondAttribute="centerY" id="JcF-Zr-d4J"/>
+                                    <constraint firstItem="pwa-fm-FXc" firstAttribute="centerY" secondItem="dW1-09-H6D" secondAttribute="centerY" constant="-2" id="JcF-Zr-d4J"/>
                                     <constraint firstItem="wcg-42-9bt" firstAttribute="centerY" secondItem="RSW-vD-Dnb" secondAttribute="centerY" id="KpW-q7-2KR"/>
                                     <constraint firstItem="OXq-53-VeG" firstAttribute="firstBaseline" secondItem="HJy-zj-QnG" secondAttribute="firstBaseline" id="LYx-lw-nhm"/>
                                     <constraint firstItem="NnE-eH-WjX" firstAttribute="top" secondItem="gk1-pA-3fX" secondAttribute="bottom" constant="18" id="M3Y-93-iwf"/>
@@ -464,7 +464,7 @@
                                     <constraint firstItem="0Uk-Q8-O9n" firstAttribute="leading" secondItem="wcg-42-9bt" secondAttribute="leading" id="rLU-JU-LxA"/>
                                     <constraint firstItem="pwa-fm-FXc" firstAttribute="baseline" secondItem="h68-ju-3ki" secondAttribute="baseline" id="s0L-a8-b4x"/>
                                     <constraint firstItem="NnE-eH-WjX" firstAttribute="trailing" secondItem="gk1-pA-3fX" secondAttribute="trailing" id="saF-xC-MBa"/>
-                                    <constraint firstItem="jc3-tI-VEV" firstAttribute="top" secondItem="Mvp-Nx-wkB" secondAttribute="bottom" constant="8" symbolic="YES" id="uA4-ap-53X"/>
+                                    <constraint firstItem="jc3-tI-VEV" firstAttribute="top" secondItem="Mvp-Nx-wkB" secondAttribute="bottom" constant="45" id="uA4-ap-53X"/>
                                     <constraint firstItem="c7d-B0-yMz" firstAttribute="top" secondItem="NnE-eH-WjX" secondAttribute="bottom" constant="13" id="uMo-qE-Vtx"/>
                                     <constraint firstItem="RSW-vD-Dnb" firstAttribute="top" secondItem="oUn-n9-kl8" secondAttribute="bottom" constant="18" id="uiC-P8-Lfi"/>
                                     <constraint firstItem="hCw-RS-mRz" firstAttribute="leading" secondItem="gk1-pA-3fX" secondAttribute="trailing" constant="24" id="vhP-VY-XQl"/>
@@ -821,6 +821,6 @@
         <image name="gallery" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aFa-gD-kNY"/>
+        <segue reference="LM5-nb-yNY"/>
     </inferredMetricsTieBreakers>
 </document>
