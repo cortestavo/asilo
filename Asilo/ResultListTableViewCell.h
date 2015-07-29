@@ -12,5 +12,6 @@
 @interface ResultListTableViewCell : UITableViewCell
 
 - (void)setupWithHome:(ASHome *)home;
+@property (weak, nonatomic) UIViewController *parent;
 
 @end
