@@ -73,6 +73,7 @@
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
     annotation.title = @"Your publication will be listed here";
     annotation.coordinate = coor;
+    self.home.location = [PFGeoPoint geoPointWithLatitude:coor.latitude longitude:coor.longitude];
     return annotation;
 }
 
@@ -87,8 +88,6 @@
     CGPoint touchPoint = [gestureRecognizer locationInView:self.mapView];
     CLLocationCoordinate2D coordinate = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
     MKPointAnnotation *annotation = [self annotationFromCoordinate:coordinate];
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-    self.home.location = [PFGeoPoint geoPointWithLocation:location];
     
     [self.mapView addAnnotation:annotation];
 }
