@@ -72,6 +72,12 @@
         self.rentInfoView.hidden = YES;
     }
     self.descriptionText.text = self.home.homeDescription;
+    self.descriptionText.layer.borderColor = [UIColor colorWithRed:230.0/255.0
+                                                             green:230.0/255.0
+                                                              blue:230.0/255.0
+                                                             alpha:1.0].CGColor;
+    self.descriptionText.layer.borderWidth = 1;
+    self.descriptionText.layer.cornerRadius = 5;
     self.hasAcLabel.text = [NSString stringWithFormat:@"A.C.: %@", self.home.hasAC ? @"Yes" : @"No"];
     self.hasHeatingLabel.text = [NSString stringWithFormat:@"Heating: %@", self.home.hasHeating ? @"Yes" : @"No"];
     self.parkingLotsLabel.text = [NSString stringWithFormat:@"Parking lots: %d", self.home.parkingLots.intValue];
