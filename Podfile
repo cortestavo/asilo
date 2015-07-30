@@ -8,6 +8,7 @@ target 'Asilo' do
     pod 'Toast', '~> 2.4'
     pod 'Fabric'
     pod 'Crashlytics'
+    pod 'MHVideoPhotoGallery', '~> 1.6.7'
 end
 
 target 'AsiloTests' do

@@ -5,6 +5,8 @@ PODS:
     - Fabric/Base (= 1.2.8)
   - Fabric/Base (1.2.8)
   - MBProgressHUD (0.9.1)
+  - MHVideoPhotoGallery (1.6.7):
+    - SDWebImage
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
@@ -17,6 +19,9 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.5.7):
     - MMDrawerController/Core
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - Toast (2.4)
 
 DEPENDENCIES:
@@ -24,6 +29,7 @@ DEPENDENCIES:
   - DateTools (~> 1.6.1)
   - Fabric
   - MBProgressHUD (~> 0.9.1)
+  - MHVideoPhotoGallery (~> 1.6.7)
   - MMDrawerController (~> 0.5.7)
   - Toast (~> 2.4)
 
@@ -32,7 +38,9 @@ SPEC CHECKSUMS:
   DateTools: 9bcc89e4f2f9004d8a7a2bd1b49269cf78968e65
   Fabric: a9eabe53915e9f1db55a84dd2838737928675878
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MHVideoPhotoGallery: d6433bc1ec2caf227ad960ee709500b23949bbb2
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d
 
 COCOAPODS: 0.37.2
