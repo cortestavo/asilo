@@ -7,10 +7,13 @@
 //
 
 #import "HomeDetailViewController.h"
+#import "MHGallery.h"
+#import "MHPresenterImageView.h"
+#import "UIImageView+WebCache.h"
 
 @interface HomeDetailViewController ()
-
-@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (weak, nonatomic) IBOutlet MHPresenterImageView *headerImageView;
+//@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bedsAndBathsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *squareMetersLabel;
@@ -81,14 +84,49 @@
     self.hasAcLabel.text = [NSString stringWithFormat:@"A.C.: %@", self.home.hasAC ? @"Yes" : @"No"];
     self.hasHeatingLabel.text = [NSString stringWithFormat:@"Heating: %@", self.home.hasHeating ? @"Yes" : @"No"];
     self.parkingLotsLabel.text = [NSString stringWithFormat:@"Parking lots: %d", self.home.parkingLots.intValue];
+
+
+//    MHGalleryItem *vimeo0 = [[MHGalleryItem alloc]initWithURL:@"http://fachadasparacasas.com/wp-content/uploads/2015/07/Fachada-Casas-Modernas-1.jpg"
+//                                                  galleryType:MHGalleryTypeImage];
+//    MHGalleryItem *vimeo1 = [[MHGalleryItem alloc]initWithURL:@"http://www.planosdecasas21.com/wp-content/uploads/2014/05/casas-modernas.jpg"
+//                                                  galleryType:MHGalleryTypeImage];
+//    
+//    NSArray *galleryItems = @[vimeo0,vimeo1];
+    int sizeOfPhotos= [self.home countOfPhotos];
+    NSMutableArray *galleryItems2 = [[NSMutableArray alloc] initWithCapacity:sizeOfPhotos];
+    int cont = 0;
+    for(PFFile *file in self.home.photos) {
+        MHGalleryItem *im = [[MHGalleryItem alloc]initWithURL:[file url] galleryType:MHGalleryTypeImage];
+        [galleryItems2 insertObject:im atIndex:cont];
+        cont++;
+    }
+    NSArray *galleryItems3 = [NSArray arrayWithArray:galleryItems2];
+    
+    __weak HomeDetailViewController *blockSelf = self;
+    
+    [self.headerImageView setInseractiveGalleryPresentionWithItems:galleryItems3 currentImageIndex:0 currentViewController:self finishCallback:^(NSInteger currentIndex,UIImage *image,MHTransitionDismissMHGallery *interactiveTransition,MHGalleryViewMode viewMode) {
+        if (viewMode == MHGalleryViewModeOverView) {
+            [blockSelf dismissViewControllerAnimated:YES completion:nil];
+        }else{
+            blockSelf.headerImageView.image = image;
+            blockSelf.headerImageView.currentImageIndex = currentIndex;
+            [blockSelf.presentedViewController dismissViewControllerAnimated:YES dismissImageView:blockSelf.headerImageView completion:nil];
+        }
+    }];
+    
+    
+    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:((MHGalleryItem *)galleryItems3[0]).URLString]];
+    [self.headerImageView setUserInteractionEnabled:YES];
+    
+    self.headerImageView.shoudlUsePanGestureReconizer = YES;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    if([self.home countOfPhotos] > 0) {
-        [self.home getPhotoAtIndex:0 block:^(UIImage *image) {
-            [self.headerImageView setImage: image];
-        }];
-    }
+//    if([self.home countOfPhotos] > 0) {
+//        [self.home getPhotoAtIndex:0 block:^(UIImage *image) {
+//            [self.headerImageView setImage: image];
+//        }];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {

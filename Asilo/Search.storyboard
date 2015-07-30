@@ -133,7 +133,7 @@
                                                 <constraint firstItem="pIb-ab-Ipt" firstAttribute="leading" secondItem="ado-3M-AOB" secondAttribute="trailing" constant="20" id="vi5-si-wCs"/>
                                             </constraints>
                                         </view>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-GR-RVd">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPy-GR-RVd">
                                             <rect key="frame" x="16" y="16" width="23" height="22"/>
                                             <state key="normal" image="like.png">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -199,7 +199,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3r-Vp-AlJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iws-pD-Yzu">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iws-pD-Yzu" customClass="MHPresenterImageView">
                                         <rect key="frame" x="0.0" y="63" width="600" height="234"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="234" id="qmn-OW-4Fm"/>
@@ -421,7 +421,7 @@
                         <outlet property="descriptionText" destination="VXc-VA-IaU" id="scS-yJ-MQR"/>
                         <outlet property="hasAcLabel" destination="cTY-fU-Pm5" id="bqT-Ar-FfX"/>
                         <outlet property="hasHeatingLabel" destination="jJm-hW-4hh" id="S8N-cd-KWz"/>
-                        <outlet property="headerImageView" destination="Iws-pD-Yzu" id="mLW-Hn-lFR"/>
+                        <outlet property="headerImageView" destination="Iws-pD-Yzu" id="uzy-hv-pO6"/>
                         <outlet property="isFurnishedLabel" destination="qH6-px-ze8" id="lPp-Np-lg2"/>
                         <outlet property="leaseLabel" destination="g9K-re-yMm" id="o6b-Rx-jvw"/>
                         <outlet property="parkingLotsLabel" destination="sgM-wG-V79" id="Dl3-ES-6Sk"/>

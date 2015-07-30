@@ -31,6 +31,7 @@
 @dynamic priceForSale;      // sale
 @dynamic squareMeters;      // shared
 @dynamic tags;              // shared
+@dynamic photos;
 
 @synthesize isFavorite;
 
