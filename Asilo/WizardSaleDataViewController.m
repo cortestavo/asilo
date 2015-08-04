@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavigationBar];
+    if(self.home.objectId != nil) {
+        [self initFromHome];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,6 +35,10 @@
 - (void)setupNavigationBar {
     self.navigationItem.title = @"Sale info";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(saveHome)];
+}
+
+- (void) initFromHome {
+    self.priceForSaleField.text = [self.home.priceForSale stringValue];
 }
 
 - (BOOL)populateModel {

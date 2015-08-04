@@ -37,8 +37,10 @@
 }
 
 - (void)initializeHomeObject {
-    self.home = [ASHome getNewObject];
-    self.home.owner = [ASUser currentUser];
+    if(self.home == nil) {
+        self.home = [ASHome getNewObject];
+        self.home.owner = [ASUser currentUser];
+    }
 }
 
 - (void)setupNavigationBar {
@@ -56,7 +58,7 @@
         [self.locationManager requestWhenInUseAuthorization];
     }
     self.mapView.delegate = self;
-    
+
 }
 
 - (void)setupSelectingLocation {
@@ -94,10 +96,21 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     if (!self.hasCenteredMapAtLoading) {
-        const CLLocationDistance METERS_TO_ZOOM = 500;
-        mapView.region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, METERS_TO_ZOOM, METERS_TO_ZOOM);
+        if(self.home.objectId != nil) {
+            CLLocationDistance distance = 35 * 1609;
+            CLLocationCoordinate2D zoomLocation;
+            zoomLocation.latitude = self.home.location.latitude;
+            zoomLocation.longitude = self.home.location.longitude;
+            MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, distance, distance);
+            [self.mapView setRegion:viewRegion animated:YES];
+            [self setDefaultAnnotation:zoomLocation];
+        } else {
+            const CLLocationDistance METERS_TO_ZOOM = 500;
+            mapView.region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, METERS_TO_ZOOM, METERS_TO_ZOOM);
+            self.hasCenteredMapAtLoading = true;
+            [self setDefaultAnnotation:userLocation.coordinate];
+        }
         self.hasCenteredMapAtLoading = true;
-        [self setDefaultAnnotation:userLocation.coordinate];
     }
 }
 
