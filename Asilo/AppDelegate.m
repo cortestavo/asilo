@@ -35,7 +35,8 @@
     
     self.drawerViewController = [[MMDrawerController alloc] initWithCenterViewController:resultMapViewController leftDrawerViewController:menuViewController];
     self.drawerViewController.openDrawerGestureModeMask = MMOpenDrawerGestureModeCustom;
-    self.drawerViewController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeTapCenterView;
+//    self.drawerViewController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeTapCenterView;
+    self.drawerViewController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
     
     self.window.rootViewController = self.drawerViewController;
     [self.window makeKeyAndVisible];
