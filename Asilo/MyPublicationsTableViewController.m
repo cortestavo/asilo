@@ -80,6 +80,7 @@
     UIStoryboard *searchStoryboard = [UIStoryboard storyboardWithName:@"Search" bundle:nil];
     HomeDetailViewController *vc = (HomeDetailViewController *)[searchStoryboard instantiateViewControllerWithIdentifier:@"HomeDetail"];
     vc.home = home;
+    vc.ableToEdit = true;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
