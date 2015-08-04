@@ -47,7 +47,22 @@
 //    testHome.address = @"Blv. Fco. Eusebio Kino No. 123, Col. Pitic, Hermosillo, Sonora.";
 //    self.home = testHome;
     // =========================================
+    if(self.ableToEdit == true) {
+        UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(goToEdit)];
+        self.navigationItem.rightBarButtonItem = menuButton;
+    }
+}
+
+- (void) viewWillAppear:(BOOL)animated {
     [self populateView];
+}
+
+- (void) goToEdit {
+    UIStoryboard *searchStoryboard = [UIStoryboard storyboardWithName:@"Publications" bundle:nil];
+    UINavigationController *nvc = (UINavigationController *)[searchStoryboard instantiateViewControllerWithIdentifier:@"NavigationWizardLocation"];
+    HomeDetailViewController *vc = (HomeDetailViewController *)nvc.viewControllers[0];
+    vc.home = self.home;
+    [self presentViewController:nvc animated:YES completion:nil];
 }
 
 -(void)populateView {
@@ -85,13 +100,6 @@
     self.hasHeatingLabel.text = [NSString stringWithFormat:@"Heating: %@", self.home.hasHeating ? @"Yes" : @"No"];
     self.parkingLotsLabel.text = [NSString stringWithFormat:@"Parking lots: %d", self.home.parkingLots.intValue];
 
-
-//    MHGalleryItem *vimeo0 = [[MHGalleryItem alloc]initWithURL:@"http://fachadasparacasas.com/wp-content/uploads/2015/07/Fachada-Casas-Modernas-1.jpg"
-//                                                  galleryType:MHGalleryTypeImage];
-//    MHGalleryItem *vimeo1 = [[MHGalleryItem alloc]initWithURL:@"http://www.planosdecasas21.com/wp-content/uploads/2014/05/casas-modernas.jpg"
-//                                                  galleryType:MHGalleryTypeImage];
-//    
-//    NSArray *galleryItems = @[vimeo0,vimeo1];
     int sizeOfPhotos= [self.home countOfPhotos];
     NSMutableArray *galleryItems2 = [[NSMutableArray alloc] initWithCapacity:sizeOfPhotos];
     int cont = 0;
@@ -119,14 +127,6 @@
     [self.headerImageView setUserInteractionEnabled:YES];
     
     self.headerImageView.shoudlUsePanGestureReconizer = YES;
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-//    if([self.home countOfPhotos] > 0) {
-//        [self.home getPhotoAtIndex:0 block:^(UIImage *image) {
-//            [self.headerImageView setImage: image];
-//        }];
-//    }
 }
 
 - (void)didReceiveMemoryWarning {

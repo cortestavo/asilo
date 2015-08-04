@@ -23,6 +23,7 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
     [super viewDidLoad];
     
     [self setupNavigationBar];
+    self.collectionView.allowsMultipleSelection = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,9 +97,25 @@ static NSString * const reuseIdentifier = @"WizardPictureCell";
     PictureCollectionViewCell *cell = (PictureCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     [self.home getPhotoAtIndex:indexPath.row block:^(UIImage *image) {
         cell.imageView.image = image;
+        cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-background.jpg"]];
     }];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+}
+
+- (IBAction)trashedImages:(id)sender {
+    NSArray *selected = [self.collectionView indexPathsForSelectedItems];
+    for(NSIndexPath *indexPath in selected) {
+        [self.home.photos removeObjectAtIndex:indexPath.row];
+    }
+    [self.collectionView deleteItemsAtIndexPaths:selected];
+    [self.collectionView reloadData];
 }
 
 #pragma mark <UICollectionViewDelegate>

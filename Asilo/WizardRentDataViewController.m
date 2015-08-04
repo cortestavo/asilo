@@ -30,6 +30,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavigationBar];
+    if(self.home.objectId != nil) {
+        [self initFromHome];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,6 +58,16 @@
     self.home.isFurnished = self.furnishedSwitch.isOn;
     self.home.petsAllowed = self.petsAllowedSwitch.isOn;
     return YES;
+}
+
+- (void) initFromHome {
+    ASHome *home = self.home;
+    self.priceForRentField.text = [home.priceForRent stringValue];
+    self.depositField.text = [home.deposit stringValue];
+    self.monthsForLeaseStepper.value = [home.lease doubleValue];
+    self.monthsForLeaseLabel.text = [NSString stringWithFormat:@"%lu months", (long)self.monthsForLeaseStepper.value];
+    self.furnishedSwitch.on = home.isFurnished;
+    self.petsAllowedSwitch.on = home.petsAllowed;
 }
 
 - (void)next {

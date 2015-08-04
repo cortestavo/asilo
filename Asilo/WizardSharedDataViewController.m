@@ -125,6 +125,28 @@
 - (void)setupUiElements {
     [self initializeDescription];
     [self loadAddressFromCoordinate];
+    if(self.home.objectId != nil) {
+//        [self initFromHome];
+    }
+}
+
+- (void) initFromHome {
+    ASHome *home = self.home;
+    self.forRentSwitch.on = home.isForRent;
+    self.forSaleSwitch.on = home.isForSale;
+    self.descriptionText.text = home.homeDescription;
+    self.numberOfBathsStepper.value = [home.baths doubleValue];
+    self.numberOfBathsLabel.text = [NSString stringWithFormat:@"%lu",(long)self.numberOfBathsStepper.value];
+    
+    self.numberOfBedsStepper.value = [home.beds doubleValue];
+    self.numberOfBedsLabel.text = [NSString stringWithFormat:@"%lu",(long)self.numberOfBedsStepper.value];
+    
+    self.numberOfParkingLotsStepper.value = [home.parkingLots doubleValue];
+    self.numberOfParkingLotsLabel.text = [NSString stringWithFormat:@"%lu",(long)self.numberOfParkingLotsStepper.value];
+    
+    self.squareFeetField.text = [NSString stringWithFormat:@"%d", [home.squareMeters integerValue]];
+    self.hasAcSwitch.on = home.hasAC;
+    self.hasHeatingSwitch.on = home.hasHeating;
 }
 
 - (void) initializeDescription {

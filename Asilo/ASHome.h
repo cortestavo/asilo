@@ -32,7 +32,7 @@
 @property (nonatomic) NSNumber *squareMeters;
 @property (nonatomic) PFRelation *tags;
 @property (nonatomic) BOOL isFavorite;
-@property (strong, nonatomic) NSArray *photos;
+@property (strong, nonatomic) NSMutableArray *photos;
 
 + (NSString *)parseClassName;
 + (instancetype)objectWithClassName:(NSString *)className;
