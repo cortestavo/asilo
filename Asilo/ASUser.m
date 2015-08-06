@@ -34,6 +34,7 @@
         if(objects == nil) {
             objects = [NSArray array];
         }
+        block([objects mutableCopy]);
     }];
 }
 
