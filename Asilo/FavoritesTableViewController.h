@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ASBaseViewController.h"
 
-@interface FavoritesTableViewController : UITableViewController
+@interface FavoritesTableViewController : ASBaseViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) NSArray *homes;
 
 @end

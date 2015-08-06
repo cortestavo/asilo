@@ -1,18 +1,104 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultListTableViewCell"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ItemCustomCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultListCell" rowHeight="266" id="KGk-i7-Jjw" customClass="ResultListTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="599" height="266"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mwd-wK-lTo" userLabel="Background Image">
+                        <rect key="frame" x="0.0" y="0.0" width="599" height="266"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztw-Xr-MUc">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Gk2-ti-unQ"/>
+                            <constraint firstAttribute="width" constant="50" id="HCQ-bS-A8y"/>
+                        </constraints>
+                        <state key="normal" image="like.png">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="selected" image="like-filled.png"/>
+                        <connections>
+                            <action selector="favoriteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="8IB-Dx-z2l"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOP-lZ-oYO" userLabel="Gradient">
+                        <rect key="frame" x="0.0" y="133" width="599" height="133"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blv. Antonio Quiroga No. 21, El Llano, Hermosillo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z70-7A-WBE" userLabel="(Address) Blv. Antonio Quiroga No. 21, El Llano, Hermosillo">
+                                <rect key="frame" x="8" y="108" width="316" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$3,500/mo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T60-08-rcO" userLabel="(Price) $3,500/mo">
+                                <rect key="frame" x="8" y="76" width="98" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 bd, 2 bth, 80 sqmt" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39U-K9-vaW" userLabel="(Summary) 2 bd, 2 bth, 80 sqmt">
+                                <rect key="frame" x="460" y="80" width="132" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 days ago" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NH4-mE-5iZ" userLabel="(Publication date) 2 days ago">
+                                <rect key="frame" x="507" y="105" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="0.72999999999999998" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="133" id="1eZ-XB-KOe"/>
+                            <constraint firstAttribute="bottom" secondItem="Z70-7A-WBE" secondAttribute="bottom" constant="8" id="4bE-pJ-k0U"/>
+                            <constraint firstAttribute="trailing" secondItem="NH4-mE-5iZ" secondAttribute="trailing" constant="8" id="Dcr-83-IIJ"/>
+                            <constraint firstItem="NH4-mE-5iZ" firstAttribute="top" secondItem="39U-K9-vaW" secondAttribute="bottom" constant="8" id="GfE-Wn-i2l"/>
+                            <constraint firstItem="39U-K9-vaW" firstAttribute="trailing" secondItem="NH4-mE-5iZ" secondAttribute="trailing" id="Q4F-DS-iTO"/>
+                            <constraint firstItem="Z70-7A-WBE" firstAttribute="leading" secondItem="nOP-lZ-oYO" secondAttribute="leading" constant="8" id="krn-6B-CZj"/>
+                            <constraint firstItem="Z70-7A-WBE" firstAttribute="leading" secondItem="T60-08-rcO" secondAttribute="leading" id="s16-yF-sad"/>
+                            <constraint firstAttribute="bottom" secondItem="NH4-mE-5iZ" secondAttribute="bottom" constant="8" id="t0z-EQ-ae9"/>
+                            <constraint firstItem="Z70-7A-WBE" firstAttribute="top" secondItem="T60-08-rcO" secondAttribute="bottom" constant="8" id="ypJ-bH-nM0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ztw-Xr-MUc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6wu-bc-yOd"/>
+                    <constraint firstAttribute="bottom" secondItem="nOP-lZ-oYO" secondAttribute="bottom" id="Hku-L9-wFZ"/>
+                    <constraint firstItem="Mwd-wK-lTo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="K06-lI-gNy"/>
+                    <constraint firstAttribute="bottom" secondItem="Mwd-wK-lTo" secondAttribute="bottom" id="RcK-He-yJc"/>
+                    <constraint firstItem="ztw-Xr-MUc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Uto-Bn-sfB"/>
+                    <constraint firstItem="Mwd-wK-lTo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Zma-ar-DiH"/>
+                    <constraint firstItem="nOP-lZ-oYO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eGr-In-7WG"/>
+                    <constraint firstAttribute="trailing" secondItem="nOP-lZ-oYO" secondAttribute="trailing" id="j7P-dV-3Vf"/>
+                    <constraint firstAttribute="right" secondItem="Mwd-wK-lTo" secondAttribute="right" id="lFM-QQ-Zkb"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="Z70-7A-WBE" id="UaU-HJ-r9u"/>
+                <outlet property="backgroundImage" destination="Mwd-wK-lTo" id="7fh-mJ-7dF"/>
+                <outlet property="dateLabel" destination="NH4-mE-5iZ" id="uLm-Xs-if9"/>
+                <outlet property="favoriteButton" destination="ztw-Xr-MUc" id="oj4-SC-BP1"/>
+                <outlet property="gradientView" destination="nOP-lZ-oYO" id="5jM-P8-9hF"/>
+                <outlet property="priceLabel" destination="T60-08-rcO" id="sjl-G6-hyn"/>
+                <outlet property="summaryLabel" destination="39U-K9-vaW" id="mb5-Re-XJH"/>
+            </connections>
+            <point key="canvasLocation" x="453.5" y="431"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="like-filled.png" width="23" height="21"/>
+        <image name="like.png" width="23" height="21"/>
+    </resources>
 </document>
