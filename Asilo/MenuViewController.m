@@ -40,6 +40,7 @@
     self.menuItems = @[
         forRent,
         forSale,
+        [[ASNavigateMenuItem alloc] initWithTitle:@"My favorites" requireLogin:YES destination:@"Favorites" beforeNavigation:nil],
         [[ASNavigateMenuItem alloc] initWithTitle:@"My publications" requireLogin:YES destination:@"Publications" beforeNavigation:nil],
         [[ASLoginMenuItem alloc] initWithTitle:@"Log in" sourceViewController:self],
         [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil],
@@ -97,7 +98,7 @@
     if([ASUser currentUser]) {
         loginTitle = @"Log out";
     }
-    [self.menuItems[3] setTitle:loginTitle];
+    [self.menuItems[4] setTitle:loginTitle];
     [self.menuItemsTable reloadData];
 }
 

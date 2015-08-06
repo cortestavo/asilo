@@ -67,6 +67,9 @@
 		434EB2D31B6809A4001535FC /* like-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 434EB2D11B6809A4001535FC /* like-filled.png */; };
 		434EB2D41B6809A4001535FC /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 434EB2D21B6809A4001535FC /* like.png */; };
 		438A5D691B6FE47600ECA233 /* photo-background in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D681B6FE47600ECA233 /* photo-background */; };
+		438A5D751B728C2100ECA233 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D741B728C2100ECA233 /* Favorites.storyboard */; };
+		438A5D781B728DDC00ECA233 /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A5D771B728DDC00ECA233 /* FavoritesTableViewController.m */; };
+		438A5D7D1B72CC6600ECA233 /* ResultListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D7B1B72CC6600ECA233 /* ResultListTableViewCell.xib */; };
 		43CD43E51B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */; };
 		43CD43E81B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E71B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m */; };
 		43CD43ED1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43EA1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m */; };
@@ -181,6 +184,10 @@
 		434EB2D11B6809A4001535FC /* like-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like-filled.png"; sourceTree = "<group>"; };
 		434EB2D21B6809A4001535FC /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
 		438A5D681B6FE47600ECA233 /* photo-background */ = {isa = PBXFileReference; lastKnownFileType = file; path = "photo-background"; sourceTree = "<group>"; };
+		438A5D741B728C2100ECA233 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		438A5D761B728DDC00ECA233 /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
+		438A5D771B728DDC00ECA233 /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
+		438A5D7B1B72CC6600ECA233 /* ResultListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultListTableViewCell.xib; sourceTree = "<group>"; };
 		43CD43E31B61B81B0070A49B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		43CD43E61B61B8930070A49B /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
@@ -292,6 +299,7 @@
 				3E6A71AF1B4DFD4F005415F6 /* SearchNavigationController.m */,
 				3E6A71881B4C619C005415F6 /* ResultMapViewController.h */,
 				3E6A71891B4C619C005415F6 /* ResultMapViewController.m */,
+				438A5D7B1B72CC6600ECA233 /* ResultListTableViewCell.xib */,
 				3EF2B3601B582D8600B9718C /* ResultListTableViewCell.h */,
 				3EF2B3611B582D8600B9718C /* ResultListTableViewCell.m */,
 				3EF2B3621B582D8600B9718C /* ResultListTableViewController.h */,
@@ -386,8 +394,10 @@
 		432FEE621B45CC74001BCF5E /* Asilo */ = {
 			isa = PBXGroup;
 			children = (
+				438A5D6E1B72815700ECA233 /* Favorites */,
 				43CD43E11B61B79F0070A49B /* Libraries */,
 				43EAC4641B55B3370001E4C2 /* Assets */,
+				3E6A718B1B4C61AC005415F6 /* Search */,
 				432FEEF71B4C9B54001BCF5E /* Model */,
 				432FEE671B45CC74001BCF5E /* AppDelegate.h */,
 				432FEE681B45CC74001BCF5E /* AppDelegate.m */,
@@ -397,7 +407,6 @@
 				3EE08F031B61BFE6007B00E6 /* ASAlertHelper.m */,
 				432FEE6D1B45CC74001BCF5E /* Main.storyboard */,
 				3E6A71AA1B4DE605005415F6 /* Menu */,
-				3E6A718B1B4C61AC005415F6 /* Search */,
 				3E6A718C1B4C62F3005415F6 /* Publications */,
 				3E6A71901B4C635C005415F6 /* Login */,
 				3E6A71941B4C6422005415F6 /* Settings */,
@@ -471,6 +480,16 @@
 				433CEDAF1B572AB100688F44 /* FBSDKLoginKit.framework */,
 			);
 			name = "Local frameworks";
+			sourceTree = "<group>";
+		};
+		438A5D6E1B72815700ECA233 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				438A5D741B728C2100ECA233 /* Favorites.storyboard */,
+				438A5D761B728DDC00ECA233 /* FavoritesTableViewController.h */,
+				438A5D771B728DDC00ECA233 /* FavoritesTableViewController.m */,
+			);
+			name = Favorites;
 			sourceTree = "<group>";
 		};
 		43CD43E11B61B79F0070A49B /* Libraries */ = {
@@ -602,10 +621,12 @@
 			files = (
 				434EB2D31B6809A4001535FC /* like-filled.png in Resources */,
 				432FEE6F1B45CC74001BCF5E /* Main.storyboard in Resources */,
+				438A5D751B728C2100ECA233 /* Favorites.storyboard in Resources */,
 				432FEE741B45CC74001BCF5E /* LaunchScreen.xib in Resources */,
 				3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */,
 				3E6A71831B4C55B8005415F6 /* Publications.storyboard in Resources */,
 				43EAC46C1B55BC8A0001E4C2 /* login-facebook.png in Resources */,
+				438A5D7D1B72CC6600ECA233 /* ResultListTableViewCell.xib in Resources */,
 				3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */,
 				432FEE711B45CC74001BCF5E /* Images.xcassets in Resources */,
 				3EF2B3691B58479100B9718C /* castle.jpg in Resources */,
@@ -691,6 +712,7 @@
 				432FEF011B4DA7C3001BCF5E /* ASTag.m in Sources */,
 				432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */,
 				430135011B5878E5007417DE /* ASHomeRepository.m in Sources */,
+				438A5D781B728DDC00ECA233 /* FavoritesTableViewController.m in Sources */,
 				432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */,
 				3E13BAEC1B506C2E0052F56D /* WizardSharedDataViewController.m in Sources */,
 				3E13BAF41B548E300052F56D /* WizardRentDataViewController.m in Sources */,
