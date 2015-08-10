@@ -6,28 +6,19 @@
 //  Copyright (c) 2015 Nearsoft. All rights reserved.
 //
 
-#import "ResultListTableViewCell.h"
+#import "HomeTableViewCell.h"
 #import <NSDate+DateTools.h>
 #import "ASUser.h"
 #import "LoginHelper.h"
 
-@interface ResultListTableViewCell()
+@interface HomeTableViewCell()
 
-@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
-@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *summaryLabel;
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (weak, nonatomic) IBOutlet UIView *gradientView;
-@property (nonatomic) ASHome *home;
-@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 @end
 
-@implementation ResultListTableViewCell
+@implementation HomeTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
     [self setupGradient];
 }
 
@@ -39,11 +30,6 @@
     gradient.colors = @[(id)[transparent CGColor], (id)[dark CGColor]];
     self.gradientView.backgroundColor = transparent;
     [self.gradientView.layer insertSublayer:gradient atIndex:0];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    // Configure the view for the selected state
 }
 
 - (void)setupWithHome:(ASHome *)home {
@@ -67,6 +53,7 @@
     ASUser *currentUser = [ASUser currentUser];
     if(currentUser != nil) {
         PFQuery *query = [PFQuery queryWithClassName:@"_User"];
+        [query whereKey:@"username" equalTo:[ASUser currentUser].username];
         [query whereKey:@"favorites" equalTo:home];
         [query countObjectsInBackgroundWithBlock:^(int counter, NSError *error){
             if(counter > 0) {

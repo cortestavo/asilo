@@ -15,9 +15,7 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     UINavigationController *navigationViewController = (UINavigationController *)[storyboard instantiateInitialViewController];
     
-    [sourceViewController presentViewController:navigationViewController animated:YES completion:^{
-        
-    }];
+    [sourceViewController presentViewController:navigationViewController animated:YES completion:nil];
 }
 
 + (void) displayLoginFromViewController:(UIViewController *)sourceViewController block:(void(^)())block {
@@ -26,10 +24,7 @@
     LoginViewController *loginViewController = (LoginViewController *)navigationViewController.viewControllers[0];
     
     loginViewController.block = block;
-    
-    [sourceViewController presentViewController:navigationViewController animated:YES completion:^{
-    }];
-
+    [sourceViewController presentViewController:navigationViewController animated:YES completion:nil];
 }
 
 @end

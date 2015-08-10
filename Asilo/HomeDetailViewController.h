@@ -12,6 +12,5 @@
 @interface HomeDetailViewController : UIViewController
 
 @property ASHome *home;
-@property (assign) BOOL ableToEdit;
 
 @end

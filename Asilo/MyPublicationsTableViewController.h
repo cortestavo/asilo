@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "ASBaseViewController.h"
 
-@interface MyPublicationsTableViewController : ASBaseViewController<UITableViewDataSource, UITableViewDelegate>
-
+@interface MyPublicationsTableViewController : ASBaseViewController
 @end

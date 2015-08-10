@@ -40,5 +40,6 @@
 - (void) addPhoto:(UIImage *)photo;
 - (int) countOfPhotos;
 - (void) getPhotoAtIndex:(int)index block:(void (^)(UIImage *))block;
+- (BOOL) isHomeBelongsToUser:(ASUser *)user;
 
 @end

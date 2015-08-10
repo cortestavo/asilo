@@ -25,15 +25,23 @@
 
 -(void)selectItem {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    UIStoryboard *destinationStoryboard = [UIStoryboard storyboardWithName:self.destination bundle:nil];
-    UIViewController *destinationViewController = [destinationStoryboard instantiateInitialViewController];
-
+    UIViewController *destinationViewController = [self getViewController];
+    
     if([self hasLoginPassed]) {
         if (self.beforeNavigation) {
             self.beforeNavigation(destinationViewController);
         }
         [appDelegate.drawerViewController setCenterViewController:destinationViewController withCloseAnimation:YES completion:nil];
     }
+}
+
+- (UIViewController *)getViewController {
+    UIStoryboard *destinationStoryboard;
+    UIViewController *destinationViewController;
+    
+    destinationStoryboard = [UIStoryboard storyboardWithName:self.destination bundle:nil];
+    destinationViewController = [destinationStoryboard instantiateInitialViewController];
+    return destinationViewController;
 }
 
 @end
