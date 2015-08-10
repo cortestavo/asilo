@@ -43,8 +43,7 @@
 		3EF2B35B1B58291800B9718C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2B35A1B58291800B9718C /* CFNetwork.framework */; };
 		3EF2B35D1B58292400B9718C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2B35C1B58292400B9718C /* AudioToolbox.framework */; };
 		3EF2B35F1B58293700B9718C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF2B35E1B58293700B9718C /* Accounts.framework */; };
-		3EF2B3641B582D8600B9718C /* ResultListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2B3611B582D8600B9718C /* ResultListTableViewCell.m */; };
-		3EF2B3651B582D8600B9718C /* ResultListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */; };
+		3EF2B3641B582D8600B9718C /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2B3611B582D8600B9718C /* HomeTableViewCell.m */; };
 		3EF2B3691B58479100B9718C /* castle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3EF2B3681B58479100B9718C /* castle.jpg */; };
 		3EF2B3D91B589CDD00B9718C /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF2B3D81B589CDD00B9718C /* HomeDetailViewController.m */; };
 		430135011B5878E5007417DE /* ASHomeRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 430135001B5878E5007417DE /* ASHomeRepository.m */; };
@@ -67,9 +66,9 @@
 		434EB2D31B6809A4001535FC /* like-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 434EB2D11B6809A4001535FC /* like-filled.png */; };
 		434EB2D41B6809A4001535FC /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 434EB2D21B6809A4001535FC /* like.png */; };
 		438A5D691B6FE47600ECA233 /* photo-background in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D681B6FE47600ECA233 /* photo-background */; };
-		438A5D751B728C2100ECA233 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D741B728C2100ECA233 /* Favorites.storyboard */; };
-		438A5D781B728DDC00ECA233 /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A5D771B728DDC00ECA233 /* FavoritesTableViewController.m */; };
-		438A5D7D1B72CC6600ECA233 /* ResultListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D7B1B72CC6600ECA233 /* ResultListTableViewCell.xib */; };
+		438A5D7D1B72CC6600ECA233 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D7B1B72CC6600ECA233 /* HomeTableViewCell.xib */; };
+		438A5D811B72F8F600ECA233 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A5D801B72F8F600ECA233 /* HomeTableViewController.m */; };
+		438A5D891B7925C900ECA233 /* ASFavoriteMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A5D881B7925C900ECA233 /* ASFavoriteMenuItem.m */; };
 		43CD43E51B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */; };
 		43CD43E81B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E71B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m */; };
 		43CD43ED1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43EA1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m */; };
@@ -144,10 +143,8 @@
 		3EF2B35A1B58291800B9718C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3EF2B35C1B58292400B9718C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3EF2B35E1B58293700B9718C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		3EF2B3601B582D8600B9718C /* ResultListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultListTableViewCell.h; sourceTree = "<group>"; };
-		3EF2B3611B582D8600B9718C /* ResultListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultListTableViewCell.m; sourceTree = "<group>"; };
-		3EF2B3621B582D8600B9718C /* ResultListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultListTableViewController.h; sourceTree = "<group>"; };
-		3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultListTableViewController.m; sourceTree = "<group>"; };
+		3EF2B3601B582D8600B9718C /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		3EF2B3611B582D8600B9718C /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		3EF2B3681B58479100B9718C /* castle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = castle.jpg; sourceTree = "<group>"; };
 		3EF2B3D71B589CDD00B9718C /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
 		3EF2B3D81B589CDD00B9718C /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
@@ -184,10 +181,11 @@
 		434EB2D11B6809A4001535FC /* like-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like-filled.png"; sourceTree = "<group>"; };
 		434EB2D21B6809A4001535FC /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
 		438A5D681B6FE47600ECA233 /* photo-background */ = {isa = PBXFileReference; lastKnownFileType = file; path = "photo-background"; sourceTree = "<group>"; };
-		438A5D741B728C2100ECA233 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
-		438A5D761B728DDC00ECA233 /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
-		438A5D771B728DDC00ECA233 /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
-		438A5D7B1B72CC6600ECA233 /* ResultListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultListTableViewCell.xib; sourceTree = "<group>"; };
+		438A5D7B1B72CC6600ECA233 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		438A5D7F1B72F8F600ECA233 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
+		438A5D801B72F8F600ECA233 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
+		438A5D871B7925C900ECA233 /* ASFavoriteMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFavoriteMenuItem.h; sourceTree = "<group>"; };
+		438A5D881B7925C900ECA233 /* ASFavoriteMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFavoriteMenuItem.m; sourceTree = "<group>"; };
 		43CD43E31B61B81B0070A49B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		43CD43E61B61B8930070A49B /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
@@ -294,16 +292,12 @@
 		3E6A718B1B4C61AC005415F6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				438A5D8A1B792B1B00ECA233 /* HomesTable */,
 				3E6A717E1B4C5584005415F6 /* Search.storyboard */,
 				3E6A71AE1B4DFD4F005415F6 /* SearchNavigationController.h */,
 				3E6A71AF1B4DFD4F005415F6 /* SearchNavigationController.m */,
 				3E6A71881B4C619C005415F6 /* ResultMapViewController.h */,
 				3E6A71891B4C619C005415F6 /* ResultMapViewController.m */,
-				438A5D7B1B72CC6600ECA233 /* ResultListTableViewCell.xib */,
-				3EF2B3601B582D8600B9718C /* ResultListTableViewCell.h */,
-				3EF2B3611B582D8600B9718C /* ResultListTableViewCell.m */,
-				3EF2B3621B582D8600B9718C /* ResultListTableViewController.h */,
-				3EF2B3631B582D8600B9718C /* ResultListTableViewController.m */,
 				3EF2B3D71B589CDD00B9718C /* HomeDetailViewController.h */,
 				3EF2B3D81B589CDD00B9718C /* HomeDetailViewController.m */,
 				3E4D86D91B604A08008341C3 /* ASHomeAnnotation.h */,
@@ -356,6 +350,8 @@
 				3E6A71AC1B4DE6F2005415F6 /* ASNavigateMenuItem.m */,
 				433CEDA81B56DEFA00688F44 /* ASLoginMenuItem.h */,
 				433CEDA91B56DEFA00688F44 /* ASLoginMenuItem.m */,
+				438A5D871B7925C900ECA233 /* ASFavoriteMenuItem.h */,
+				438A5D881B7925C900ECA233 /* ASFavoriteMenuItem.m */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -394,18 +390,17 @@
 		432FEE621B45CC74001BCF5E /* Asilo */ = {
 			isa = PBXGroup;
 			children = (
-				438A5D6E1B72815700ECA233 /* Favorites */,
 				43CD43E11B61B79F0070A49B /* Libraries */,
 				43EAC4641B55B3370001E4C2 /* Assets */,
 				3E6A718B1B4C61AC005415F6 /* Search */,
 				432FEEF71B4C9B54001BCF5E /* Model */,
+				432FEE6D1B45CC74001BCF5E /* Main.storyboard */,
 				432FEE671B45CC74001BCF5E /* AppDelegate.h */,
 				432FEE681B45CC74001BCF5E /* AppDelegate.m */,
 				3E6A71A71B4DCD8A005415F6 /* ASBaseViewController.h */,
 				3E6A71A81B4DCD8A005415F6 /* ASBaseViewController.m */,
 				3EE08F021B61BFE6007B00E6 /* ASAlertHelper.h */,
 				3EE08F031B61BFE6007B00E6 /* ASAlertHelper.m */,
-				432FEE6D1B45CC74001BCF5E /* Main.storyboard */,
 				3E6A71AA1B4DE605005415F6 /* Menu */,
 				3E6A718C1B4C62F3005415F6 /* Publications */,
 				3E6A71901B4C635C005415F6 /* Login */,
@@ -482,14 +477,16 @@
 			name = "Local frameworks";
 			sourceTree = "<group>";
 		};
-		438A5D6E1B72815700ECA233 /* Favorites */ = {
+		438A5D8A1B792B1B00ECA233 /* HomesTable */ = {
 			isa = PBXGroup;
 			children = (
-				438A5D741B728C2100ECA233 /* Favorites.storyboard */,
-				438A5D761B728DDC00ECA233 /* FavoritesTableViewController.h */,
-				438A5D771B728DDC00ECA233 /* FavoritesTableViewController.m */,
+				438A5D7B1B72CC6600ECA233 /* HomeTableViewCell.xib */,
+				3EF2B3601B582D8600B9718C /* HomeTableViewCell.h */,
+				3EF2B3611B582D8600B9718C /* HomeTableViewCell.m */,
+				438A5D7F1B72F8F600ECA233 /* HomeTableViewController.h */,
+				438A5D801B72F8F600ECA233 /* HomeTableViewController.m */,
 			);
-			name = Favorites;
+			name = HomesTable;
 			sourceTree = "<group>";
 		};
 		43CD43E11B61B79F0070A49B /* Libraries */ = {
@@ -621,12 +618,11 @@
 			files = (
 				434EB2D31B6809A4001535FC /* like-filled.png in Resources */,
 				432FEE6F1B45CC74001BCF5E /* Main.storyboard in Resources */,
-				438A5D751B728C2100ECA233 /* Favorites.storyboard in Resources */,
 				432FEE741B45CC74001BCF5E /* LaunchScreen.xib in Resources */,
 				3E6A717F1B4C5584005415F6 /* Search.storyboard in Resources */,
 				3E6A71831B4C55B8005415F6 /* Publications.storyboard in Resources */,
 				43EAC46C1B55BC8A0001E4C2 /* login-facebook.png in Resources */,
-				438A5D7D1B72CC6600ECA233 /* ResultListTableViewCell.xib in Resources */,
+				438A5D7D1B72CC6600ECA233 /* HomeTableViewCell.xib in Resources */,
 				3E6A71811B4C559B005415F6 /* Login.storyboard in Resources */,
 				432FEE711B45CC74001BCF5E /* Images.xcassets in Resources */,
 				3EF2B3691B58479100B9718C /* castle.jpg in Resources */,
@@ -701,7 +697,7 @@
 				43CD43E51B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				3E6244251B5EBCD300B62E82 /* WizardPicturesController.m in Sources */,
 				43CD43EE1B61B89D0070A49B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
-				3EF2B3641B582D8600B9718C /* ResultListTableViewCell.m in Sources */,
+				3EF2B3641B582D8600B9718C /* HomeTableViewCell.m in Sources */,
 				3E6A71A61B4DA386005415F6 /* ASMenuItem.m in Sources */,
 				3EF2B3D91B589CDD00B9718C /* HomeDetailViewController.m in Sources */,
 				3E6A71AD1B4DE6F2005415F6 /* ASNavigateMenuItem.m in Sources */,
@@ -712,13 +708,13 @@
 				432FEF011B4DA7C3001BCF5E /* ASTag.m in Sources */,
 				432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */,
 				430135011B5878E5007417DE /* ASHomeRepository.m in Sources */,
-				438A5D781B728DDC00ECA233 /* FavoritesTableViewController.m in Sources */,
 				432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */,
 				3E13BAEC1B506C2E0052F56D /* WizardSharedDataViewController.m in Sources */,
+				438A5D891B7925C900ECA233 /* ASFavoriteMenuItem.m in Sources */,
 				3E13BAF41B548E300052F56D /* WizardRentDataViewController.m in Sources */,
 				432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */,
 				43CD43E81B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m in Sources */,
-				3EF2B3651B582D8600B9718C /* ResultListTableViewController.m in Sources */,
+				438A5D811B72F8F600ECA233 /* HomeTableViewController.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
 				432FEEFB1B4C9B76001BCF5E /* ASHome.m in Sources */,
 				433CEDAD1B570E9000688F44 /* LoginHelper.m in Sources */,

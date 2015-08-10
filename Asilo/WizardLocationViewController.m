@@ -31,11 +31,6 @@
     [self setupSelectingLocation];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)initializeHomeObject {
     if(self.home == nil) {
         self.home = [ASHome getNewObject];
@@ -58,7 +53,6 @@
         [self.locationManager requestWhenInUseAuthorization];
     }
     self.mapView.delegate = self;
-
 }
 
 - (void)setupSelectingLocation {

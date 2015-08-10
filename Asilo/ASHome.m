@@ -9,6 +9,7 @@
 #import "ASHome.h"
 #import <Parse/PFObject+Subclass.h>
 #import <Foundation/Foundation.h>
+#import "ASUser.h"
 
 @implementation ASHome
 
@@ -118,6 +119,14 @@
             block([UIImage imageWithData:imageData]);
         }
     }];
+}
+
+- (BOOL) isHomeBelongsToUser:(ASUser *)user {
+    BOOL itBelogns = false;
+    if([self.owner.objectId isEqualToString:user.objectId]) {
+        itBelogns = true;
+    }
+    return itBelogns;
 }
 
 @end

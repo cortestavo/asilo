@@ -7,7 +7,7 @@
 //
 
 #import "ResultMapViewController.h"
-#import "ResultListTableViewController.h"
+#import "HomeTableViewController.h"
 #import "ASFilter.h"
 #import "SearchNavigationController.h"
 #import "ASHomeRepository.h"
@@ -29,15 +29,6 @@
     [super viewDidLoad];
     self.searchType = ((SearchNavigationController *)self.parentViewController).searchType;
     [self initMap];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)listAction:(id)sender {
-    [self changeToListView];
 }
 
 /**
@@ -101,7 +92,8 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ResultList"]) {
-        ResultListTableViewController *listView = (ResultListTableViewController *)segue.destinationViewController;
+        UINavigationController *nav = (UINavigationController *)segue.destinationViewController;
+        HomeTableViewController *listView = nav.viewControllers[0];
         listView.homes = self.homes;
     }
     if ([segue.identifier isEqualToString:@"MapToDetail"]) {

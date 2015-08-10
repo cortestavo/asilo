@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "ASNavigateMenuItem.h"
+#import "ASFavoriteMenuItem.h"
 #import "ASLoginMenuItem.h"
 #import "AppDelegate.h"
 #import "SearchNavigationController.h"
@@ -40,28 +41,13 @@
     self.menuItems = @[
         forRent,
         forSale,
-        [[ASNavigateMenuItem alloc] initWithTitle:@"My favorites" requireLogin:YES destination:@"Favorites" beforeNavigation:nil],
+        [[ASFavoriteMenuItem alloc] initWithTitle:@"My favorites" requireLogin:YES destination:@"Favorites" beforeNavigation:nil],
         [[ASNavigateMenuItem alloc] initWithTitle:@"My publications" requireLogin:YES destination:@"Publications" beforeNavigation:nil],
         [[ASLoginMenuItem alloc] initWithTitle:@"Log in" sourceViewController:self],
         [[ASNavigateMenuItem alloc] initWithTitle:@"Settings" requireLogin:NO destination:@"Settings" beforeNavigation:nil],
     ];
     [self updateLoginStatus];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - TableViewDataSource
 

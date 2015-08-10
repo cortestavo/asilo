@@ -10,6 +10,7 @@
 #import "MHGallery.h"
 #import "MHPresenterImageView.h"
 #import "UIImageView+WebCache.h"
+#import "ASUser.h"
 
 @interface HomeDetailViewController ()
 @property (weak, nonatomic) IBOutlet MHPresenterImageView *headerImageView;
@@ -47,7 +48,9 @@
 //    testHome.address = @"Blv. Fco. Eusebio Kino No. 123, Col. Pitic, Hermosillo, Sonora.";
 //    self.home = testHome;
     // =========================================
-    if(self.ableToEdit == true) {
+    
+    //if home belongs to user then he can edit
+    if([self.home isHomeBelongsToUser:[ASUser currentUser]] == true) {
         UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(goToEdit)];
         self.navigationItem.rightBarButtonItem = menuButton;
     }
@@ -128,20 +131,5 @@
     
     self.headerImageView.shoudlUsePanGestureReconizer = YES;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

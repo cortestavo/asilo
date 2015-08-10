@@ -37,11 +37,6 @@
     [self setupNavigationBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Navigation
 
 - (void)next {
@@ -125,9 +120,6 @@
 - (void)setupUiElements {
     [self initializeDescription];
     [self loadAddressFromCoordinate];
-    if(self.home.objectId != nil) {
-//        [self initFromHome];
-    }
 }
 
 - (void) initFromHome {
@@ -144,7 +136,7 @@
     self.numberOfParkingLotsStepper.value = [home.parkingLots doubleValue];
     self.numberOfParkingLotsLabel.text = [NSString stringWithFormat:@"%lu",(long)self.numberOfParkingLotsStepper.value];
     
-    self.squareFeetField.text = [NSString stringWithFormat:@"%d", [home.squareMeters integerValue]];
+    self.squareFeetField.text = [NSString stringWithFormat:@"%lu", [home.squareMeters integerValue]];
     self.hasAcSwitch.on = home.hasAC;
     self.hasHeatingSwitch.on = home.hasHeating;
 }
