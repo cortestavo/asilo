@@ -15,6 +15,7 @@
 #import "HomeDetailViewController.h"
 #import "ASHomeAnnotation.h"
 #import <UIView+Toast.h>
+#import "ASLastRegion.h"
 
 @interface ResultMapViewController ()
 
@@ -36,15 +37,11 @@
 **/
 - (void)initMap {
     self.mapView.delegate = self;
-    CLLocationDistance distance = 35 * 1609;
-    CLLocationCoordinate2D zoomLocation;
-    zoomLocation.latitude = 29.0729670;
-    zoomLocation.longitude = -110.9559190;
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, distance, distance);
-    [self.mapView setRegion:viewRegion animated:YES];
+    [self.mapView setRegion:[ASLastRegion getRegion] animated:YES];
 }
 
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    [ASLastRegion setRegion:[mapView region]];
     [self getHomes];
 }
 
