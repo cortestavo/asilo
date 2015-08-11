@@ -69,6 +69,7 @@
 		438A5D7D1B72CC6600ECA233 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D7B1B72CC6600ECA233 /* HomeTableViewCell.xib */; };
 		438A5D811B72F8F600ECA233 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A5D801B72F8F600ECA233 /* HomeTableViewController.m */; };
 		438A5D891B7925C900ECA233 /* ASFavoriteMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A5D881B7925C900ECA233 /* ASFavoriteMenuItem.m */; };
+		438A5D8D1B79844A00ECA233 /* ASLastRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A5D8C1B79844900ECA233 /* ASLastRegion.m */; };
 		43CD43E51B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */; };
 		43CD43E81B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43E71B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m */; };
 		43CD43ED1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CD43EA1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m */; };
@@ -186,6 +187,8 @@
 		438A5D801B72F8F600ECA233 /* HomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewController.m; sourceTree = "<group>"; };
 		438A5D871B7925C900ECA233 /* ASFavoriteMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFavoriteMenuItem.h; sourceTree = "<group>"; };
 		438A5D881B7925C900ECA233 /* ASFavoriteMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFavoriteMenuItem.m; sourceTree = "<group>"; };
+		438A5D8B1B79844900ECA233 /* ASLastRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLastRegion.h; sourceTree = "<group>"; };
+		438A5D8C1B79844900ECA233 /* ASLastRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLastRegion.m; sourceTree = "<group>"; };
 		43CD43E31B61B81B0070A49B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		43CD43E41B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		43CD43E61B61B8930070A49B /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
@@ -517,6 +520,8 @@
 			children = (
 				43CE65AA1B5D683C00610D4A /* ASAnnotation.h */,
 				43CE65AB1B5D683C00610D4A /* ASAnnotation.m */,
+				438A5D8B1B79844900ECA233 /* ASLastRegion.h */,
+				438A5D8C1B79844900ECA233 /* ASLastRegion.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -725,6 +730,7 @@
 				3E6A718A1B4C619C005415F6 /* ResultMapViewController.m in Sources */,
 				3E6A71931B4C63D3005415F6 /* LoginViewController.m in Sources */,
 				3E13BAE31B50399A0052F56D /* WizardLocationViewController.m in Sources */,
+				438A5D8D1B79844A00ECA233 /* ASLastRegion.m in Sources */,
 				3E4D86DB1B604A08008341C3 /* ASHomeAnnotation.m in Sources */,
 				43CD43ED1B61B89D0070A49B /* TPKeyboardAvoidingTableView.m in Sources */,
 				433CEDAA1B56DEFA00688F44 /* ASLoginMenuItem.m in Sources */,
