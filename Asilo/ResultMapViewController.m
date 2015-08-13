@@ -34,8 +34,6 @@
     [super viewDidLoad];
     [self loadFilterFromDevice];
     [self initMap];
-    NSString* Identifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
-    NSLog(@"output is : %@", Identifier);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
