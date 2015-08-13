@@ -58,6 +58,9 @@
 		432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF031B4DA89E001BCF5E /* ASFilter.m */; };
 		432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF061B4DE9F5001BCF5E /* ASUser.m */; };
 		432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */; };
+		433C509D1B7BBA2500FD5DFE /* ASLastFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 433C509C1B7BBA2500FD5DFE /* ASLastFilter.m */; };
+		433C50A01B7BCD3800FD5DFE /* RentFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433C509F1B7BCD3800FD5DFE /* RentFilterViewController.m */; };
+		433C50A31B7C0B1200FD5DFE /* SaleFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433C50A21B7C0B1200FD5DFE /* SaleFilterViewController.m */; };
 		433CEDAA1B56DEFA00688F44 /* ASLoginMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 433CEDA91B56DEFA00688F44 /* ASLoginMenuItem.m */; };
 		433CEDAD1B570E9000688F44 /* LoginHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 433CEDAC1B570E9000688F44 /* LoginHelper.m */; };
 		433CEDB01B572AB100688F44 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433CEDAE1B572AB100688F44 /* FBSDKCoreKit.framework */; };
@@ -65,6 +68,7 @@
 		433CEDB41B572B0500688F44 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 433CEDB31B572B0500688F44 /* ParseFacebookUtilsV4.framework */; };
 		434EB2D31B6809A4001535FC /* like-filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 434EB2D11B6809A4001535FC /* like-filled.png */; };
 		434EB2D41B6809A4001535FC /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 434EB2D21B6809A4001535FC /* like.png */; };
+		43880C5C1B7AD5FB002E416B /* SaveFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43880C5B1B7AD5FB002E416B /* SaveFilterViewController.m */; };
 		438A5D691B6FE47600ECA233 /* photo-background in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D681B6FE47600ECA233 /* photo-background */; };
 		438A5D7D1B72CC6600ECA233 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438A5D7B1B72CC6600ECA233 /* HomeTableViewCell.xib */; };
 		438A5D811B72F8F600ECA233 /* HomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438A5D801B72F8F600ECA233 /* HomeTableViewController.m */; };
@@ -172,6 +176,12 @@
 		432FEF061B4DE9F5001BCF5E /* ASUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASUser.m; sourceTree = "<group>"; };
 		432FEF0A1B4EE2E6001BCF5E /* ASPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPhoto.h; sourceTree = "<group>"; };
 		432FEF0B1B4EE2E6001BCF5E /* ASPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPhoto.m; sourceTree = "<group>"; };
+		433C509B1B7BBA2500FD5DFE /* ASLastFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLastFilter.h; sourceTree = "<group>"; };
+		433C509C1B7BBA2500FD5DFE /* ASLastFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLastFilter.m; sourceTree = "<group>"; };
+		433C509E1B7BCD3800FD5DFE /* RentFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RentFilterViewController.h; sourceTree = "<group>"; };
+		433C509F1B7BCD3800FD5DFE /* RentFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RentFilterViewController.m; sourceTree = "<group>"; };
+		433C50A11B7C0B1200FD5DFE /* SaleFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaleFilterViewController.h; sourceTree = "<group>"; };
+		433C50A21B7C0B1200FD5DFE /* SaleFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaleFilterViewController.m; sourceTree = "<group>"; };
 		433CEDA81B56DEFA00688F44 /* ASLoginMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASLoginMenuItem.h; sourceTree = "<group>"; };
 		433CEDA91B56DEFA00688F44 /* ASLoginMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASLoginMenuItem.m; sourceTree = "<group>"; };
 		433CEDAB1B570E9000688F44 /* LoginHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginHelper.h; sourceTree = "<group>"; };
@@ -181,6 +191,8 @@
 		433CEDB31B572B0500688F44 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		434EB2D11B6809A4001535FC /* like-filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like-filled.png"; sourceTree = "<group>"; };
 		434EB2D21B6809A4001535FC /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		43880C5A1B7AD5FB002E416B /* SaveFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveFilterViewController.h; sourceTree = "<group>"; };
+		43880C5B1B7AD5FB002E416B /* SaveFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveFilterViewController.m; sourceTree = "<group>"; };
 		438A5D681B6FE47600ECA233 /* photo-background */ = {isa = PBXFileReference; lastKnownFileType = file; path = "photo-background"; sourceTree = "<group>"; };
 		438A5D7B1B72CC6600ECA233 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		438A5D7F1B72F8F600ECA233 /* HomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewController.h; sourceTree = "<group>"; };
@@ -305,6 +317,12 @@
 				3EF2B3D81B589CDD00B9718C /* HomeDetailViewController.m */,
 				3E4D86D91B604A08008341C3 /* ASHomeAnnotation.h */,
 				3E4D86DA1B604A08008341C3 /* ASHomeAnnotation.m */,
+				43880C5A1B7AD5FB002E416B /* SaveFilterViewController.h */,
+				43880C5B1B7AD5FB002E416B /* SaveFilterViewController.m */,
+				433C509E1B7BCD3800FD5DFE /* RentFilterViewController.h */,
+				433C509F1B7BCD3800FD5DFE /* RentFilterViewController.m */,
+				433C50A11B7C0B1200FD5DFE /* SaleFilterViewController.h */,
+				433C50A21B7C0B1200FD5DFE /* SaleFilterViewController.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -522,6 +540,8 @@
 				43CE65AB1B5D683C00610D4A /* ASAnnotation.m */,
 				438A5D8B1B79844900ECA233 /* ASLastRegion.h */,
 				438A5D8C1B79844900ECA233 /* ASLastRegion.m */,
+				433C509B1B7BBA2500FD5DFE /* ASLastFilter.h */,
+				433C509C1B7BBA2500FD5DFE /* ASLastFilter.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -699,6 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E6A718F1B4C6330005415F6 /* MyPublicationsTableViewController.m in Sources */,
+				43880C5C1B7AD5FB002E416B /* SaveFilterViewController.m in Sources */,
 				43CD43E51B61B81B0070A49B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				3E6244251B5EBCD300B62E82 /* WizardPicturesController.m in Sources */,
 				43CD43EE1B61B89D0070A49B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
@@ -708,9 +729,11 @@
 				3E6A71AD1B4DE6F2005415F6 /* ASNavigateMenuItem.m in Sources */,
 				3E6244281B5ED50200B62E82 /* PictureCollectionViewCell.m in Sources */,
 				43CE65AC1B5D683C00610D4A /* ASAnnotation.m in Sources */,
+				433C50A01B7BCD3800FD5DFE /* RentFilterViewController.m in Sources */,
 				3E6A71A91B4DCD8A005415F6 /* ASBaseViewController.m in Sources */,
 				3E13BAF71B548E490052F56D /* WizardSaleDataViewController.m in Sources */,
 				432FEF011B4DA7C3001BCF5E /* ASTag.m in Sources */,
+				433C50A31B7C0B1200FD5DFE /* SaleFilterViewController.m in Sources */,
 				432FEF041B4DA89E001BCF5E /* ASFilter.m in Sources */,
 				430135011B5878E5007417DE /* ASHomeRepository.m in Sources */,
 				432FEF071B4DE9F5001BCF5E /* ASUser.m in Sources */,
@@ -719,6 +742,7 @@
 				3E13BAF41B548E300052F56D /* WizardRentDataViewController.m in Sources */,
 				432FEF0C1B4EE2E6001BCF5E /* ASPhoto.m in Sources */,
 				43CD43E81B61B8930070A49B /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				433C509D1B7BBA2500FD5DFE /* ASLastFilter.m in Sources */,
 				438A5D811B72F8F600ECA233 /* HomeTableViewController.m in Sources */,
 				432FEE691B45CC74001BCF5E /* AppDelegate.m in Sources */,
 				432FEEFB1B4C9B76001BCF5E /* ASHome.m in Sources */,
@@ -793,6 +817,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

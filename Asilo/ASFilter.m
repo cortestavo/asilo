@@ -36,4 +36,8 @@
     return @"Filter";
 }
 
++ (instancetype)getNewObject {
+    return [super objectWithClassName:@"Filter"];
+}
+
 @end
