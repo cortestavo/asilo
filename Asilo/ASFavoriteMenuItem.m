@@ -18,7 +18,7 @@
     destinationStoryboard = [UIStoryboard storyboardWithName:@"Search" bundle:nil];
     UINavigationController *nav = (UINavigationController *)[destinationStoryboard instantiateViewControllerWithIdentifier:@"HomeTable"];
     HomeTableViewController *home = nav.viewControllers[0];
-    home.useMenuItem = true;
+    [home useLeftItemASMenu];
     home.title = self.title;
     [[ASUser currentUser] getFavoritesWithBlock:^(NSMutableArray *homes) {
         home.homes = homes;

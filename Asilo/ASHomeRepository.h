@@ -12,7 +12,7 @@
 
 @interface ASHomeRepository : NSObject 
 
-+ (void) findByAreaWithNorthEast:(CLLocationCoordinate2D)northEastPoint southWest:(CLLocationCoordinate2D)southWestPoint searchType:(ASFilterType)searchType block:(void (^)(NSArray *homes))block;
++ (void) findUsingFilterWithBlock:(ASFilter *)filter block:(void (^)(NSArray *homes))block;
 
 + (void)getPublishedHomesForUser:(PFUser *)user block:(void (^)(NSArray *homes, NSError *error))block;
 

@@ -752,7 +752,6 @@
         <!--View Controller-->
         <scene sceneID="haX-Rd-qp9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dK4-qZ-3kj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="vBV-Cp-Iok" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UoX-Fj-yc0"/>
@@ -765,6 +764,7 @@
                     </view>
                     <toolbarItems/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dK4-qZ-3kj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6" y="957"/>
         </scene>
@@ -774,6 +774,6 @@
         <image name="gallery" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LM5-nb-yNY"/>
+        <segue reference="aFa-gD-kNY"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,6 +12,7 @@
 #import "ASLoginMenuItem.h"
 #import "AppDelegate.h"
 #import "SearchNavigationController.h"
+#import "ResultMapViewController.h"
 #import <Parse/Parse.h>
 #import "ASUser.h"
 
@@ -28,13 +29,13 @@
     // Do any additional setup after loading the view.
     ASNavigateMenuItem *forRent = [[ASNavigateMenuItem alloc] initWithTitle:@"For Rent" requireLogin:NO destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
         SearchNavigationController *searchNavigation = (SearchNavigationController *)destinationViewController;
-        searchNavigation.searchType = ASFilterTypeForRent;
+        ((ResultMapViewController *)searchNavigation.viewControllers[0]).searchType = ASFilterTypeForRent;
     }];
     forRent.textColor = [UIColor redColor];
     
     ASNavigateMenuItem *forSale = [[ASNavigateMenuItem alloc] initWithTitle:@"For Sale" requireLogin:NO destination:@"Search" beforeNavigation:^(UIViewController *destinationViewController) {
         SearchNavigationController *searchNavigation = (SearchNavigationController *)destinationViewController;
-        searchNavigation.searchType = ASFilterTypeForSale;
+        ((ResultMapViewController *)searchNavigation.viewControllers[0]).searchType = ASFilterTypeForSale;
     }];
     forSale.textColor = [UIColor blueColor];
     

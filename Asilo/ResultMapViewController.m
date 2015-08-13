@@ -16,10 +16,14 @@
 #import "ASHomeAnnotation.h"
 #import <UIView+Toast.h>
 #import "ASLastRegion.h"
+#import "ASUser.h"
+#import "LoginHelper.h"
+#import "ASLastFilter.h"
+#import "SaveFilterViewController.h"
+#import "RentFilterViewController.h"
 
 @interface ResultMapViewController ()
 
-@property (nonatomic) ASFilterType searchType;
 @property (strong, nonatomic) NSArray *homes;
 
 @end
@@ -28,10 +32,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.searchType = ((SearchNavigationController *)self.parentViewController).searchType;
+    [self loadFilterFromDevice];
     [self initMap];
+    NSString* Identifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
+    NSLog(@"output is : %@", Identifier);
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self getHomes];
+}
 /**
     Creates a map with Hermosillo as a center
 **/
@@ -49,7 +58,11 @@
     MKMapRect mRect = self.mapView.visibleMapRect;
     CLLocationCoordinate2D ne = MKCoordinateForMapPoint(MKMapPointMake(MKMapRectGetMaxX(mRect), mRect.origin.y));
     CLLocationCoordinate2D sw = MKCoordinateForMapPoint(MKMapPointMake(mRect.origin.x, MKMapRectGetMaxY(mRect)));
-    [ASHomeRepository findByAreaWithNorthEast:ne southWest:sw searchType:self.searchType block:^void (NSArray *homes){
+    self.filter.northEast = [PFGeoPoint geoPointWithLatitude:ne.latitude longitude:ne.longitude];
+    self.filter.southWest = [PFGeoPoint geoPointWithLatitude:sw.latitude longitude:sw.longitude];
+    [self saveFilterToDevice];
+    
+    [ASHomeRepository findUsingFilterWithBlock:self.filter block:^void (NSArray *homes){
         self.homes = homes;
         if(self.homes.count) {
             [self.mapView removeAnnotations:self.mapView.annotations];
@@ -81,22 +94,86 @@
 }
 
 #pragma mark - Navigation
+- (IBAction)changeToListView:(id)sender {
+    UIStoryboard *destinationStoryboard;
+    
+    destinationStoryboard = [UIStoryboard storyboardWithName:@"Search" bundle:nil];
+    UINavigationController *nav = (UINavigationController *)[destinationStoryboard instantiateViewControllerWithIdentifier:@"HomeTable"];
+    HomeTableViewController *home = nav.viewControllers[0];
+    [home useLeftItemASBackButton];
+    home.title = @"List View";
+    
+    [self presentViewController:nav animated:YES completion:nil];
+    [[ASUser currentUser] getFavoritesWithBlock:^(NSMutableArray *homes) {
+        home.homes = homes;
+        [home.tableView reloadData];
+    }];
+}
 
--(void)changeToListView {
-    [self performSegueWithIdentifier:@"ResultList" sender:nil];
+- (IBAction)doFilter:(id)sender {
+    switch (self.searchType) {
+        case ASFilterTypeForRent:
+            [self performSegueWithIdentifier:@"RentFilter" sender:nil];
+            break;
+            
+        case ASFilterTypeForSale:
+            [self performSegueWithIdentifier:@"SaleFilter" sender:nil];
+            break;
+    }
+}
+
+- (IBAction)saveSearch:(id)sender {
+    if([ASUser currentUser] != nil) {
+        [self performSegueWithIdentifier:@"SaveFilter" sender:nil];
+    } else {
+        [LoginHelper displayLoginFromViewController:self block:^{
+            [self performSegueWithIdentifier:@"SaveFilter" sender:nil];
+        }];
+    }
 }
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"ResultList"]) {
-        UINavigationController *nav = (UINavigationController *)segue.destinationViewController;
-        HomeTableViewController *listView = nav.viewControllers[0];
-        listView.homes = self.homes;
+    if([segue.identifier isEqualToString:@"RentFilter"]) {
+        RentFilterViewController *destination = (RentFilterViewController *)segue.destinationViewController;
+        self.filter.type = ASFilterTypeForRent;
+        [self saveFilterToDevice];
+        destination.parent = self;
+    }
+    if([segue.identifier isEqualToString:@"SaleFilter"]) {
+        RentFilterViewController *destination = (RentFilterViewController *)segue.destinationViewController;
+        self.filter.type = ASFilterTypeForSale;
+        [self saveFilterToDevice];
+        destination.parent = self;
+    }
+    if([segue.identifier isEqualToString:@"SaveFilter"]) {
+        SaveFilterViewController *destination = (SaveFilterViewController *)segue.destinationViewController;
+        destination.filter = self.filter;
     }
     if ([segue.identifier isEqualToString:@"MapToDetail"]) {
         ASHome *home = (ASHome *)sender;
         HomeDetailViewController *destination = (HomeDetailViewController *)segue.destinationViewController;
         destination.home = home;
+    }
+}
+
+- (IBAction)returnToSaveFilter:(UIStoryboardSegue *)segue {
+    NSLog(@"And now we are back.");
+}
+
+- (void)loadFilterFromDevice {
+    if(self.searchType == ASFilterTypeForRent) {
+        self.filter = [ASLastFilter getRentFilter];
+    } else {
+        self.filter = [ASLastFilter getSaleFilter];
+    }
+}
+
+- (void)saveFilterToDevice {
+    if(self.searchType == ASFilterTypeForRent) {
+        [ASLastFilter setRentFilter:self.filter];
+    } else {
+        [ASLastFilter setSaveFilter:self.filter];
     }
 }
 

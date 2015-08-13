@@ -28,11 +28,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if(self.useMenuItem == true) {
+    if([self.leftItemUsage isEqualToString:@"menu"] == true) {
         self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0/255.0 green:180/255.0 blue:200/255.0 alpha:1];
         MMDrawerBarButtonItem *menuButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(showMenu:)];
         self.navigationItem.leftBarButtonItem = menuButton;
         menuButton.tintColor = [UIColor whiteColor];
+    } else if([self.leftItemUsage isEqualToString:@"back"] == true) {
+        self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0/255.0 green:180/255.0 blue:200/255.0 alpha:1];
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style: UIBarButtonItemStyleBordered target:self action:@selector(back)];
+        self.navigationItem.leftBarButtonItem = backButton;
     }
     [self.tableView registerNib:[UINib nibWithNibName:@"HomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"HomeCell"];
 }
@@ -42,8 +46,16 @@
     [appDelegate.drawerViewController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void) back {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) useLeftItemASMenu {
+    self.leftItemUsage = @"menu";
+}
+
+- (void) useLeftItemASBackButton {
+    self.leftItemUsage = @"back";
 }
 
 #pragma mark - Table view data source

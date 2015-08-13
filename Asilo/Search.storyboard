@@ -6,6 +6,186 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Rent filter-->
+        <scene sceneID="IcT-MQ-6RO">
+            <objects>
+                <viewController title="Rent filter" id="CYm-if-5eg" customClass="RentFilterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b7z-kv-wU2"/>
+                        <viewControllerLayoutGuide type="bottom" id="PZQ-Xs-9Cf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FLU-iV-tzA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDM-is-5LQ">
+                                <rect key="frame" x="16" y="82" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bP7-mP-kde">
+                                <rect key="frame" x="204" y="78" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="vbE-pe-Lb6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="minPriceChanged:" destination="CYm-if-5eg" eventType="editingChanged" id="a53-ky-H7v"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOR-EF-gaV">
+                                <rect key="frame" x="16" y="131" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BIr-Pv-Y4N">
+                                <rect key="frame" x="204" y="127" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2DI-OM-0g4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="maxPriceChanged:" destination="CYm-if-5eg" eventType="editingChanged" id="81c-Qs-NSw"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FDM-is-5LQ" firstAttribute="leading" secondItem="kOR-EF-gaV" secondAttribute="leading" id="37d-UI-fgr"/>
+                            <constraint firstItem="bP7-mP-kde" firstAttribute="baseline" secondItem="FDM-is-5LQ" secondAttribute="baseline" constant="-1" id="5xz-ba-6WB"/>
+                            <constraint firstItem="kOR-EF-gaV" firstAttribute="top" secondItem="FDM-is-5LQ" secondAttribute="bottom" constant="28" id="8aZ-QZ-hhU"/>
+                            <constraint firstItem="FDM-is-5LQ" firstAttribute="top" secondItem="b7z-kv-wU2" secondAttribute="bottom" constant="18" id="KQz-nk-YWk"/>
+                            <constraint firstItem="BIr-Pv-Y4N" firstAttribute="trailing" secondItem="bP7-mP-kde" secondAttribute="trailing" id="hYm-K7-0t5"/>
+                            <constraint firstItem="bP7-mP-kde" firstAttribute="trailing" secondItem="FLU-iV-tzA" secondAttribute="trailingMargin" id="oh7-Ua-kkx"/>
+                            <constraint firstItem="BIr-Pv-Y4N" firstAttribute="baseline" secondItem="kOR-EF-gaV" secondAttribute="baseline" constant="-1" id="q0a-Ac-d2s"/>
+                            <constraint firstItem="FDM-is-5LQ" firstAttribute="leading" secondItem="FLU-iV-tzA" secondAttribute="leadingMargin" id="zE7-Hq-rvT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rent filter" id="fgw-9L-nAL"/>
+                    <connections>
+                        <outlet property="maxPrice" destination="BIr-Pv-Y4N" id="ZfL-rb-WC9"/>
+                        <outlet property="minPrice" destination="bP7-mP-kde" id="piT-np-KeL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMA-R5-CZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="-389.99999999999983"/>
+        </scene>
+        <!--Sale Filter-->
+        <scene sceneID="3Wg-Rr-oHL">
+            <objects>
+                <viewController id="mMK-ye-i6H" customClass="SaleFilterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3Xs-e5-WEp"/>
+                        <viewControllerLayoutGuide type="bottom" id="xoO-bf-GsL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o95-Ub-hrg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Min" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8i0-Sw-7pJ">
+                                <rect key="frame" x="204" y="77" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="UmC-Jl-6Mv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="minPriceChanged:" destination="mMK-ye-i6H" eventType="editingDidEnd" id="nDn-cO-Xrk"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYi-If-MwP">
+                                <rect key="frame" x="16" y="82" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum price:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlE-zf-Snn">
+                                <rect key="frame" x="16" y="130" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Max" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z1S-4q-9UM">
+                                <rect key="frame" x="204" y="126" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="D3u-ZQ-xes"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="maxPriceChanged:" destination="mMK-ye-i6H" eventType="editingDidEnd" id="aVM-pC-ao7"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z1S-4q-9UM" firstAttribute="trailing" secondItem="8i0-Sw-7pJ" secondAttribute="trailing" id="8Cz-x9-PUi"/>
+                            <constraint firstItem="z1S-4q-9UM" firstAttribute="baseline" secondItem="hlE-zf-Snn" secondAttribute="baseline" constant="-1" id="AWk-6Z-mJT"/>
+                            <constraint firstItem="hlE-zf-Snn" firstAttribute="leading" secondItem="qYi-If-MwP" secondAttribute="leading" id="Iod-TY-Jdk"/>
+                            <constraint firstItem="qYi-If-MwP" firstAttribute="baseline" secondItem="8i0-Sw-7pJ" secondAttribute="baseline" constant="1" id="KFv-fD-3ha"/>
+                            <constraint firstItem="qYi-If-MwP" firstAttribute="top" secondItem="3Xs-e5-WEp" secondAttribute="bottom" constant="18" id="jui-Bk-WxF"/>
+                            <constraint firstItem="8i0-Sw-7pJ" firstAttribute="trailing" secondItem="o95-Ub-hrg" secondAttribute="trailingMargin" id="pid-N6-f4H"/>
+                            <constraint firstItem="hlE-zf-Snn" firstAttribute="top" secondItem="qYi-If-MwP" secondAttribute="bottom" constant="28" id="tiT-xi-nsc"/>
+                            <constraint firstItem="qYi-If-MwP" firstAttribute="leading" secondItem="o95-Ub-hrg" secondAttribute="leadingMargin" id="uw4-uf-ydY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sale Filter" id="Dkh-1G-j6d"/>
+                    <connections>
+                        <outlet property="maxPrice" destination="z1S-4q-9UM" id="Ubg-QH-gDH"/>
+                        <outlet property="minPrice" destination="8i0-Sw-7pJ" id="KYT-Io-W1W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Djt-x9-nwl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2196" y="-390"/>
+        </scene>
+        <!--Save Search-->
+        <scene sceneID="eiZ-jv-D1C">
+            <objects>
+                <viewController title="Save Search" id="HZJ-z7-ZDf" customClass="SaveFilterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eNx-ZW-n5r"/>
+                        <viewControllerLayoutGuide type="bottom" id="dkn-gV-vzi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BAl-73-TAb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name for the filter" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wAl-Bd-HID">
+                                <rect key="frame" x="16" y="77" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wAl-Bd-HID" firstAttribute="leading" secondItem="BAl-73-TAb" secondAttribute="leadingMargin" id="X7P-v1-gGc"/>
+                            <constraint firstItem="wAl-Bd-HID" firstAttribute="trailing" secondItem="BAl-73-TAb" secondAttribute="trailingMargin" id="ss9-9c-KmP"/>
+                            <constraint firstItem="wAl-Bd-HID" firstAttribute="top" secondItem="eNx-ZW-n5r" secondAttribute="bottom" constant="13" id="t3z-Y8-vE9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Md-gI-WOR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="euu-Ub-xKc">
+                            <connections>
+                                <action selector="saveFilter:" destination="HZJ-z7-ZDf" id="3Mw-Ap-QR1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="name" destination="wAl-Bd-HID" id="gg5-yH-SV0"/>
+                        <segue destination="3K2-YN-iea" kind="unwind" identifier="BackToMapResults" unwindAction="returnToSaveFilter:" id="DYP-oq-lXE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ID-ag-BcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3K2-YN-iea" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2681" y="-390"/>
+        </scene>
         <!--Search-->
         <scene sceneID="GKC-mp-21P">
             <objects>
@@ -24,11 +204,15 @@
                                     <constraint firstAttribute="height" constant="44" id="cbX-gB-wHC"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Save Search" id="zwt-Cg-W9s"/>
+                                    <barButtonItem title="Save Search" id="zwt-Cg-W9s">
+                                        <connections>
+                                            <action selector="saveSearch:" destination="ech-q5-vzk" id="Ve3-aN-PC8"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="V4a-Wx-4h0"/>
                                     <barButtonItem title="List" id="AWa-t5-wKa">
                                         <connections>
-                                            <segue destination="LYK-n9-jyL" kind="show" identifier="ResultList" id="3r8-pu-16S"/>
+                                            <action selector="changeToListView:" destination="ech-q5-vzk" id="RXQ-uy-4eb"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -48,10 +232,19 @@
                             <constraint firstAttribute="trailingMargin" secondItem="aba-Bp-aso" secondAttribute="trailing" constant="-16" id="xnj-Ev-Uy8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="MDL-fT-g7p"/>
+                    <navigationItem key="navigationItem" title="Search" id="MDL-fT-g7p">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="R0H-By-tFt">
+                            <connections>
+                                <action selector="doFilter:" destination="ech-q5-vzk" id="twB-A7-tLK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="SaZ-B7-pdC" id="ryo-Un-lkX"/>
                         <segue destination="xHD-iS-Ewd" kind="show" identifier="MapToDetail" id="5JU-rt-cxd"/>
+                        <segue destination="CYm-if-5eg" kind="show" identifier="RentFilter" id="2TC-Le-hU3"/>
+                        <segue destination="mMK-ye-i6H" kind="show" identifier="SaleFilter" id="UVa-d5-KFh"/>
+                        <segue destination="HZJ-z7-ZDf" kind="show" identifier="SaveFilter" id="zOB-YO-bQL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jve-8q-Tqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -63,7 +256,7 @@
             <objects>
                 <tableViewController id="buy-x8-WkV" customClass="HomeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ORv-N5-5Ii">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -75,7 +268,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLt-Ou-4tB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2022" y="1119"/>
+            <point key="canvasLocation" x="2022.0000000000002" y="1118.9999999999993"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xcg-mu-Sqg">
@@ -91,7 +284,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nB8-Vg-9XL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="1119"/>
+            <point key="canvasLocation" x="1258" y="1118.9999999999993"/>
         </scene>
         <!--Home Detail View Controller-->
         <scene sceneID="hOA-DH-9B3">
@@ -320,6 +513,7 @@
                             <constraint firstItem="M3r-Vp-AlJ" firstAttribute="top" secondItem="5dz-ZG-YrX" secondAttribute="top" id="Rpr-pT-BeS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jo0-O6-Gqq"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
@@ -343,7 +537,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W4U-j7-wG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2877" y="704"/>
+            <point key="canvasLocation" x="2821" y="490"/>
         </scene>
         <!--Search Navigation Controller-->
         <scene sceneID="W7W-qh-nDA">

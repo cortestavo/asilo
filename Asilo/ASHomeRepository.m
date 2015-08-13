@@ -11,16 +11,24 @@
 
 @implementation ASHomeRepository
 
-+ (void) findByAreaWithNorthEast:(CLLocationCoordinate2D)northEastPoint southWest:(CLLocationCoordinate2D)southWestPoint searchType:(ASFilterType)searchType block:(void (^)(NSArray *homes))block {
++ (void) findUsingFilterWithBlock:(ASFilter *)filter block:(void (^)(NSArray *homes))block {
     PFQuery *query = [self createQuery];
-    PFGeoPoint *ne = [PFGeoPoint geoPointWithLatitude:northEastPoint.latitude longitude:northEastPoint.longitude];
-    PFGeoPoint *sw = [PFGeoPoint geoPointWithLatitude:southWestPoint.latitude longitude:southWestPoint.longitude];
-    if(searchType == ASFilterTypeForRent) {
+    NSString *priceField;
+    NSNumber *minPrice = [filter.minPrice floatValue] >= 0 ? filter.minPrice : @(0);
+    NSNumber *maxPrice = [filter.maxPrice floatValue] >= 0 ? filter.maxPrice : @(0);
+    
+    if(filter.type == ASFilterTypeForRent) {
         [query whereKey:@"isForRent" equalTo:@YES];
+        priceField = @"priceForRent";
     } else {
         [query whereKey:@"isForSale" equalTo:@YES];
+        priceField = @"priceForSale";
     }
-    [query whereKey:@"location" withinGeoBoxFromSouthwest:sw toNortheast:ne];
+    [query whereKey:@"location" withinGeoBoxFromSouthwest:filter.southWest toNortheast:filter.northEast];
+    [query whereKey:priceField greaterThanOrEqualTo:minPrice];
+    if([maxPrice doubleValue] > [minPrice doubleValue]) {
+        [query whereKey:priceField lessThanOrEqualTo:maxPrice];
+    }
     [query findObjectsInBackgroundWithBlock:^(NSArray *homes, NSError *error){
         NSArray *found = [NSArray arrayWithArray:homes];
         block(found);

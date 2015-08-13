@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ASFilter.h"
 
 @interface SearchNavigationController : UINavigationController
-
-@property (assign, nonatomic) ASFilterType searchType;
 
 @end

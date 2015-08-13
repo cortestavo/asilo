@@ -14,9 +14,10 @@
 @interface HomeTableViewController : UITableViewController
 
 @property (strong, nonatomic) NSArray *homes;
-@property (assign) BOOL useMenuItem;
+@property (assign) NSString *leftItemUsage;
 
 - (instancetype)initWithHomes:(NSArray *)homes;
-- (void)setUseMenuItem:(BOOL)useMenuItem;
+- (void) useLeftItemASMenu;
+- (void) useLeftItemASBackButton;
 
 @end

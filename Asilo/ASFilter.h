@@ -35,5 +35,6 @@ typedef enum {
 
 
 + (NSString *)parseClassName;
++ (instancetype)getNewObject;
 
 @end
